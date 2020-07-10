@@ -124,6 +124,24 @@
     <Compile Include="View\CaixaRecebimento.Designer.cs">
       <DependentUpon>CaixaRecebimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CaixaReforco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CaixaReforco.Designer.cs">
+      <DependentUpon>CaixaReforco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaixaSangria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CaixaSangria.Designer.cs">
+      <DependentUpon>CaixaSangria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaixaStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CaixaStatus.Designer.cs">
+      <DependentUpon>CaixaStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ClienteAlterar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +260,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CaixaLista.resx">
+      <DependentUpon>CaixaLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaixaNovo.resx">
+      <DependentUpon>CaixaNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClienteAlterar.resx">
+      <DependentUpon>ClienteAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClienteLista.resx">
+      <DependentUpon>ClienteLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClienteNovo.resx">
+      <DependentUpon>ClienteNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CupomList.resx">
+      <DependentUpon>CupomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProdutoLista.resx">
+      <DependentUpon>ProdutoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProdutoNovo.resx">
+      <DependentUpon>ProdutoNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UsuarioAltera.resx">
+      <DependentUpon>UsuarioAltera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UsuarioLista.resx">
       <DependentUpon>UsuarioLista.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,7 +300,6 @@
       <DependentUpon>VendaTabela.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
-    <None Include="Properties\DataSources\Hope.IFace.IEstado.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -313,6 +357,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

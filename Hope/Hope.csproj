@@ -48,46 +48,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbsEstadoOperacional.cs" />
-    <Compile Include="Caixa.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Cupom.cs" />
-    <Compile Include="Dbg\Usuario.cs" />
-    <Compile Include="EstadoOperacional.cs" />
-    <Compile Include="frmMeuConsole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMeuConsole.Designer.cs">
-      <DependentUpon>frmMeuConsole.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStatus.Designer.cs">
-      <DependentUpon>frmStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IFace\ICaixa.cs" />
-    <Compile Include="IFace\ICliente.cs" />
-    <Compile Include="IFace\ICupom.cs" />
-    <Compile Include="IFace\IEstado.cs" />
-    <Compile Include="IFace\IListaRegistroExecucao.cs" />
-    <Compile Include="IFace\INucleo.cs" />
-    <Compile Include="IFace\IProduto.cs" />
-    <Compile Include="IFace\IEstatdoOperacional.cs" />
-    <Compile Include="IFace\IUsuario.cs" />
-    <Compile Include="Nucleo.cs" />
-    <Compile Include="OfficeDataSet.Designer.cs">
+    <Compile Include="Abs\Caixa.cs" />
+    <Compile Include="Abs\Cliente.cs" />
+    <Compile Include="Abs\Cupom.cs" />
+    <Compile Include="AbsHope.cs" />
+    <Compile Include="Abs\DtHope.cs" />
+    <Compile Include="Abs\Produto.cs" />
+    <Compile Include="Alfa\HopeAlfa.cs" />
+    <Compile Include="Alfa\Usuario_alfa.cs" />
+    <Compile Include="Beta\Cliente_beta.cs" />
+    <Compile Include="Beta\Hope_beta.cs" />
+    <Compile Include="Beta\Produto_beta.cs" />
+    <Compile Include="Beta\Caixa_beta.cs" />
+    <Compile Include="Beta\Cupom_beta.cs" />
+    <Compile Include="Beta\Usuario_beta.cs" />
+    <Compile Include="Contrato\IDtHope.cs" />
+    <Compile Include="Entidade\Cliente.cs" />
+    <Compile Include="Entidade\ICliente.cs" />
+    <Compile Include="Entidade\IProduto.cs" />
+    <Compile Include="Entidade\IUsuario.cs" />
+    <Compile Include="Entidade\Produto.cs" />
+    <Compile Include="Entidade\Usuario.cs" />
+    <Compile Include="ListEnum.cs" />
+    <Compile Include="HopeLocalDB_DEBUG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OfficeDataSet.xsd</DependentUpon>
+      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Pdc\Usuario.cs" />
-    <Compile Include="PosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PosDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Produto.cs" />
+    <Compile Include="Contrato\ICaixa.cs" />
+    <Compile Include="Contrato\ICliente.cs" />
+    <Compile Include="Contrato\ICupom.cs" />
+    <Compile Include="Contrato\IProduto.cs" />
+    <Compile Include="Contrato\IUsuario.cs" />
+    <Compile Include="IHope.cs" />
+    <Compile Include="Prod\HopeProd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,31 +93,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="AbsUsuario.cs" />
+    <Compile Include="Abs\Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="OfficeDataSet.xsc">
-      <DependentUpon>OfficeDataSet.xsd</DependentUpon>
+    <None Include="HopeLocalDB_DEBUG.xsc">
+      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
     </None>
-    <None Include="OfficeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OfficeDataSet.Designer.cs</LastGenOutput>
+    <None Include="HopeLocalDB_DEBUG.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="OfficeDataSet.xss">
-      <DependentUpon>OfficeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PosDataSet.xsc">
-      <DependentUpon>PosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PosDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <LastGenOutput>HopeLocalDB_DEBUG.Designer.cs</LastGenOutput>
     </None>
-    <None Include="PosDataSet.xss">
-      <DependentUpon>PosDataSet.xsd</DependentUpon>
+    <None Include="HopeLocalDB_DEBUG.xss">
+      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,18 +118,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Dbg\Mod_DEBUG.txt" />
     <Content Include="Hop.ico" />
-    <Content Include="Pdc\Mod_PRODUCAO.txt" />
     <None Include="Resources\Hop-512.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmMeuConsole.resx">
-      <DependentUpon>frmMeuConsole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmStatus.resx">
-      <DependentUpon>frmStatus.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

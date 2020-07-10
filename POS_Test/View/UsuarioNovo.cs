@@ -19,14 +19,36 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (Hope.Nucleo.ObjUsuario.Novo(txtUsusario.Text, txtSenha.Text, txtNome.Text))
+            if (!Program.ObjHope.Usuario.Set_NomeUsuario(txtUsusarioNome.Text))
             {
-                MessageBox.Show(Hope.Nucleo.ObjUsuario.strMsgResult);
+                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                return;
+            }
+            else if (!Program.ObjHope.Usuario.Set_Senha(txtSenha.Text))
+            {
+                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                return;
+            }
+            else if (!Program.ObjHope.Usuario.Set_NomeCompleto(txtNomeCompleto.Text))
+            {
+                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                return;
+            }
+            else if (!Program.ObjHope.Usuario.Set_Email(txtEmail.Text))
+            {
+                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                return;
+            }
+            else if (Program.ObjHope.Usuario.GravarNovo())
+            {
                 btnVoltar.PerformClick();
+                return;
+
             }
             else
             {
-                MessageBox.Show(Hope.Nucleo.ObjUsuario.strMsgResult);
+                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
+                return;
             }
         }
     }

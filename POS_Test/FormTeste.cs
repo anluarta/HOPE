@@ -23,7 +23,7 @@ namespace POS_Test
         {
             try
             {
-                Program.nHope = Hope.Nucleo.New(true);
+               // Program.nHope = Hope.Nucleo.New(true);
             }
             catch (Exception e)
             {
@@ -32,13 +32,6 @@ namespace POS_Test
             }
 
         }
-        private void des_Ativa(bool acao)
-        {
-            groupBox1.Enabled = acao;
-            groupBox2.Enabled = acao;
-            groupBox3.Enabled = acao;
-            groupBox4.Enabled = acao;
-        }
         private void FormTeste_Shown(object sender, EventArgs e)
         {
             carreganucleo();
@@ -46,17 +39,18 @@ namespace POS_Test
         private void ExibicaoAcao(Control control)
         {
             control.Dock = DockStyle.Fill;
-            frm.Size = control.Size;
+            frm.Size =control.Size;
             frm.MinimumSize = control.Size;
             frm.Controls.Add(control);
             frm.Controls[frm.Controls.IndexOf(control)].BringToFront();
+            frm.Refresh();
             frm.ShowDialog();
 
         }
         private void btnNewUsuario_Click(object sender, EventArgs e)
         {
             View.UsuarioNovo usuarioNovo = new View.UsuarioNovo();
-            usuarioNovo.btnVoltar.Click += new EventHandler(frm_Close_Clisk);
+            usuarioNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
             ExibicaoAcao(usuarioNovo);
         }
 
@@ -68,52 +62,73 @@ namespace POS_Test
 
         private void btnListUsuario_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.UsuarioLista());
+            View.UsuarioLista usuarioLista = new View.UsuarioLista();
+            usuarioLista.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(usuarioLista);
         }
 
         private void btnNewCliente_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.ClienteNovo());
+            View.ClienteNovo clienteNovo = new View.ClienteNovo();
+            clienteNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(clienteNovo);
         }
 
         private void btnListCliente_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.ClienteLista());
+            View.ClienteLista clienteLista = new View.ClienteLista();
+            clienteLista.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(clienteLista);
         }
 
         private void btnNewProduto_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.ProdutoNovo());
+            View.ProdutoNovo produtoNovo = new View.ProdutoNovo();
+            produtoNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(produtoNovo);
         }
 
         private void btnListProduto_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.ProdutoLista());
+            View.ProdutoLista produtoLista = new View.ProdutoLista();
+            produtoLista.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(produtoLista);
         }
 
         private void btnNewCaixa_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.CaixaNovo());
+            View.CaixaNovo caixaNovo = new View.CaixaNovo();
+          //  caixaNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(caixaNovo);
         }
 
         private void btnListCaixa_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.CaixaLista());
+            View.CaixaLista caixaLista = new View.CaixaLista();
+            caixaLista.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(caixaLista);
         }
 
         private void btnRecebimento_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.CaixaRecebimento());
+            View.CaixaRecebimento caixaRecebimento = new View.CaixaRecebimento();
+          //  caixaRecebimento.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(caixaRecebimento);
         }
 
         private void btnNewCupom_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.CupomNovo());
+            
+            View.CupomNovo cupomNovo = new View.CupomNovo();
+           // cupomNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(cupomNovo);
         }
 
         private void btnListCupom_Click(object sender, EventArgs e)
         {
-            ExibicaoAcao(new View.CupomList());
+            View.CupomList cupomList = new View.CupomList();
+            cupomList.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
+            ExibicaoAcao(cupomList);
         }
     }
 }

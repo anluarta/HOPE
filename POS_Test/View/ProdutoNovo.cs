@@ -15,6 +15,19 @@ namespace POS_Test.View
         public ProdutoNovo()
         {
             InitializeComponent();
+            cmbUnidade.Items.Clear();
+            cmbUnidade.Items.AddRange(Program.ObjHope.GetTipoUnidadeProduto());
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            Program.ObjHope.Produto.Set_EAN(txtxEAN.Text);
+            Program.ObjHope.Produto.Set_Descricao(txtDescricao.Text);
+            Program.ObjHope.Produto.Set_Custo(txtCusto.Text);
+            Program.ObjHope.Produto.Set_Unidade(cmbUnidade.SelectedText.ToString());
+            Program.ObjHope.Produto.Set_Venda(txtVenda.Text);
+            Program.ObjHope.Produto.GravarNovo();
+            btnVoltar.PerformClick();
         }
     }
 }

@@ -16,5 +16,10 @@ namespace POS_Test
         {
             InitializeComponent();
         }
+        public void BtnVoltar(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            Close();
+        }
     }
 }

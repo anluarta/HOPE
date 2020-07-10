@@ -8,8 +8,7 @@ namespace POS_Test
 {
     static class Program
     {
-        internal static Hope.Nucleo nHope;
-        
+        internal static Hope.IHope ObjHope;
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
@@ -19,6 +18,7 @@ namespace POS_Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ObjHope = Hope.AbsHope.Beta();
             Application.Run(new FormTeste());
         }
     }
