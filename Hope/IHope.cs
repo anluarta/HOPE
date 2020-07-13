@@ -17,7 +17,9 @@ namespace Hope
         object[] GetListaVencimentoSemana();
         object[] GetTipoCliente();
         object[] GetUsuarioLocalConsulta();
+        object[] GetListaFormaRecebimento();
         object[] GetOperacaoConsulta();
+        object[] GetListaTipoRecebimento();
         object[] GetOrden();
         object[] GetTipoUnidadeProduto();
         object[] GetClienteLocalConsulta();

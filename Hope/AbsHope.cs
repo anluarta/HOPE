@@ -10,13 +10,13 @@ namespace Hope
         internal static ICliente cliente;
         internal static ICaixa caixa;
         internal static ICupom cupom;
-        
+
         internal static HopeLocalDB_DEBUG LocalDB_DEBUG;
         public abstract string valor { get; set; }
 
-        internal string _versao; 
+        internal string _versao;
         public object[] Get { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        IUsuario IHope.Usuario { get => usuario; set => usuario=value; }
+        IUsuario IHope.Usuario { get => usuario; set => usuario = value; }
         IProduto IHope.Produto { get => produto; set => produto = value; }
         ICliente IHope.Cliente { get => cliente; set => cliente = value; }
         ICaixa IHope.Caixa { get => caixa; set => caixa = value; }
@@ -203,9 +203,47 @@ namespace Hope
                     goto case ListEnum.ListaColunaProduto.EAN;
                 case ListEnum.ListaColunaProduto.EAN:
                     vs[1] = ListEnum.ListaColunaProduto.EAN.ToString();
-                    goto case ListEnum.ListaColunaProduto.Descricao; 
+                    goto case ListEnum.ListaColunaProduto.Descricao;
                 case ListEnum.ListaColunaProduto.Descricao:
                     vs[2] = ListEnum.ListaColunaProduto.Descricao.ToString();
+                    break;
+            }
+            return vs;
+            throw new NotImplementedException();
+        }
+
+        object[] IHope.GetListaFormaRecebimento()
+        {
+            object[] vs = new object[4];
+            switch (ListEnum.ListaFormaRecebimento.Dinheiro)
+            {
+                case ListEnum.ListaFormaRecebimento.Dinheiro:
+                    vs[0] = ListEnum.ListaFormaRecebimento.Dinheiro.ToString();
+                    goto case ListEnum.ListaFormaRecebimento.Debito;
+                case ListEnum.ListaFormaRecebimento.Debito:
+                    vs[1] = ListEnum.ListaFormaRecebimento.Debito.ToString();
+                    goto case ListEnum.ListaFormaRecebimento.Credito;
+                case ListEnum.ListaFormaRecebimento.Credito:
+                    vs[2] = ListEnum.ListaFormaRecebimento.Credito.ToString();
+                    goto case ListEnum.ListaFormaRecebimento.Cheque;
+                case ListEnum.ListaFormaRecebimento.Cheque:
+                    vs[3] = ListEnum.ListaFormaRecebimento.Cheque.ToString();
+                    break;
+            }
+            return vs;
+            throw new NotImplementedException();
+        }
+
+        object[] IHope.GetListaTipoRecebimento()
+        {
+            object[] vs = new object[2];
+            switch (ListEnum.ListaTipoRecebimento.Avulso)
+            {
+                case ListEnum.ListaTipoRecebimento.Avulso:
+                    vs[0] = ListEnum.ListaTipoRecebimento.Avulso.ToString();
+                    goto case ListEnum.ListaTipoRecebimento.Conta_Cliente;
+                case ListEnum.ListaTipoRecebimento.Conta_Cliente:
+                    vs[1] = ListEnum.ListaTipoRecebimento.Conta_Cliente.ToString();
                     break;
             }
             return vs;

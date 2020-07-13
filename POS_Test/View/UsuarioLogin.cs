@@ -16,5 +16,18 @@ namespace POS_Test.View
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(Program.ObjHope.Usuario.Login(txtUsuarioNome.Text, txtSenha.Text, out string msg))
+            {
+                btnVoltar.PerformClick();
+            }
+            else
+            {
+                label1.Text = msg;
+            }
+
+        }
     }
 }

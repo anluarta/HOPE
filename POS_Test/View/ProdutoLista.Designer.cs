@@ -39,17 +39,17 @@
             this.cmbOrdenar = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iProdutoVarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoVarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAlterar
@@ -154,7 +154,7 @@
             this.unidadeDataGridViewTextBoxColumn,
             this.custoDataGridViewTextBoxColumn,
             this.vendaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.iProdutoVarBindingSource;
+            this.dataGridView1.DataSource = this.iProdutoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 128);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -162,6 +162,10 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(624, 232);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // iProdutoBindingSource
+            // 
+            this.iProdutoBindingSource.DataSource = typeof(Hope.Entidade.IProduto);
             // 
             // iDProdutoDataGridViewTextBoxColumn
             // 
@@ -176,7 +180,6 @@
             this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
             this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
             this.eANDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eANDataGridViewTextBoxColumn.Visible = false;
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
@@ -198,7 +201,6 @@
             this.custoDataGridViewTextBoxColumn.HeaderText = "Custo";
             this.custoDataGridViewTextBoxColumn.Name = "custoDataGridViewTextBoxColumn";
             this.custoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.custoDataGridViewTextBoxColumn.Visible = false;
             // 
             // vendaDataGridViewTextBoxColumn
             // 
@@ -206,10 +208,6 @@
             this.vendaDataGridViewTextBoxColumn.HeaderText = "Venda";
             this.vendaDataGridViewTextBoxColumn.Name = "vendaDataGridViewTextBoxColumn";
             this.vendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iProdutoVarBindingSource
-            // 
-            this.iProdutoVarBindingSource.DataSource = typeof(Hope.Entidade.IProduto);
             // 
             // ProdutoLista
             // 
@@ -225,7 +223,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoVarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iProdutoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,6 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn custoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iProdutoVarBindingSource;
+        private System.Windows.Forms.BindingSource iProdutoBindingSource;
     }
 }

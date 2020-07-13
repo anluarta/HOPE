@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS_Test.View
 {
-    public partial class UsuarioLista : UserControl
+    public partial class UsuarioListaRegistro : UserControl
     {
-        public UsuarioLista()
+        public UsuarioListaRegistro()
         {
             InitializeComponent();
             cmbLocal.Items.AddRange(Program.ObjHope.GetUsuarioLocalConsulta());
@@ -23,7 +23,7 @@ namespace POS_Test.View
         {
             if (Program.ObjHope.Usuario.Localizar(_orden: cmbOrdenar.SelectedItem.ToString(),_operacao: cmbOperacao.SelectedItem.ToString(),_local: cmbLocal.SelectedItem.ToString(),_limit:0,_termo: txtTermo.Text))
             {
-                iUsuarioVarBindingSource.DataSource = Program.ObjHope.Usuario.DadoResultado;
+                iUsuarioBindingSource.DataSource = Program.ObjHope.Usuario.DadoResultado;
 
             }
             else
@@ -37,7 +37,7 @@ namespace POS_Test.View
         {
             if (Program.ObjHope.Usuario.FocusRegistro((object)dgvListaUsuario.SelectedRows))
             {
-                View.UsuarioAltera usuarioAltera = new UsuarioAltera();
+                View.UsuarioAlteraRegistro usuarioAltera = new UsuarioAlteraRegistro();
                 using (frmControlUser frm= new frmControlUser())
                 {
                     usuarioAltera.btnVoltar.Click += new EventHandler(frm.BtnVoltar);

@@ -8,6 +8,11 @@ namespace Hope.Alfa
 {
     class Usuario_alfa : AbsUsuario
     {
+        internal override bool Autenticador(string _UsuarioNome, string _Senha)
+        {
+            throw new NotImplementedException();
+        }
+
         internal override bool GravaAlteracaoRegistro_Update()
         {
             throw new NotImplementedException();

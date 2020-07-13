@@ -1,6 +1,6 @@
 ﻿namespace POS_Test.View
 {
-    partial class UsuarioLista
+    partial class UsuarioListaRegistro
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
-            this.iDUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iUsuarioVarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,10 +39,16 @@
             this.cmbOperacao = new System.Windows.Forms.ComboBox();
             this.cmbOrdenar = new System.Windows.Forms.ComboBox();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.iUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeCompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioVarBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaUsuario
@@ -64,7 +64,7 @@
             this.senhaDataGridViewTextBoxColumn,
             this.nomeCompletoDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
-            this.dgvListaUsuario.DataSource = this.iUsuarioVarBindingSource;
+            this.dgvListaUsuario.DataSource = this.iUsuarioBindingSource;
             this.dgvListaUsuario.Location = new System.Drawing.Point(3, 128);
             this.dgvListaUsuario.Name = "dgvListaUsuario";
             this.dgvListaUsuario.ReadOnly = true;
@@ -72,45 +72,6 @@
             this.dgvListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaUsuario.Size = new System.Drawing.Size(640, 298);
             this.dgvListaUsuario.TabIndex = 0;
-            // 
-            // iDUsuarioDataGridViewTextBoxColumn
-            // 
-            this.iDUsuarioDataGridViewTextBoxColumn.DataPropertyName = "ID_Usuario";
-            this.iDUsuarioDataGridViewTextBoxColumn.HeaderText = "ID_Usuario";
-            this.iDUsuarioDataGridViewTextBoxColumn.Name = "iDUsuarioDataGridViewTextBoxColumn";
-            this.iDUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioNomeDataGridViewTextBoxColumn
-            // 
-            this.usuarioNomeDataGridViewTextBoxColumn.DataPropertyName = "Usuario_Nome";
-            this.usuarioNomeDataGridViewTextBoxColumn.HeaderText = "Usuario_Nome";
-            this.usuarioNomeDataGridViewTextBoxColumn.Name = "usuarioNomeDataGridViewTextBoxColumn";
-            this.usuarioNomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // senhaDataGridViewTextBoxColumn
-            // 
-            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "Senha";
-            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
-            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
-            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeCompletoDataGridViewTextBoxColumn
-            // 
-            this.nomeCompletoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.HeaderText = "Nome_Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.Name = "nomeCompletoDataGridViewTextBoxColumn";
-            this.nomeCompletoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iUsuarioVarBindingSource
-            // 
-            this.iUsuarioVarBindingSource.DataSource = typeof(Hope.Entidade.IUsuario);
             // 
             // btnVoltar
             // 
@@ -200,7 +161,46 @@
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // UsuarioLista
+            // iUsuarioBindingSource
+            // 
+            this.iUsuarioBindingSource.DataSource = typeof(Hope.Entidade.IUsuario);
+            // 
+            // iDUsuarioDataGridViewTextBoxColumn
+            // 
+            this.iDUsuarioDataGridViewTextBoxColumn.DataPropertyName = "ID_Usuario";
+            this.iDUsuarioDataGridViewTextBoxColumn.HeaderText = "ID_Usuario";
+            this.iDUsuarioDataGridViewTextBoxColumn.Name = "iDUsuarioDataGridViewTextBoxColumn";
+            this.iDUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioNomeDataGridViewTextBoxColumn
+            // 
+            this.usuarioNomeDataGridViewTextBoxColumn.DataPropertyName = "Usuario_Nome";
+            this.usuarioNomeDataGridViewTextBoxColumn.HeaderText = "Usuario_Nome";
+            this.usuarioNomeDataGridViewTextBoxColumn.Name = "usuarioNomeDataGridViewTextBoxColumn";
+            this.usuarioNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // senhaDataGridViewTextBoxColumn
+            // 
+            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "Senha";
+            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
+            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
+            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeCompletoDataGridViewTextBoxColumn
+            // 
+            this.nomeCompletoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Completo";
+            this.nomeCompletoDataGridViewTextBoxColumn.HeaderText = "Nome_Completo";
+            this.nomeCompletoDataGridViewTextBoxColumn.Name = "nomeCompletoDataGridViewTextBoxColumn";
+            this.nomeCompletoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // UsuarioListaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,13 +208,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dgvListaUsuario);
-            this.Name = "UsuarioLista";
+            this.Name = "UsuarioListaRegistro";
             this.Size = new System.Drawing.Size(711, 489);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioVarBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListaUsuario;
-        private System.Windows.Forms.BindingSource iUsuarioVarBindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtTermo;
@@ -237,5 +236,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCompletoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource iUsuarioBindingSource;
     }
 }

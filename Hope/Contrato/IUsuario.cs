@@ -16,8 +16,11 @@ namespace Hope.Contrato
         bool FocusRegistro(object _Selecionado);
         bool GravarNovo();
         bool GravaAlteracao();
-       // bool TodaLista();
-       // bool NovoUsuario(string _usuarionome, string _senha, string _nomecompleto,string _email);
-       // bool AlteraDado(string _usuarionome, string _senha, string _nomecompleto, string _email);
+        bool Login(string _UsuarioNome, string _Senha, out string _MsgResult);
+        bool Autenticado(out string msgResult);
+        void Sair(out string logof);
+        // bool TodaLista();
+        // bool NovoUsuario(string _usuarionome, string _senha, string _nomecompleto,string _email);
+        // bool AlteraDado(string _usuarionome, string _senha, string _nomecompleto, string _email);
     }
 }

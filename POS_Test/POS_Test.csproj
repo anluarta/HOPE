@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\CaixaDetalhe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CaixaDetalhe.Designer.cs">
+      <DependentUpon>CaixaDetalhe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CaixaFechamento.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,11 +196,11 @@
     <Compile Include="View\ProdutoNovo.Designer.cs">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioLista.cs">
+    <Compile Include="View\UsuarioListaRegistro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioLista.Designer.cs">
-      <DependentUpon>UsuarioLista.cs</DependentUpon>
+    <Compile Include="View\UsuarioListaRegistro.Designer.cs">
+      <DependentUpon>UsuarioListaRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UsuarioLogin.cs">
       <SubType>UserControl</SubType>
@@ -202,17 +208,17 @@
     <Compile Include="View\UsuarioLogin.Designer.cs">
       <DependentUpon>UsuarioLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioNovo.cs">
+    <Compile Include="View\UsuarioNovoRegistro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioNovo.Designer.cs">
-      <DependentUpon>UsuarioNovo.cs</DependentUpon>
+    <Compile Include="View\UsuarioNovoRegistro.Designer.cs">
+      <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioAltera.cs">
+    <Compile Include="View\UsuarioAlteraRegistro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioAltera.Designer.cs">
-      <DependentUpon>UsuarioAltera.cs</DependentUpon>
+    <Compile Include="View\UsuarioAlteraRegistro.Designer.cs">
+      <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\VendaCliente.cs">
       <SubType>UserControl</SubType>
@@ -260,11 +266,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CaixaDetalhe.resx">
+      <DependentUpon>CaixaDetalhe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CaixaLista.resx">
       <DependentUpon>CaixaLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CaixaNovo.resx">
       <DependentUpon>CaixaNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaixaRecebimento.resx">
+      <DependentUpon>CaixaRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaixaReforco.resx">
+      <DependentUpon>CaixaReforco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaixaSangria.resx">
+      <DependentUpon>CaixaSangria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClienteAlterar.resx">
       <DependentUpon>ClienteAlterar.cs</DependentUpon>
@@ -278,20 +296,26 @@
     <EmbeddedResource Include="View\CupomList.resx">
       <DependentUpon>CupomList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ProdutoAlterar.resx">
+      <DependentUpon>ProdutoAlterar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ProdutoLista.resx">
       <DependentUpon>ProdutoLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProdutoNovo.resx">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioAltera.resx">
-      <DependentUpon>UsuarioAltera.cs</DependentUpon>
+    <EmbeddedResource Include="View\UsuarioAlteraRegistro.resx">
+      <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioLista.resx">
-      <DependentUpon>UsuarioLista.cs</DependentUpon>
+    <EmbeddedResource Include="View\UsuarioListaRegistro.resx">
+      <DependentUpon>UsuarioListaRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioNovo.resx">
-      <DependentUpon>UsuarioNovo.cs</DependentUpon>
+    <EmbeddedResource Include="View\UsuarioLogin.resx">
+      <DependentUpon>UsuarioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UsuarioNovoRegistro.resx">
+      <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VendaCupom.resx">
       <DependentUpon>VendaCupom.cs</DependentUpon>
@@ -300,6 +324,10 @@
       <DependentUpon>VendaTabela.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICaixa.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICliente.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IProduto.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IUsuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -312,12 +340,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hope\Hope.csproj">
-      <Project>{1a163c76-7d25-4f19-be2f-daceecaca707}</Project>
-      <Name>Hope</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-ok-48.png" />
@@ -359,7 +381,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
+    <ProjectReference Include="..\Hope\Hope.csproj">
+      <Project>{1a163c76-7d25-4f19-be2f-daceecaca707}</Project>
+      <Name>Hope</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

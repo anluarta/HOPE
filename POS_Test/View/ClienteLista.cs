@@ -24,7 +24,7 @@ namespace POS_Test.View
         {
             if (Program.ObjHope.Cliente.Localizar(_orden: cmbOrdenar.SelectedItem.ToString(), _operacao: cmbOperacao.SelectedItem.ToString(), _local: cmbLocal.SelectedItem.ToString(), _limit: 0, _termo: txtTermo.Text))
             {
-                iClienteVarBindingSource.DataSource = Program.ObjHope.Cliente.DataResultado;
+                iClienteBindingSource.DataSource = Program.ObjHope.Cliente.DataResultado;
 
             }
             else

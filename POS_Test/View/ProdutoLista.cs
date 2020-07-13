@@ -24,7 +24,7 @@ namespace POS_Test.View
         {
             if (Program.ObjHope.Produto.Localizar(_orden: cmbOrdenar.SelectedItem.ToString(), _operacao: cmbOperacao.SelectedItem.ToString(), _local: cmbLocal.SelectedItem.ToString(), _limit: 0, _termo: txtTermo.Text))
             {
-              iProdutoVarBindingSource.DataSource = Program.ObjHope.Produto.DadoResultado;
+              iProdutoBindingSource.DataSource = Program.ObjHope.Produto.DadoResultado;
 
             }
             else
@@ -38,7 +38,7 @@ namespace POS_Test.View
         {
             if (Program.ObjHope.Usuario.FocusRegistro((object)dataGridView1.SelectedRows))
             {
-                View.UsuarioAltera usuarioAltera = new UsuarioAltera();
+                View.UsuarioAlteraRegistro usuarioAltera = new UsuarioAlteraRegistro();
                 using (frmControlUser frm = new frmControlUser())
                 {
                     usuarioAltera.btnVoltar.Click += new EventHandler(frm.BtnVoltar);

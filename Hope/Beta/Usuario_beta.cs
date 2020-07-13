@@ -107,5 +107,12 @@ namespace Hope.Beta
             return false;
             throw new NotImplementedException();
         }
+
+        internal override bool Autenticador(string _UsuarioNome, string _Senha)
+        {
+            _AutenticEntidade = new Entidade.Usuario() { Usuario_Nome = _UsuarioNome, Senha = _Senha };
+            return true;
+            throw new NotImplementedException();
+        }
     }
 }

@@ -3,6 +3,14 @@ namespace Hope
 {
     class ListEnum
     {
+        public enum ListaTipoRecebimento
+        {
+            Avulso,Conta_Cliente
+        }
+        public enum ListaFormaRecebimento
+        {
+            Dinheiro,Debito,Credito,Cheque/*,Boleto*/
+        }
         public enum TipoCliente
         {
             Fisico,Juridico

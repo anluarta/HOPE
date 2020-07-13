@@ -13,6 +13,7 @@ namespace Hope
     {
         internal Entidade.Usuario _SetEntidade;
         internal Entidade.Usuario _FocusEntidade;
+        internal Entidade.Usuario _AutenticEntidade;
         internal string MsgResult { get; set; }
         internal string StrfilterExpression;
         public AbsUsuario()
@@ -164,7 +165,7 @@ namespace Hope
         internal abstract bool SelectAll();
         internal abstract bool GravarNovoRegistro_Insert();
         internal abstract bool GravaAlteracaoRegistro_Update();
-
+        internal abstract bool Autenticador(string _UsuarioNome, string _Senha);
 
         #region Contrato
         internal Entidade.IUsuario[] _DadoResultado { get; set; }
@@ -338,6 +339,28 @@ namespace Hope
                 MsgResult = "Erro gravar alteracao registro";
                 return false;
             }
+            throw new NotImplementedException();
+        }
+
+        public bool Login(string _UsuarioNome, string _Senha, out string _MsgResult)
+        {
+            _MsgResult = MsgResult;
+            return Autenticador(_UsuarioNome, _Senha);
+            throw new NotImplementedException();
+        }
+
+        bool IUsuario.Autenticado(out string msgResult)
+        {
+            //msgResult = "ja ta logado voce vai sair";
+            if(_AutenticEntidade!=null){ msgResult ="Sair da conta";return true;}else{msgResult="Nao a usuario autenticado";return false;}
+            throw new NotImplementedException();
+        }
+
+        void IUsuario.Sair(out string logof)
+        {
+            logof = "Usuario saio ";
+            _AutenticEntidade = null;
+            return;
             throw new NotImplementedException();
         }
         #endregion

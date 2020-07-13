@@ -1,6 +1,6 @@
 ﻿namespace POS_Test.View
 {
-    partial class UsuarioAltera
+    partial class UsuarioAlteraRegistro
     {
         /// <summary> 
         /// Variável de designer necessária.

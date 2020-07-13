@@ -54,6 +54,7 @@
     <Compile Include="AbsHope.cs" />
     <Compile Include="Abs\DtHope.cs" />
     <Compile Include="Abs\Produto.cs" />
+    <Compile Include="Abs\Recebimento.cs" />
     <Compile Include="Alfa\HopeAlfa.cs" />
     <Compile Include="Alfa\Usuario_alfa.cs" />
     <Compile Include="Beta\Cliente_beta.cs" />
@@ -63,7 +64,12 @@
     <Compile Include="Beta\Cupom_beta.cs" />
     <Compile Include="Beta\Usuario_beta.cs" />
     <Compile Include="Contrato\IDtHope.cs" />
+    <Compile Include="Contrato\IRecebimento.cs" />
+    <Compile Include="Entidade\Caixa.cs" />
+    <Compile Include="Entidade\CaixaTotal.cs" />
     <Compile Include="Entidade\Cliente.cs" />
+    <Compile Include="Entidade\ICaixa.cs" />
+    <Compile Include="Entidade\ICaixaTotal.cs" />
     <Compile Include="Entidade\ICliente.cs" />
     <Compile Include="Entidade\IProduto.cs" />
     <Compile Include="Entidade\IUsuario.cs" />

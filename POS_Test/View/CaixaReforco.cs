@@ -16,5 +16,17 @@ namespace POS_Test.View
         {
             InitializeComponent();
         }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            if (Program.ObjHope.Caixa.Reforco(txtValor.Text, txtObservacao.Text, out string msg))
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                MessageBox.Show(msg);
+            }
+        }
     }
 }

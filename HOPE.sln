@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Test", "POS_Test\POS_Test.csproj", "{5898A22A-8AB0-49B7-91A4-331EE1007C52}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1A163C76-7D25-4F19-BE2F-DACEECACA707} = {1A163C76-7D25-4F19-BE2F-DACEECACA707}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hope", "Hope\Hope.csproj", "{1A163C76-7D25-4F19-BE2F-DACEECACA707}"
 EndProject

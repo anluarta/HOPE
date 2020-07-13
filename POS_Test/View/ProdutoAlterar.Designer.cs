@@ -28,10 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(322, 30);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(122, 50);
+            this.btnVoltar.TabIndex = 0;
+            this.btnVoltar.Text = "button1";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
+            // ProdutoAlterar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnVoltar);
+            this.Name = "ProdutoAlterar";
+            this.Size = new System.Drawing.Size(465, 390);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        public System.Windows.Forms.Button btnVoltar;
     }
 }
