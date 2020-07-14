@@ -269,6 +269,15 @@
     <EmbeddedResource Include="View\ClienteNovo.resx">
       <DependentUpon>ClienteNovo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CupomCliente.resx">
+      <DependentUpon>CupomCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CupomPagar.resx">
+      <DependentUpon>CupomPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CupomProduto.resx">
+      <DependentUpon>CupomProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ProdutoAlterar.resx">
       <DependentUpon>ProdutoAlterar.cs</DependentUpon>
     </EmbeddedResource>

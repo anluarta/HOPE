@@ -4,7 +4,7 @@
     {
         Entidade.ICliente[] DataResultado { get; }
         string StrMsgResultado { get; set; }
-        bool Localizar(string _operacao, string _local, string _orden, int _limit, string _termo);
+        bool Localizar(string _operacao, string _local, string _orden, int _limit, string _termo, out string msg, out Entidade.ICliente[] ListaResultado);
         Entidade.ICliente FocusEntidade { get; }
         bool FocusRegistro(object _Selecionado);
         bool GravarRegistro();

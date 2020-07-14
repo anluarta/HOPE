@@ -123,7 +123,7 @@ namespace Hope
             throw new NotImplementedException();
         }
 
-        bool Contrato.ICliente.Localizar(string _operacao, string _local, string _orden, int _limit, string _termo)
+        bool Contrato.ICliente.Localizar(string _operacao, string _local, string _orden, int _limit, string _termo, out string msg, out Hope.Entidade.ICliente[] ListaResultado)
         {
             if (_operacao == null)
             {
@@ -152,7 +152,10 @@ namespace Hope
                 switch (operacaoConsulta)
                 {
                     case ListEnum.ListaOperacaoConsulta.All:
-                        return SelectAll();
+                        bool v= SelectAll();
+                       ListaResultado= _DataResultado;
+                        msg = MsgResult;
+                        return v;
                         break;
                     case ListEnum.ListaOperacaoConsulta.Distinto:
                         break;
@@ -184,7 +187,8 @@ namespace Hope
             }
             else
             {
-                MsgResult = "Erro AbsCliente.Localizar";
+                msg = "Erro AbsCliente.Localizar";
+                ListaResultado = new Entidade.ICliente[0];
                 return false;
             }
 
