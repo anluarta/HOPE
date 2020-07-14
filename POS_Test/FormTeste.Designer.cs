@@ -159,20 +159,41 @@
             this.cmbOperacaoConsultaCaixa = new System.Windows.Forms.ComboBox();
             this.cmbOrdenarConsultaCaixa = new System.Windows.Forms.ComboBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCupomFechar = new System.Windows.Forms.Button();
+            this.btnCupomIniciaNovoCupom = new System.Windows.Forms.Button();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCupomTotalRecebido = new System.Windows.Forms.Label();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.lblCupomTotal = new System.Windows.Forms.Label();
+            this.btnCupomPagar = new System.Windows.Forms.Button();
+            this.btnCupomAdicionarProduto = new System.Windows.Forms.Button();
+            this.btnCupomAdicionarCliente = new System.Windows.Forms.Button();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.lblResultadoCupomCliente = new System.Windows.Forms.Label();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.lblCupomDesconto = new System.Windows.Forms.Label();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.lblCupomTroco = new System.Windows.Forms.Label();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.btnCupomAtualizar = new System.Windows.Forms.Button();
+            this.btnCupomalteraItem = new System.Windows.Forms.Button();
+            this.btnCupomExcluirItem = new System.Windows.Forms.Button();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.lblCupomTotalQuantItem = new System.Windows.Forms.Label();
+            this.dgvCupomItem = new System.Windows.Forms.DataGridView();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.btnCupomAndamento = new System.Windows.Forms.Button();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.txtTermoConsultaCupom = new System.Windows.Forms.TextBox();
+            this.cmbCupomLocalConsulta = new System.Windows.Forms.ComboBox();
+            this.btnCupomFiltraLista = new System.Windows.Forms.Button();
+            this.cmbCupomOperacao = new System.Windows.Forms.ComboBox();
+            this.cmbCupomOrdenConsulta = new System.Windows.Forms.ComboBox();
+            this.btnCupomResumo = new System.Windows.Forms.Button();
+            this.dgvListaCupom = new System.Windows.Forms.DataGridView();
             this.groupBox7.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -221,9 +242,18 @@
             this.tabPage10.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage13.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).BeginInit();
+            this.groupBox30.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewUsuario
@@ -1498,8 +1528,8 @@
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.button5);
-            this.tabPage10.Controls.Add(this.button1);
+            this.tabPage10.Controls.Add(this.btnCupomFechar);
+            this.tabPage10.Controls.Add(this.btnCupomIniciaNovoCupom);
             this.tabPage10.Controls.Add(this.tabControl5);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
@@ -1509,54 +1539,125 @@
             this.tabPage10.Text = "Ponto De Venda";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCupomFechar
             // 
-            this.button1.Location = new System.Drawing.Point(8, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Inicia Novo Cupom Meu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCupomFechar.Location = new System.Drawing.Point(221, 6);
+            this.btnCupomFechar.Name = "btnCupomFechar";
+            this.btnCupomFechar.Size = new System.Drawing.Size(207, 34);
+            this.btnCupomFechar.TabIndex = 5;
+            this.btnCupomFechar.Text = "Fechar Cupom";
+            this.btnCupomFechar.UseVisualStyleBackColor = true;
+            this.btnCupomFechar.Click += new System.EventHandler(this.btnCupomFechar_Click);
+            // 
+            // btnCupomIniciaNovoCupom
+            // 
+            this.btnCupomIniciaNovoCupom.Location = new System.Drawing.Point(8, 6);
+            this.btnCupomIniciaNovoCupom.Name = "btnCupomIniciaNovoCupom";
+            this.btnCupomIniciaNovoCupom.Size = new System.Drawing.Size(207, 34);
+            this.btnCupomIniciaNovoCupom.TabIndex = 4;
+            this.btnCupomIniciaNovoCupom.Text = "Inicia Novo Cupom";
+            this.btnCupomIniciaNovoCupom.UseVisualStyleBackColor = true;
+            this.btnCupomIniciaNovoCupom.Click += new System.EventHandler(this.btnCupomIniciaNovoCupom_Click);
             // 
             // tabControl5
             // 
             this.tabControl5.Controls.Add(this.tabPage13);
             this.tabControl5.Controls.Add(this.tabPage14);
-            this.tabControl5.Location = new System.Drawing.Point(26, 92);
+            this.tabControl5.Location = new System.Drawing.Point(8, 92);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(585, 315);
+            this.tabControl5.Size = new System.Drawing.Size(632, 326);
             this.tabControl5.TabIndex = 3;
             // 
             // tabPage13
             // 
+            this.tabPage13.Controls.Add(this.groupBox28);
+            this.tabPage13.Controls.Add(this.groupBox27);
+            this.tabPage13.Controls.Add(this.groupBox26);
             this.tabPage13.Controls.Add(this.groupBox25);
             this.tabPage13.Controls.Add(this.groupBox24);
-            this.tabPage13.Controls.Add(this.button4);
-            this.tabPage13.Controls.Add(this.button3);
-            this.tabPage13.Controls.Add(this.button2);
+            this.tabPage13.Controls.Add(this.btnCupomPagar);
+            this.tabPage13.Controls.Add(this.btnCupomAdicionarProduto);
+            this.tabPage13.Controls.Add(this.btnCupomAdicionarCliente);
             this.tabPage13.Controls.Add(this.groupBox23);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(577, 289);
+            this.tabPage13.Size = new System.Drawing.Size(624, 300);
             this.tabPage13.TabIndex = 0;
-            this.tabPage13.Text = "Meu Cupom";
+            this.tabPage13.Text = "Cupom";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // tabPage14
+            // groupBox25
             // 
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(577, 289);
-            this.tabPage14.TabIndex = 1;
-            this.tabPage14.Text = "Listagem Cupom";
-            this.tabPage14.UseVisualStyleBackColor = true;
+            this.groupBox25.Controls.Add(this.lblCupomTotalRecebido);
+            this.groupBox25.Location = new System.Drawing.Point(445, 130);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(123, 43);
+            this.groupBox25.TabIndex = 2;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Total Recebido";
+            // 
+            // lblCupomTotalRecebido
+            // 
+            this.lblCupomTotalRecebido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTotalRecebido.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTotalRecebido.Name = "lblCupomTotalRecebido";
+            this.lblCupomTotalRecebido.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomTotalRecebido.TabIndex = 0;
+            this.lblCupomTotalRecebido.Text = "R$ {0}";
+            this.lblCupomTotalRecebido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.lblCupomTotal);
+            this.groupBox24.Location = new System.Drawing.Point(445, 81);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(123, 43);
+            this.groupBox24.TabIndex = 1;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Total Cupom";
+            // 
+            // lblCupomTotal
+            // 
+            this.lblCupomTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTotal.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTotal.Name = "lblCupomTotal";
+            this.lblCupomTotal.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomTotal.TabIndex = 0;
+            this.lblCupomTotal.Text = "R$ {0}";
+            this.lblCupomTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCupomPagar
+            // 
+            this.btnCupomPagar.Location = new System.Drawing.Point(474, 12);
+            this.btnCupomPagar.Name = "btnCupomPagar";
+            this.btnCupomPagar.Size = new System.Drawing.Size(100, 37);
+            this.btnCupomPagar.TabIndex = 3;
+            this.btnCupomPagar.Text = "Pagar";
+            this.btnCupomPagar.UseVisualStyleBackColor = true;
+            // 
+            // btnCupomAdicionarProduto
+            // 
+            this.btnCupomAdicionarProduto.Location = new System.Drawing.Point(357, 12);
+            this.btnCupomAdicionarProduto.Name = "btnCupomAdicionarProduto";
+            this.btnCupomAdicionarProduto.Size = new System.Drawing.Size(111, 37);
+            this.btnCupomAdicionarProduto.TabIndex = 2;
+            this.btnCupomAdicionarProduto.Text = "Adicionar Produto";
+            this.btnCupomAdicionarProduto.UseVisualStyleBackColor = true;
+            // 
+            // btnCupomAdicionarCliente
+            // 
+            this.btnCupomAdicionarCliente.Location = new System.Drawing.Point(240, 12);
+            this.btnCupomAdicionarCliente.Name = "btnCupomAdicionarCliente";
+            this.btnCupomAdicionarCliente.Size = new System.Drawing.Size(111, 37);
+            this.btnCupomAdicionarCliente.TabIndex = 1;
+            this.btnCupomAdicionarCliente.Text = "Adicionar Cliente";
+            this.btnCupomAdicionarCliente.UseVisualStyleBackColor = true;
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.label1);
+            this.groupBox23.Controls.Add(this.lblResultadoCupomCliente);
             this.groupBox23.Location = new System.Drawing.Point(6, 6);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(228, 43);
@@ -1564,91 +1665,236 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Cliente";
             // 
-            // label1
+            // lblResultadoCupomCliente
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Resultado";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblResultadoCupomCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResultadoCupomCliente.Location = new System.Drawing.Point(3, 16);
+            this.lblResultadoCupomCliente.Name = "lblResultadoCupomCliente";
+            this.lblResultadoCupomCliente.Size = new System.Drawing.Size(222, 24);
+            this.lblResultadoCupomCliente.TabIndex = 0;
+            this.lblResultadoCupomCliente.Text = "Resultado";
+            this.lblResultadoCupomCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // tabPage14
             // 
-            this.button2.Location = new System.Drawing.Point(240, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Adicionar Cliente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tabPage14.Controls.Add(this.dgvListaCupom);
+            this.tabPage14.Controls.Add(this.groupBox30);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(624, 300);
+            this.tabPage14.TabIndex = 1;
+            this.tabPage14.Text = "Listagem Cupom";
+            this.tabPage14.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // groupBox26
             // 
-            this.button3.Location = new System.Drawing.Point(357, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Adicionar Produto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.groupBox26.Controls.Add(this.lblCupomDesconto);
+            this.groupBox26.Location = new System.Drawing.Point(442, 179);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(123, 43);
+            this.groupBox26.TabIndex = 3;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Desconto";
             // 
-            // button4
+            // lblCupomDesconto
             // 
-            this.button4.Location = new System.Drawing.Point(474, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 37);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Pagar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.lblCupomDesconto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomDesconto.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomDesconto.Name = "lblCupomDesconto";
+            this.lblCupomDesconto.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomDesconto.TabIndex = 0;
+            this.lblCupomDesconto.Text = "R$ {0}";
+            this.lblCupomDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // groupBox27
             // 
-            this.button5.Location = new System.Drawing.Point(221, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(207, 34);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Fechar meu Cupom";
-            this.button5.UseVisualStyleBackColor = true;
+            this.groupBox27.Controls.Add(this.lblCupomTroco);
+            this.groupBox27.Location = new System.Drawing.Point(445, 228);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(123, 43);
+            this.groupBox27.TabIndex = 4;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Troco";
             // 
-            // groupBox24
+            // lblCupomTroco
             // 
-            this.groupBox24.Controls.Add(this.label2);
-            this.groupBox24.Location = new System.Drawing.Point(448, 240);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(123, 43);
-            this.groupBox24.TabIndex = 1;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Total Cupom";
+            this.lblCupomTroco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTroco.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTroco.Name = "lblCupomTroco";
+            this.lblCupomTroco.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomTroco.TabIndex = 0;
+            this.lblCupomTroco.Text = "R$ {0}";
+            this.lblCupomTroco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // groupBox28
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "R$ {0}";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox28.Controls.Add(this.dgvCupomItem);
+            this.groupBox28.Controls.Add(this.groupBox29);
+            this.groupBox28.Controls.Add(this.btnCupomExcluirItem);
+            this.groupBox28.Controls.Add(this.btnCupomalteraItem);
+            this.groupBox28.Controls.Add(this.btnCupomAtualizar);
+            this.groupBox28.Location = new System.Drawing.Point(15, 55);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(427, 228);
+            this.groupBox28.TabIndex = 5;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Item Cupom";
             // 
-            // groupBox25
+            // btnCupomAtualizar
             // 
-            this.groupBox25.Controls.Add(this.label3);
-            this.groupBox25.Location = new System.Drawing.Point(448, 191);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(123, 43);
-            this.groupBox25.TabIndex = 2;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Total Cupom";
+            this.btnCupomAtualizar.Location = new System.Drawing.Point(6, 189);
+            this.btnCupomAtualizar.Name = "btnCupomAtualizar";
+            this.btnCupomAtualizar.Size = new System.Drawing.Size(70, 33);
+            this.btnCupomAtualizar.TabIndex = 0;
+            this.btnCupomAtualizar.Text = "Atualizar";
+            this.btnCupomAtualizar.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnCupomalteraItem
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "R$ {0}";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCupomalteraItem.Location = new System.Drawing.Point(82, 189);
+            this.btnCupomalteraItem.Name = "btnCupomalteraItem";
+            this.btnCupomalteraItem.Size = new System.Drawing.Size(70, 33);
+            this.btnCupomalteraItem.TabIndex = 1;
+            this.btnCupomalteraItem.Text = "Alterar";
+            this.btnCupomalteraItem.UseVisualStyleBackColor = true;
+            // 
+            // btnCupomExcluirItem
+            // 
+            this.btnCupomExcluirItem.Location = new System.Drawing.Point(158, 189);
+            this.btnCupomExcluirItem.Name = "btnCupomExcluirItem";
+            this.btnCupomExcluirItem.Size = new System.Drawing.Size(70, 33);
+            this.btnCupomExcluirItem.TabIndex = 2;
+            this.btnCupomExcluirItem.Text = "Excluir";
+            this.btnCupomExcluirItem.UseVisualStyleBackColor = true;
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.lblCupomTotalQuantItem);
+            this.groupBox29.Location = new System.Drawing.Point(334, 186);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox29.Size = new System.Drawing.Size(90, 36);
+            this.groupBox29.TabIndex = 5;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Total Item";
+            // 
+            // lblCupomTotalQuantItem
+            // 
+            this.lblCupomTotalQuantItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTotalQuantItem.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTotalQuantItem.Name = "lblCupomTotalQuantItem";
+            this.lblCupomTotalQuantItem.Size = new System.Drawing.Size(84, 17);
+            this.lblCupomTotalQuantItem.TabIndex = 0;
+            this.lblCupomTotalQuantItem.Text = "{0}";
+            this.lblCupomTotalQuantItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgvCupomItem
+            // 
+            this.dgvCupomItem.AllowUserToAddRows = false;
+            this.dgvCupomItem.AllowUserToDeleteRows = false;
+            this.dgvCupomItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCupomItem.Location = new System.Drawing.Point(10, 22);
+            this.dgvCupomItem.Name = "dgvCupomItem";
+            this.dgvCupomItem.ReadOnly = true;
+            this.dgvCupomItem.Size = new System.Drawing.Size(407, 164);
+            this.dgvCupomItem.TabIndex = 6;
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.btnCupomResumo);
+            this.groupBox30.Controls.Add(this.btnCupomAndamento);
+            this.groupBox30.Controls.Add(this.groupBox31);
+            this.groupBox30.Controls.Add(this.cmbCupomLocalConsulta);
+            this.groupBox30.Controls.Add(this.btnCupomFiltraLista);
+            this.groupBox30.Controls.Add(this.cmbCupomOperacao);
+            this.groupBox30.Controls.Add(this.cmbCupomOrdenConsulta);
+            this.groupBox30.Location = new System.Drawing.Point(6, 6);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(612, 103);
+            this.groupBox30.TabIndex = 7;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Filtrar";
+            // 
+            // btnCupomAndamento
+            // 
+            this.btnCupomAndamento.Location = new System.Drawing.Point(477, 19);
+            this.btnCupomAndamento.Name = "btnCupomAndamento";
+            this.btnCupomAndamento.Size = new System.Drawing.Size(128, 32);
+            this.btnCupomAndamento.TabIndex = 7;
+            this.btnCupomAndamento.Text = "Andamento";
+            this.btnCupomAndamento.UseVisualStyleBackColor = true;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.txtTermoConsultaCupom);
+            this.groupBox31.Location = new System.Drawing.Point(6, 46);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(465, 48);
+            this.groupBox31.TabIndex = 4;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Termo";
+            // 
+            // txtTermoConsultaCupom
+            // 
+            this.txtTermoConsultaCupom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTermoConsultaCupom.Location = new System.Drawing.Point(3, 16);
+            this.txtTermoConsultaCupom.Name = "txtTermoConsultaCupom";
+            this.txtTermoConsultaCupom.Size = new System.Drawing.Size(459, 20);
+            this.txtTermoConsultaCupom.TabIndex = 0;
+            // 
+            // cmbCupomLocalConsulta
+            // 
+            this.cmbCupomLocalConsulta.FormattingEnabled = true;
+            this.cmbCupomLocalConsulta.Location = new System.Drawing.Point(131, 18);
+            this.cmbCupomLocalConsulta.Name = "cmbCupomLocalConsulta";
+            this.cmbCupomLocalConsulta.Size = new System.Drawing.Size(121, 21);
+            this.cmbCupomLocalConsulta.TabIndex = 3;
+            this.cmbCupomLocalConsulta.Text = "Local";
+            // 
+            // btnCupomFiltraLista
+            // 
+            this.btnCupomFiltraLista.Location = new System.Drawing.Point(395, 18);
+            this.btnCupomFiltraLista.Name = "btnCupomFiltraLista";
+            this.btnCupomFiltraLista.Size = new System.Drawing.Size(76, 21);
+            this.btnCupomFiltraLista.TabIndex = 2;
+            this.btnCupomFiltraLista.Text = "Filtrar";
+            this.btnCupomFiltraLista.UseVisualStyleBackColor = true;
+            // 
+            // cmbCupomOperacao
+            // 
+            this.cmbCupomOperacao.FormattingEnabled = true;
+            this.cmbCupomOperacao.Location = new System.Drawing.Point(6, 19);
+            this.cmbCupomOperacao.Name = "cmbCupomOperacao";
+            this.cmbCupomOperacao.Size = new System.Drawing.Size(121, 21);
+            this.cmbCupomOperacao.TabIndex = 1;
+            this.cmbCupomOperacao.Text = "Operacao";
+            // 
+            // cmbCupomOrdenConsulta
+            // 
+            this.cmbCupomOrdenConsulta.FormattingEnabled = true;
+            this.cmbCupomOrdenConsulta.Location = new System.Drawing.Point(258, 18);
+            this.cmbCupomOrdenConsulta.Name = "cmbCupomOrdenConsulta";
+            this.cmbCupomOrdenConsulta.Size = new System.Drawing.Size(121, 21);
+            this.cmbCupomOrdenConsulta.TabIndex = 0;
+            this.cmbCupomOrdenConsulta.Text = "Ordenar Por";
+            // 
+            // btnCupomResumo
+            // 
+            this.btnCupomResumo.Location = new System.Drawing.Point(478, 57);
+            this.btnCupomResumo.Name = "btnCupomResumo";
+            this.btnCupomResumo.Size = new System.Drawing.Size(128, 32);
+            this.btnCupomResumo.TabIndex = 8;
+            this.btnCupomResumo.Text = "Resumo";
+            this.btnCupomResumo.UseVisualStyleBackColor = true;
+            // 
+            // dgvListaCupom
+            // 
+            this.dgvListaCupom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaCupom.Location = new System.Drawing.Point(6, 106);
+            this.dgvListaCupom.Name = "dgvListaCupom";
+            this.dgvListaCupom.Size = new System.Drawing.Size(611, 188);
+            this.dgvListaCupom.TabIndex = 8;
             // 
             // FormTeste
             // 
@@ -1714,9 +1960,19 @@
             this.tabPage10.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox24.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox23.ResumeLayout(false);
+            this.tabPage14.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox29.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).EndInit();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox31.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1753,7 +2009,7 @@
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCupomIniciaNovoCupom;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.TabPage tabPage14;
@@ -1857,15 +2113,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource iCaixaBindingSource;
         private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCupomAdicionarCliente;
+        private System.Windows.Forms.Label lblResultadoCupomCliente;
+        private System.Windows.Forms.Button btnCupomFechar;
         private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCupomTotalRecebido;
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblCupomTotal;
+        private System.Windows.Forms.Button btnCupomPagar;
+        private System.Windows.Forms.Button btnCupomAdicionarProduto;
+        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.Label lblCupomTotalQuantItem;
+        private System.Windows.Forms.Button btnCupomExcluirItem;
+        private System.Windows.Forms.Button btnCupomalteraItem;
+        private System.Windows.Forms.Button btnCupomAtualizar;
+        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.Label lblCupomTroco;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.Label lblCupomDesconto;
+        private System.Windows.Forms.DataGridView dgvCupomItem;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.Button btnCupomResumo;
+        private System.Windows.Forms.Button btnCupomAndamento;
+        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.TextBox txtTermoConsultaCupom;
+        private System.Windows.Forms.ComboBox cmbCupomLocalConsulta;
+        private System.Windows.Forms.Button btnCupomFiltraLista;
+        private System.Windows.Forms.ComboBox cmbCupomOperacao;
+        private System.Windows.Forms.ComboBox cmbCupomOrdenConsulta;
+        private System.Windows.Forms.DataGridView dgvListaCupom;
     }
 }
 

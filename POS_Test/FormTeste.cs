@@ -78,17 +78,6 @@ namespace POS_Test
             caixaRecebimento.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
             ExibicaoAcao(caixaRecebimento);
         }
-
-        private void btnNewCupom_Click(object sender, EventArgs e)
-        {
-
-            View.CupomNovo cupomNovo = new View.CupomNovo();
-            // cupomNovo.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
-            ExibicaoAcao(cupomNovo);
-        }
-
-
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (Program.ObjHope.Usuario.Autenticado(out string MsgResult))
@@ -284,6 +273,18 @@ namespace POS_Test
             {
                 MessageBox.Show(msgresult);
             }
+        }
+
+        private void btnCupomIniciaNovoCupom_Click(object sender, EventArgs e)
+        {
+            bool vinicia = Program.ObjHope.Cupom.NovoRegistro(out string msg);
+            MessageBox.Show(msg);
+        }
+
+        private void btnCupomFechar_Click(object sender, EventArgs e)
+        {
+            bool vinicia = Program.ObjHope.Cupom.FecharRegistro(out string msg);
+            MessageBox.Show(msg);
         }
     }
 }

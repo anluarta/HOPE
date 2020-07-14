@@ -166,17 +166,23 @@
     <Compile Include="View\ClienteNovo.Designer.cs">
       <DependentUpon>ClienteNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CupomList.cs">
+    <Compile Include="View\CupomCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\CupomList.Designer.cs">
-      <DependentUpon>CupomList.cs</DependentUpon>
+    <Compile Include="View\CupomCliente.Designer.cs">
+      <DependentUpon>CupomCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CupomNovo.cs">
+    <Compile Include="View\CupomPagar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\CupomNovo.Designer.cs">
-      <DependentUpon>CupomNovo.cs</DependentUpon>
+    <Compile Include="View\CupomPagar.Designer.cs">
+      <DependentUpon>CupomPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CupomProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CupomProduto.Designer.cs">
+      <DependentUpon>CupomProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ProdutoAlterar.cs">
       <SubType>UserControl</SubType>
@@ -219,36 +225,6 @@
     </Compile>
     <Compile Include="View\UsuarioAlteraRegistro.Designer.cs">
       <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\VendaCliente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\VendaCliente.Designer.cs">
-      <DependentUpon>VendaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\VendaCupom.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\VendaCupom.Designer.cs">
-      <DependentUpon>VendaCupom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\VendaFechado.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\VendaFechado.Designer.cs">
-      <DependentUpon>VendaFechado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\VendaPagar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\VendaPagar.Designer.cs">
-      <DependentUpon>VendaPagar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\VendaTabela.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\VendaTabela.Designer.cs">
-      <DependentUpon>VendaTabela.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormTeste.resx">
       <DependentUpon>FormTeste.cs</DependentUpon>
@@ -293,9 +269,6 @@
     <EmbeddedResource Include="View\ClienteNovo.resx">
       <DependentUpon>ClienteNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CupomList.resx">
-      <DependentUpon>CupomList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ProdutoAlterar.resx">
       <DependentUpon>ProdutoAlterar.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,12 +289,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UsuarioNovoRegistro.resx">
       <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\VendaCupom.resx">
-      <DependentUpon>VendaCupom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\VendaTabela.resx">
-      <DependentUpon>VendaTabela.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Hope.Entidade.ICaixa.datasource" />

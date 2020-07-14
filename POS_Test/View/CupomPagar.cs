@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS_Test.View
 {
-    public partial class VendaTabela : UserControl
+    public partial class CupomPagar : UserControl
     {
-        public VendaTabela()
+        public CupomPagar()
         {
             InitializeComponent();
         }

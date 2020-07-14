@@ -1,6 +1,6 @@
 ﻿namespace POS_Test.View
 {
-    partial class CupomNovo
+    partial class CupomCliente
     {
         /// <summary> 
         /// Variável de designer necessária.
