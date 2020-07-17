@@ -29,9 +29,79 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.GroupBox groupBox10;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTeste));
+            System.Windows.Forms.GroupBox groupBox8;
+            this.tabControlCRUD = new System.Windows.Forms.TabControl();
+            this.tpageListaUsuario = new System.Windows.Forms.TabPage();
+            this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorUsuario = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAlterarUsuario = new System.Windows.Forms.ToolStripButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.cmbCondicaoConsultaUsuario = new System.Windows.Forms.ComboBox();
+            this.numUsuarioLimitFiltro = new System.Windows.Forms.NumericUpDown();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.txtTermoUsuario = new System.Windows.Forms.TextBox();
+            this.cmbColunaConsultaUsuario = new System.Windows.Forms.ComboBox();
+            this.btnFiltarUsuario = new System.Windows.Forms.Button();
+            this.cmbComandoConsultaUsuar = new System.Windows.Forms.ComboBox();
+            this.cmbOrdenConsultaUsuario = new System.Windows.Forms.ComboBox();
+            this.tpageListaCliente = new System.Windows.Forms.TabPage();
+            this.dgvListaCliente = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorCliente = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAlteraCliente = new System.Windows.Forms.ToolStripButton();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.cmbCondicaoConsultaCliente = new System.Windows.Forms.ComboBox();
+            this.numLimitConsultaCliente = new System.Windows.Forms.NumericUpDown();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.txtTermoCliente = new System.Windows.Forms.TextBox();
+            this.cmbColunaConsultaCliente = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cmbComandoConsualtaCliente = new System.Windows.Forms.ComboBox();
+            this.cmbOrdenConsultaCliente = new System.Windows.Forms.ComboBox();
+            this.tpageListaProduto = new System.Windows.Forms.TabPage();
+            this.dgvListaProduto = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorProduto = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAlteraProduto = new System.Windows.Forms.ToolStripButton();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.cmbCondicaoConsultaPRoduto = new System.Windows.Forms.ComboBox();
+            this.numLimitConsultaProduto = new System.Windows.Forms.NumericUpDown();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.txtTermoProduto = new System.Windows.Forms.TextBox();
+            this.cmbColunaConsultaProduto = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cmbComandoConsultaProduto = new System.Windows.Forms.ComboBox();
+            this.cmbOrdenConsultaProduto = new System.Windows.Forms.ComboBox();
             this.btnNewUsuario = new System.Windows.Forms.Button();
-            this.btnNewCliente = new System.Windows.Forms.Button();
             this.btnNewProduto = new System.Windows.Forms.Button();
+            this.btnNewCliente = new System.Windows.Forms.Button();
             this.btnRecebimento = new System.Windows.Forms.Button();
             this.btnIniciaMeuCaixa = new System.Windows.Forms.Button();
             this.btnReforco = new System.Windows.Forms.Button();
@@ -39,86 +109,18 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbllogin = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabControlResumo = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tpageListaUsuario = new System.Windows.Forms.TabPage();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.btnAlterarUsuario = new System.Windows.Forms.Button();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.txtTermoUsuario = new System.Windows.Forms.TextBox();
-            this.cmbLocalConsultaUsuario = new System.Windows.Forms.ComboBox();
-            this.btnFiltarUsuario = new System.Windows.Forms.Button();
-            this.cmboperacaoConsultaUsuar = new System.Windows.Forms.ComboBox();
-            this.cmbOrdenConsultaUsuario = new System.Windows.Forms.ComboBox();
-            this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
-            this.iDUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tpageListaCliente = new System.Windows.Forms.TabPage();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.btnAlterarClien = new System.Windows.Forms.Button();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.txtTermoClient = new System.Windows.Forms.TextBox();
-            this.cmbLocalConsultaClien = new System.Windows.Forms.ComboBox();
-            this.btnFiltraCliente = new System.Windows.Forms.Button();
-            this.cmbOperacaoConsultaClient = new System.Windows.Forms.ComboBox();
-            this.cmbOrdenConsultaClient = new System.Windows.Forms.ComboBox();
-            this.dgvListaCliente = new System.Windows.Forms.DataGridView();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornecedorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cpfCnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apelidoFantasiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logradouroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.municipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contaClienteDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.limiteCupomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.limiteMensalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semanaVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoVemcimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tpageListaProduto = new System.Windows.Forms.TabPage();
-            this.dgvListaProduto = new System.Windows.Forms.DataGridView();
-            this.iDProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.txtTermoCultaProd = new System.Windows.Forms.TextBox();
-            this.btnAlterarProduto = new System.Windows.Forms.Button();
-            this.cmbLocalConsultaProd = new System.Windows.Forms.ComboBox();
-            this.btnFiltraProduto = new System.Windows.Forms.Button();
-            this.cmbOperacaConsultaProd = new System.Windows.Forms.ComboBox();
-            this.cmbOrdenConsultaprod = new System.Windows.Forms.ComboBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageCRUD = new System.Windows.Forms.TabPage();
+            this.tabPageFuncaoOperacao = new System.Windows.Forms.TabPage();
+            this.tabPageCaixa = new System.Windows.Forms.TabPage();
             this.btnEnceraMeuCaixa = new System.Windows.Forms.Button();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabControlCaixa = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.lblresultmeucaixa = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
@@ -146,23 +148,41 @@
             this.lbltotRecebimento = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.dgvListaCaixa = new System.Windows.Forms.DataGridView();
-            this.iDCaixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aberturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iCaixaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCaixa = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnVisualizarRegistroCaixa = new System.Windows.Forms.ToolStripButton();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnDetalheCaixaSelecionado = new System.Windows.Forms.Button();
+            this.cmbCondicaoConsultaCaixa = new System.Windows.Forms.ComboBox();
+            this.numLimitConsultaCaixa = new System.Windows.Forms.NumericUpDown();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.txtTermoCaixa = new System.Windows.Forms.TextBox();
-            this.cmbLocalConsultaCaixa = new System.Windows.Forms.ComboBox();
-            this.btnFiltarCaixa = new System.Windows.Forms.Button();
-            this.cmbOperacaoConsultaCaixa = new System.Windows.Forms.ComboBox();
-            this.cmbOrdenarConsultaCaixa = new System.Windows.Forms.ComboBox();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.cmbColunaConsultaCaixa = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cmbComandoConsultaCaixa = new System.Windows.Forms.ComboBox();
+            this.cmbOrdenConusltaCaixa = new System.Windows.Forms.ComboBox();
+            this.tabPagePDV = new System.Windows.Forms.TabPage();
             this.btnCupomFechar = new System.Windows.Forms.Button();
             this.btnCupomIniciaNovoCupom = new System.Windows.Forms.Button();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabControlPDV = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.dgvCupomItem = new System.Windows.Forms.DataGridView();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.lblCupomTotalQuantItem = new System.Windows.Forms.Label();
+            this.btnCupomExcluirItem = new System.Windows.Forms.Button();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.lblCupomTroco = new System.Windows.Forms.Label();
+            this.btnCupomalteraItem = new System.Windows.Forms.Button();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.lblCupomDesconto = new System.Windows.Forms.Label();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.lblCupomTotalRecebido = new System.Windows.Forms.Label();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
@@ -173,55 +193,117 @@
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.lblResultadoCupomCliente = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.lblCupomDesconto = new System.Windows.Forms.Label();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTroco = new System.Windows.Forms.Label();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.btnCupomAtualizar = new System.Windows.Forms.Button();
-            this.btnCupomalteraItem = new System.Windows.Forms.Button();
-            this.btnCupomExcluirItem = new System.Windows.Forms.Button();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTotalQuantItem = new System.Windows.Forms.Label();
-            this.dgvCupomItem = new System.Windows.Forms.DataGridView();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.btnCupomAndamento = new System.Windows.Forms.Button();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.txtTermoConsultaCupom = new System.Windows.Forms.TextBox();
-            this.cmbCupomLocalConsulta = new System.Windows.Forms.ComboBox();
-            this.btnCupomFiltraLista = new System.Windows.Forms.Button();
-            this.cmbCupomOperacao = new System.Windows.Forms.ComboBox();
-            this.cmbCupomOrdenConsulta = new System.Windows.Forms.ComboBox();
-            this.btnCupomResumo = new System.Windows.Forms.Button();
             this.dgvListaCupom = new System.Windows.Forms.DataGridView();
-            this.groupBox7.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.tabControl3.SuspendLayout();
+            this.bindingNavigatorCupom = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnVisualizarRegistroCupom = new System.Windows.Forms.ToolStripButton();
+            this.btnContinuarRegistro = new System.Windows.Forms.ToolStripButton();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.cmbCondicaoConsultaCupom = new System.Windows.Forms.ComboBox();
+            this.numLimitConsultaCupom = new System.Windows.Forms.NumericUpDown();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.txtTermoCupom = new System.Windows.Forms.TextBox();
+            this.cmbColunaConsultaCupom = new System.Windows.Forms.ComboBox();
+            this.btnFiltraCupom = new System.Windows.Forms.Button();
+            this.cmbComandoConsultaCupom = new System.Windows.Forms.ComboBox();
+            this.cmbOrdenConsultaCupom = new System.Windows.Forms.ComboBox();
+            this.iUsuarioEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iClienteEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iProdutoEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iCaixaEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkIDUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iCupomEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDCupomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iCupomItemEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            groupBox10 = new System.Windows.Forms.GroupBox();
+            groupBox8 = new System.Windows.Forms.GroupBox();
+            groupBox10.SuspendLayout();
+            this.tabControlCRUD.SuspendLayout();
             this.tpageListaUsuario.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            this.groupBox22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorUsuario)).BeginInit();
+            this.bindingNavigatorUsuario.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUsuarioLimitFiltro)).BeginInit();
+            this.groupBox22.SuspendLayout();
             this.tpageListaCliente.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCliente)).BeginInit();
+            this.bindingNavigatorCliente.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCliente)).BeginInit();
+            this.groupBox20.SuspendLayout();
             this.tpageListaProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProduto)).BeginInit();
+            this.bindingNavigatorProduto.SuspendLayout();
             this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaProduto)).BeginInit();
             this.groupBox18.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabControl4.SuspendLayout();
+            groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.tabControlPrincipal.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControlResumo.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPageCRUD.SuspendLayout();
+            this.tabPageFuncaoOperacao.SuspendLayout();
+            this.tabPageCaixa.SuspendLayout();
+            this.tabControlCaixa.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -236,25 +318,809 @@
             this.groupBox1.SuspendLayout();
             this.tabPage12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCaixa)).BeginInit();
+            this.bindingNavigatorCaixa.SuspendLayout();
             this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCaixa)).BeginInit();
             this.groupBox16.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabControl5.SuspendLayout();
+            this.tabPagePDV.SuspendLayout();
+            this.tabControlPDV.SuspendLayout();
             this.tabPage13.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).BeginInit();
+            this.groupBox29.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox26.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.tabPage14.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            this.groupBox28.SuspendLayout();
-            this.groupBox29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).BeginInit();
-            this.groupBox30.SuspendLayout();
-            this.groupBox31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCupom)).BeginInit();
+            this.bindingNavigatorCupom.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCupom)).BeginInit();
+            this.groupBox31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioEntcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iClienteEntcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iProdutoEntcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCaixaEntcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCupomEntcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCupomItemEntcBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(this.tabControlCRUD);
+            groupBox10.Location = new System.Drawing.Point(8, 77);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new System.Drawing.Size(637, 341);
+            groupBox10.TabIndex = 7;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "Listagem";
+            // 
+            // tabControlCRUD
+            // 
+            this.tabControlCRUD.Controls.Add(this.tpageListaUsuario);
+            this.tabControlCRUD.Controls.Add(this.tpageListaCliente);
+            this.tabControlCRUD.Controls.Add(this.tpageListaProduto);
+            this.tabControlCRUD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlCRUD.Location = new System.Drawing.Point(3, 16);
+            this.tabControlCRUD.Name = "tabControlCRUD";
+            this.tabControlCRUD.SelectedIndex = 0;
+            this.tabControlCRUD.Size = new System.Drawing.Size(631, 322);
+            this.tabControlCRUD.TabIndex = 0;
+            // 
+            // tpageListaUsuario
+            // 
+            this.tpageListaUsuario.Controls.Add(this.dgvListaUsuario);
+            this.tpageListaUsuario.Controls.Add(this.bindingNavigatorUsuario);
+            this.tpageListaUsuario.Controls.Add(this.groupBox21);
+            this.tpageListaUsuario.Location = new System.Drawing.Point(4, 22);
+            this.tpageListaUsuario.Name = "tpageListaUsuario";
+            this.tpageListaUsuario.Padding = new System.Windows.Forms.Padding(3);
+            this.tpageListaUsuario.Size = new System.Drawing.Size(623, 296);
+            this.tpageListaUsuario.TabIndex = 0;
+            this.tpageListaUsuario.Text = "Usuario";
+            this.tpageListaUsuario.UseVisualStyleBackColor = true;
+            // 
+            // dgvListaUsuario
+            // 
+            this.dgvListaUsuario.AllowUserToAddRows = false;
+            this.dgvListaUsuario.AllowUserToDeleteRows = false;
+            this.dgvListaUsuario.AutoGenerateColumns = false;
+            this.dgvListaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dgvListaUsuario.DataSource = this.iUsuarioEntcBindingSource;
+            this.dgvListaUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaUsuario.Location = new System.Drawing.Point(3, 109);
+            this.dgvListaUsuario.Name = "dgvListaUsuario";
+            this.dgvListaUsuario.ReadOnly = true;
+            this.dgvListaUsuario.RowHeadersVisible = false;
+            this.dgvListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaUsuario.Size = new System.Drawing.Size(617, 159);
+            this.dgvListaUsuario.TabIndex = 5;
+            // 
+            // bindingNavigatorUsuario
+            // 
+            this.bindingNavigatorUsuario.AddNewItem = null;
+            this.bindingNavigatorUsuario.BindingSource = this.iUsuarioEntcBindingSource;
+            this.bindingNavigatorUsuario.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigatorUsuario.DeleteItem = null;
+            this.bindingNavigatorUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorUsuario.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigatorUsuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.btnAlterarUsuario});
+            this.bindingNavigatorUsuario.Location = new System.Drawing.Point(3, 268);
+            this.bindingNavigatorUsuario.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorUsuario.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorUsuario.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorUsuario.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorUsuario.Name = "bindingNavigatorUsuario";
+            this.bindingNavigatorUsuario.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorUsuario.Size = new System.Drawing.Size(617, 25);
+            this.bindingNavigatorUsuario.TabIndex = 5;
+            this.bindingNavigatorUsuario.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnAlterarUsuario
+            // 
+            this.btnAlterarUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAlterarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterarUsuario.Image")));
+            this.btnAlterarUsuario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterarUsuario.Name = "btnAlterarUsuario";
+            this.btnAlterarUsuario.Size = new System.Drawing.Size(88, 22);
+            this.btnAlterarUsuario.Text = "Altera Registro";
+            this.btnAlterarUsuario.Click += new System.EventHandler(this.btnAlterarUsuario_Click);
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.cmbCondicaoConsultaUsuario);
+            this.groupBox21.Controls.Add(this.numUsuarioLimitFiltro);
+            this.groupBox21.Controls.Add(this.groupBox22);
+            this.groupBox21.Controls.Add(this.cmbColunaConsultaUsuario);
+            this.groupBox21.Controls.Add(this.btnFiltarUsuario);
+            this.groupBox21.Controls.Add(this.cmbComandoConsultaUsuar);
+            this.groupBox21.Controls.Add(this.cmbOrdenConsultaUsuario);
+            this.groupBox21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox21.Location = new System.Drawing.Point(3, 3);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(617, 106);
+            this.groupBox21.TabIndex = 6;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Filtrar";
+            // 
+            // cmbCondicaoConsultaUsuario
+            // 
+            this.cmbCondicaoConsultaUsuario.FormattingEnabled = true;
+            this.cmbCondicaoConsultaUsuario.Location = new System.Drawing.Point(235, 20);
+            this.cmbCondicaoConsultaUsuario.Name = "cmbCondicaoConsultaUsuario";
+            this.cmbCondicaoConsultaUsuario.Size = new System.Drawing.Size(92, 21);
+            this.cmbCondicaoConsultaUsuario.TabIndex = 6;
+            this.cmbCondicaoConsultaUsuario.Text = "Condicao";
+            // 
+            // numUsuarioLimitFiltro
+            // 
+            this.numUsuarioLimitFiltro.Location = new System.Drawing.Point(422, 21);
+            this.numUsuarioLimitFiltro.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUsuarioLimitFiltro.Name = "numUsuarioLimitFiltro";
+            this.numUsuarioLimitFiltro.Size = new System.Drawing.Size(53, 20);
+            this.numUsuarioLimitFiltro.TabIndex = 5;
+            this.numUsuarioLimitFiltro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numUsuarioLimitFiltro.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.txtTermoUsuario);
+            this.groupBox22.Location = new System.Drawing.Point(6, 46);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(465, 48);
+            this.groupBox22.TabIndex = 4;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Termo";
+            // 
+            // txtTermoUsuario
+            // 
+            this.txtTermoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTermoUsuario.Location = new System.Drawing.Point(3, 16);
+            this.txtTermoUsuario.Name = "txtTermoUsuario";
+            this.txtTermoUsuario.Size = new System.Drawing.Size(459, 20);
+            this.txtTermoUsuario.TabIndex = 0;
+            // 
+            // cmbColunaConsultaUsuario
+            // 
+            this.cmbColunaConsultaUsuario.FormattingEnabled = true;
+            this.cmbColunaConsultaUsuario.Location = new System.Drawing.Point(137, 19);
+            this.cmbColunaConsultaUsuario.Name = "cmbColunaConsultaUsuario";
+            this.cmbColunaConsultaUsuario.Size = new System.Drawing.Size(92, 21);
+            this.cmbColunaConsultaUsuario.TabIndex = 3;
+            this.cmbColunaConsultaUsuario.Text = "Coluna";
+            // 
+            // btnFiltarUsuario
+            // 
+            this.btnFiltarUsuario.Location = new System.Drawing.Point(474, 55);
+            this.btnFiltarUsuario.Name = "btnFiltarUsuario";
+            this.btnFiltarUsuario.Size = new System.Drawing.Size(137, 32);
+            this.btnFiltarUsuario.TabIndex = 2;
+            this.btnFiltarUsuario.Text = "Filtrar";
+            this.btnFiltarUsuario.UseVisualStyleBackColor = true;
+            this.btnFiltarUsuario.Click += new System.EventHandler(this.btnFiltarUsuario_Click);
+            // 
+            // cmbComandoConsultaUsuar
+            // 
+            this.cmbComandoConsultaUsuar.FormattingEnabled = true;
+            this.cmbComandoConsultaUsuar.Location = new System.Drawing.Point(6, 19);
+            this.cmbComandoConsultaUsuar.Name = "cmbComandoConsultaUsuar";
+            this.cmbComandoConsultaUsuar.Size = new System.Drawing.Size(121, 21);
+            this.cmbComandoConsultaUsuar.TabIndex = 1;
+            this.cmbComandoConsultaUsuar.Text = "Comando Consulta";
+            // 
+            // cmbOrdenConsultaUsuario
+            // 
+            this.cmbOrdenConsultaUsuario.FormattingEnabled = true;
+            this.cmbOrdenConsultaUsuario.Location = new System.Drawing.Point(333, 20);
+            this.cmbOrdenConsultaUsuario.Name = "cmbOrdenConsultaUsuario";
+            this.cmbOrdenConsultaUsuario.Size = new System.Drawing.Size(83, 21);
+            this.cmbOrdenConsultaUsuario.TabIndex = 0;
+            this.cmbOrdenConsultaUsuario.Text = "Ordenar Por";
+            // 
+            // tpageListaCliente
+            // 
+            this.tpageListaCliente.Controls.Add(this.dgvListaCliente);
+            this.tpageListaCliente.Controls.Add(this.bindingNavigatorCliente);
+            this.tpageListaCliente.Controls.Add(this.groupBox19);
+            this.tpageListaCliente.Location = new System.Drawing.Point(4, 22);
+            this.tpageListaCliente.Name = "tpageListaCliente";
+            this.tpageListaCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.tpageListaCliente.Size = new System.Drawing.Size(623, 296);
+            this.tpageListaCliente.TabIndex = 1;
+            this.tpageListaCliente.Text = "Cliente";
+            this.tpageListaCliente.UseVisualStyleBackColor = true;
+            // 
+            // dgvListaCliente
+            // 
+            this.dgvListaCliente.AllowUserToAddRows = false;
+            this.dgvListaCliente.AllowUserToDeleteRows = false;
+            this.dgvListaCliente.AutoGenerateColumns = false;
+            this.dgvListaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewCheckBoxColumn2,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
+            this.dgvListaCliente.DataSource = this.iClienteEntcBindingSource;
+            this.dgvListaCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaCliente.Location = new System.Drawing.Point(3, 109);
+            this.dgvListaCliente.Name = "dgvListaCliente";
+            this.dgvListaCliente.ReadOnly = true;
+            this.dgvListaCliente.RowHeadersVisible = false;
+            this.dgvListaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaCliente.Size = new System.Drawing.Size(617, 159);
+            this.dgvListaCliente.TabIndex = 7;
+            // 
+            // bindingNavigatorCliente
+            // 
+            this.bindingNavigatorCliente.AddNewItem = null;
+            this.bindingNavigatorCliente.BindingSource = this.iClienteEntcBindingSource;
+            this.bindingNavigatorCliente.CountItem = this.toolStripLabel1;
+            this.bindingNavigatorCliente.DeleteItem = null;
+            this.bindingNavigatorCliente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorCliente.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigatorCliente.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator3,
+            this.btnAlteraCliente});
+            this.bindingNavigatorCliente.Location = new System.Drawing.Point(3, 268);
+            this.bindingNavigatorCliente.MoveFirstItem = this.toolStripButton1;
+            this.bindingNavigatorCliente.MoveLastItem = this.toolStripButton4;
+            this.bindingNavigatorCliente.MoveNextItem = this.toolStripButton3;
+            this.bindingNavigatorCliente.MovePreviousItem = this.toolStripButton2;
+            this.bindingNavigatorCliente.Name = "bindingNavigatorCliente";
+            this.bindingNavigatorCliente.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigatorCliente.Size = new System.Drawing.Size(617, 25);
+            this.bindingNavigatorCliente.TabIndex = 8;
+            this.bindingNavigatorCliente.Text = "bindingNavigator2";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel1.Text = "de {0}";
+            this.toolStripLabel1.ToolTipText = "Número total de itens";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Mover primeiro";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Mover anterior";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Posição";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Posição atual";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Mover próximo";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "Mover último";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnAlteraCliente
+            // 
+            this.btnAlteraCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAlteraCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnAlteraCliente.Image")));
+            this.btnAlteraCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlteraCliente.Name = "btnAlteraCliente";
+            this.btnAlteraCliente.Size = new System.Drawing.Size(88, 22);
+            this.btnAlteraCliente.Text = "Altera Registro";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.cmbCondicaoConsultaCliente);
+            this.groupBox19.Controls.Add(this.numLimitConsultaCliente);
+            this.groupBox19.Controls.Add(this.groupBox20);
+            this.groupBox19.Controls.Add(this.cmbColunaConsultaCliente);
+            this.groupBox19.Controls.Add(this.button1);
+            this.groupBox19.Controls.Add(this.cmbComandoConsualtaCliente);
+            this.groupBox19.Controls.Add(this.cmbOrdenConsultaCliente);
+            this.groupBox19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox19.Location = new System.Drawing.Point(3, 3);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(617, 106);
+            this.groupBox19.TabIndex = 9;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Filtrar";
+            // 
+            // cmbCondicaoConsultaCliente
+            // 
+            this.cmbCondicaoConsultaCliente.FormattingEnabled = true;
+            this.cmbCondicaoConsultaCliente.Location = new System.Drawing.Point(235, 20);
+            this.cmbCondicaoConsultaCliente.Name = "cmbCondicaoConsultaCliente";
+            this.cmbCondicaoConsultaCliente.Size = new System.Drawing.Size(92, 21);
+            this.cmbCondicaoConsultaCliente.TabIndex = 6;
+            this.cmbCondicaoConsultaCliente.Text = "Condicao";
+            // 
+            // numLimitConsultaCliente
+            // 
+            this.numLimitConsultaCliente.Location = new System.Drawing.Point(422, 21);
+            this.numLimitConsultaCliente.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLimitConsultaCliente.Name = "numLimitConsultaCliente";
+            this.numLimitConsultaCliente.Size = new System.Drawing.Size(53, 20);
+            this.numLimitConsultaCliente.TabIndex = 5;
+            this.numLimitConsultaCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numLimitConsultaCliente.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.txtTermoCliente);
+            this.groupBox20.Location = new System.Drawing.Point(6, 46);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(465, 48);
+            this.groupBox20.TabIndex = 4;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Termo";
+            // 
+            // txtTermoCliente
+            // 
+            this.txtTermoCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTermoCliente.Location = new System.Drawing.Point(3, 16);
+            this.txtTermoCliente.Name = "txtTermoCliente";
+            this.txtTermoCliente.Size = new System.Drawing.Size(459, 20);
+            this.txtTermoCliente.TabIndex = 0;
+            // 
+            // cmbColunaConsultaCliente
+            // 
+            this.cmbColunaConsultaCliente.FormattingEnabled = true;
+            this.cmbColunaConsultaCliente.Location = new System.Drawing.Point(137, 19);
+            this.cmbColunaConsultaCliente.Name = "cmbColunaConsultaCliente";
+            this.cmbColunaConsultaCliente.Size = new System.Drawing.Size(92, 21);
+            this.cmbColunaConsultaCliente.TabIndex = 3;
+            this.cmbColunaConsultaCliente.Text = "Coluna";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(474, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 32);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cmbComandoConsualtaCliente
+            // 
+            this.cmbComandoConsualtaCliente.FormattingEnabled = true;
+            this.cmbComandoConsualtaCliente.Location = new System.Drawing.Point(6, 19);
+            this.cmbComandoConsualtaCliente.Name = "cmbComandoConsualtaCliente";
+            this.cmbComandoConsualtaCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbComandoConsualtaCliente.TabIndex = 1;
+            this.cmbComandoConsualtaCliente.Text = "Comando Consulta";
+            // 
+            // cmbOrdenConsultaCliente
+            // 
+            this.cmbOrdenConsultaCliente.FormattingEnabled = true;
+            this.cmbOrdenConsultaCliente.Location = new System.Drawing.Point(333, 20);
+            this.cmbOrdenConsultaCliente.Name = "cmbOrdenConsultaCliente";
+            this.cmbOrdenConsultaCliente.Size = new System.Drawing.Size(83, 21);
+            this.cmbOrdenConsultaCliente.TabIndex = 0;
+            this.cmbOrdenConsultaCliente.Text = "Ordenar Por";
+            // 
+            // tpageListaProduto
+            // 
+            this.tpageListaProduto.Controls.Add(this.dgvListaProduto);
+            this.tpageListaProduto.Controls.Add(this.bindingNavigatorProduto);
+            this.tpageListaProduto.Controls.Add(this.groupBox17);
+            this.tpageListaProduto.Location = new System.Drawing.Point(4, 22);
+            this.tpageListaProduto.Name = "tpageListaProduto";
+            this.tpageListaProduto.Padding = new System.Windows.Forms.Padding(3);
+            this.tpageListaProduto.Size = new System.Drawing.Size(623, 296);
+            this.tpageListaProduto.TabIndex = 2;
+            this.tpageListaProduto.Text = "Produto";
+            this.tpageListaProduto.UseVisualStyleBackColor = true;
+            // 
+            // dgvListaProduto
+            // 
+            this.dgvListaProduto.AllowUserToAddRows = false;
+            this.dgvListaProduto.AllowUserToDeleteRows = false;
+            this.dgvListaProduto.AutoGenerateColumns = false;
+            this.dgvListaProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
+            this.dgvListaProduto.DataSource = this.iProdutoEntcBindingSource;
+            this.dgvListaProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaProduto.Location = new System.Drawing.Point(3, 109);
+            this.dgvListaProduto.Name = "dgvListaProduto";
+            this.dgvListaProduto.ReadOnly = true;
+            this.dgvListaProduto.RowHeadersVisible = false;
+            this.dgvListaProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaProduto.Size = new System.Drawing.Size(617, 159);
+            this.dgvListaProduto.TabIndex = 7;
+            // 
+            // bindingNavigatorProduto
+            // 
+            this.bindingNavigatorProduto.AddNewItem = null;
+            this.bindingNavigatorProduto.BindingSource = this.iProdutoEntcBindingSource;
+            this.bindingNavigatorProduto.CountItem = this.toolStripLabel2;
+            this.bindingNavigatorProduto.DeleteItem = null;
+            this.bindingNavigatorProduto.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorProduto.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigatorProduto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton6,
+            this.toolStripButton7,
+            this.toolStripSeparator4,
+            this.toolStripTextBox2,
+            this.toolStripLabel2,
+            this.toolStripSeparator5,
+            this.toolStripButton8,
+            this.toolStripButton9,
+            this.toolStripSeparator6,
+            this.btnAlteraProduto});
+            this.bindingNavigatorProduto.Location = new System.Drawing.Point(3, 268);
+            this.bindingNavigatorProduto.MoveFirstItem = this.toolStripButton6;
+            this.bindingNavigatorProduto.MoveLastItem = this.toolStripButton9;
+            this.bindingNavigatorProduto.MoveNextItem = this.toolStripButton8;
+            this.bindingNavigatorProduto.MovePreviousItem = this.toolStripButton7;
+            this.bindingNavigatorProduto.Name = "bindingNavigatorProduto";
+            this.bindingNavigatorProduto.PositionItem = this.toolStripTextBox2;
+            this.bindingNavigatorProduto.Size = new System.Drawing.Size(617, 25);
+            this.bindingNavigatorProduto.TabIndex = 8;
+            this.bindingNavigatorProduto.Text = "bindingNavigator3";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel2.Text = "de {0}";
+            this.toolStripLabel2.ToolTipText = "Número total de itens";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "Mover primeiro";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "Mover anterior";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.AccessibleName = "Posição";
+            this.toolStripTextBox2.AutoSize = false;
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox2.Text = "0";
+            this.toolStripTextBox2.ToolTipText = "Posição atual";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "Mover próximo";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "Mover último";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnAlteraProduto
+            // 
+            this.btnAlteraProduto.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAlteraProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnAlteraProduto.Image")));
+            this.btnAlteraProduto.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlteraProduto.Name = "btnAlteraProduto";
+            this.btnAlteraProduto.Size = new System.Drawing.Size(88, 22);
+            this.btnAlteraProduto.Text = "Altera Registro";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.cmbCondicaoConsultaPRoduto);
+            this.groupBox17.Controls.Add(this.numLimitConsultaProduto);
+            this.groupBox17.Controls.Add(this.groupBox18);
+            this.groupBox17.Controls.Add(this.cmbColunaConsultaProduto);
+            this.groupBox17.Controls.Add(this.button2);
+            this.groupBox17.Controls.Add(this.cmbComandoConsultaProduto);
+            this.groupBox17.Controls.Add(this.cmbOrdenConsultaProduto);
+            this.groupBox17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox17.Location = new System.Drawing.Point(3, 3);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(617, 106);
+            this.groupBox17.TabIndex = 9;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Filtrar";
+            // 
+            // cmbCondicaoConsultaPRoduto
+            // 
+            this.cmbCondicaoConsultaPRoduto.FormattingEnabled = true;
+            this.cmbCondicaoConsultaPRoduto.Location = new System.Drawing.Point(235, 20);
+            this.cmbCondicaoConsultaPRoduto.Name = "cmbCondicaoConsultaPRoduto";
+            this.cmbCondicaoConsultaPRoduto.Size = new System.Drawing.Size(92, 21);
+            this.cmbCondicaoConsultaPRoduto.TabIndex = 6;
+            this.cmbCondicaoConsultaPRoduto.Text = "Condicao";
+            // 
+            // numLimitConsultaProduto
+            // 
+            this.numLimitConsultaProduto.Location = new System.Drawing.Point(422, 21);
+            this.numLimitConsultaProduto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLimitConsultaProduto.Name = "numLimitConsultaProduto";
+            this.numLimitConsultaProduto.Size = new System.Drawing.Size(53, 20);
+            this.numLimitConsultaProduto.TabIndex = 5;
+            this.numLimitConsultaProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numLimitConsultaProduto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.txtTermoProduto);
+            this.groupBox18.Location = new System.Drawing.Point(6, 46);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(465, 48);
+            this.groupBox18.TabIndex = 4;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Termo";
+            // 
+            // txtTermoProduto
+            // 
+            this.txtTermoProduto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTermoProduto.Location = new System.Drawing.Point(3, 16);
+            this.txtTermoProduto.Name = "txtTermoProduto";
+            this.txtTermoProduto.Size = new System.Drawing.Size(459, 20);
+            this.txtTermoProduto.TabIndex = 0;
+            // 
+            // cmbColunaConsultaProduto
+            // 
+            this.cmbColunaConsultaProduto.FormattingEnabled = true;
+            this.cmbColunaConsultaProduto.Location = new System.Drawing.Point(137, 19);
+            this.cmbColunaConsultaProduto.Name = "cmbColunaConsultaProduto";
+            this.cmbColunaConsultaProduto.Size = new System.Drawing.Size(92, 21);
+            this.cmbColunaConsultaProduto.TabIndex = 3;
+            this.cmbColunaConsultaProduto.Text = "Local";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(474, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 32);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Filtrar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // cmbComandoConsultaProduto
+            // 
+            this.cmbComandoConsultaProduto.FormattingEnabled = true;
+            this.cmbComandoConsultaProduto.Location = new System.Drawing.Point(6, 19);
+            this.cmbComandoConsultaProduto.Name = "cmbComandoConsultaProduto";
+            this.cmbComandoConsultaProduto.Size = new System.Drawing.Size(121, 21);
+            this.cmbComandoConsultaProduto.TabIndex = 1;
+            this.cmbComandoConsultaProduto.Text = "Comando Consulta";
+            // 
+            // cmbOrdenConsultaProduto
+            // 
+            this.cmbOrdenConsultaProduto.FormattingEnabled = true;
+            this.cmbOrdenConsultaProduto.Location = new System.Drawing.Point(333, 20);
+            this.cmbOrdenConsultaProduto.Name = "cmbOrdenConsultaProduto";
+            this.cmbOrdenConsultaProduto.Size = new System.Drawing.Size(83, 21);
+            this.cmbOrdenConsultaProduto.TabIndex = 0;
+            this.cmbOrdenConsultaProduto.Text = "Ordenar Por";
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(this.btnNewUsuario);
+            groupBox8.Controls.Add(this.btnNewProduto);
+            groupBox8.Controls.Add(this.btnNewCliente);
+            groupBox8.Location = new System.Drawing.Point(8, 6);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new System.Drawing.Size(630, 65);
+            groupBox8.TabIndex = 6;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "Cadastra";
             // 
             // btnNewUsuario
             // 
@@ -266,16 +1132,6 @@
             this.btnNewUsuario.UseVisualStyleBackColor = true;
             this.btnNewUsuario.Click += new System.EventHandler(this.btnNewUsuario_Click);
             // 
-            // btnNewCliente
-            // 
-            this.btnNewCliente.Location = new System.Drawing.Point(147, 19);
-            this.btnNewCliente.Name = "btnNewCliente";
-            this.btnNewCliente.Size = new System.Drawing.Size(118, 23);
-            this.btnNewCliente.TabIndex = 0;
-            this.btnNewCliente.Text = "Cadastra Cliente";
-            this.btnNewCliente.UseVisualStyleBackColor = true;
-            this.btnNewCliente.Click += new System.EventHandler(this.btnNewCliente_Click);
-            // 
             // btnNewProduto
             // 
             this.btnNewProduto.Location = new System.Drawing.Point(295, 19);
@@ -285,6 +1141,16 @@
             this.btnNewProduto.Text = "Cadastra Produto";
             this.btnNewProduto.UseVisualStyleBackColor = true;
             this.btnNewProduto.Click += new System.EventHandler(this.btnNewProduto_Click);
+            // 
+            // btnNewCliente
+            // 
+            this.btnNewCliente.Location = new System.Drawing.Point(147, 19);
+            this.btnNewCliente.Name = "btnNewCliente";
+            this.btnNewCliente.Size = new System.Drawing.Size(118, 23);
+            this.btnNewCliente.TabIndex = 0;
+            this.btnNewCliente.Text = "Cadastra Cliente";
+            this.btnNewCliente.UseVisualStyleBackColor = true;
+            this.btnNewCliente.Click += new System.EventHandler(this.btnNewCliente_Click);
             // 
             // btnRecebimento
             // 
@@ -356,23 +1222,23 @@
             this.lbllogin.TabIndex = 0;
             this.lbllogin.Text = "Resultado";
             // 
-            // tabControl1
+            // tabControlPrincipal
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage10);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(656, 450);
-            this.tabControl1.TabIndex = 8;
+            this.tabControlPrincipal.Controls.Add(this.tabPage1);
+            this.tabControlPrincipal.Controls.Add(this.tabPageCRUD);
+            this.tabControlPrincipal.Controls.Add(this.tabPageFuncaoOperacao);
+            this.tabControlPrincipal.Controls.Add(this.tabPageCaixa);
+            this.tabControlPrincipal.Controls.Add(this.tabPagePDV);
+            this.tabControlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.tabControlPrincipal.Name = "tabControlPrincipal";
+            this.tabControlPrincipal.SelectedIndex = 0;
+            this.tabControlPrincipal.Size = new System.Drawing.Size(656, 450);
+            this.tabControlPrincipal.TabIndex = 8;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.tabControl2);
+            this.tabPage1.Controls.Add(this.tabControlResumo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -381,16 +1247,16 @@
             this.tabPage1.Text = "Resumo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // tabControlResumo
             // 
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(642, 418);
-            this.tabControl2.TabIndex = 0;
+            this.tabControlResumo.Controls.Add(this.tabPage5);
+            this.tabControlResumo.Controls.Add(this.tabPage6);
+            this.tabControlResumo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlResumo.Location = new System.Drawing.Point(3, 3);
+            this.tabControlResumo.Name = "tabControlResumo";
+            this.tabControlResumo.SelectedIndex = 0;
+            this.tabControlResumo.Size = new System.Drawing.Size(642, 418);
+            this.tabControlResumo.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -430,671 +1296,45 @@
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "Feito\n-CRUD\n--Usuario,Cliente,Produto\n\nPedente\n-Caixa\n-Cupom\n\n";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox10);
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(648, 424);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "C.R.U.D.";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.tabControl3);
-            this.groupBox10.Location = new System.Drawing.Point(8, 77);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(637, 341);
-            this.groupBox10.TabIndex = 7;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Listagem";
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.Controls.Add(this.tpageListaUsuario);
-            this.tabControl3.Controls.Add(this.tpageListaCliente);
-            this.tabControl3.Controls.Add(this.tpageListaProduto);
-            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(3, 16);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(631, 322);
-            this.tabControl3.TabIndex = 0;
-            // 
-            // tpageListaUsuario
-            // 
-            this.tpageListaUsuario.Controls.Add(this.groupBox21);
-            this.tpageListaUsuario.Controls.Add(this.dgvListaUsuario);
-            this.tpageListaUsuario.Location = new System.Drawing.Point(4, 22);
-            this.tpageListaUsuario.Name = "tpageListaUsuario";
-            this.tpageListaUsuario.Padding = new System.Windows.Forms.Padding(3);
-            this.tpageListaUsuario.Size = new System.Drawing.Size(623, 296);
-            this.tpageListaUsuario.TabIndex = 0;
-            this.tpageListaUsuario.Text = "Usuario";
-            this.tpageListaUsuario.UseVisualStyleBackColor = true;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.btnAlterarUsuario);
-            this.groupBox21.Controls.Add(this.groupBox22);
-            this.groupBox21.Controls.Add(this.cmbLocalConsultaUsuario);
-            this.groupBox21.Controls.Add(this.btnFiltarUsuario);
-            this.groupBox21.Controls.Add(this.cmboperacaoConsultaUsuar);
-            this.groupBox21.Controls.Add(this.cmbOrdenConsultaUsuario);
-            this.groupBox21.Location = new System.Drawing.Point(6, 6);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(611, 106);
-            this.groupBox21.TabIndex = 6;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Filtrar";
-            // 
-            // btnAlterarUsuario
-            // 
-            this.btnAlterarUsuario.Location = new System.Drawing.Point(477, 19);
-            this.btnAlterarUsuario.Name = "btnAlterarUsuario";
-            this.btnAlterarUsuario.Size = new System.Drawing.Size(128, 49);
-            this.btnAlterarUsuario.TabIndex = 7;
-            this.btnAlterarUsuario.Text = "Alterar";
-            this.btnAlterarUsuario.UseVisualStyleBackColor = true;
-            this.btnAlterarUsuario.Click += new System.EventHandler(this.btnAlterarUsuario_Click);
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Controls.Add(this.txtTermoUsuario);
-            this.groupBox22.Location = new System.Drawing.Point(6, 46);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(465, 48);
-            this.groupBox22.TabIndex = 4;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Termo";
-            // 
-            // txtTermoUsuario
-            // 
-            this.txtTermoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTermoUsuario.Location = new System.Drawing.Point(3, 16);
-            this.txtTermoUsuario.Name = "txtTermoUsuario";
-            this.txtTermoUsuario.Size = new System.Drawing.Size(459, 20);
-            this.txtTermoUsuario.TabIndex = 0;
-            // 
-            // cmbLocalConsultaUsuario
-            // 
-            this.cmbLocalConsultaUsuario.FormattingEnabled = true;
-            this.cmbLocalConsultaUsuario.Location = new System.Drawing.Point(131, 18);
-            this.cmbLocalConsultaUsuario.Name = "cmbLocalConsultaUsuario";
-            this.cmbLocalConsultaUsuario.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalConsultaUsuario.TabIndex = 3;
-            this.cmbLocalConsultaUsuario.Text = "Local";
-            // 
-            // btnFiltarUsuario
-            // 
-            this.btnFiltarUsuario.Location = new System.Drawing.Point(395, 18);
-            this.btnFiltarUsuario.Name = "btnFiltarUsuario";
-            this.btnFiltarUsuario.Size = new System.Drawing.Size(76, 21);
-            this.btnFiltarUsuario.TabIndex = 2;
-            this.btnFiltarUsuario.Text = "Filtrar";
-            this.btnFiltarUsuario.UseVisualStyleBackColor = true;
-            this.btnFiltarUsuario.Click += new System.EventHandler(this.btnFiltarUsuario_Click);
-            // 
-            // cmboperacaoConsultaUsuar
-            // 
-            this.cmboperacaoConsultaUsuar.FormattingEnabled = true;
-            this.cmboperacaoConsultaUsuar.Location = new System.Drawing.Point(6, 19);
-            this.cmboperacaoConsultaUsuar.Name = "cmboperacaoConsultaUsuar";
-            this.cmboperacaoConsultaUsuar.Size = new System.Drawing.Size(121, 21);
-            this.cmboperacaoConsultaUsuar.TabIndex = 1;
-            this.cmboperacaoConsultaUsuar.Text = "Operacao";
-            // 
-            // cmbOrdenConsultaUsuario
-            // 
-            this.cmbOrdenConsultaUsuario.FormattingEnabled = true;
-            this.cmbOrdenConsultaUsuario.Location = new System.Drawing.Point(258, 18);
-            this.cmbOrdenConsultaUsuario.Name = "cmbOrdenConsultaUsuario";
-            this.cmbOrdenConsultaUsuario.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrdenConsultaUsuario.TabIndex = 0;
-            this.cmbOrdenConsultaUsuario.Text = "Ordenar Por";
-            // 
-            // dgvListaUsuario
-            // 
-            this.dgvListaUsuario.AllowUserToAddRows = false;
-            this.dgvListaUsuario.AllowUserToDeleteRows = false;
-            this.dgvListaUsuario.AutoGenerateColumns = false;
-            this.dgvListaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDUsuarioDataGridViewTextBoxColumn,
-            this.usuarioNomeDataGridViewTextBoxColumn,
-            this.senhaDataGridViewTextBoxColumn,
-            this.nomeCompletoDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.dgvListaUsuario.DataSource = this.iUsuarioBindingSource;
-            this.dgvListaUsuario.Location = new System.Drawing.Point(6, 118);
-            this.dgvListaUsuario.Name = "dgvListaUsuario";
-            this.dgvListaUsuario.ReadOnly = true;
-            this.dgvListaUsuario.RowHeadersVisible = false;
-            this.dgvListaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaUsuario.Size = new System.Drawing.Size(611, 172);
-            this.dgvListaUsuario.TabIndex = 5;
-            // 
-            // iDUsuarioDataGridViewTextBoxColumn
-            // 
-            this.iDUsuarioDataGridViewTextBoxColumn.DataPropertyName = "ID_Usuario";
-            this.iDUsuarioDataGridViewTextBoxColumn.HeaderText = "ID_Usuario";
-            this.iDUsuarioDataGridViewTextBoxColumn.Name = "iDUsuarioDataGridViewTextBoxColumn";
-            this.iDUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioNomeDataGridViewTextBoxColumn
-            // 
-            this.usuarioNomeDataGridViewTextBoxColumn.DataPropertyName = "Usuario_Nome";
-            this.usuarioNomeDataGridViewTextBoxColumn.HeaderText = "Usuario_Nome";
-            this.usuarioNomeDataGridViewTextBoxColumn.Name = "usuarioNomeDataGridViewTextBoxColumn";
-            this.usuarioNomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // senhaDataGridViewTextBoxColumn
-            // 
-            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "Senha";
-            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
-            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
-            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeCompletoDataGridViewTextBoxColumn
-            // 
-            this.nomeCompletoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.HeaderText = "Nome_Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.Name = "nomeCompletoDataGridViewTextBoxColumn";
-            this.nomeCompletoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iUsuarioBindingSource
-            // 
-            this.iUsuarioBindingSource.DataSource = typeof(Hope.Entidade.IUsuario);
-            // 
-            // tpageListaCliente
-            // 
-            this.tpageListaCliente.Controls.Add(this.groupBox19);
-            this.tpageListaCliente.Controls.Add(this.dgvListaCliente);
-            this.tpageListaCliente.Location = new System.Drawing.Point(4, 22);
-            this.tpageListaCliente.Name = "tpageListaCliente";
-            this.tpageListaCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tpageListaCliente.Size = new System.Drawing.Size(623, 296);
-            this.tpageListaCliente.TabIndex = 1;
-            this.tpageListaCliente.Text = "Cliente";
-            this.tpageListaCliente.UseVisualStyleBackColor = true;
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.btnAlterarClien);
-            this.groupBox19.Controls.Add(this.groupBox20);
-            this.groupBox19.Controls.Add(this.cmbLocalConsultaClien);
-            this.groupBox19.Controls.Add(this.btnFiltraCliente);
-            this.groupBox19.Controls.Add(this.cmbOperacaoConsultaClient);
-            this.groupBox19.Controls.Add(this.cmbOrdenConsultaClient);
-            this.groupBox19.Location = new System.Drawing.Point(6, 6);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(611, 106);
-            this.groupBox19.TabIndex = 11;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Filtrar";
-            // 
-            // btnAlterarClien
-            // 
-            this.btnAlterarClien.Location = new System.Drawing.Point(496, 32);
-            this.btnAlterarClien.Name = "btnAlterarClien";
-            this.btnAlterarClien.Size = new System.Drawing.Size(109, 38);
-            this.btnAlterarClien.TabIndex = 12;
-            this.btnAlterarClien.Text = "Alterar";
-            this.btnAlterarClien.UseVisualStyleBackColor = true;
-            this.btnAlterarClien.Click += new System.EventHandler(this.btnAlterarCliente_Click);
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.txtTermoClient);
-            this.groupBox20.Location = new System.Drawing.Point(6, 52);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(458, 48);
-            this.groupBox20.TabIndex = 4;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Termo";
-            // 
-            // txtTermoClient
-            // 
-            this.txtTermoClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTermoClient.Location = new System.Drawing.Point(3, 16);
-            this.txtTermoClient.Name = "txtTermoClient";
-            this.txtTermoClient.Size = new System.Drawing.Size(452, 20);
-            this.txtTermoClient.TabIndex = 0;
-            // 
-            // cmbLocalConsultaClien
-            // 
-            this.cmbLocalConsultaClien.FormattingEnabled = true;
-            this.cmbLocalConsultaClien.Location = new System.Drawing.Point(134, 17);
-            this.cmbLocalConsultaClien.Name = "cmbLocalConsultaClien";
-            this.cmbLocalConsultaClien.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalConsultaClien.TabIndex = 3;
-            this.cmbLocalConsultaClien.Text = "Local";
-            // 
-            // btnFiltraCliente
-            // 
-            this.btnFiltraCliente.Location = new System.Drawing.Point(388, 17);
-            this.btnFiltraCliente.Name = "btnFiltraCliente";
-            this.btnFiltraCliente.Size = new System.Drawing.Size(76, 21);
-            this.btnFiltraCliente.TabIndex = 2;
-            this.btnFiltraCliente.Text = "Filtrar";
-            this.btnFiltraCliente.UseVisualStyleBackColor = true;
-            this.btnFiltraCliente.Click += new System.EventHandler(this.btnFiltarCliente_Click);
-            // 
-            // cmbOperacaoConsultaClient
-            // 
-            this.cmbOperacaoConsultaClient.FormattingEnabled = true;
-            this.cmbOperacaoConsultaClient.Location = new System.Drawing.Point(6, 18);
-            this.cmbOperacaoConsultaClient.Name = "cmbOperacaoConsultaClient";
-            this.cmbOperacaoConsultaClient.Size = new System.Drawing.Size(121, 21);
-            this.cmbOperacaoConsultaClient.TabIndex = 1;
-            this.cmbOperacaoConsultaClient.Text = "Operacao";
-            // 
-            // cmbOrdenConsultaClient
-            // 
-            this.cmbOrdenConsultaClient.FormattingEnabled = true;
-            this.cmbOrdenConsultaClient.Location = new System.Drawing.Point(261, 18);
-            this.cmbOrdenConsultaClient.Name = "cmbOrdenConsultaClient";
-            this.cmbOrdenConsultaClient.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrdenConsultaClient.TabIndex = 0;
-            this.cmbOrdenConsultaClient.Text = "Ordenar Por";
-            // 
-            // dgvListaCliente
-            // 
-            this.dgvListaCliente.AllowUserToAddRows = false;
-            this.dgvListaCliente.AllowUserToDeleteRows = false;
-            this.dgvListaCliente.AutoGenerateColumns = false;
-            this.dgvListaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClienteDataGridViewTextBoxColumn,
-            this.tipoDataGridViewTextBoxColumn,
-            this.fornecedorDataGridViewCheckBoxColumn,
-            this.cpfCnpjDataGridViewTextBoxColumn,
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn1,
-            this.apelidoFantasiaDataGridViewTextBoxColumn,
-            this.telefone1DataGridViewTextBoxColumn,
-            this.telefone2DataGridViewTextBoxColumn,
-            this.cepDataGridViewTextBoxColumn,
-            this.logradouroDataGridViewTextBoxColumn,
-            this.bairroDataGridViewTextBoxColumn,
-            this.municipioDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn,
-            this.observacaoDataGridViewTextBoxColumn,
-            this.contaClienteDataGridViewCheckBoxColumn,
-            this.limiteCupomDataGridViewTextBoxColumn,
-            this.limiteMensalDataGridViewTextBoxColumn,
-            this.semanaVencimentoDataGridViewTextBoxColumn,
-            this.tipoVemcimentoDataGridViewTextBoxColumn,
-            this.diaVencimentoDataGridViewTextBoxColumn});
-            this.dgvListaCliente.DataSource = this.iClienteBindingSource;
-            this.dgvListaCliente.Location = new System.Drawing.Point(6, 118);
-            this.dgvListaCliente.Name = "dgvListaCliente";
-            this.dgvListaCliente.ReadOnly = true;
-            this.dgvListaCliente.RowHeadersVisible = false;
-            this.dgvListaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCliente.Size = new System.Drawing.Size(605, 172);
-            this.dgvListaCliente.TabIndex = 10;
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "Id_Cliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "Id_Cliente";
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fornecedorDataGridViewCheckBoxColumn
-            // 
-            this.fornecedorDataGridViewCheckBoxColumn.DataPropertyName = "Fornecedor";
-            this.fornecedorDataGridViewCheckBoxColumn.HeaderText = "Fornecedor";
-            this.fornecedorDataGridViewCheckBoxColumn.Name = "fornecedorDataGridViewCheckBoxColumn";
-            this.fornecedorDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // cpfCnpjDataGridViewTextBoxColumn
-            // 
-            this.cpfCnpjDataGridViewTextBoxColumn.DataPropertyName = "Cpf_Cnpj";
-            this.cpfCnpjDataGridViewTextBoxColumn.HeaderText = "Cpf_Cnpj";
-            this.cpfCnpjDataGridViewTextBoxColumn.Name = "cpfCnpjDataGridViewTextBoxColumn";
-            this.cpfCnpjDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeCompletoRazaoDataGridViewTextBoxColumn
-            // 
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn.DataPropertyName = "NomeCompleto_Razao";
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn.HeaderText = "NomeCompleto_Razao";
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn.Name = "nomeCompletoRazaoDataGridViewTextBoxColumn";
-            this.nomeCompletoRazaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // apelidoFantasiaDataGridViewTextBoxColumn
-            // 
-            this.apelidoFantasiaDataGridViewTextBoxColumn.DataPropertyName = "Apelido_Fantasia";
-            this.apelidoFantasiaDataGridViewTextBoxColumn.HeaderText = "Apelido_Fantasia";
-            this.apelidoFantasiaDataGridViewTextBoxColumn.Name = "apelidoFantasiaDataGridViewTextBoxColumn";
-            this.apelidoFantasiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefone1DataGridViewTextBoxColumn
-            // 
-            this.telefone1DataGridViewTextBoxColumn.DataPropertyName = "Telefone_1";
-            this.telefone1DataGridViewTextBoxColumn.HeaderText = "Telefone_1";
-            this.telefone1DataGridViewTextBoxColumn.Name = "telefone1DataGridViewTextBoxColumn";
-            this.telefone1DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefone2DataGridViewTextBoxColumn
-            // 
-            this.telefone2DataGridViewTextBoxColumn.DataPropertyName = "Telefone_2";
-            this.telefone2DataGridViewTextBoxColumn.HeaderText = "Telefone_2";
-            this.telefone2DataGridViewTextBoxColumn.Name = "telefone2DataGridViewTextBoxColumn";
-            this.telefone2DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cepDataGridViewTextBoxColumn
-            // 
-            this.cepDataGridViewTextBoxColumn.DataPropertyName = "Cep";
-            this.cepDataGridViewTextBoxColumn.HeaderText = "Cep";
-            this.cepDataGridViewTextBoxColumn.Name = "cepDataGridViewTextBoxColumn";
-            this.cepDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // logradouroDataGridViewTextBoxColumn
-            // 
-            this.logradouroDataGridViewTextBoxColumn.DataPropertyName = "Logradouro";
-            this.logradouroDataGridViewTextBoxColumn.HeaderText = "Logradouro";
-            this.logradouroDataGridViewTextBoxColumn.Name = "logradouroDataGridViewTextBoxColumn";
-            this.logradouroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bairroDataGridViewTextBoxColumn
-            // 
-            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
-            this.bairroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // municipioDataGridViewTextBoxColumn
-            // 
-            this.municipioDataGridViewTextBoxColumn.DataPropertyName = "Municipio";
-            this.municipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
-            this.municipioDataGridViewTextBoxColumn.Name = "municipioDataGridViewTextBoxColumn";
-            this.municipioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "Observacao";
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contaClienteDataGridViewCheckBoxColumn
-            // 
-            this.contaClienteDataGridViewCheckBoxColumn.DataPropertyName = "Conta_Cliente";
-            this.contaClienteDataGridViewCheckBoxColumn.HeaderText = "Conta_Cliente";
-            this.contaClienteDataGridViewCheckBoxColumn.Name = "contaClienteDataGridViewCheckBoxColumn";
-            this.contaClienteDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // limiteCupomDataGridViewTextBoxColumn
-            // 
-            this.limiteCupomDataGridViewTextBoxColumn.DataPropertyName = "Limite_Cupom";
-            this.limiteCupomDataGridViewTextBoxColumn.HeaderText = "Limite_Cupom";
-            this.limiteCupomDataGridViewTextBoxColumn.Name = "limiteCupomDataGridViewTextBoxColumn";
-            this.limiteCupomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // limiteMensalDataGridViewTextBoxColumn
-            // 
-            this.limiteMensalDataGridViewTextBoxColumn.DataPropertyName = "Limite_Mensal";
-            this.limiteMensalDataGridViewTextBoxColumn.HeaderText = "Limite_Mensal";
-            this.limiteMensalDataGridViewTextBoxColumn.Name = "limiteMensalDataGridViewTextBoxColumn";
-            this.limiteMensalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // semanaVencimentoDataGridViewTextBoxColumn
-            // 
-            this.semanaVencimentoDataGridViewTextBoxColumn.DataPropertyName = "semanaVencimento";
-            this.semanaVencimentoDataGridViewTextBoxColumn.HeaderText = "semanaVencimento";
-            this.semanaVencimentoDataGridViewTextBoxColumn.Name = "semanaVencimentoDataGridViewTextBoxColumn";
-            this.semanaVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoVemcimentoDataGridViewTextBoxColumn
-            // 
-            this.tipoVemcimentoDataGridViewTextBoxColumn.DataPropertyName = "TipoVemcimento";
-            this.tipoVemcimentoDataGridViewTextBoxColumn.HeaderText = "TipoVemcimento";
-            this.tipoVemcimentoDataGridViewTextBoxColumn.Name = "tipoVemcimentoDataGridViewTextBoxColumn";
-            this.tipoVemcimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diaVencimentoDataGridViewTextBoxColumn
-            // 
-            this.diaVencimentoDataGridViewTextBoxColumn.DataPropertyName = "DiaVencimento";
-            this.diaVencimentoDataGridViewTextBoxColumn.HeaderText = "DiaVencimento";
-            this.diaVencimentoDataGridViewTextBoxColumn.Name = "diaVencimentoDataGridViewTextBoxColumn";
-            this.diaVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iClienteBindingSource
-            // 
-            this.iClienteBindingSource.DataSource = typeof(Hope.Entidade.ICliente);
-            // 
-            // tpageListaProduto
-            // 
-            this.tpageListaProduto.Controls.Add(this.dgvListaProduto);
-            this.tpageListaProduto.Controls.Add(this.groupBox17);
-            this.tpageListaProduto.Location = new System.Drawing.Point(4, 22);
-            this.tpageListaProduto.Name = "tpageListaProduto";
-            this.tpageListaProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpageListaProduto.Size = new System.Drawing.Size(623, 296);
-            this.tpageListaProduto.TabIndex = 2;
-            this.tpageListaProduto.Text = "Produto";
-            this.tpageListaProduto.UseVisualStyleBackColor = true;
-            // 
-            // dgvListaProduto
-            // 
-            this.dgvListaProduto.AllowUserToAddRows = false;
-            this.dgvListaProduto.AllowUserToDeleteRows = false;
-            this.dgvListaProduto.AutoGenerateColumns = false;
-            this.dgvListaProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDProdutoDataGridViewTextBoxColumn,
-            this.eANDataGridViewTextBoxColumn,
-            this.descricaoDataGridViewTextBoxColumn,
-            this.unidadeDataGridViewTextBoxColumn,
-            this.custoDataGridViewTextBoxColumn,
-            this.vendaDataGridViewTextBoxColumn});
-            this.dgvListaProduto.DataSource = this.iProdutoBindingSource;
-            this.dgvListaProduto.Location = new System.Drawing.Point(6, 118);
-            this.dgvListaProduto.Name = "dgvListaProduto";
-            this.dgvListaProduto.ReadOnly = true;
-            this.dgvListaProduto.RowHeadersVisible = false;
-            this.dgvListaProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaProduto.Size = new System.Drawing.Size(611, 172);
-            this.dgvListaProduto.TabIndex = 14;
-            // 
-            // iDProdutoDataGridViewTextBoxColumn
-            // 
-            this.iDProdutoDataGridViewTextBoxColumn.DataPropertyName = "ID_Produto";
-            this.iDProdutoDataGridViewTextBoxColumn.HeaderText = "ID_Produto";
-            this.iDProdutoDataGridViewTextBoxColumn.Name = "iDProdutoDataGridViewTextBoxColumn";
-            this.iDProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eANDataGridViewTextBoxColumn
-            // 
-            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
-            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
-            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
-            this.eANDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unidadeDataGridViewTextBoxColumn
-            // 
-            this.unidadeDataGridViewTextBoxColumn.DataPropertyName = "Unidade";
-            this.unidadeDataGridViewTextBoxColumn.HeaderText = "Unidade";
-            this.unidadeDataGridViewTextBoxColumn.Name = "unidadeDataGridViewTextBoxColumn";
-            this.unidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // custoDataGridViewTextBoxColumn
-            // 
-            this.custoDataGridViewTextBoxColumn.DataPropertyName = "Custo";
-            this.custoDataGridViewTextBoxColumn.HeaderText = "Custo";
-            this.custoDataGridViewTextBoxColumn.Name = "custoDataGridViewTextBoxColumn";
-            this.custoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vendaDataGridViewTextBoxColumn
-            // 
-            this.vendaDataGridViewTextBoxColumn.DataPropertyName = "Venda";
-            this.vendaDataGridViewTextBoxColumn.HeaderText = "Venda";
-            this.vendaDataGridViewTextBoxColumn.Name = "vendaDataGridViewTextBoxColumn";
-            this.vendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iProdutoBindingSource
-            // 
-            this.iProdutoBindingSource.DataSource = typeof(Hope.Entidade.IProduto);
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.groupBox18);
-            this.groupBox17.Controls.Add(this.btnAlterarProduto);
-            this.groupBox17.Controls.Add(this.cmbLocalConsultaProd);
-            this.groupBox17.Controls.Add(this.btnFiltraProduto);
-            this.groupBox17.Controls.Add(this.cmbOperacaConsultaProd);
-            this.groupBox17.Controls.Add(this.cmbOrdenConsultaprod);
-            this.groupBox17.Location = new System.Drawing.Point(6, 6);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(611, 106);
-            this.groupBox17.TabIndex = 12;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Filtrar";
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.txtTermoCultaProd);
-            this.groupBox18.Location = new System.Drawing.Point(6, 46);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(458, 48);
-            this.groupBox18.TabIndex = 4;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Termo";
-            // 
-            // txtTermoCultaProd
-            // 
-            this.txtTermoCultaProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTermoCultaProd.Location = new System.Drawing.Point(3, 16);
-            this.txtTermoCultaProd.Name = "txtTermoCultaProd";
-            this.txtTermoCultaProd.Size = new System.Drawing.Size(452, 20);
-            this.txtTermoCultaProd.TabIndex = 0;
-            // 
-            // btnAlterarProduto
-            // 
-            this.btnAlterarProduto.Location = new System.Drawing.Point(470, 19);
-            this.btnAlterarProduto.Name = "btnAlterarProduto";
-            this.btnAlterarProduto.Size = new System.Drawing.Size(135, 54);
-            this.btnAlterarProduto.TabIndex = 13;
-            this.btnAlterarProduto.Text = "Alterar";
-            this.btnAlterarProduto.UseVisualStyleBackColor = true;
-            // 
-            // cmbLocalConsultaProd
-            // 
-            this.cmbLocalConsultaProd.FormattingEnabled = true;
-            this.cmbLocalConsultaProd.Location = new System.Drawing.Point(261, 19);
-            this.cmbLocalConsultaProd.Name = "cmbLocalConsultaProd";
-            this.cmbLocalConsultaProd.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalConsultaProd.TabIndex = 3;
-            this.cmbLocalConsultaProd.Text = "Local";
-            // 
-            // btnFiltraProduto
-            // 
-            this.btnFiltraProduto.Location = new System.Drawing.Point(388, 18);
-            this.btnFiltraProduto.Name = "btnFiltraProduto";
-            this.btnFiltraProduto.Size = new System.Drawing.Size(76, 22);
-            this.btnFiltraProduto.TabIndex = 2;
-            this.btnFiltraProduto.Text = "Filtrar";
-            this.btnFiltraProduto.UseVisualStyleBackColor = true;
-            // 
-            // cmbOperacaConsultaProd
-            // 
-            this.cmbOperacaConsultaProd.FormattingEnabled = true;
-            this.cmbOperacaConsultaProd.Location = new System.Drawing.Point(131, 18);
-            this.cmbOperacaConsultaProd.Name = "cmbOperacaConsultaProd";
-            this.cmbOperacaConsultaProd.Size = new System.Drawing.Size(121, 21);
-            this.cmbOperacaConsultaProd.TabIndex = 1;
-            this.cmbOperacaConsultaProd.Text = "Operacao";
-            // 
-            // cmbOrdenConsultaprod
-            // 
-            this.cmbOrdenConsultaprod.FormattingEnabled = true;
-            this.cmbOrdenConsultaprod.Location = new System.Drawing.Point(6, 19);
-            this.cmbOrdenConsultaprod.Name = "cmbOrdenConsultaprod";
-            this.cmbOrdenConsultaprod.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrdenConsultaprod.TabIndex = 0;
-            this.cmbOrdenConsultaprod.Text = "Ordenar Por";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.btnNewUsuario);
-            this.groupBox8.Controls.Add(this.btnNewProduto);
-            this.groupBox8.Controls.Add(this.btnNewCliente);
-            this.groupBox8.Location = new System.Drawing.Point(8, 6);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(630, 65);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Cadastra";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(648, 424);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Funcao-Operacao";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.btnReforco);
-            this.tabPage4.Controls.Add(this.btnIniciaMeuCaixa);
-            this.tabPage4.Controls.Add(this.btnRecebimento);
-            this.tabPage4.Controls.Add(this.btnEnceraMeuCaixa);
-            this.tabPage4.Controls.Add(this.btnSangria);
-            this.tabPage4.Controls.Add(this.tabControl4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(648, 424);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Caixa";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // tabPageCRUD
+            // 
+            this.tabPageCRUD.Controls.Add(groupBox10);
+            this.tabPageCRUD.Controls.Add(groupBox8);
+            this.tabPageCRUD.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCRUD.Name = "tabPageCRUD";
+            this.tabPageCRUD.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCRUD.Size = new System.Drawing.Size(648, 424);
+            this.tabPageCRUD.TabIndex = 1;
+            this.tabPageCRUD.Text = "C.R.U.D.";
+            this.tabPageCRUD.UseVisualStyleBackColor = true;
+            this.tabPageCRUD.Leave += new System.EventHandler(this.tabPageCRUD_Leave);
+            // 
+            // tabPageFuncaoOperacao
+            // 
+            this.tabPageFuncaoOperacao.Controls.Add(this.groupBox7);
+            this.tabPageFuncaoOperacao.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFuncaoOperacao.Name = "tabPageFuncaoOperacao";
+            this.tabPageFuncaoOperacao.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFuncaoOperacao.Size = new System.Drawing.Size(648, 424);
+            this.tabPageFuncaoOperacao.TabIndex = 2;
+            this.tabPageFuncaoOperacao.Text = "Funcao-Operacao";
+            this.tabPageFuncaoOperacao.UseVisualStyleBackColor = true;
+            // 
+            // tabPageCaixa
+            // 
+            this.tabPageCaixa.Controls.Add(this.btnReforco);
+            this.tabPageCaixa.Controls.Add(this.btnIniciaMeuCaixa);
+            this.tabPageCaixa.Controls.Add(this.btnRecebimento);
+            this.tabPageCaixa.Controls.Add(this.btnEnceraMeuCaixa);
+            this.tabPageCaixa.Controls.Add(this.btnSangria);
+            this.tabPageCaixa.Controls.Add(this.tabControlCaixa);
+            this.tabPageCaixa.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCaixa.Name = "tabPageCaixa";
+            this.tabPageCaixa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCaixa.Size = new System.Drawing.Size(648, 424);
+            this.tabPageCaixa.TabIndex = 3;
+            this.tabPageCaixa.Text = "Caixa";
+            this.tabPageCaixa.UseVisualStyleBackColor = true;
             // 
             // btnEnceraMeuCaixa
             // 
@@ -1106,15 +1346,15 @@
             this.btnEnceraMeuCaixa.UseVisualStyleBackColor = true;
             this.btnEnceraMeuCaixa.Click += new System.EventHandler(this.btnEnceraMeuCaixa_Click);
             // 
-            // tabControl4
+            // tabControlCaixa
             // 
-            this.tabControl4.Controls.Add(this.tabPage11);
-            this.tabControl4.Controls.Add(this.tabPage12);
-            this.tabControl4.Location = new System.Drawing.Point(10, 98);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(617, 305);
-            this.tabControl4.TabIndex = 1;
+            this.tabControlCaixa.Controls.Add(this.tabPage11);
+            this.tabControlCaixa.Controls.Add(this.tabPage12);
+            this.tabControlCaixa.Location = new System.Drawing.Point(10, 98);
+            this.tabControlCaixa.Name = "tabControlCaixa";
+            this.tabControlCaixa.SelectedIndex = 0;
+            this.tabControlCaixa.Size = new System.Drawing.Size(617, 305);
+            this.tabControlCaixa.TabIndex = 1;
             // 
             // tabPage11
             // 
@@ -1392,6 +1632,7 @@
             // tabPage12
             // 
             this.tabPage12.Controls.Add(this.dgvListaCaixa);
+            this.tabPage12.Controls.Add(this.bindingNavigatorCaixa);
             this.tabPage12.Controls.Add(this.groupBox15);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
@@ -1409,74 +1650,176 @@
             this.dgvListaCaixa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaCaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaCaixa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCaixaDataGridViewTextBoxColumn,
-            this.aberturaDataGridViewTextBoxColumn,
-            this.fechamentoDataGridViewTextBoxColumn});
-            this.dgvListaCaixa.DataSource = this.iCaixaBindingSource;
-            this.dgvListaCaixa.Location = new System.Drawing.Point(6, 118);
+            this.dataGridViewTextBoxColumn31,
+            this.fkIDUsuarioDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33});
+            this.dgvListaCaixa.DataSource = this.iCaixaEntcBindingSource;
+            this.dgvListaCaixa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaCaixa.Location = new System.Drawing.Point(3, 109);
             this.dgvListaCaixa.Name = "dgvListaCaixa";
             this.dgvListaCaixa.ReadOnly = true;
             this.dgvListaCaixa.RowHeadersVisible = false;
             this.dgvListaCaixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCaixa.Size = new System.Drawing.Size(597, 150);
-            this.dgvListaCaixa.TabIndex = 10;
+            this.dgvListaCaixa.Size = new System.Drawing.Size(603, 142);
+            this.dgvListaCaixa.TabIndex = 7;
             // 
-            // iDCaixaDataGridViewTextBoxColumn
+            // bindingNavigatorCaixa
             // 
-            this.iDCaixaDataGridViewTextBoxColumn.DataPropertyName = "ID_Caixa";
-            this.iDCaixaDataGridViewTextBoxColumn.HeaderText = "ID_Caixa";
-            this.iDCaixaDataGridViewTextBoxColumn.Name = "iDCaixaDataGridViewTextBoxColumn";
-            this.iDCaixaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bindingNavigatorCaixa.AddNewItem = null;
+            this.bindingNavigatorCaixa.BindingSource = this.iCaixaEntcBindingSource;
+            this.bindingNavigatorCaixa.CountItem = this.toolStripLabel3;
+            this.bindingNavigatorCaixa.DeleteItem = null;
+            this.bindingNavigatorCaixa.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorCaixa.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigatorCaixa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton11,
+            this.toolStripButton12,
+            this.toolStripSeparator7,
+            this.toolStripTextBox3,
+            this.toolStripLabel3,
+            this.toolStripSeparator8,
+            this.toolStripButton13,
+            this.toolStripButton14,
+            this.toolStripSeparator9,
+            this.btnVisualizarRegistroCaixa});
+            this.bindingNavigatorCaixa.Location = new System.Drawing.Point(3, 251);
+            this.bindingNavigatorCaixa.MoveFirstItem = this.toolStripButton11;
+            this.bindingNavigatorCaixa.MoveLastItem = this.toolStripButton14;
+            this.bindingNavigatorCaixa.MoveNextItem = this.toolStripButton13;
+            this.bindingNavigatorCaixa.MovePreviousItem = this.toolStripButton12;
+            this.bindingNavigatorCaixa.Name = "bindingNavigatorCaixa";
+            this.bindingNavigatorCaixa.PositionItem = this.toolStripTextBox3;
+            this.bindingNavigatorCaixa.Size = new System.Drawing.Size(603, 25);
+            this.bindingNavigatorCaixa.TabIndex = 8;
+            this.bindingNavigatorCaixa.Text = "bindingNavigator1";
             // 
-            // aberturaDataGridViewTextBoxColumn
+            // toolStripLabel3
             // 
-            this.aberturaDataGridViewTextBoxColumn.DataPropertyName = "Abertura";
-            this.aberturaDataGridViewTextBoxColumn.HeaderText = "Abertura";
-            this.aberturaDataGridViewTextBoxColumn.Name = "aberturaDataGridViewTextBoxColumn";
-            this.aberturaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel3.Text = "de {0}";
+            this.toolStripLabel3.ToolTipText = "Número total de itens";
             // 
-            // fechamentoDataGridViewTextBoxColumn
+            // toolStripButton11
             // 
-            this.fechamentoDataGridViewTextBoxColumn.DataPropertyName = "Fechamento";
-            this.fechamentoDataGridViewTextBoxColumn.HeaderText = "Fechamento";
-            this.fechamentoDataGridViewTextBoxColumn.Name = "fechamentoDataGridViewTextBoxColumn";
-            this.fechamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "Mover primeiro";
             // 
-            // iCaixaBindingSource
+            // toolStripButton12
             // 
-            this.iCaixaBindingSource.DataSource = typeof(Hope.Entidade.ICaixa);
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "Mover anterior";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.AccessibleName = "Posição";
+            this.toolStripTextBox3.AutoSize = false;
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox3.Text = "0";
+            this.toolStripTextBox3.ToolTipText = "Posição atual";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Mover próximo";
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "Mover último";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnVisualizarRegistroCaixa
+            // 
+            this.btnVisualizarRegistroCaixa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnVisualizarRegistroCaixa.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarRegistroCaixa.Image")));
+            this.btnVisualizarRegistroCaixa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVisualizarRegistroCaixa.Name = "btnVisualizarRegistroCaixa";
+            this.btnVisualizarRegistroCaixa.Size = new System.Drawing.Size(106, 22);
+            this.btnVisualizarRegistroCaixa.Text = "Visualizar Registro";
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.btnDetalheCaixaSelecionado);
+            this.groupBox15.Controls.Add(this.cmbCondicaoConsultaCaixa);
+            this.groupBox15.Controls.Add(this.numLimitConsultaCaixa);
             this.groupBox15.Controls.Add(this.groupBox16);
-            this.groupBox15.Controls.Add(this.cmbLocalConsultaCaixa);
-            this.groupBox15.Controls.Add(this.btnFiltarCaixa);
-            this.groupBox15.Controls.Add(this.cmbOperacaoConsultaCaixa);
-            this.groupBox15.Controls.Add(this.cmbOrdenarConsultaCaixa);
-            this.groupBox15.Location = new System.Drawing.Point(6, 6);
+            this.groupBox15.Controls.Add(this.cmbColunaConsultaCaixa);
+            this.groupBox15.Controls.Add(this.button3);
+            this.groupBox15.Controls.Add(this.cmbComandoConsultaCaixa);
+            this.groupBox15.Controls.Add(this.cmbOrdenConusltaCaixa);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox15.Location = new System.Drawing.Point(3, 3);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(597, 106);
+            this.groupBox15.Size = new System.Drawing.Size(603, 106);
             this.groupBox15.TabIndex = 9;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Filtrar";
             // 
-            // btnDetalheCaixaSelecionado
+            // cmbCondicaoConsultaCaixa
             // 
-            this.btnDetalheCaixaSelecionado.Location = new System.Drawing.Point(445, 29);
-            this.btnDetalheCaixaSelecionado.Name = "btnDetalheCaixaSelecionado";
-            this.btnDetalheCaixaSelecionado.Size = new System.Drawing.Size(146, 53);
-            this.btnDetalheCaixaSelecionado.TabIndex = 5;
-            this.btnDetalheCaixaSelecionado.Text = "Detalhe Caixa Selecionado";
-            this.btnDetalheCaixaSelecionado.UseVisualStyleBackColor = true;
-            this.btnDetalheCaixaSelecionado.Click += new System.EventHandler(this.btnDetalheCaixaSelecionado_Click);
+            this.cmbCondicaoConsultaCaixa.FormattingEnabled = true;
+            this.cmbCondicaoConsultaCaixa.Location = new System.Drawing.Point(235, 20);
+            this.cmbCondicaoConsultaCaixa.Name = "cmbCondicaoConsultaCaixa";
+            this.cmbCondicaoConsultaCaixa.Size = new System.Drawing.Size(92, 21);
+            this.cmbCondicaoConsultaCaixa.TabIndex = 6;
+            this.cmbCondicaoConsultaCaixa.Text = "Condicao";
+            // 
+            // numLimitConsultaCaixa
+            // 
+            this.numLimitConsultaCaixa.Location = new System.Drawing.Point(422, 21);
+            this.numLimitConsultaCaixa.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLimitConsultaCaixa.Name = "numLimitConsultaCaixa";
+            this.numLimitConsultaCaixa.Size = new System.Drawing.Size(53, 20);
+            this.numLimitConsultaCaixa.TabIndex = 5;
+            this.numLimitConsultaCaixa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numLimitConsultaCaixa.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.txtTermoCaixa);
             this.groupBox16.Location = new System.Drawing.Point(6, 46);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(422, 48);
+            this.groupBox16.Size = new System.Drawing.Size(465, 48);
             this.groupBox16.TabIndex = 4;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Termo";
@@ -1486,58 +1829,57 @@
             this.txtTermoCaixa.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTermoCaixa.Location = new System.Drawing.Point(3, 16);
             this.txtTermoCaixa.Name = "txtTermoCaixa";
-            this.txtTermoCaixa.Size = new System.Drawing.Size(416, 20);
+            this.txtTermoCaixa.Size = new System.Drawing.Size(459, 20);
             this.txtTermoCaixa.TabIndex = 0;
             // 
-            // cmbLocalConsultaCaixa
+            // cmbColunaConsultaCaixa
             // 
-            this.cmbLocalConsultaCaixa.FormattingEnabled = true;
-            this.cmbLocalConsultaCaixa.Location = new System.Drawing.Point(236, 19);
-            this.cmbLocalConsultaCaixa.Name = "cmbLocalConsultaCaixa";
-            this.cmbLocalConsultaCaixa.Size = new System.Drawing.Size(82, 21);
-            this.cmbLocalConsultaCaixa.TabIndex = 3;
-            this.cmbLocalConsultaCaixa.Text = "Local";
+            this.cmbColunaConsultaCaixa.FormattingEnabled = true;
+            this.cmbColunaConsultaCaixa.Location = new System.Drawing.Point(137, 19);
+            this.cmbColunaConsultaCaixa.Name = "cmbColunaConsultaCaixa";
+            this.cmbColunaConsultaCaixa.Size = new System.Drawing.Size(92, 21);
+            this.cmbColunaConsultaCaixa.TabIndex = 3;
+            this.cmbColunaConsultaCaixa.Text = "Local";
             // 
-            // btnFiltarCaixa
+            // button3
             // 
-            this.btnFiltarCaixa.Location = new System.Drawing.Point(324, 18);
-            this.btnFiltarCaixa.Name = "btnFiltarCaixa";
-            this.btnFiltarCaixa.Size = new System.Drawing.Size(115, 21);
-            this.btnFiltarCaixa.TabIndex = 2;
-            this.btnFiltarCaixa.Text = "Filtrar";
-            this.btnFiltarCaixa.UseVisualStyleBackColor = true;
-            this.btnFiltarCaixa.Click += new System.EventHandler(this.btnFiltarCaixa_Click);
+            this.button3.Location = new System.Drawing.Point(474, 55);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(137, 32);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Filtrar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // cmbOperacaoConsultaCaixa
+            // cmbComandoConsultaCaixa
             // 
-            this.cmbOperacaoConsultaCaixa.FormattingEnabled = true;
-            this.cmbOperacaoConsultaCaixa.Location = new System.Drawing.Point(133, 19);
-            this.cmbOperacaoConsultaCaixa.Name = "cmbOperacaoConsultaCaixa";
-            this.cmbOperacaoConsultaCaixa.Size = new System.Drawing.Size(97, 21);
-            this.cmbOperacaoConsultaCaixa.TabIndex = 1;
-            this.cmbOperacaoConsultaCaixa.Text = "Operacao";
+            this.cmbComandoConsultaCaixa.FormattingEnabled = true;
+            this.cmbComandoConsultaCaixa.Location = new System.Drawing.Point(6, 19);
+            this.cmbComandoConsultaCaixa.Name = "cmbComandoConsultaCaixa";
+            this.cmbComandoConsultaCaixa.Size = new System.Drawing.Size(121, 21);
+            this.cmbComandoConsultaCaixa.TabIndex = 1;
+            this.cmbComandoConsultaCaixa.Text = "Comando Consulta";
             // 
-            // cmbOrdenarConsultaCaixa
+            // cmbOrdenConusltaCaixa
             // 
-            this.cmbOrdenarConsultaCaixa.FormattingEnabled = true;
-            this.cmbOrdenarConsultaCaixa.Location = new System.Drawing.Point(6, 19);
-            this.cmbOrdenarConsultaCaixa.Name = "cmbOrdenarConsultaCaixa";
-            this.cmbOrdenarConsultaCaixa.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrdenarConsultaCaixa.TabIndex = 0;
-            this.cmbOrdenarConsultaCaixa.Text = "Ordenar Por";
+            this.cmbOrdenConusltaCaixa.FormattingEnabled = true;
+            this.cmbOrdenConusltaCaixa.Location = new System.Drawing.Point(333, 20);
+            this.cmbOrdenConusltaCaixa.Name = "cmbOrdenConusltaCaixa";
+            this.cmbOrdenConusltaCaixa.Size = new System.Drawing.Size(83, 21);
+            this.cmbOrdenConusltaCaixa.TabIndex = 0;
+            this.cmbOrdenConusltaCaixa.Text = "Ordenar Por";
             // 
-            // tabPage10
+            // tabPagePDV
             // 
-            this.tabPage10.Controls.Add(this.btnCupomFechar);
-            this.tabPage10.Controls.Add(this.btnCupomIniciaNovoCupom);
-            this.tabPage10.Controls.Add(this.tabControl5);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(648, 424);
-            this.tabPage10.TabIndex = 4;
-            this.tabPage10.Text = "Ponto De Venda";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            this.tabPagePDV.Controls.Add(this.btnCupomFechar);
+            this.tabPagePDV.Controls.Add(this.btnCupomIniciaNovoCupom);
+            this.tabPagePDV.Controls.Add(this.tabControlPDV);
+            this.tabPagePDV.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePDV.Name = "tabPagePDV";
+            this.tabPagePDV.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePDV.Size = new System.Drawing.Size(648, 424);
+            this.tabPagePDV.TabIndex = 4;
+            this.tabPagePDV.Text = "Ponto De Venda";
+            this.tabPagePDV.UseVisualStyleBackColor = true;
             // 
             // btnCupomFechar
             // 
@@ -1559,20 +1901,23 @@
             this.btnCupomIniciaNovoCupom.UseVisualStyleBackColor = true;
             this.btnCupomIniciaNovoCupom.Click += new System.EventHandler(this.btnCupomIniciaNovoCupom_Click);
             // 
-            // tabControl5
+            // tabControlPDV
             // 
-            this.tabControl5.Controls.Add(this.tabPage13);
-            this.tabControl5.Controls.Add(this.tabPage14);
-            this.tabControl5.Location = new System.Drawing.Point(8, 92);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(632, 326);
-            this.tabControl5.TabIndex = 3;
+            this.tabControlPDV.Controls.Add(this.tabPage13);
+            this.tabControlPDV.Controls.Add(this.tabPage14);
+            this.tabControlPDV.Location = new System.Drawing.Point(8, 71);
+            this.tabControlPDV.Name = "tabControlPDV";
+            this.tabControlPDV.SelectedIndex = 0;
+            this.tabControlPDV.Size = new System.Drawing.Size(632, 347);
+            this.tabControlPDV.TabIndex = 3;
             // 
             // tabPage13
             // 
             this.tabPage13.Controls.Add(this.groupBox28);
+            this.tabPage13.Controls.Add(this.groupBox29);
+            this.tabPage13.Controls.Add(this.btnCupomExcluirItem);
             this.tabPage13.Controls.Add(this.groupBox27);
+            this.tabPage13.Controls.Add(this.btnCupomalteraItem);
             this.tabPage13.Controls.Add(this.groupBox26);
             this.tabPage13.Controls.Add(this.groupBox25);
             this.tabPage13.Controls.Add(this.groupBox24);
@@ -1583,15 +1928,127 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(624, 300);
+            this.tabPage13.Size = new System.Drawing.Size(624, 321);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Cupom";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.dgvCupomItem);
+            this.groupBox28.Location = new System.Drawing.Point(15, 55);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(427, 260);
+            this.groupBox28.TabIndex = 5;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Item Cupom";
+            // 
+            // dgvCupomItem
+            // 
+            this.dgvCupomItem.AllowUserToAddRows = false;
+            this.dgvCupomItem.AllowUserToDeleteRows = false;
+            this.dgvCupomItem.AutoGenerateColumns = false;
+            this.dgvCupomItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCupomItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCupomItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDItemDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.precoDataGridViewTextBoxColumn,
+            this.subTotalDataGridViewTextBoxColumn});
+            this.dgvCupomItem.DataSource = this.iCupomItemEntcBindingSource;
+            this.dgvCupomItem.Location = new System.Drawing.Point(10, 22);
+            this.dgvCupomItem.Name = "dgvCupomItem";
+            this.dgvCupomItem.ReadOnly = true;
+            this.dgvCupomItem.RowHeadersVisible = false;
+            this.dgvCupomItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCupomItem.Size = new System.Drawing.Size(407, 232);
+            this.dgvCupomItem.TabIndex = 6;
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.lblCupomTotalQuantItem);
+            this.groupBox29.Location = new System.Drawing.Point(471, 249);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(123, 36);
+            this.groupBox29.TabIndex = 5;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Total Item";
+            // 
+            // lblCupomTotalQuantItem
+            // 
+            this.lblCupomTotalQuantItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTotalQuantItem.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTotalQuantItem.Name = "lblCupomTotalQuantItem";
+            this.lblCupomTotalQuantItem.Size = new System.Drawing.Size(117, 17);
+            this.lblCupomTotalQuantItem.TabIndex = 0;
+            this.lblCupomTotalQuantItem.Text = "{0}";
+            this.lblCupomTotalQuantItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCupomExcluirItem
+            // 
+            this.btnCupomExcluirItem.Location = new System.Drawing.Point(447, 291);
+            this.btnCupomExcluirItem.Name = "btnCupomExcluirItem";
+            this.btnCupomExcluirItem.Size = new System.Drawing.Size(70, 24);
+            this.btnCupomExcluirItem.TabIndex = 2;
+            this.btnCupomExcluirItem.Text = "Excluir";
+            this.btnCupomExcluirItem.UseVisualStyleBackColor = true;
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.lblCupomTroco);
+            this.groupBox27.Location = new System.Drawing.Point(474, 202);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(123, 43);
+            this.groupBox27.TabIndex = 4;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Troco";
+            // 
+            // lblCupomTroco
+            // 
+            this.lblCupomTroco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomTroco.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomTroco.Name = "lblCupomTroco";
+            this.lblCupomTroco.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomTroco.TabIndex = 0;
+            this.lblCupomTroco.Text = "R$ {0}";
+            this.lblCupomTroco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCupomalteraItem
+            // 
+            this.btnCupomalteraItem.Location = new System.Drawing.Point(530, 291);
+            this.btnCupomalteraItem.Name = "btnCupomalteraItem";
+            this.btnCupomalteraItem.Size = new System.Drawing.Size(70, 24);
+            this.btnCupomalteraItem.TabIndex = 1;
+            this.btnCupomalteraItem.Text = "Alterar";
+            this.btnCupomalteraItem.UseVisualStyleBackColor = true;
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.lblCupomDesconto);
+            this.groupBox26.Location = new System.Drawing.Point(471, 153);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(123, 43);
+            this.groupBox26.TabIndex = 3;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Desconto";
+            // 
+            // lblCupomDesconto
+            // 
+            this.lblCupomDesconto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCupomDesconto.Location = new System.Drawing.Point(3, 16);
+            this.lblCupomDesconto.Name = "lblCupomDesconto";
+            this.lblCupomDesconto.Size = new System.Drawing.Size(117, 24);
+            this.lblCupomDesconto.TabIndex = 0;
+            this.lblCupomDesconto.Text = "R$ {0}";
+            this.lblCupomDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.lblCupomTotalRecebido);
-            this.groupBox25.Location = new System.Drawing.Point(445, 130);
+            this.groupBox25.Location = new System.Drawing.Point(474, 104);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(123, 43);
             this.groupBox25.TabIndex = 2;
@@ -1611,7 +2068,7 @@
             // groupBox24
             // 
             this.groupBox24.Controls.Add(this.lblCupomTotal);
-            this.groupBox24.Location = new System.Drawing.Point(445, 81);
+            this.groupBox24.Location = new System.Drawing.Point(474, 55);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(123, 43);
             this.groupBox24.TabIndex = 1;
@@ -1678,156 +2135,201 @@
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.dgvListaCupom);
+            this.tabPage14.Controls.Add(this.bindingNavigatorCupom);
             this.tabPage14.Controls.Add(this.groupBox30);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(624, 300);
+            this.tabPage14.Size = new System.Drawing.Size(624, 321);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Listagem Cupom";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
-            // groupBox26
+            // dgvListaCupom
             // 
-            this.groupBox26.Controls.Add(this.lblCupomDesconto);
-            this.groupBox26.Location = new System.Drawing.Point(442, 179);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(123, 43);
-            this.groupBox26.TabIndex = 3;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Desconto";
+            this.dgvListaCupom.AllowUserToAddRows = false;
+            this.dgvListaCupom.AllowUserToDeleteRows = false;
+            this.dgvListaCupom.AutoGenerateColumns = false;
+            this.dgvListaCupom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaCupom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaCupom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCupomDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn34,
+            this.horaDataGridViewTextBoxColumn,
+            this.colaboradorDataGridViewTextBoxColumn});
+            this.dgvListaCupom.DataSource = this.iCupomEntcBindingSource;
+            this.dgvListaCupom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaCupom.Location = new System.Drawing.Point(3, 109);
+            this.dgvListaCupom.Name = "dgvListaCupom";
+            this.dgvListaCupom.ReadOnly = true;
+            this.dgvListaCupom.RowHeadersVisible = false;
+            this.dgvListaCupom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaCupom.Size = new System.Drawing.Size(618, 184);
+            this.dgvListaCupom.TabIndex = 10;
             // 
-            // lblCupomDesconto
+            // bindingNavigatorCupom
             // 
-            this.lblCupomDesconto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomDesconto.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomDesconto.Name = "lblCupomDesconto";
-            this.lblCupomDesconto.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomDesconto.TabIndex = 0;
-            this.lblCupomDesconto.Text = "R$ {0}";
-            this.lblCupomDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bindingNavigatorCupom.AddNewItem = null;
+            this.bindingNavigatorCupom.BindingSource = this.iCupomEntcBindingSource;
+            this.bindingNavigatorCupom.CountItem = this.toolStripLabel4;
+            this.bindingNavigatorCupom.DeleteItem = null;
+            this.bindingNavigatorCupom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorCupom.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigatorCupom.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton16,
+            this.toolStripButton17,
+            this.toolStripSeparator10,
+            this.toolStripTextBox4,
+            this.toolStripLabel4,
+            this.toolStripSeparator11,
+            this.toolStripButton18,
+            this.toolStripButton19,
+            this.toolStripSeparator12,
+            this.btnVisualizarRegistroCupom,
+            this.btnContinuarRegistro});
+            this.bindingNavigatorCupom.Location = new System.Drawing.Point(3, 293);
+            this.bindingNavigatorCupom.MoveFirstItem = this.toolStripButton16;
+            this.bindingNavigatorCupom.MoveLastItem = this.toolStripButton19;
+            this.bindingNavigatorCupom.MoveNextItem = this.toolStripButton18;
+            this.bindingNavigatorCupom.MovePreviousItem = this.toolStripButton17;
+            this.bindingNavigatorCupom.Name = "bindingNavigatorCupom";
+            this.bindingNavigatorCupom.PositionItem = this.toolStripTextBox4;
+            this.bindingNavigatorCupom.Size = new System.Drawing.Size(618, 25);
+            this.bindingNavigatorCupom.TabIndex = 11;
+            this.bindingNavigatorCupom.Text = "bindingNavigator2";
             // 
-            // groupBox27
+            // toolStripLabel4
             // 
-            this.groupBox27.Controls.Add(this.lblCupomTroco);
-            this.groupBox27.Location = new System.Drawing.Point(445, 228);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(123, 43);
-            this.groupBox27.TabIndex = 4;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Troco";
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel4.Text = "de {0}";
+            this.toolStripLabel4.ToolTipText = "Número total de itens";
             // 
-            // lblCupomTroco
+            // toolStripButton16
             // 
-            this.lblCupomTroco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTroco.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTroco.Name = "lblCupomTroco";
-            this.lblCupomTroco.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomTroco.TabIndex = 0;
-            this.lblCupomTroco.Text = "R$ {0}";
-            this.lblCupomTroco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
+            this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton16.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton16.Text = "Mover primeiro";
             // 
-            // groupBox28
+            // toolStripButton17
             // 
-            this.groupBox28.Controls.Add(this.dgvCupomItem);
-            this.groupBox28.Controls.Add(this.groupBox29);
-            this.groupBox28.Controls.Add(this.btnCupomExcluirItem);
-            this.groupBox28.Controls.Add(this.btnCupomalteraItem);
-            this.groupBox28.Controls.Add(this.btnCupomAtualizar);
-            this.groupBox28.Location = new System.Drawing.Point(15, 55);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(427, 228);
-            this.groupBox28.TabIndex = 5;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "Item Cupom";
+            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
+            this.toolStripButton17.Name = "toolStripButton17";
+            this.toolStripButton17.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton17.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton17.Text = "Mover anterior";
             // 
-            // btnCupomAtualizar
+            // toolStripSeparator10
             // 
-            this.btnCupomAtualizar.Location = new System.Drawing.Point(6, 189);
-            this.btnCupomAtualizar.Name = "btnCupomAtualizar";
-            this.btnCupomAtualizar.Size = new System.Drawing.Size(70, 33);
-            this.btnCupomAtualizar.TabIndex = 0;
-            this.btnCupomAtualizar.Text = "Atualizar";
-            this.btnCupomAtualizar.UseVisualStyleBackColor = true;
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
-            // btnCupomalteraItem
+            // toolStripTextBox4
             // 
-            this.btnCupomalteraItem.Location = new System.Drawing.Point(82, 189);
-            this.btnCupomalteraItem.Name = "btnCupomalteraItem";
-            this.btnCupomalteraItem.Size = new System.Drawing.Size(70, 33);
-            this.btnCupomalteraItem.TabIndex = 1;
-            this.btnCupomalteraItem.Text = "Alterar";
-            this.btnCupomalteraItem.UseVisualStyleBackColor = true;
+            this.toolStripTextBox4.AccessibleName = "Posição";
+            this.toolStripTextBox4.AutoSize = false;
+            this.toolStripTextBox4.Name = "toolStripTextBox4";
+            this.toolStripTextBox4.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox4.Text = "0";
+            this.toolStripTextBox4.ToolTipText = "Posição atual";
             // 
-            // btnCupomExcluirItem
+            // toolStripSeparator11
             // 
-            this.btnCupomExcluirItem.Location = new System.Drawing.Point(158, 189);
-            this.btnCupomExcluirItem.Name = "btnCupomExcluirItem";
-            this.btnCupomExcluirItem.Size = new System.Drawing.Size(70, 33);
-            this.btnCupomExcluirItem.TabIndex = 2;
-            this.btnCupomExcluirItem.Text = "Excluir";
-            this.btnCupomExcluirItem.UseVisualStyleBackColor = true;
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // groupBox29
+            // toolStripButton18
             // 
-            this.groupBox29.Controls.Add(this.lblCupomTotalQuantItem);
-            this.groupBox29.Location = new System.Drawing.Point(334, 186);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox29.Size = new System.Drawing.Size(90, 36);
-            this.groupBox29.TabIndex = 5;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Total Item";
+            this.toolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton18.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton18.Image")));
+            this.toolStripButton18.Name = "toolStripButton18";
+            this.toolStripButton18.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton18.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton18.Text = "Mover próximo";
             // 
-            // lblCupomTotalQuantItem
+            // toolStripButton19
             // 
-            this.lblCupomTotalQuantItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTotalQuantItem.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTotalQuantItem.Name = "lblCupomTotalQuantItem";
-            this.lblCupomTotalQuantItem.Size = new System.Drawing.Size(84, 17);
-            this.lblCupomTotalQuantItem.TabIndex = 0;
-            this.lblCupomTotalQuantItem.Text = "{0}";
-            this.lblCupomTotalQuantItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
+            this.toolStripButton19.Name = "toolStripButton19";
+            this.toolStripButton19.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton19.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton19.Text = "Mover último";
             // 
-            // dgvCupomItem
+            // toolStripSeparator12
             // 
-            this.dgvCupomItem.AllowUserToAddRows = false;
-            this.dgvCupomItem.AllowUserToDeleteRows = false;
-            this.dgvCupomItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCupomItem.Location = new System.Drawing.Point(10, 22);
-            this.dgvCupomItem.Name = "dgvCupomItem";
-            this.dgvCupomItem.ReadOnly = true;
-            this.dgvCupomItem.Size = new System.Drawing.Size(407, 164);
-            this.dgvCupomItem.TabIndex = 6;
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnVisualizarRegistroCupom
+            // 
+            this.btnVisualizarRegistroCupom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnVisualizarRegistroCupom.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarRegistroCupom.Image")));
+            this.btnVisualizarRegistroCupom.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVisualizarRegistroCupom.Name = "btnVisualizarRegistroCupom";
+            this.btnVisualizarRegistroCupom.Size = new System.Drawing.Size(106, 22);
+            this.btnVisualizarRegistroCupom.Text = "Visualizar Registro";
+            // 
+            // btnContinuarRegistro
+            // 
+            this.btnContinuarRegistro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnContinuarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnContinuarRegistro.Image")));
+            this.btnContinuarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnContinuarRegistro.Name = "btnContinuarRegistro";
+            this.btnContinuarRegistro.Size = new System.Drawing.Size(110, 22);
+            this.btnContinuarRegistro.Text = "Continuar Registro";
             // 
             // groupBox30
             // 
-            this.groupBox30.Controls.Add(this.btnCupomResumo);
-            this.groupBox30.Controls.Add(this.btnCupomAndamento);
+            this.groupBox30.Controls.Add(this.cmbCondicaoConsultaCupom);
+            this.groupBox30.Controls.Add(this.numLimitConsultaCupom);
             this.groupBox30.Controls.Add(this.groupBox31);
-            this.groupBox30.Controls.Add(this.cmbCupomLocalConsulta);
-            this.groupBox30.Controls.Add(this.btnCupomFiltraLista);
-            this.groupBox30.Controls.Add(this.cmbCupomOperacao);
-            this.groupBox30.Controls.Add(this.cmbCupomOrdenConsulta);
-            this.groupBox30.Location = new System.Drawing.Point(6, 6);
+            this.groupBox30.Controls.Add(this.cmbColunaConsultaCupom);
+            this.groupBox30.Controls.Add(this.btnFiltraCupom);
+            this.groupBox30.Controls.Add(this.cmbComandoConsultaCupom);
+            this.groupBox30.Controls.Add(this.cmbOrdenConsultaCupom);
+            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox30.Location = new System.Drawing.Point(3, 3);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(612, 103);
-            this.groupBox30.TabIndex = 7;
+            this.groupBox30.Size = new System.Drawing.Size(618, 106);
+            this.groupBox30.TabIndex = 12;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Filtrar";
             // 
-            // btnCupomAndamento
+            // cmbCondicaoConsultaCupom
             // 
-            this.btnCupomAndamento.Location = new System.Drawing.Point(477, 19);
-            this.btnCupomAndamento.Name = "btnCupomAndamento";
-            this.btnCupomAndamento.Size = new System.Drawing.Size(128, 32);
-            this.btnCupomAndamento.TabIndex = 7;
-            this.btnCupomAndamento.Text = "Andamento";
-            this.btnCupomAndamento.UseVisualStyleBackColor = true;
+            this.cmbCondicaoConsultaCupom.FormattingEnabled = true;
+            this.cmbCondicaoConsultaCupom.Location = new System.Drawing.Point(235, 20);
+            this.cmbCondicaoConsultaCupom.Name = "cmbCondicaoConsultaCupom";
+            this.cmbCondicaoConsultaCupom.Size = new System.Drawing.Size(92, 21);
+            this.cmbCondicaoConsultaCupom.TabIndex = 6;
+            this.cmbCondicaoConsultaCupom.Text = "Condicao";
+            // 
+            // numLimitConsultaCupom
+            // 
+            this.numLimitConsultaCupom.Location = new System.Drawing.Point(422, 21);
+            this.numLimitConsultaCupom.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLimitConsultaCupom.Name = "numLimitConsultaCupom";
+            this.numLimitConsultaCupom.Size = new System.Drawing.Size(53, 20);
+            this.numLimitConsultaCupom.TabIndex = 5;
+            this.numLimitConsultaCupom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numLimitConsultaCupom.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // groupBox31
             // 
-            this.groupBox31.Controls.Add(this.txtTermoConsultaCupom);
+            this.groupBox31.Controls.Add(this.txtTermoCupom);
             this.groupBox31.Location = new System.Drawing.Point(6, 46);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(465, 48);
@@ -1835,109 +2337,479 @@
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Termo";
             // 
-            // txtTermoConsultaCupom
+            // txtTermoCupom
             // 
-            this.txtTermoConsultaCupom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTermoConsultaCupom.Location = new System.Drawing.Point(3, 16);
-            this.txtTermoConsultaCupom.Name = "txtTermoConsultaCupom";
-            this.txtTermoConsultaCupom.Size = new System.Drawing.Size(459, 20);
-            this.txtTermoConsultaCupom.TabIndex = 0;
+            this.txtTermoCupom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTermoCupom.Location = new System.Drawing.Point(3, 16);
+            this.txtTermoCupom.Name = "txtTermoCupom";
+            this.txtTermoCupom.Size = new System.Drawing.Size(459, 20);
+            this.txtTermoCupom.TabIndex = 0;
             // 
-            // cmbCupomLocalConsulta
+            // cmbColunaConsultaCupom
             // 
-            this.cmbCupomLocalConsulta.FormattingEnabled = true;
-            this.cmbCupomLocalConsulta.Location = new System.Drawing.Point(131, 18);
-            this.cmbCupomLocalConsulta.Name = "cmbCupomLocalConsulta";
-            this.cmbCupomLocalConsulta.Size = new System.Drawing.Size(121, 21);
-            this.cmbCupomLocalConsulta.TabIndex = 3;
-            this.cmbCupomLocalConsulta.Text = "Local";
+            this.cmbColunaConsultaCupom.FormattingEnabled = true;
+            this.cmbColunaConsultaCupom.Location = new System.Drawing.Point(137, 19);
+            this.cmbColunaConsultaCupom.Name = "cmbColunaConsultaCupom";
+            this.cmbColunaConsultaCupom.Size = new System.Drawing.Size(92, 21);
+            this.cmbColunaConsultaCupom.TabIndex = 3;
+            this.cmbColunaConsultaCupom.Text = "Coluna";
             // 
-            // btnCupomFiltraLista
+            // btnFiltraCupom
             // 
-            this.btnCupomFiltraLista.Location = new System.Drawing.Point(395, 18);
-            this.btnCupomFiltraLista.Name = "btnCupomFiltraLista";
-            this.btnCupomFiltraLista.Size = new System.Drawing.Size(76, 21);
-            this.btnCupomFiltraLista.TabIndex = 2;
-            this.btnCupomFiltraLista.Text = "Filtrar";
-            this.btnCupomFiltraLista.UseVisualStyleBackColor = true;
+            this.btnFiltraCupom.Location = new System.Drawing.Point(474, 55);
+            this.btnFiltraCupom.Name = "btnFiltraCupom";
+            this.btnFiltraCupom.Size = new System.Drawing.Size(137, 32);
+            this.btnFiltraCupom.TabIndex = 2;
+            this.btnFiltraCupom.Text = "Filtrar";
+            this.btnFiltraCupom.UseVisualStyleBackColor = true;
             // 
-            // cmbCupomOperacao
+            // cmbComandoConsultaCupom
             // 
-            this.cmbCupomOperacao.FormattingEnabled = true;
-            this.cmbCupomOperacao.Location = new System.Drawing.Point(6, 19);
-            this.cmbCupomOperacao.Name = "cmbCupomOperacao";
-            this.cmbCupomOperacao.Size = new System.Drawing.Size(121, 21);
-            this.cmbCupomOperacao.TabIndex = 1;
-            this.cmbCupomOperacao.Text = "Operacao";
+            this.cmbComandoConsultaCupom.FormattingEnabled = true;
+            this.cmbComandoConsultaCupom.Location = new System.Drawing.Point(6, 19);
+            this.cmbComandoConsultaCupom.Name = "cmbComandoConsultaCupom";
+            this.cmbComandoConsultaCupom.Size = new System.Drawing.Size(121, 21);
+            this.cmbComandoConsultaCupom.TabIndex = 1;
+            this.cmbComandoConsultaCupom.Text = "Comando Consulta";
             // 
-            // cmbCupomOrdenConsulta
+            // cmbOrdenConsultaCupom
             // 
-            this.cmbCupomOrdenConsulta.FormattingEnabled = true;
-            this.cmbCupomOrdenConsulta.Location = new System.Drawing.Point(258, 18);
-            this.cmbCupomOrdenConsulta.Name = "cmbCupomOrdenConsulta";
-            this.cmbCupomOrdenConsulta.Size = new System.Drawing.Size(121, 21);
-            this.cmbCupomOrdenConsulta.TabIndex = 0;
-            this.cmbCupomOrdenConsulta.Text = "Ordenar Por";
+            this.cmbOrdenConsultaCupom.FormattingEnabled = true;
+            this.cmbOrdenConsultaCupom.Location = new System.Drawing.Point(333, 20);
+            this.cmbOrdenConsultaCupom.Name = "cmbOrdenConsultaCupom";
+            this.cmbOrdenConsultaCupom.Size = new System.Drawing.Size(83, 21);
+            this.cmbOrdenConsultaCupom.TabIndex = 0;
+            this.cmbOrdenConsultaCupom.Text = "Ordenar Por";
             // 
-            // btnCupomResumo
+            // iUsuarioEntcBindingSource
             // 
-            this.btnCupomResumo.Location = new System.Drawing.Point(478, 57);
-            this.btnCupomResumo.Name = "btnCupomResumo";
-            this.btnCupomResumo.Size = new System.Drawing.Size(128, 32);
-            this.btnCupomResumo.TabIndex = 8;
-            this.btnCupomResumo.Text = "Resumo";
-            this.btnCupomResumo.UseVisualStyleBackColor = true;
+            this.iUsuarioEntcBindingSource.DataSource = typeof(Hope.Entidade.IUsuario_Ent_c);
             // 
-            // dgvListaCupom
+            // dataGridViewTextBoxColumn1
             // 
-            this.dgvListaCupom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCupom.Location = new System.Drawing.Point(6, 106);
-            this.dgvListaCupom.Name = "dgvListaCupom";
-            this.dgvListaCupom.Size = new System.Drawing.Size(611, 188);
-            this.dgvListaCupom.TabIndex = 8;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Usuario";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Usuario";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Usuario_Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Usuario_Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Senha";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Senha";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Nome_Completo";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nome_Completo";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // iClienteEntcBindingSource
+            // 
+            this.iClienteEntcBindingSource.DataSource = typeof(Hope.Entidade.ICliente_Ent_c);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id_Cliente";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id_Cliente";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Tipo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Fornecedor";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Fornecedor";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Cpf_Cnpj";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Cpf_Cnpj";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "NomeCompleto_Razao";
+            this.dataGridViewTextBoxColumn9.HeaderText = "NomeCompleto_Razao";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Apelido_Fantasia";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Apelido_Fantasia";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Telefone_1";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Telefone_1";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Telefone_2";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Telefone_2";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Cep";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Cep";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Logradouro";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Logradouro";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Bairro";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Bairro";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Municipio";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Municipio";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Estado";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Observacao";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Observacao";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Conta_Cliente";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Conta_Cliente";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Limite_Cupom";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Limite_Cupom";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Limite_Mensal";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Limite_Mensal";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "semanaVencimento";
+            this.dataGridViewTextBoxColumn22.HeaderText = "semanaVencimento";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "TipoVemcimento";
+            this.dataGridViewTextBoxColumn23.HeaderText = "TipoVemcimento";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "DiaVencimento";
+            this.dataGridViewTextBoxColumn24.HeaderText = "DiaVencimento";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Visible = false;
+            // 
+            // iProdutoEntcBindingSource
+            // 
+            this.iProdutoEntcBindingSource.DataSource = typeof(Hope.Entidade.IProduto_Ent_c);
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "ID_Produto";
+            this.dataGridViewTextBoxColumn25.HeaderText = "ID_Produto";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "EAN";
+            this.dataGridViewTextBoxColumn26.HeaderText = "EAN";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "Unidade";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Unidade";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.dataGridViewTextBoxColumn28.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "Custo";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Custo";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Venda";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Venda";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.dataGridViewTextBoxColumn30.Visible = false;
+            // 
+            // iCaixaEntcBindingSource
+            // 
+            this.iCaixaEntcBindingSource.DataSource = typeof(Hope.Entidade.ICaixa_Ent_c);
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "ID_Caixa";
+            this.dataGridViewTextBoxColumn31.HeaderText = "ID_Caixa";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // fkIDUsuarioDataGridViewTextBoxColumn
+            // 
+            this.fkIDUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Fk_ID_Usuario";
+            this.fkIDUsuarioDataGridViewTextBoxColumn.HeaderText = "Fk_ID_Usuario";
+            this.fkIDUsuarioDataGridViewTextBoxColumn.Name = "fkIDUsuarioDataGridViewTextBoxColumn";
+            this.fkIDUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "Abertura";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Abertura";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "Fechamento";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Fechamento";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // iCupomEntcBindingSource
+            // 
+            this.iCupomEntcBindingSource.DataSource = typeof(Hope.Entidade.ICupom_Ent_c);
+            // 
+            // iDCupomDataGridViewTextBoxColumn
+            // 
+            this.iDCupomDataGridViewTextBoxColumn.DataPropertyName = "ID_Cupom";
+            this.iDCupomDataGridViewTextBoxColumn.HeaderText = "ID_Cupom";
+            this.iDCupomDataGridViewTextBoxColumn.Name = "iDCupomDataGridViewTextBoxColumn";
+            this.iDCupomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "ID_Caixa";
+            this.dataGridViewTextBoxColumn34.HeaderText = "ID_Caixa";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // horaDataGridViewTextBoxColumn
+            // 
+            this.horaDataGridViewTextBoxColumn.DataPropertyName = "Hora";
+            this.horaDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
+            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colaboradorDataGridViewTextBoxColumn
+            // 
+            this.colaboradorDataGridViewTextBoxColumn.DataPropertyName = "Colaborador";
+            this.colaboradorDataGridViewTextBoxColumn.HeaderText = "Colaborador";
+            this.colaboradorDataGridViewTextBoxColumn.Name = "colaboradorDataGridViewTextBoxColumn";
+            this.colaboradorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iCupomItemEntcBindingSource
+            // 
+            this.iCupomItemEntcBindingSource.DataSource = typeof(Hope.Entidade.ICupomItem_Ent_c);
+            // 
+            // iDItemDataGridViewTextBoxColumn
+            // 
+            this.iDItemDataGridViewTextBoxColumn.DataPropertyName = "ID_Item";
+            this.iDItemDataGridViewTextBoxColumn.HeaderText = "ID_Item";
+            this.iDItemDataGridViewTextBoxColumn.Name = "iDItemDataGridViewTextBoxColumn";
+            this.iDItemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Unidade";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Unidade";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precoDataGridViewTextBoxColumn
+            // 
+            this.precoDataGridViewTextBoxColumn.DataPropertyName = "Preco";
+            this.precoDataGridViewTextBoxColumn.HeaderText = "Preco";
+            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
+            this.precoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // subTotalDataGridViewTextBoxColumn
+            // 
+            this.subTotalDataGridViewTextBoxColumn.DataPropertyName = "Sub_Total";
+            this.subTotalDataGridViewTextBoxColumn.HeaderText = "Sub_Total";
+            this.subTotalDataGridViewTextBoxColumn.Name = "subTotalDataGridViewTextBoxColumn";
+            this.subTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 450);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlPrincipal);
             this.Name = "FormTeste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teste";
             this.Shown += new System.EventHandler(this.FormTeste_Shown);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
+            groupBox10.ResumeLayout(false);
+            this.tabControlCRUD.ResumeLayout(false);
             this.tpageListaUsuario.ResumeLayout(false);
+            this.tpageListaUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorUsuario)).EndInit();
+            this.bindingNavigatorUsuario.ResumeLayout(false);
+            this.bindingNavigatorUsuario.PerformLayout();
             this.groupBox21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numUsuarioLimitFiltro)).EndInit();
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioBindingSource)).EndInit();
             this.tpageListaCliente.ResumeLayout(false);
+            this.tpageListaCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCliente)).EndInit();
+            this.bindingNavigatorCliente.ResumeLayout(false);
+            this.bindingNavigatorCliente.PerformLayout();
             this.groupBox19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCliente)).EndInit();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iClienteBindingSource)).EndInit();
             this.tpageListaProduto.ResumeLayout(false);
+            this.tpageListaProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProduto)).EndInit();
+            this.bindingNavigatorProduto.ResumeLayout(false);
+            this.bindingNavigatorProduto.PerformLayout();
             this.groupBox17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaProduto)).EndInit();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
+            groupBox8.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.tabControlPrincipal.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabControlResumo.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPageCRUD.ResumeLayout(false);
+            this.tabPageFuncaoOperacao.ResumeLayout(false);
+            this.tabPageCaixa.ResumeLayout(false);
+            this.tabControlCaixa.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -1952,27 +2824,42 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
+            this.tabPage12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCaixa)).EndInit();
+            this.bindingNavigatorCaixa.ResumeLayout(false);
+            this.bindingNavigatorCaixa.PerformLayout();
             this.groupBox15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCaixa)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.tabControl5.ResumeLayout(false);
+            this.tabPagePDV.ResumeLayout(false);
+            this.tabControlPDV.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
+            this.groupBox28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).EndInit();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox28.ResumeLayout(false);
-            this.groupBox29.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCupomItem)).EndInit();
+            this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCupom)).EndInit();
+            this.bindingNavigatorCupom.ResumeLayout(false);
+            this.bindingNavigatorCupom.PerformLayout();
             this.groupBox30.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCupom)).EndInit();
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iUsuarioEntcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iClienteEntcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iProdutoEntcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCaixaEntcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCupomEntcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCupomItemEntcBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1988,29 +2875,27 @@
         private System.Windows.Forms.Label lbllogin;
         private System.Windows.Forms.Button btnReforco;
         private System.Windows.Forms.Button btnSangria;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlPrincipal;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tabControlResumo;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPageCRUD;
+        private System.Windows.Forms.TabPage tabPageFuncaoOperacao;
+        private System.Windows.Forms.TabPage tabPageCaixa;
+        private System.Windows.Forms.TabControl tabControlCRUD;
         private System.Windows.Forms.TabPage tpageListaUsuario;
         private System.Windows.Forms.TabPage tpageListaCliente;
         private System.Windows.Forms.TabPage tpageListaProduto;
-        private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button btnEnceraMeuCaixa;
-        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabControl tabControlCaixa;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPagePDV;
         private System.Windows.Forms.Button btnCupomIniciaNovoCupom;
-        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabControl tabControlPDV;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.GroupBox groupBox14;
@@ -2037,39 +2922,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbltotRecebimento;
         private System.Windows.Forms.Label lblresultmeucaixa;
-        private System.Windows.Forms.DataGridView dgvListaCaixa;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox txtTermoCaixa;
-        private System.Windows.Forms.ComboBox cmbLocalConsultaCaixa;
-        private System.Windows.Forms.Button btnFiltarCaixa;
-        private System.Windows.Forms.ComboBox cmbOperacaoConsultaCaixa;
-        private System.Windows.Forms.ComboBox cmbOrdenarConsultaCaixa;
-        private System.Windows.Forms.DataGridView dgvListaProduto;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.TextBox txtTermoCultaProd;
-        private System.Windows.Forms.Button btnAlterarProduto;
-        private System.Windows.Forms.ComboBox cmbLocalConsultaProd;
-        private System.Windows.Forms.Button btnFiltraProduto;
-        private System.Windows.Forms.ComboBox cmbOperacaConsultaProd;
-        private System.Windows.Forms.ComboBox cmbOrdenConsultaprod;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.Button btnAlterarClien;
-        private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox txtTermoClient;
-        private System.Windows.Forms.ComboBox cmbLocalConsultaClien;
-        private System.Windows.Forms.Button btnFiltraCliente;
-        private System.Windows.Forms.ComboBox cmbOperacaoConsultaClient;
-        private System.Windows.Forms.ComboBox cmbOrdenConsultaClient;
-        private System.Windows.Forms.DataGridView dgvListaCliente;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.Button btnAlterarUsuario;
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.TextBox txtTermoUsuario;
-        private System.Windows.Forms.ComboBox cmbLocalConsultaUsuario;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaUsuario;
         private System.Windows.Forms.Button btnFiltarUsuario;
-        private System.Windows.Forms.ComboBox cmboperacaoConsultaUsuar;
+        private System.Windows.Forms.ComboBox cmbComandoConsultaUsuar;
         private System.Windows.Forms.ComboBox cmbOrdenConsultaUsuario;
         private System.Windows.Forms.DataGridView dgvListaUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDUsuarioDataGridViewTextBoxColumn;
@@ -2077,7 +2935,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCompletoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iUsuarioBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn fornecedorDataGridViewCheckBoxColumn;
@@ -2099,19 +2956,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn semanaVencimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoVemcimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaVencimentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iClienteBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn custoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iProdutoBindingSource;
-        private System.Windows.Forms.Button btnDetalheCaixaSelecionado;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCaixaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aberturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iCaixaBindingSource;
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.Button btnCupomAdicionarCliente;
         private System.Windows.Forms.Label lblResultadoCupomCliente;
@@ -2127,22 +2980,162 @@
         private System.Windows.Forms.Label lblCupomTotalQuantItem;
         private System.Windows.Forms.Button btnCupomExcluirItem;
         private System.Windows.Forms.Button btnCupomalteraItem;
-        private System.Windows.Forms.Button btnCupomAtualizar;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.Label lblCupomTroco;
         private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.Label lblCupomDesconto;
         private System.Windows.Forms.DataGridView dgvCupomItem;
-        private System.Windows.Forms.GroupBox groupBox30;
-        private System.Windows.Forms.Button btnCupomResumo;
-        private System.Windows.Forms.Button btnCupomAndamento;
-        private System.Windows.Forms.GroupBox groupBox31;
-        private System.Windows.Forms.TextBox txtTermoConsultaCupom;
-        private System.Windows.Forms.ComboBox cmbCupomLocalConsulta;
-        private System.Windows.Forms.Button btnCupomFiltraLista;
-        private System.Windows.Forms.ComboBox cmbCupomOperacao;
-        private System.Windows.Forms.ComboBox cmbCupomOrdenConsulta;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorUsuario;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton btnAlterarUsuario;
+        private System.Windows.Forms.NumericUpDown numUsuarioLimitFiltro;
+        private System.Windows.Forms.ComboBox cmbCondicaoConsultaUsuario;
+        private System.Windows.Forms.DataGridView dgvListaCliente;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorCliente;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnAlteraCliente;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.ComboBox cmbCondicaoConsultaCliente;
+        private System.Windows.Forms.NumericUpDown numLimitConsultaCliente;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.TextBox txtTermoCliente;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaCliente;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbComandoConsualtaCliente;
+        private System.Windows.Forms.ComboBox cmbOrdenConsultaCliente;
+        private System.Windows.Forms.DataGridView dgvListaProduto;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorProduto;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton btnAlteraProduto;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.ComboBox cmbCondicaoConsultaPRoduto;
+        private System.Windows.Forms.NumericUpDown numLimitConsultaProduto;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TextBox txtTermoProduto;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaProduto;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cmbComandoConsultaProduto;
+        private System.Windows.Forms.ComboBox cmbOrdenConsultaProduto;
+        private System.Windows.Forms.DataGridView dgvListaCaixa;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorCaixa;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton btnVisualizarRegistroCaixa;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.ComboBox cmbCondicaoConsultaCaixa;
+        private System.Windows.Forms.NumericUpDown numLimitConsultaCaixa;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox txtTermoCaixa;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaCaixa;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cmbComandoConsultaCaixa;
+        private System.Windows.Forms.ComboBox cmbOrdenConusltaCaixa;
         private System.Windows.Forms.DataGridView dgvListaCupom;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorCupom;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.ToolStripButton toolStripButton17;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton toolStripButton18;
+        private System.Windows.Forms.ToolStripButton toolStripButton19;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton btnVisualizarRegistroCupom;
+        private System.Windows.Forms.ToolStripButton btnContinuarRegistro;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.ComboBox cmbCondicaoConsultaCupom;
+        private System.Windows.Forms.NumericUpDown numLimitConsultaCupom;
+        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.TextBox txtTermoCupom;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaCupom;
+        private System.Windows.Forms.Button btnFiltraCupom;
+        private System.Windows.Forms.ComboBox cmbComandoConsultaCupom;
+        private System.Windows.Forms.ComboBox cmbOrdenConsultaCupom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.BindingSource iUsuarioEntcBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.BindingSource iClienteEntcBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.BindingSource iProdutoEntcBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkIDUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.BindingSource iCaixaEntcBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCupomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colaboradorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource iCupomEntcBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource iCupomItemEntcBindingSource;
     }
 }
 

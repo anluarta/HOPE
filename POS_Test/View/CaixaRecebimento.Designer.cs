@@ -38,7 +38,7 @@
             this.lblFormaRes = new System.Windows.Forms.Label();
             this.cmbFormaRcebimento = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbLocalConsultaCliente = new System.Windows.Forms.ComboBox();
+            this.cmbColunaConsultaCliente = new System.Windows.Forms.ComboBox();
             this.lblClienteRes = new System.Windows.Forms.Label();
             this.btnLocalizarCliente = new System.Windows.Forms.Button();
             this.txtCliente = new System.Windows.Forms.TextBox();
@@ -135,7 +135,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cmbLocalConsultaCliente);
+            this.groupBox4.Controls.Add(this.cmbColunaConsultaCliente);
             this.groupBox4.Controls.Add(this.lblClienteRes);
             this.groupBox4.Controls.Add(this.btnLocalizarCliente);
             this.groupBox4.Controls.Add(this.txtCliente);
@@ -146,13 +146,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Cliente";
             // 
-            // cmbLocalConsultaCliente
+            // cmbColunaConsultaCliente
             // 
-            this.cmbLocalConsultaCliente.FormattingEnabled = true;
-            this.cmbLocalConsultaCliente.Location = new System.Drawing.Point(6, 16);
-            this.cmbLocalConsultaCliente.Name = "cmbLocalConsultaCliente";
-            this.cmbLocalConsultaCliente.Size = new System.Drawing.Size(105, 21);
-            this.cmbLocalConsultaCliente.TabIndex = 3;
+            this.cmbColunaConsultaCliente.FormattingEnabled = true;
+            this.cmbColunaConsultaCliente.Location = new System.Drawing.Point(6, 16);
+            this.cmbColunaConsultaCliente.Name = "cmbColunaConsultaCliente";
+            this.cmbColunaConsultaCliente.Size = new System.Drawing.Size(105, 21);
+            this.cmbColunaConsultaCliente.TabIndex = 3;
+            this.cmbColunaConsultaCliente.Text = "Coluna";
             // 
             // lblClienteRes
             // 
@@ -236,7 +237,7 @@
         private System.Windows.Forms.Button btnLocalizarCliente;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.ComboBox cmbLocalConsultaCliente;
+        private System.Windows.Forms.ComboBox cmbColunaConsultaCliente;
         private System.Windows.Forms.Label lblRecebimentoRes;
         private System.Windows.Forms.Label lblRecebidoREs;
         private System.Windows.Forms.Label lblFormaRes;

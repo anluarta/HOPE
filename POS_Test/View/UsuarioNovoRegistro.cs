@@ -19,35 +19,33 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (!Program.ObjHope.Usuario.Set_NomeUsuario(txtUsusarioNome.Text))
+            bool vregistro = Program.ObjHope.Usuario.NovoRegistro(out Hope.Entidade.IUsuario_Ent_c usuario);
+            if (vregistro)
             {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else if (!Program.ObjHope.Usuario.Set_Senha(txtSenha.Text))
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else if (!Program.ObjHope.Usuario.Set_NomeCompleto(txtNomeCompleto.Text))
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else if (!Program.ObjHope.Usuario.Set_Email(txtEmail.Text))
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else if (Program.ObjHope.Usuario.GravarNovo())
-            {
-                btnVoltar.PerformClick();
-                return;
+               bool vnomeuser= usuario.Set_NomeUsuario(txtUsusarioNome.Text);
+               bool vsenha =usuario.Set_Senha(txtSenha.Text);
+               bool vnomecomple =usuario.Set_NomeCompleto(txtNomeCompleto.Text);
+               bool vemail= usuario.Set_Email(txtEmail.Text);
+                if (!vnomeuser|!vemail|!vnomecomple|vsenha)
+                {
+                    MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
+                    return;
+                }
+                else if (Program.ObjHope.Usuario.GravarRegistro(usuario))
+                {
+                    btnVoltar.PerformClick();
+                    return;
 
+                }
+                else
+                {
+                    MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
+                    return;
+                }
             }
             else
             {
-                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
+                MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
                 return;
             }
         }

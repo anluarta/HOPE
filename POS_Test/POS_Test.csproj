@@ -112,12 +112,6 @@
     <Compile Include="View\CaixaFechamento.Designer.cs">
       <DependentUpon>CaixaFechamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CaixaLista.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CaixaLista.Designer.cs">
-      <DependentUpon>CaixaLista.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\CaixaNovo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,12 +148,6 @@
     <Compile Include="View\ClienteAlterar.Designer.cs">
       <DependentUpon>ClienteAlterar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ClienteLista.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ClienteLista.Designer.cs">
-      <DependentUpon>ClienteLista.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ClienteNovo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,23 +178,11 @@
     <Compile Include="View\ProdutoAlterar.Designer.cs">
       <DependentUpon>ProdutoAlterar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ProdutoLista.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ProdutoLista.Designer.cs">
-      <DependentUpon>ProdutoLista.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ProdutoNovo.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ProdutoNovo.Designer.cs">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\UsuarioListaRegistro.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\UsuarioListaRegistro.Designer.cs">
-      <DependentUpon>UsuarioListaRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UsuarioLogin.cs">
       <SubType>UserControl</SubType>
@@ -245,9 +221,6 @@
     <EmbeddedResource Include="View\CaixaDetalhe.resx">
       <DependentUpon>CaixaDetalhe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CaixaLista.resx">
-      <DependentUpon>CaixaLista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\CaixaNovo.resx">
       <DependentUpon>CaixaNovo.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClienteAlterar.resx">
       <DependentUpon>ClienteAlterar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ClienteLista.resx">
-      <DependentUpon>ClienteLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClienteNovo.resx">
       <DependentUpon>ClienteNovo.cs</DependentUpon>
@@ -281,17 +251,11 @@
     <EmbeddedResource Include="View\ProdutoAlterar.resx">
       <DependentUpon>ProdutoAlterar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ProdutoLista.resx">
-      <DependentUpon>ProdutoLista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ProdutoNovo.resx">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UsuarioAlteraRegistro.resx">
       <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioListaRegistro.resx">
-      <DependentUpon>UsuarioListaRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UsuarioLogin.resx">
       <DependentUpon>UsuarioLogin.cs</DependentUpon>
@@ -300,10 +264,12 @@
       <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICaixa.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICliente.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IProduto.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IUsuario.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICaixa_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICliente_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICupomItem_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.ICupom_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IProduto_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IUsuario_Ent_c.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

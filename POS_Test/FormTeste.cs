@@ -80,50 +80,19 @@ namespace POS_Test
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Usuario.Autenticado(out string MsgResult))
-            {
-                lbllogin.Text = MsgResult;
-                if (MessageBox.Show(MsgResult, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    Program.ObjHope.Usuario.Sair(out string Logof);
-                    lbllogin.Text = Logof;
-                }
-                else
-                {
-                    return;
-                }
-            }
-            else
-            {
-                View.UsuarioLogin usuarioLogin = new View.UsuarioLogin();
-                usuarioLogin.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
-                ExibicaoAcao(usuarioLogin);
-                lbllogin.Text = MsgResult;
-            }
+
         }
 
         private void btnIniciaMeuCaixa_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Caixa.IniciarMeuCaixa(out string mgs))
-            {
-                MessageBox.Show(mgs);
-            }
-            else
-            {
-                MessageBox.Show(mgs);
-            }
+            Program.ObjHope.Caixa.IniciarMeuCaixa();
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
         }
 
         private void btnEnceraMeuCaixa_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Caixa.EncerrarMeuCaixa(out string mgs))
-            {
-                MessageBox.Show(mgs);
-            }
-            else
-            {
-                MessageBox.Show(mgs);
-            }
+            Program.ObjHope.Caixa.EncerrarMeuCaixa();
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
         }
 
         private void btnSangria_Click(object sender, EventArgs e)
@@ -142,8 +111,6 @@ namespace POS_Test
 
         private void btnAtualizarMeuCaixa_Click(object sender, EventArgs e)
         {
-            bool vAtualmeucaixa = Program.ObjHope.Caixa.Situacao(out string msgmeucaixa);
-            lblresultmeucaixa.Text = msgmeucaixa;
             lbltotContaCliente.Text = Program.ObjHope.Caixa.ContaClienteTotal;
             lbltotCredito.Text = Program.ObjHope.Caixa.CreditoTotal;
             lbltotDebito.Text = Program.ObjHope.Caixa.DebidoTotal;
@@ -159,49 +126,42 @@ namespace POS_Test
 
         private void btnFiltarUsuario_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Usuario.Localizar(_orden: cmbOrdenConsultaUsuario.SelectedItem.ToString(), _operacao: cmboperacaoConsultaUsuar.SelectedItem.ToString(), _local: cmbLocalConsultaUsuario.SelectedItem.ToString(), _limit: 0, _termo: txtTermoUsuario.Text))
-            {
-                iUsuarioBindingSource.DataSource = Program.ObjHope.Usuario.DadoResultado;
+            bool bfiltro = Program.ObjHope.Usuario.Localizar(Orden: cmbOrdenConsultaUsuario.SelectedItem.ToString(), Comando: cmbComandoConsultaUsuar.SelectedItem.ToString(), Coluna: cmbColunaConsultaUsuario.SelectedItem.ToString(), Limit: numUsuarioLimitFiltro.Value, Termo: txtTermoUsuario.Text, ListaRegistro: out Hope.Entidade.IUsuario_Ent_c[] ListaRegistro);
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
 
-            }
-            else
+            if (bfiltro)
             {
-                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
-
+                iUsuarioBindingSource.DataSource = ListaRegistro;
             }
         }
 
         private void btnAlterarUsuario_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Usuario.FocusRegistro((object)dgvListaUsuario.SelectedRows))
+            bool bfocus = Program.ObjHope.Usuario.SelecionaRegistro((object)dgvListaUsuario.SelectedRows);
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
+
+            if (bfocus)
             {
                 View.UsuarioAlteraRegistro usuarioAltera = new View.UsuarioAlteraRegistro();
                 usuarioAltera.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
                 ExibicaoAcao(usuarioAltera);
-
-            }
-            else
-            {
-                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
             }
         }
         private void btnFiltarCliente_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Cliente.Localizar(_orden: cmbOrdenConsultaClient.SelectedItem.ToString(), _operacao: cmbOperacaoConsultaClient.SelectedItem.ToString(), _local: cmbLocalConsultaClien.SelectedItem.ToString(), _limit: 0, _termo: txtTermoClient.Text))
-            {
-                iClienteBindingSource.DataSource = Program.ObjHope.Cliente.DataResultado;
+            bool vfilrto = Program.ObjHope.Cliente.Localizar(Orden: cmbOrdenConsultaCliente.SelectedItem.ToString(), Comando: cmbColunaConsultaCliente.SelectedItem.ToString(), Coluna: cmbColunaConsultaCliente.SelectedItem.ToString(), Limit: numLimitConsultaCliente.Value, Termo: txtTermoCliente.Text, ListaResultado: out Hope.Entidade.ICliente_Ent_c[] listaResultado);
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
 
-            }
-            else
+            if (vfilrto)
             {
-                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
+                iClienteBindingSource.DataSource = listaResultado;
 
             }
         }
 
         private void btnAlterarCliente_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Cliente.FocusRegistro((object)dgvListaCliente.SelectedRows))
+            if (Program.ObjHope.Cliente.SelecionaRegistro((object)dgvListaCliente.SelectedRows))
             {
                 View.ClienteAlterar clienteAlterar = new View.ClienteAlterar();
                 clienteAlterar.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
@@ -210,26 +170,24 @@ namespace POS_Test
             }
             else
             {
-                MessageBox.Show(Program.ObjHope.Usuario.StrMsgResult);
+                MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
             }
         }
         private void btnFiltarProduto_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Produto.Localizar(_orden: cmbOrdenConsultaprod.SelectedItem.ToString(), _operacao: cmbOperacaConsultaProd.SelectedItem.ToString(), _local: cmbLocalConsultaProd.SelectedItem.ToString(), _limit: 0, _termo: txtTermoCultaProd.Text))
+            if (Program.ObjHope.Produto.Localizar(Orden: cmbOrdenConsultaProduto.SelectedItem.ToString(), Comando: cmbComandoConsultaProduto.SelectedItem.ToString(), Coluna: cmbColunaConsultaProduto.SelectedItem.ToString(), Limit: numLimitConsultaProduto.Value, Termo: txtTermoProduto.Text,ListaRegistro: out Hope.Entidade.IProduto_Ent_c[] ListaResultado))
             {
-                iProdutoBindingSource.DataSource = Program.ObjHope.Produto.DadoResultado;
-
+                iProdutoBindingSource.DataSource = ListaResultado;
             }
             else
             {
-                MessageBox.Show(Program.ObjHope.Produto.StrMsgResultado);
-
+                MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
             }
         }
 
         private void btnAlterarProduto_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Usuario.FocusRegistro((object)dgvListaProduto.SelectedRows))
+            if (Program.ObjHope.Usuario.SelecionaRegistro((object)dgvListaProduto.SelectedRows))
             {
                 View.ProdutoAlterar produtoAlterar = new View.ProdutoAlterar();
                 produtoAlterar.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
@@ -238,16 +196,16 @@ namespace POS_Test
             }
             else
             {
-                MessageBox.Show(Program.ObjHope.Produto.StrMsgResultado);
+                MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
             }
         }
 
         private void btnDetalheCaixaSelecionado_Click(object sender, EventArgs e)
         {
-            if (dgvListaCaixa.SelectedRows.Count!=0)
+            if (dgvListaCaixa.SelectedRows.Count != 0)
             {
 
-                bool vselec = Program.ObjHope.Caixa.DetalheValorTotalRegistro(dgvListaCaixa.SelectedRows[0], out string msgdetalhe, out Hope.Entidade.ICaixaTotal Totais);
+                bool vselec = Program.ObjHope.Caixa.DetalheValorTotalRegistro(dgvListaCaixa.SelectedRows[0],  out Hope.Entidade.ICaixaTotal_Ent_c Totais);
                 if (vselec)
                 {
                     View.CaixaDetalhe caixaDetalhe = new View.CaixaDetalhe();
@@ -257,34 +215,53 @@ namespace POS_Test
                 }
                 else
                 {
-                    MessageBox.Show(msgdetalhe);
+                    MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+
                 }
-            } 
+            }
         }
 
         private void btnFiltarCaixa_Click(object sender, EventArgs e)
         {
-            bool vfiltro = Program.ObjHope.Caixa.Localizar(cmbOperacaoConsultaCaixa.SelectedText.ToString(), cmbLocalConsultaCaixa.SelectedText.ToString(), cmbOrdenarConsultaCaixa.SelectedText.ToString(), 0, txtTermoCaixa.Text, out Hope.Entidade.ICaixa[] registro,out string msgresult);
+            bool vfiltro = Program.ObjHope.Caixa.Localizar(Comando:cmbComandoConsultaCaixa.SelectedText.ToString(),Coluna: cmbColunaConsultaCaixa.SelectedText.ToString(),Orden: cmbOrdenConusltaCaixa.SelectedText.ToString(), Limit:numLimitConsultaCaixa.Value , Termo:txtTermoCaixa.Text,ListaResultado: out Hope.Entidade.ICaixa_Ent_c[] registro);
             if (vfiltro)
             {
                 iCaixaBindingSource.DataSource = registro;
             }
             else
             {
-                MessageBox.Show(msgresult);
+                MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+
             }
         }
 
         private void btnCupomIniciaNovoCupom_Click(object sender, EventArgs e)
         {
-            bool vinicia = Program.ObjHope.Cupom.NovoRegistro(out string msg);
-            MessageBox.Show(msg);
+            bool vinicia = Program.ObjHope.Cupom.NovoRegistro();
+            MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+
         }
 
         private void btnCupomFechar_Click(object sender, EventArgs e)
         {
-            bool vinicia = Program.ObjHope.Cupom.FecharRegistro(out string msg);
-            MessageBox.Show(msg);
+            bool vinicia = Program.ObjHope.Cupom.FinalizarRegistro();
+            MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+
+        }
+
+        private void btnCupomFiltraLista_Click(object sender, EventArgs e)
+        {
+            bool vfiltro = Program.ObjHope.Cupom.Localizar(Comando: cmbComandoConsultaCupom.SelectedItem.ToString(), Coluna: cmbColunaConsultaCupom.SelectedItem.ToString(), Orden: cmbOrdenConsultaCupom.SelectedItem.ToString(), Limit: numLimitConsultaCupom.Value, Termo: txtTermoCupom.Text, ListaRegistro: out Hope.Entidade.ICupom_Ent_c[] listaresgistro);
+            MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+            if (vfiltro)
+            {
+
+            }
+        }
+
+        private void tabPageCRUD_Leave(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mem Cache CRUD CLEA");
         }
     }
 }

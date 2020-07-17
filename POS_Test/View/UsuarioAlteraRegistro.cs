@@ -15,7 +15,7 @@ namespace POS_Test.View
         public UsuarioAlteraRegistro()
         {
             InitializeComponent();
-            Hope.Entidade.IUsuario usuario = Program.ObjHope.Usuario.FocusEntidade;
+            Hope.Controle.IUsuario_Ent_c usuario = Program.ObjHope.Usuario.FocusEntidade;
             txtEmail.Text = usuario.Email;
             txtNomeCompleto.Text = usuario.Nome_Completo;
             txtSenha.Text = usuario.Senha;

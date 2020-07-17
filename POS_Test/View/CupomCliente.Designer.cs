@@ -332,7 +332,7 @@
             // 
             // iClienteBindingSource
             // 
-            this.iClienteBindingSource.DataSource = typeof(Hope.Entidade.ICliente);
+            this.iClienteBindingSource.DataSource = typeof(Hope.Controle.ICliente_Ent_c);
             // 
             // CupomCliente
             // 

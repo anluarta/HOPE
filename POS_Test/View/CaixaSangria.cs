@@ -19,14 +19,9 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Caixa.Sangria(txtValor.Text,txtObservacao.Text,out string msg))
-            {
-                MessageBox.Show(msg);
-            }
-            else
-            {
-                MessageBox.Show(msg);
-            }
+            bool v = Program.ObjHope.Caixa.Sangria(txtValor.Text, txtObservacao.Text);
+            MessageBox.Show(Program.ObjHope.Caixa.Informacao.ToMessageBox());
+
         }
     }
 }

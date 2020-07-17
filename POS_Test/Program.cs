@@ -20,7 +20,7 @@ namespace POS_Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ObjHope = Hope.AbsHope.Beta();
+            ObjHope = new Hope.Hope();
             Application.Run(new FormTeste());
         }
     }

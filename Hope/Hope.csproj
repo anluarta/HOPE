@@ -13,6 +13,21 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,46 +63,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abs\Caixa.cs" />
-    <Compile Include="Abs\Cliente.cs" />
-    <Compile Include="Abs\Cupom.cs" />
-    <Compile Include="AbsHope.cs" />
-    <Compile Include="Abs\DtHope.cs" />
-    <Compile Include="Abs\Produto.cs" />
-    <Compile Include="Abs\Recebimento.cs" />
-    <Compile Include="Alfa\HopeAlfa.cs" />
-    <Compile Include="Alfa\Usuario_alfa.cs" />
-    <Compile Include="Beta\Cliente_beta.cs" />
-    <Compile Include="Beta\Hope_beta.cs" />
-    <Compile Include="Beta\Produto_beta.cs" />
-    <Compile Include="Beta\Caixa_beta.cs" />
-    <Compile Include="Beta\Cupom_beta.cs" />
-    <Compile Include="Beta\Usuario_beta.cs" />
-    <Compile Include="Contrato\IDtHope.cs" />
-    <Compile Include="Contrato\IRecebimento.cs" />
-    <Compile Include="Entidade\Caixa.cs" />
-    <Compile Include="Entidade\CaixaTotal.cs" />
-    <Compile Include="Entidade\Cliente.cs" />
-    <Compile Include="Entidade\ICaixa.cs" />
-    <Compile Include="Entidade\ICaixaTotal.cs" />
-    <Compile Include="Entidade\ICliente.cs" />
-    <Compile Include="Entidade\IProduto.cs" />
-    <Compile Include="Entidade\IUsuario.cs" />
-    <Compile Include="Entidade\Produto.cs" />
-    <Compile Include="Entidade\Usuario.cs" />
-    <Compile Include="ListEnum.cs" />
-    <Compile Include="HopeLocalDB_DEBUG.Designer.cs">
+    <Compile Include="Beta\Cliente_Ent_b.cs" />
+    <Compile Include="Beta\Informacao_b.cs" />
+    <Compile Include="Beta\Produto_Ent_b.cs" />
+    <Compile Include="Beta\Usuario_Ent_b.cs" />
+    <Compile Include="Contrato\Iinformacao_c.cs" />
+    <Compile Include="Controle\Caixa_abs.cs" />
+    <Compile Include="Controle\Cliente_abs.cs" />
+    <Compile Include="Controle\Cliente_Ent_abs.cs" />
+    <Compile Include="Controle\Cupom_abs.cs" />
+    <Compile Include="Controle\Informacao_abs.cs" />
+    <Compile Include="Controle\Produto_abs.cs" />
+    <Compile Include="Controle\Produto_Ent_abs.cs" />
+    <Compile Include="Controle\Recebimento_abs.cs" />
+    <Compile Include="Beta\Cliente_b.cs" />
+    <Compile Include="Beta\Produto_b.cs" />
+    <Compile Include="Beta\Caixa_b.cs" />
+    <Compile Include="Beta\Cupom_b.cs" />
+    <Compile Include="Beta\Usuario_b.cs" />
+    <Compile Include="Contrato\ICupomCliente_c.cs" />
+    <Compile Include="Contrato\ICupomItem_c.cs" />
+    <Compile Include="Contrato\ICupomPagar_c.cs" />
+    <Compile Include="Contrato\IRecebimento_c.cs" />
+    <Compile Include="Entidade\Cupom.cs" />
+    <Compile Include="Entidade\ICaixa_Ent_c.cs" />
+    <Compile Include="Entidade\ICaixaTotal_Ent_c.cs" />
+    <Compile Include="Entidade\ICliente_Ent_c.cs" />
+    <Compile Include="Entidade\ICupom_Ent_c.cs" />
+    <Compile Include="Entidade\ICupomCliente_Ent_c.cs" />
+    <Compile Include="Entidade\ICupomItem_Ent_c.cs" />
+    <Compile Include="Entidade\ICupomPagar_Ent_c.cs" />
+    <Compile Include="Entidade\IProduto_Ent_c.cs" />
+    <Compile Include="Entidade\IRecebimento_Ent_c.cs" />
+    <Compile Include="Entidade\IUsuario_Ent_c.cs" />
+    <Compile Include="Hope.cs" />
+    <Compile Include="HopeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
+      <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Contrato\ICaixa.cs" />
-    <Compile Include="Contrato\ICliente.cs" />
-    <Compile Include="Contrato\ICupom.cs" />
-    <Compile Include="Contrato\IProduto.cs" />
-    <Compile Include="Contrato\IUsuario.cs" />
+    <Compile Include="ListEnum.cs" />
+    <Compile Include="Contrato\ICaixa_c.cs" />
+    <Compile Include="Contrato\ICliente_c.cs" />
+    <Compile Include="Contrato\ICupom_c.cs" />
+    <Compile Include="Contrato\IProduto_c.cs" />
+    <Compile Include="Contrato\IUsuario_c.cs" />
     <Compile Include="IHope.cs" />
-    <Compile Include="Prod\HopeProd.cs" />
+    <Compile Include="Controle\Usuario_Ent_abs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,20 +121,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Abs\Usuario.cs" />
+    <Compile Include="Controle\Usuario_abs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="HopeLocalDB_DEBUG.xsc">
-      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
+    <None Include="HopeDataSet.xsc">
+      <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="HopeLocalDB_DEBUG.xsd">
+    <None Include="HopeDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HopeLocalDB_DEBUG.Designer.cs</LastGenOutput>
+      <LastGenOutput>HopeDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="HopeLocalDB_DEBUG.xss">
-      <DependentUpon>HopeLocalDB_DEBUG.xsd</DependentUpon>
+    <None Include="HopeDataSet.xss">
+      <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,9 +144,22 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Hop.ico" />
+    <Content Include="HopeDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HopeDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HopeDB.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\Hop-512.png" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +167,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Alfa\" />
+    <Folder Include="Prod\" />
+    <Folder Include="Utilidade\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -165,7 +165,7 @@
             // 
             // iProdutoBindingSource
             // 
-            this.iProdutoBindingSource.DataSource = typeof(Hope.Entidade.IProduto);
+            this.iProdutoBindingSource.DataSource = typeof(Hope.Entidade.IProduto_Ent_c);
             // 
             // iDProdutoDataGridViewTextBoxColumn
             // 

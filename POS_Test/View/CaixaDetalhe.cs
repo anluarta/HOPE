@@ -16,7 +16,7 @@ namespace POS_Test.View
         {
             InitializeComponent();
         }
-        public void LoadICaixaTotal(Hope.Entidade.ICaixaTotal caixaTotal)
+        public void LoadICaixaTotal(Hope.Entidade.ICaixaTotal_Ent_c caixaTotal)
         {
             lbltotContaCliente.Text = string.Format(lbltotContaCliente.Text, caixaTotal.ContaCliente);
             lbltotCredito.Text = string.Format(lbltotCredito.Text, caixaTotal.Credito);
@@ -29,7 +29,7 @@ namespace POS_Test.View
             lbltotSangria.Text = string.Format(lbltotSangria.Text, caixaTotal.Sangria);
             lbltotValeAlimentacao.Text = string.Format(lbltotValeAlimentacao.Text, caixaTotal.ValeAlimentacao);
             lbltotValeRefeicao.Text = string.Format(lbltotValeRefeicao.Text, caixaTotal.ValeRefeicao);
-            lblEntradaTotalCaixa.Text = string.Format(lblEntradaTotalCaixa.Text, caixaTotal.EntradaCaixa);
+            
             lblTotCupomCancel.Text = string.Format(lblTotCupomCancel.Text, caixaTotal.CupomCancelado);
             lbltotCupom.Text = string.Format(lbltotCupom.Text, caixaTotal.CupomVendido);
 
