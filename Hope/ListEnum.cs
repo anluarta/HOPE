@@ -3,6 +3,10 @@ namespace Hope
 {
     class ListEnum
     {
+        public enum TipoStatusCupom
+        {
+            Aberto,Espera,Finalizado
+        }
         public enum TipoRecebimento
         {
             Avulso, Conta_Cliente

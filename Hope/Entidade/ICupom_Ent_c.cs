@@ -10,7 +10,10 @@ namespace Hope.Entidade
     {
         string ID_Cupom { get; }
         string ID_Caixa { get; }
-        string Hora { get; }
-        string Colaborador { get; }
+        string Dia_Hora_Abertura { get; }
+        string Dia_Hora_Fechamento { get; }
+        string ID_Usuario { get; }
+        string Cliente { get; }
+
     }
 }

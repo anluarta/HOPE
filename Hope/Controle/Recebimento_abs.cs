@@ -10,9 +10,32 @@ namespace Hope.Controle
 {
     abstract class Recebimento_abs : Contrato.IRecebimento_c
     {
-        IInformacao_c IRecebimento_c.Informacao => throw new NotImplementedException();
+        internal Recebimento_Ent_abs _NovoRegistro;
+        internal Recebimento_Ent_abs _FocusRegistro;
+        internal abstract bool InsertRegistro();
+        IInformacao_c IRecebimento_c.Informacao => Hope.informacao;
 
-        Entidade.IRecebimento_Ent_c IRecebimento_c.FocusEntidade => throw new NotImplementedException();
+        Entidade.IRecebimento_Ent_c IRecebimento_c.FocusEntidade => _FocusRegistro;
+
+        string IRecebimento_c.Cliente => _NovoRegistro._Cliente;
+
+        string IRecebimento_c.Cliente_Conta_Valor => _NovoRegistro._Cliente_Conta_Valor;
+
+        bool IRecebimento_c.AdicionarCliente()
+        {
+            if (Hope.cliente._FocusRegistro._Conta_Cliente)
+            {
+                _NovoRegistro._ID_Cliente = Hope.cliente._FocusRegistro._Id_Cliente;
+                _NovoRegistro._Cliente = Hope.cliente._FocusRegistro._NomeCompleto_Razao;
+                _NovoRegistro._Cliente_Conta_Valor = "0,00";
+                return true;
+            }
+            else
+            {
+                Hope.informacao.Add("000", "Conta Cliente nao ativa");
+                return false; 
+            }
+        }
 
         bool IRecebimento_c.GravarRegistro(Entidade.IRecebimento_Ent_c usuario)
         {

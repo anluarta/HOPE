@@ -8,28 +8,33 @@ namespace Hope.Beta
 {
     class Produto_b : Controle.Produto_abs
     {
-        internal override bool Insert()
+        public Produto_b()
+        {
+            ListaResultado = new List<Controle.Produto_Ent_abs>();
+            _FocusRegistro = new Beta.Produto_Ent_b();
+            _NovoRegistro = new Beta.Produto_Ent_b();
+
+        }
+        internal override bool InsertRegistro()
         {
             HopeDataSet.ProdutoRow produtoRow = Hope.localSet.Produto.NewProdutoRow();
-            produtoRow.EAN = _SetEntidade. EAN;
-            produtoRow.Descricao = _SetEntidade.Descricao;
-            produtoRow.Unidade = _SetEntidade.Unidade;
-            produtoRow.Custo = _SetEntidade.Custo;
-            produtoRow.Venda = _SetEntidade.Venda;
+            produtoRow.EAN = _NovoRegistro._EAN;
+            produtoRow.Descricao = _NovoRegistro._Descricao;
+            produtoRow.Unidade = _NovoRegistro._Unidade;
+            produtoRow.Custo = _NovoRegistro._Custo;
+            produtoRow.Venda = _NovoRegistro._Venda;
             Hope.localSet.Produto.Rows.Add(produtoRow);
-          Hope.informacao.Add("000",ListMsg.msg001);
-            
+            Hope.informacao.Add("000", ListMsg.msg001);
+
             return true;
-            throw new NotImplementedException();
         }
-        internal override bool SelectAll()
+        internal override bool Select_All_From()
         {
             if (Hope.localSet.Produto.Count != 0)
             {
-               
                 for (int i = 0; i < Hope.localSet.Produto.Count; i++)
                 {
-                    _DataResultado[i] = new Beta.Produto_Ent_b()
+                    ListaResultado.Add(new Beta.Produto_Ent_b()
                     {
                         _ID_Produto = Hope.localSet.Produto.Rows[i]
                         [Hope.localSet.Produto.Columns.IndexOf("ID_Produto")].ToString(),
@@ -43,35 +48,34 @@ namespace Hope.Beta
                         [Hope.localSet.Produto.Columns.IndexOf("Custo")].ToString(),
                         _Venda = Hope.localSet.Produto.Rows[i]
                         [Hope.localSet.Produto.Columns.IndexOf("Venda")].ToString()
-                    };
+                    });
                 }
                 return true;
             }
             else
             {
-                MsgResult = "Tabela vazia";
+                Hope.informacao.Add("000", "Tabela vazia");
                 return false;
             }
-            throw new NotImplementedException();
         }
-        internal override bool Update()
+        internal override bool UpdateRegistro()
         {
             for (int i = 0; i < Hope.localSet.Produto.Count; i++)
             {
                 HopeDataSet.ProdutoRow produtoRow = Hope.localSet.Produto.Rows[i] as HopeDataSet.ProdutoRow;
-                if (produtoRow.ID_Produto==int.Parse(_FocusEntidade.ID_Produto))
+                if (produtoRow.ID_Produto == int.Parse(_FocusRegistro._ID_Produto))
                 {
-                    produtoRow.EAN = _SetEntidade.EAN;
-                    produtoRow.Descricao = _SetEntidade.Descricao;
-                    produtoRow.Unidade = _SetEntidade.Unidade;
-                    produtoRow.Custo = _SetEntidade.Custo;
-                    produtoRow.Venda = _SetEntidade.Venda;
-                
+                    produtoRow.EAN = _NovoRegistro._EAN;
+                    produtoRow.Descricao = _NovoRegistro._Descricao;
+                    produtoRow.Unidade = _NovoRegistro._Unidade;
+                    produtoRow.Custo = _NovoRegistro._Custo;
+                    produtoRow.Venda = _NovoRegistro._Venda;
+
                     return true;
                 }
 
             }
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

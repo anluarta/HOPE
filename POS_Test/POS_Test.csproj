@@ -106,18 +106,6 @@
     <Compile Include="View\CaixaDetalhe.Designer.cs">
       <DependentUpon>CaixaDetalhe.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CaixaFechamento.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CaixaFechamento.Designer.cs">
-      <DependentUpon>CaixaFechamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CaixaNovo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CaixaNovo.Designer.cs">
-      <DependentUpon>CaixaNovo.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\CaixaRecebimento.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,12 +123,6 @@
     </Compile>
     <Compile Include="View\CaixaSangria.Designer.cs">
       <DependentUpon>CaixaSangria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CaixaStatus.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CaixaStatus.Designer.cs">
-      <DependentUpon>CaixaStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ClienteAlterar.cs">
       <SubType>UserControl</SubType>
@@ -220,9 +202,6 @@
     </Compile>
     <EmbeddedResource Include="View\CaixaDetalhe.resx">
       <DependentUpon>CaixaDetalhe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CaixaNovo.resx">
-      <DependentUpon>CaixaNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CaixaRecebimento.resx">
       <DependentUpon>CaixaRecebimento.cs</DependentUpon>

@@ -20,7 +20,7 @@ namespace POS_Test.View
         private void btnFiltraCliente_Click(object sender, EventArgs e)
         {
             bool vfiltro = Program.ObjHope.Cliente.Localizar(cmbOperacaoConsultaClient.SelectedItem.ToString(), cmbLocalConsultaClien.SelectedItem.ToString(), cmbOrdenConsultaClient.SelectedItem.ToString(), 0, txtTermoClient.Text, out Hope.Entidade.ICliente_Ent_c[] ListaResultado);
-            MessageBox.Show(msg);
+            MessageBox.Show(Program.ObjHope.Cliente.Informacao.ToMessageBox());
             if (vfiltro)
             {
                 iClienteBindingSource.DataSource=ListaResultado;

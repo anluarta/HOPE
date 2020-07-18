@@ -10,5 +10,14 @@ namespace Hope.Beta
 {
     class Cupom_b : Controle.Cupom_abs
     {
+        protected override bool fechar_updade_registro()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool novo_insert_registro()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

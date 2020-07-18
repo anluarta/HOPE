@@ -131,7 +131,7 @@ namespace POS_Test
 
             if (bfiltro)
             {
-                iUsuarioBindingSource.DataSource = ListaRegistro;
+                iUsuarioEntcBindingSource.DataSource = ListaRegistro;
             }
         }
 
@@ -142,6 +142,7 @@ namespace POS_Test
 
             if (bfocus)
             {
+
                 View.UsuarioAlteraRegistro usuarioAltera = new View.UsuarioAlteraRegistro();
                 usuarioAltera.btnVoltar.Click += new EventHandler(frm.BtnVoltar);
                 ExibicaoAcao(usuarioAltera);
@@ -154,7 +155,7 @@ namespace POS_Test
 
             if (vfilrto)
             {
-                iClienteBindingSource.DataSource = listaResultado;
+                iClienteEntcBindingSource.DataSource = listaResultado;
 
             }
         }
@@ -177,7 +178,7 @@ namespace POS_Test
         {
             if (Program.ObjHope.Produto.Localizar(Orden: cmbOrdenConsultaProduto.SelectedItem.ToString(), Comando: cmbComandoConsultaProduto.SelectedItem.ToString(), Coluna: cmbColunaConsultaProduto.SelectedItem.ToString(), Limit: numLimitConsultaProduto.Value, Termo: txtTermoProduto.Text,ListaRegistro: out Hope.Entidade.IProduto_Ent_c[] ListaResultado))
             {
-                iProdutoBindingSource.DataSource = ListaResultado;
+                iProdutoEntcBindingSource.DataSource = ListaResultado;
             }
             else
             {
@@ -226,7 +227,7 @@ namespace POS_Test
             bool vfiltro = Program.ObjHope.Caixa.Localizar(Comando:cmbComandoConsultaCaixa.SelectedText.ToString(),Coluna: cmbColunaConsultaCaixa.SelectedText.ToString(),Orden: cmbOrdenConusltaCaixa.SelectedText.ToString(), Limit:numLimitConsultaCaixa.Value , Termo:txtTermoCaixa.Text,ListaResultado: out Hope.Entidade.ICaixa_Ent_c[] registro);
             if (vfiltro)
             {
-                iCaixaBindingSource.DataSource = registro;
+                iCaixaEntcBindingSource.DataSource = registro;
             }
             else
             {

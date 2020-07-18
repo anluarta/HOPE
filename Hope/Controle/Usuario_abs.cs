@@ -21,6 +21,7 @@ namespace Hope.Controle
         internal abstract bool UpdateRegistro();
         internal abstract bool InsertRegistro();
         internal abstract bool Select_All_From();
+        internal abstract bool Login(string user, string senha);
         IUsuario_Ent_c IUsuario_c.FocusEntidade => _FocusRegistro;
 
         IInformacao_c IUsuario_c.Informacao => Hope.informacao;
@@ -93,8 +94,7 @@ namespace Hope.Controle
         bool IUsuario_c.Login(string _UsuarioNome, string _Senha)
         {
             Hope.informacao.Clear();
-
-            throw new NotImplementedException();
+            return Login(_UsuarioNome, _Senha);
         }
 
         bool IUsuario_c.NovoRegistro( out IUsuario_Ent_c usuario)

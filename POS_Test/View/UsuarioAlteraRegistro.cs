@@ -15,7 +15,7 @@ namespace POS_Test.View
         public UsuarioAlteraRegistro()
         {
             InitializeComponent();
-            Hope.Controle.IUsuario_Ent_c usuario = Program.ObjHope.Usuario.FocusEntidade;
+            Hope.Entidade.IUsuario_Ent_c usuario = Program.ObjHope.Usuario.FocusEntidade;
             txtEmail.Text = usuario.Email;
             txtNomeCompleto.Text = usuario.Nome_Completo;
             txtSenha.Text = usuario.Senha;
@@ -24,36 +24,25 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (!Program.ObjHope.Usuario.Set_Email(txtEmail.Text))
+            Program.ObjHope.Usuario.AlteraRegistro(out Hope.Entidade.IUsuario_Ent_c usuario);
+            bool vnomeuser = usuario.Set_NomeUsuario(txtUsusarioNome.Text);
+            bool vsenha = usuario.Set_Senha(txtSenha.Text);
+            bool vnomecomple = usuario.Set_NomeCompleto(txtNomeCompleto.Text);
+            bool vemail = usuario.Set_Email(txtEmail.Text);
+            if (!vnomeuser | !vemail | !vnomecomple | vsenha)
             {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }else
-            if (!Program.ObjHope.Usuario.Set_NomeCompleto(txtNomeCompleto.Text))
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else
-            if (!Program.ObjHope.Usuario.Set_NomeUsuario(txtUsusarioNome.Text))
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
                 return;
             }
-            else
-            if (!Program.ObjHope.Usuario.Set_Senha(txtSenha.Text))
+            else if (Program.ObjHope.Usuario.GravaAlteracao(usuario))
             {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
-                return;
-            }
-            else if (Program.ObjHope.Usuario.GravaAlteracao())
-            {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
                 btnVoltar.PerformClick();
+                return;
+
             }
             else
             {
-                lblResultado.Text = Program.ObjHope.Usuario.StrMsgResult;
+                MessageBox.Show(Program.ObjHope.Usuario.Informacao.ToMessageBox());
                 return;
             }
         }

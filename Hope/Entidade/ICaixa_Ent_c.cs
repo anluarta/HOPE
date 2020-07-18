@@ -8,10 +8,10 @@ namespace Hope.Entidade
 {
    public interface ICaixa_Ent_c
     {
-        string ID_Caixa { get; set; }
-        string Fk_ID_Usuario { get; set; }
-        string Abertura { get; set; }
-        string Fechamento { get; set; }
+        string ID_Caixa { get; }
+        string Fk_ID_Usuario { get;  }
+        string Abertura { get;  }
+        string Fechamento { get;  }
        
     }
 }

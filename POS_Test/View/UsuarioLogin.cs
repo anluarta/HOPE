@@ -19,13 +19,13 @@ namespace POS_Test.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(Program.ObjHope.Usuario.Login(txtUsuarioNome.Text, txtSenha.Text, out string msg))
+            if(Program.ObjHope.Usuario.Login(txtUsuarioNome.Text, txtSenha.Text))
             {
                 btnVoltar.PerformClick();
             }
             else
             {
-                label1.Text = msg;
+                label1.Text = Program.ObjHope.Usuario.Informacao.ToMessageBox();
             }
 
         }

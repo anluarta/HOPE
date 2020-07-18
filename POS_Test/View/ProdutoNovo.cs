@@ -21,14 +21,35 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-
-            Program.ObjHope.Produto.Set_EAN(txtxEAN.Text);
-            Program.ObjHope.Produto.Set_Descricao(txtDescricao.Text);
-            Program.ObjHope.Produto.Set_Custo(txtCusto.Text);
-            Program.ObjHope.Produto.Set_Unidade(cmbUnidade.SelectedText.ToString());
-            Program.ObjHope.Produto.Set_Venda(txtVenda.Text);
-           
-            btnVoltar.PerformClick();
+            bool vnovo = Program.ObjHope.Produto.NovoRegistro(out Hope.Entidade.IProduto_Ent_c produto);
+            if (vnovo)
+            {
+               bool bean= produto.Set_EAN(txtxEAN.Text);
+               bool bdescricao= produto.Set_Descricao(txtDescricao.Text);
+               bool bcusto= produto.Set_Custo(txtCusto.Text);
+               bool bunidade= produto.Set_Unidade(cmbUnidade.SelectedText.ToString());
+               bool bVenda= produto.Set_Venda(txtVenda.Text);
+                if (!bcusto|!bdescricao|!bean|!bunidade|!bVenda)
+                {
+                    MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+                    return;
+                }
+                else if (Program.ObjHope.Produto.GravarRegistro(produto))
+                {
+                    MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+                    btnVoltar.PerformClick();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());
+            }
         }
     }
 }

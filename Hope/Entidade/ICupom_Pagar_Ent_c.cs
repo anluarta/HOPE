@@ -1,12 +1,13 @@
 ﻿namespace Hope.Entidade
 {
-    public interface ICupomPagar_Ent_c
+    public interface ICupom_Pagar_Ent_c
     {
         string Bruto { get; }
         string Desconto { get; }
         string Cobrado { get; }
         string Recebido { get; }
         string Dinheiro { get; }
+        string Troco { get; }
         string Debito { get; }
         string Credito { get; }
         string Cheque { get; }

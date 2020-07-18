@@ -9,7 +9,7 @@ namespace Hope.Controle
 {
     abstract class Cliente_Ent_abs : ICliente_Ent_c
     {
-        
+
         public string _Id_Cliente { get; set; }
         public string _Tipo { get; set; }
         public bool _Fornecedor { get; set; }
@@ -31,6 +31,30 @@ namespace Hope.Controle
         public string _Semana_Vencimento { get; set; }
         public string _Tipo_Vemcimento { get; set; }
         public string _Dia_Vencimento { get; set; }
+        internal void Clea()
+        {
+            _Id_Cliente = string.Empty;
+            _Tipo = string.Empty;
+            _Fornecedor = false;
+            _Cpf_Cnpj = string.Empty;
+            _NomeCompleto_Razao = string.Empty;
+            _Email = string.Empty;
+            _Apelido_Fantasia = string.Empty;
+            _Telefone_1 = string.Empty;
+            _Telefone_2 = string.Empty;
+            _Cep = string.Empty;
+            _Logradouro = string.Empty;
+            _Bairro = string.Empty;
+            _Municipio = string.Empty;
+            _Estado = string.Empty;
+            _Observacao = string.Empty;
+            _Conta_Cliente = false;
+            _Limite_Cupom = string.Empty;
+            _Limite_Mensal = string.Empty;
+            _Semana_Vencimento = string.Empty;
+            _Tipo_Vemcimento = string.Empty;
+            _Dia_Vencimento = string.Empty;
+        }
         string ICliente_Ent_c.Id_Cliente => _Id_Cliente;
 
         string ICliente_Ent_c.Tipo => _Tipo;

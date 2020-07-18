@@ -14,6 +14,7 @@ namespace Hope.Beta
             _NovoRegistro = new Usuario_Ent_b();
             _AlteraRegistro = new Usuario_Ent_b();
             _Logado = new Usuario_Ent_b();
+            ListRegUsuario = new List<Usuario_Ent_abs>();
         }
 
         internal override bool InsertRegistro()
@@ -26,12 +27,47 @@ namespace Hope.Beta
                     Nome_Completo: _NovoRegistro._Nome_Completo,
                     Email: _NovoRegistro._Email
                     );
-                Hope.informacao.Add("000","Regstro gravado");
+                Hope.informacao.Add("000", "Regstro gravado");
                 return true;
             }
             catch (Exception e)
             {
-                Hope.informacao.Add("000",e.Message);
+                Hope.informacao.Add("000", e.Message);
+                return false;
+            }
+        }
+
+        internal override bool Login(string user, string senha)
+        {
+            if (Hope.localSet.Usuario.Count != 0)
+            {
+                foreach (HopeDataSet.UsuarioRow item in Hope.localSet.Usuario.Rows)
+                {
+                    if (item.Usuario_Nome.Equals(user))
+                    {
+                        if (item.Senha.Equals(senha))
+                        {
+                            _Logado = new Beta.Usuario_Ent_b()
+                            {
+                                Autenticado = true,
+                                _ID_Usuario = item.ID_Usuario.ToString(),
+                                _Email = item.Email,
+                                _Nome_Completo = item.Nome_Completo,
+                                _Senha = item.Senha,
+                                _Usuario_Nome = item.Usuario_Nome
+                            };
+                            Hope.informacao.Add("000", "Login executato sucesso");
+
+                            return true;
+                        }
+                    }
+                }
+                Hope.informacao.Add("000", "Login executato falha nao enontrado registro");
+                return false;
+            }
+            else
+            {
+                Hope.informacao.Add("000", "DataRow Usuario Count = 0");
                 return false;
             }
         }

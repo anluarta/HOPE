@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hope.Controle
 {
-    class Produto_Ent_abs : Entidade.IProduto_Ent_c
+    abstract class Produto_Ent_abs : Entidade.IProduto_Ent_c
     {
 
         internal string _ID_Produto;
@@ -16,7 +16,15 @@ namespace Hope.Controle
         internal string _Unidade;
         internal string _Custo;
         internal string _Venda;
-
+        internal void Clea()
+        {
+            _ID_Produto = string.Empty;
+            _EAN = string.Empty;
+            _Descricao = string.Empty;
+            _Unidade = string.Empty;
+            _Custo = string.Empty;
+            _Venda = string.Empty;
+        }
         string IProduto_Ent_c.ID_Produto => _ID_Produto;
 
         string IProduto_Ent_c.EAN => _EAN;
