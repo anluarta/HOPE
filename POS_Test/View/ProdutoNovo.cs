@@ -26,9 +26,9 @@ namespace POS_Test.View
             {
                bool bean= produto.Set_EAN(txtxEAN.Text);
                bool bdescricao= produto.Set_Descricao(txtDescricao.Text);
-               bool bcusto= produto.Set_Custo(txtCusto.Text);
+               bool bcusto= produto.Set_Custo(numCusto.Value);
                bool bunidade= produto.Set_Unidade(cmbUnidade.SelectedText.ToString());
-               bool bVenda= produto.Set_Venda(txtVenda.Text);
+               bool bVenda= produto.Set_Venda(numVenda.Value);
                 if (!bcusto|!bdescricao|!bean|!bunidade|!bVenda)
                 {
                     MessageBox.Show(Program.ObjHope.Produto.Informacao.ToMessageBox());

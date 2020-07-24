@@ -8,11 +8,11 @@ namespace Hope
 {
     public interface IHope
     {
-        Contrato.IUsuario_c Usuario { get; }
         Contrato.IProduto_c Produto { get; }
-        Contrato.ICliente_c Cliente { get; }
         Contrato.ICaixa_c Caixa { get; }
-        Contrato.ICupom_c Cupom { get; }
+        Contrato.IVender_c Cupom { get; }
+        Contrato.IColaborador_c Colaborador { get; }
+        Contrato.IComprador_c Comprador { get; }
         string[] ArrayTipoCliente{ get; }
         string[] ArrayTipoVecimento { get; }
         string[] ArrayVencimentoSemana{ get; }

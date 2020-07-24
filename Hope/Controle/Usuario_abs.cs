@@ -17,11 +17,16 @@ namespace Hope.Controle
         internal Controle.Usuario_Ent_abs _FocusRegistro;
         internal Controle.Usuario_Ent_abs _AlteraRegistro;
         internal Controle.Usuario_Ent_abs _NovoRegistro;
-        internal string _Msg;
         internal abstract bool UpdateRegistro();
         internal abstract bool InsertRegistro();
         internal abstract bool Select_All_From();
         internal abstract bool Login(string user, string senha);
+        internal void sair()
+        {
+            Hope.informacao.Clear();
+            Hope.informacao.Add("000", "Limpo memoria cache");
+            _Logado.Clea();
+        }
         IUsuario_Ent_c IUsuario_c.FocusEntidade => _FocusRegistro;
 
         IInformacao_c IUsuario_c.Informacao => Hope.informacao;
@@ -107,9 +112,7 @@ namespace Hope.Controle
 
         void IUsuario_c.Sair()
         {
-            Hope.informacao.Clear();
-            Hope.informacao.Add("000", "Limpo memoria cache");
-            _Logado.Clea();
+            sair();
         }
 
         bool IUsuario_c.SelecionaRegistro(object _Selecionado)

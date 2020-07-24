@@ -1,8 +1,20 @@
 ﻿
 namespace Hope
 {
-    class ListEnum
+   class ListEnum
     {
+       public enum TipoSituacaoCaixa
+        {
+            Nulo,Aberto,FaltaFechar
+        }
+        public enum NivelPermisao
+        {
+            Total,CriarEditarLer,Ler
+        }
+        public enum TipoColaborador
+        {
+            Gerente,Caixa,Vendedo,Entregado
+        }
         public enum TipoStatusCupom
         {
             Aberto,Espera,Finalizado
@@ -15,7 +27,7 @@ namespace Hope
         {
             Dinheiro, Debito, Credito, Cheque/*,Boleto*/
         }
-        public enum TipoCliente
+        public enum TipoComprador
         {
             Fisico, Juridico
         }

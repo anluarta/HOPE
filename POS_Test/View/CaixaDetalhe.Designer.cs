@@ -30,8 +30,6 @@
         {
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.lbltotInterno = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.lbltotContaCliente = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.lbltotOutro = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -54,11 +52,8 @@
             this.lbltotCupom = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblTotCupomCancel = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.lblEntradaTotalCaixa = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox14.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -70,13 +65,12 @@
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.lbltotInterno);
-            this.groupBox14.Location = new System.Drawing.Point(170, 371);
+            this.groupBox14.Location = new System.Drawing.Point(13, 371);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(151, 55);
             this.groupBox14.TabIndex = 21;
@@ -93,27 +87,6 @@
             this.lbltotInterno.TabIndex = 0;
             this.lbltotInterno.Text = "R$ {0}";
             this.lbltotInterno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.lbltotContaCliente);
-            this.groupBox13.Location = new System.Drawing.Point(13, 371);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(151, 55);
-            this.groupBox13.TabIndex = 20;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Conta Cliente ";
-            // 
-            // lbltotContaCliente
-            // 
-            this.lbltotContaCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbltotContaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotContaCliente.Location = new System.Drawing.Point(3, 16);
-            this.lbltotContaCliente.Name = "lbltotContaCliente";
-            this.lbltotContaCliente.Size = new System.Drawing.Size(145, 36);
-            this.lbltotContaCliente.TabIndex = 0;
-            this.lbltotContaCliente.Text = "R$ {0}";
-            this.lbltotContaCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox12
             // 
@@ -346,27 +319,6 @@
             this.lblTotCupomCancel.Text = "R$ {0}";
             this.lblTotCupomCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.lblEntradaTotalCaixa);
-            this.groupBox10.Location = new System.Drawing.Point(163, 3);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(151, 55);
-            this.groupBox10.TabIndex = 13;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Total Entrada  no caixa";
-            // 
-            // lblEntradaTotalCaixa
-            // 
-            this.lblEntradaTotalCaixa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEntradaTotalCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntradaTotalCaixa.Location = new System.Drawing.Point(3, 16);
-            this.lblEntradaTotalCaixa.Name = "lblEntradaTotalCaixa";
-            this.lblEntradaTotalCaixa.Size = new System.Drawing.Size(145, 36);
-            this.lblEntradaTotalCaixa.TabIndex = 0;
-            this.lblEntradaTotalCaixa.Text = "R$ {0}";
-            this.lblEntradaTotalCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnVoltar
             // 
             this.btnVoltar.Location = new System.Drawing.Point(332, 15);
@@ -381,11 +333,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox14);
-            this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox9);
@@ -398,7 +348,6 @@
             this.Name = "CaixaDetalhe";
             this.Size = new System.Drawing.Size(496, 445);
             this.groupBox14.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -410,7 +359,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -419,8 +367,6 @@
 
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label lbltotInterno;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Label lbltotContaCliente;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Label lbltotOutro;
         private System.Windows.Forms.GroupBox groupBox11;
@@ -443,8 +389,6 @@
         private System.Windows.Forms.Label lbltotCupom;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label lblTotCupomCancel;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label lblEntradaTotalCaixa;
         public System.Windows.Forms.Button btnVoltar;
     }
 }

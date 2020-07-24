@@ -17,8 +17,16 @@ namespace Hope.Controle
         public string _Senha { get; set; }
         public string _Nome_Completo { get; set; }
         public string _Email { get; set; }
-        internal abstract void Clea();
-       
+        internal void Clea()
+        {
+            _ID_Usuario = string.Empty;
+            _Usuario_Nome = string.Empty;
+            _Senha = string.Empty;
+            _Nome_Completo = string.Empty;
+            _Email = string.Empty;
+            Autenticado = false;
+        }
+
         string IUsuario_Ent_c.ID_Usuario => _ID_Usuario;
 
         string IUsuario_Ent_c.Usuario_Nome => _Usuario_Nome;

@@ -32,19 +32,21 @@
             this.txtxEAN = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtCusto = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtVenda = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cmbUnidade = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numVenda = new System.Windows.Forms.NumericUpDown();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numCusto = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,40 +82,6 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(248, 20);
             this.txtDescricao.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txtCusto);
-            this.groupBox3.Location = new System.Drawing.Point(51, 172);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(115, 50);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Custo";
-            // 
-            // txtCusto
-            // 
-            this.txtCusto.Location = new System.Drawing.Point(6, 19);
-            this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(100, 20);
-            this.txtCusto.TabIndex = 0;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.txtVenda);
-            this.groupBox4.Location = new System.Drawing.Point(190, 172);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(115, 50);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Venda";
-            // 
-            // txtVenda
-            // 
-            this.txtVenda.Location = new System.Drawing.Point(6, 19);
-            this.txtVenda.Name = "txtVenda";
-            this.txtVenda.Size = new System.Drawing.Size(100, 20);
-            this.txtVenda.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -151,15 +119,72 @@
             this.btnGravar.TabIndex = 12;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.numVenda);
+            this.groupBox4.Location = new System.Drawing.Point(190, 172);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(115, 50);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Venda";
+            // 
+            // numVenda
+            // 
+            this.numVenda.DecimalPlaces = 3;
+            this.numVenda.Location = new System.Drawing.Point(6, 19);
+            this.numVenda.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numVenda.Name = "numVenda";
+            this.numVenda.Size = new System.Drawing.Size(103, 20);
+            this.numVenda.TabIndex = 7;
+            this.numVenda.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.numCusto);
+            this.groupBox3.Location = new System.Drawing.Point(51, 172);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(115, 50);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Custo";
+            // 
+            // numCusto
+            // 
+            this.numCusto.DecimalPlaces = 3;
+            this.numCusto.Location = new System.Drawing.Point(6, 19);
+            this.numCusto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numCusto.Name = "numCusto";
+            this.numCusto.Size = new System.Drawing.Size(103, 20);
+            this.numCusto.TabIndex = 8;
+            this.numCusto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
             // 
             // ProdutoAlterar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnGravar);
@@ -169,11 +194,11 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,13 +209,13 @@
         private System.Windows.Forms.TextBox txtxEAN;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtCusto;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox txtVenda;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox cmbUnidade;
         internal System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.NumericUpDown numVenda;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown numCusto;
     }
 }

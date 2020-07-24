@@ -338,7 +338,7 @@
             // 
             // iClienteEntcBindingSource
             // 
-            this.iClienteEntcBindingSource.DataSource = typeof(Hope.Entidade.ICliente_Ent_c);
+            this.iClienteEntcBindingSource.DataSource = typeof(Hope.Entidade.IComprador_Ent_c);
             // 
             // idClienteDataGridViewTextBoxColumn
             // 

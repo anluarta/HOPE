@@ -12,18 +12,23 @@ namespace Hope.Controle
 {
     abstract class Produto_abs : Contrato.IProduto_c
     {
-        internal List<Produto_Ent_abs> ListaResultado;
        internal Controle.Produto_Ent_abs _FocusRegistro;
+       internal Controle.Produto_Ent_abs _AlteraRegistro;
        internal Controle.Produto_Ent_abs _NovoRegistro;
-        internal abstract bool UpdateRegistro();
-        internal abstract bool InsertRegistro();
-        internal abstract bool Select_All_From();
+        protected abstract bool novo_insert_registro();
+        protected abstract bool focus_update_registro();
+        protected abstract bool select_all_from_registro(out IProduto_Ent_c[] produto_Ents);
+        internal  bool gravarregistro()
+        {
+            return novo_insert_registro();
+        }
         IInformacao_c IProduto_c.Informacao => Hope.informacao;
 
         IProduto_Ent_c IProduto_c.FocusEntidade => _FocusRegistro;
         bool IProduto_c.Localizar(string Comando, string Coluna, string Orden, decimal Limit, string Termo, out IProduto_Ent_c[] ListaRegistro)
         {
-            throw new NotImplementedException();
+            select_all_from_registro(out ListaRegistro);
+            return true;
         }
 
         bool IProduto_c.SelecionaRegistro(object _Selecionado)
@@ -31,12 +36,12 @@ namespace Hope.Controle
             System.Windows.Forms.DataGridViewSelectedRowCollection rowCollection = _Selecionado as System.Windows.Forms.DataGridViewSelectedRowCollection;
             _FocusRegistro = new Beta.Produto_Ent_b()
             {
-                _ID_Produto = rowCollection[0].Cells[0].Value.ToString(),
+                _ID_Produto = (int)rowCollection[0].Cells[0].Value,
                 _EAN = rowCollection[0].Cells[1].Value.ToString(),
                 _Descricao = rowCollection[0].Cells[2].Value.ToString(),
                 _Unidade = rowCollection[0].Cells[3].Value.ToString(),
-                _Custo = rowCollection[0].Cells[4].Value.ToString(),
-                _Venda = rowCollection[0].Cells[5].Value.ToString()
+                _Custo = (decimal)rowCollection[0].Cells[4].Value,
+                _Venda = (decimal)rowCollection[0].Cells[5].Value
             };
             return true;
         }
@@ -52,17 +57,22 @@ namespace Hope.Controle
         bool IProduto_c.GravarRegistro(IProduto_Ent_c _produto)
         {
             _NovoRegistro = _produto as Produto_Ent_abs;
-            return InsertRegistro();
+            return gravarregistro();
             throw new NotImplementedException();
         }
 
         void IProduto_c.AlteraRegistro(out IProduto_Ent_c _produto)
         {
+            _AlteraRegistro.Clea();
+            _produto = _AlteraRegistro;
+            return;
             throw new NotImplementedException();
         }
 
         bool IProduto_c.GravaAlteracao(IProduto_Ent_c _produto)
         {
+            _AlteraRegistro = _produto as Produto_Ent_abs;
+            return focus_update_registro();
             throw new NotImplementedException();
         }
         //bool Contrato.IProduto_c.FocusRegistro(object _Selecionado)

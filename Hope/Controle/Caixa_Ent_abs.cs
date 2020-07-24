@@ -7,26 +7,27 @@ using System.Threading.Tasks;
 
 namespace Hope.Controle
 {
-    abstract class Caixa_Ent_abs : Entidade.ICaixa_Ent_c
+   public abstract class Caixa_Ent_abs : ICaixa_Ent_c
     {
-        public string _ID_Caixa { get; set; }
-        public string _Fk_ID_Usuario { get; set; }
-        public string _Abertura { get; set; }
-        public string _Fechamento { get; set; }
-        internal void Clea()
+        internal int _ID_Caixa;
+        internal int _ID_Colaborador;
+        internal string _Abertura;
+        internal string _Fechamento;
+        internal CaixaTotal_Ent_abs total_Ent_Abs;
+        public void Clea()
         {
-            _ID_Caixa = string.Empty;
-            _Fk_ID_Usuario = string.Empty;
+            _ID_Caixa = 0;
+            _ID_Colaborador = 0;
             _Abertura = string.Empty;
             _Fechamento = string.Empty;
-
+            total_Ent_Abs.Clea();
         }
-        string ICaixa_Ent_c.ID_Caixa => _ID_Caixa;
+        int ICaixa_Ent_c.ID_Caixa => _ID_Caixa;
 
-        string ICaixa_Ent_c.Fk_ID_Usuario => _Fk_ID_Usuario;
+        int ICaixa_Ent_c.ID_Colaborador => _ID_Colaborador;
 
-        string ICaixa_Ent_c.Abertura => _Abertura;
+        string ICaixa_Ent_c.Dia_Hora_Abertura => _Abertura;
 
-        string ICaixa_Ent_c.Fechamento => _Fechamento;
+        string ICaixa_Ent_c.Dia_Hora_Fechamento => _Fechamento;
     }
 }

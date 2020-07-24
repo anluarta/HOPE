@@ -7,48 +7,66 @@ using System.Threading.Tasks;
 
 namespace Hope.Controle
 {
-    class CaixaTotal_Ent_abs : Entidade.ICaixaTotal_Ent_c
+   public class CaixaTotal_Ent_abs : ICaixaTotal_Ent_c
     {
-        public string _Recebimento { get; }
-        public string _Reforco { get; }
-        public string _Sangria { get; }
-        public string _ContaCliente { get; }
-        public string _Interno { get; }
-        public string _Dinheiro { get; }
-        public string _Debito { get; }
-        public string _Credito { get; }
-        public string _Cheque { get; }
-        public string _Vale_Alimentacao { get; }
-        public string _Vale_Refeicao { get; }
-        public string _Outro { get; }
-        public string _Cupom_Cancelado { get; }
-        public string _Cupom_Vendido { get; }
-        string ICaixaTotal_Ent_c.Recebimento => _Recebimento;
+        protected const decimal Zero = 0.0m;
+        internal decimal _Recebimento;
+        internal decimal _Reforco;
+        internal decimal _Sangria;
+        internal decimal _Interno;
+        internal decimal _Dinheiro;
+        internal decimal _Debito;
+        internal decimal _Credito;
+        internal decimal _Cheque;
+        internal decimal _Vale_Alimentacao;
+        internal decimal _Vale_Refeicao;
+        internal decimal _Outro;
 
-        string ICaixaTotal_Ent_c.Reforco => _Reforco;
+        internal void Clea()
+        {
+            _Recebimento = Zero;
+            _Reforco = Zero;
+            _Sangria = Zero;
+            _Interno = Zero;
+            _Dinheiro = Zero;
+            _Debito = Zero;
+            _Credito = Zero;
+            _Cheque = Zero;
+            _Vale_Alimentacao = Zero;
+            _Vale_Refeicao = Zero;
+            _Outro = Zero;
+        }
 
-        string ICaixaTotal_Ent_c.Sangria =>_Sangria;
+        internal decimal _Cupom_Cancelado;
+        internal decimal _Cupom_Vendido;
+        internal decimal _Desconto;
+        internal decimal _Troco;
 
-        string ICaixaTotal_Ent_c.ContaCliente => _ContaCliente;
+        string ICaixaTotal_Ent_c.Recebimento => _Recebimento.ToString();
 
-        string ICaixaTotal_Ent_c.Interno => _Interno;
+        string ICaixaTotal_Ent_c.Reforco => _Reforco.ToString();
 
-        string ICaixaTotal_Ent_c.Dinheiro =>_Dinheiro;
+        string ICaixaTotal_Ent_c.Sangria => _Sangria.ToString();
 
-        string ICaixaTotal_Ent_c.Debito =>_Debito;
 
-        string ICaixaTotal_Ent_c.Credito => _Credito;
+        string ICaixaTotal_Ent_c.Interno => _Interno.ToString();
 
-        string ICaixaTotal_Ent_c.Cheque => _Cheque;
+        string ICaixaTotal_Ent_c.Dinheiro => _Dinheiro.ToString();
 
-        string ICaixaTotal_Ent_c.ValeAlimentacao =>_Vale_Alimentacao;
+        string ICaixaTotal_Ent_c.Debito => _Debito.ToString();
 
-        string ICaixaTotal_Ent_c.ValeRefeicao =>_Vale_Refeicao;
+        string ICaixaTotal_Ent_c.Credito => _Credito.ToString();
 
-        string ICaixaTotal_Ent_c.Outro => _Outro;
+        string ICaixaTotal_Ent_c.Cheque => _Cheque.ToString();
 
-        string ICaixaTotal_Ent_c.CupomCancelado => _Cupom_Cancelado;
+        string ICaixaTotal_Ent_c.ValeAlimentacao => _Vale_Alimentacao.ToString();
 
-        string ICaixaTotal_Ent_c.CupomVendido => _Cupom_Vendido;
+        string ICaixaTotal_Ent_c.ValeRefeicao => _Vale_Refeicao.ToString();
+
+        string ICaixaTotal_Ent_c.Outro => _Outro.ToString();
+
+        string ICaixaTotal_Ent_c.CupomCancelado => _Cupom_Cancelado.ToString();
+
+        string ICaixaTotal_Ent_c.CupomVendido => _Cupom_Vendido.ToString();
     }
 }

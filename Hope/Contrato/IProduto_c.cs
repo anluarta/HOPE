@@ -10,8 +10,5 @@
         bool GravarRegistro(Entidade.IProduto_Ent_c _produto);
         void AlteraRegistro(out Entidade.IProduto_Ent_c _produto);
         bool GravaAlteracao(Entidade.IProduto_Ent_c _produto);
-
-
-
     }
 }

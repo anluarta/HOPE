@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 
 namespace Hope.Controle
 {
-    abstract class Produto_Ent_abs : Entidade.IProduto_Ent_c
+    abstract class Produto_Ent_abs : IProduto_Ent_c
     {
 
-        internal string _ID_Produto;
+        internal int _ID_Produto;
         internal string _EAN;
         internal string _Descricao;
         internal string _Unidade;
-        internal string _Custo;
-        internal string _Venda;
+        internal decimal _Custo;
+        internal decimal _Venda;
         internal void Clea()
         {
-            _ID_Produto = string.Empty;
+            _ID_Produto = 0;
             _EAN = string.Empty;
             _Descricao = string.Empty;
             _Unidade = string.Empty;
-            _Custo = string.Empty;
-            _Venda = string.Empty;
+            _Custo = 0;
+            _Venda = 0;
         }
-        string IProduto_Ent_c.ID_Produto => _ID_Produto;
+        int IProduto_Ent_c.ID_Produto => _ID_Produto;
 
         string IProduto_Ent_c.EAN => _EAN;
 
@@ -33,15 +33,11 @@ namespace Hope.Controle
 
         string IProduto_Ent_c.Unidade => _Unidade;
 
-        string IProduto_Ent_c.Custo => _Custo;
+        decimal IProduto_Ent_c.Custo => _Custo;
 
-        string IProduto_Ent_c.Venda => _Venda;
+        decimal IProduto_Ent_c.Venda => _Venda;
 
-        bool IProduto_Ent_c.Set_Custo(string Valor)
-        {
-            _Custo = Valor;
-            return true;
-        }
+    
 
         bool IProduto_Ent_c.Set_Descricao(string Valor)
         {
@@ -61,9 +57,14 @@ namespace Hope.Controle
             return true;
         }
 
-        bool IProduto_Ent_c.Set_Venda(string Valor)
+        bool IProduto_Ent_c.Set_Venda(decimal Valor)
         {
-            _Venda = Valor;
+            _Venda = (Valor);
+            return true;
+        }
+        bool IProduto_Ent_c.Set_Custo(decimal Valor)
+        {
+            _Custo = (Valor);
             return true;
         }
     }

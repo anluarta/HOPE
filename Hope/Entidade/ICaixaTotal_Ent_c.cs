@@ -11,7 +11,6 @@ namespace Hope.Entidade
         string Recebimento { get; }
         string Reforco { get; }
         string Sangria { get; }
-        string ContaCliente { get; }
         string Interno { get; }
         string Dinheiro { get; }
         string Debito { get; }

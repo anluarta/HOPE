@@ -9,8 +9,8 @@ namespace Hope.Entidade
   public interface IRecebimento_Ent_c
     {
          
-        bool SetTipoRecebimento(string valor);
-        bool SetValorRecebido(string valor);
-        bool SetFormaRecebimento(string valor);
+        //bool SetTipoRecebimento(string valor);
+        //bool SetValorRecebido(string valor);
+        //bool SetFormaRecebimento(string valor);
     }
 }

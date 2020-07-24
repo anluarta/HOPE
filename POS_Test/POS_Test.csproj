@@ -124,17 +124,17 @@
     <Compile Include="View\CaixaSangria.Designer.cs">
       <DependentUpon>CaixaSangria.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ClienteAlterar.cs">
+    <Compile Include="View\CompradorAlterar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ClienteAlterar.Designer.cs">
-      <DependentUpon>ClienteAlterar.cs</DependentUpon>
+    <Compile Include="View\CompradorAlterar.Designer.cs">
+      <DependentUpon>CompradorAlterar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ClienteNovo.cs">
+    <Compile Include="View\CompradorNovo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ClienteNovo.Designer.cs">
-      <DependentUpon>ClienteNovo.cs</DependentUpon>
+    <Compile Include="View\CompradorNovo.Designer.cs">
+      <DependentUpon>CompradorNovo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CupomCliente.cs">
       <SubType>UserControl</SubType>
@@ -166,23 +166,23 @@
     <Compile Include="View\ProdutoNovo.Designer.cs">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioLogin.cs">
+    <Compile Include="View\ColaboradorLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioLogin.Designer.cs">
-      <DependentUpon>UsuarioLogin.cs</DependentUpon>
+    <Compile Include="View\ColaboradorLogin.Designer.cs">
+      <DependentUpon>ColaboradorLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioNovoRegistro.cs">
+    <Compile Include="View\ColaboradorNovoRegistro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioNovoRegistro.Designer.cs">
-      <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
+    <Compile Include="View\ColaboradorNovoRegistro.Designer.cs">
+      <DependentUpon>ColaboradorNovoRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsuarioAlteraRegistro.cs">
+    <Compile Include="View\ColaboradorAlteraRegistro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UsuarioAlteraRegistro.Designer.cs">
-      <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
+    <Compile Include="View\ColaboradorAlteraRegistro.Designer.cs">
+      <DependentUpon>ColaboradorAlteraRegistro.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormTeste.resx">
       <DependentUpon>FormTeste.cs</DependentUpon>
@@ -212,11 +212,11 @@
     <EmbeddedResource Include="View\CaixaSangria.resx">
       <DependentUpon>CaixaSangria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ClienteAlterar.resx">
-      <DependentUpon>ClienteAlterar.cs</DependentUpon>
+    <EmbeddedResource Include="View\CompradorAlterar.resx">
+      <DependentUpon>CompradorAlterar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ClienteNovo.resx">
-      <DependentUpon>ClienteNovo.cs</DependentUpon>
+    <EmbeddedResource Include="View\CompradorNovo.resx">
+      <DependentUpon>CompradorNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CupomCliente.resx">
       <DependentUpon>CupomCliente.cs</DependentUpon>
@@ -233,18 +233,20 @@
     <EmbeddedResource Include="View\ProdutoNovo.resx">
       <DependentUpon>ProdutoNovo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioAlteraRegistro.resx">
-      <DependentUpon>UsuarioAlteraRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="View\ColaboradorAlteraRegistro.resx">
+      <DependentUpon>ColaboradorAlteraRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioLogin.resx">
-      <DependentUpon>UsuarioLogin.cs</DependentUpon>
+    <EmbeddedResource Include="View\ColaboradorLogin.resx">
+      <DependentUpon>ColaboradorLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsuarioNovoRegistro.resx">
-      <DependentUpon>UsuarioNovoRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="View\ColaboradorNovoRegistro.resx">
+      <DependentUpon>ColaboradorNovoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Hope.Entidade.ICaixa_Ent_c.datasource" />
     <None Include="Properties\DataSources\Hope.Entidade.ICliente_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IColaborador_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Entidade.IComprador_Ent_c.datasource" />
     <None Include="Properties\DataSources\Hope.Entidade.ICupomItem_Ent_c.datasource" />
     <None Include="Properties\DataSources\Hope.Entidade.ICupom_Ent_c.datasource" />
     <None Include="Properties\DataSources\Hope.Entidade.IProduto_Ent_c.datasource" />

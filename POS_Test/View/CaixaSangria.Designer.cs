@@ -31,11 +31,12 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.numValor = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numValor)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -59,20 +60,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtValor);
-            this.groupBox1.Location = new System.Drawing.Point(45, 50);
+            this.groupBox1.Controls.Add(this.numValor);
+            this.groupBox1.Location = new System.Drawing.Point(72, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.Size = new System.Drawing.Size(137, 45);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(6, 19);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(175, 20);
-            this.txtValor.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -92,6 +86,14 @@
             this.txtObservacao.Size = new System.Drawing.Size(175, 76);
             this.txtObservacao.TabIndex = 0;
             // 
+            // numValor
+            // 
+            this.numValor.DecimalPlaces = 2;
+            this.numValor.Location = new System.Drawing.Point(6, 19);
+            this.numValor.Name = "numValor";
+            this.numValor.Size = new System.Drawing.Size(120, 20);
+            this.numValor.TabIndex = 4;
+            // 
             // CaixaSangria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,9 +105,9 @@
             this.Name = "CaixaSangria";
             this.Size = new System.Drawing.Size(428, 291);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numValor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -115,8 +117,8 @@
         public System.Windows.Forms.Button btnVoltar;
         public System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.NumericUpDown numValor;
     }
 }
