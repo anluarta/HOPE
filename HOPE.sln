@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hope", "Hope\Hope.csproj", 
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBHopeLocal", "DBHopeLocal\DBHopeLocal.sqlproj", "{BDDD70B6-F054-4708-AA38-64BB206174BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteHope", "TesteHope\TesteHope.csproj", "{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{BDDD70B6-F054-4708-AA38-64BB206174BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDDD70B6-F054-4708-AA38-64BB206174BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDDD70B6-F054-4708-AA38-64BB206174BC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

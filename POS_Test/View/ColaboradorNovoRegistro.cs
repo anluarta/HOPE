@@ -19,34 +19,35 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            bool vregistro = Program.ObjHope.Colaborador.NovoRegistro(out Hope.Entidade.IColaborador_Ent_c usuario);
-            if (vregistro)
+            try
             {
-                bool vnomeuser = usuario.Set_Login_User(txtLoginUser.Text);
-                bool vsenha = usuario.Set_Login_PassWord(txtLoginSenha.Text);
-                bool vnomecomple = usuario.Set_Nome_Vendedor(txtNomeVendedor.Text);
-                if (!vnomeuser  | !vnomecomple | !vsenha)
+                Hope.Interface.IColaborador_e colaborador = Program.ObjHope.BackOffice.Colaborador.Novo();
+               bool v1= colaborador.Set_Login(txtLoginUser.Text);
+                bool v2 = colaborador.Set_Nome_Vendedor(txtNomeVendedor.Text);
+                bool v3 = colaborador.Set_Senha(txtLoginSenha.Text);
+                if (v1&v2&v3)
                 {
-                    MessageBox.Show(Program.ObjHope.Colaborador.Informacao.ToMessageBox());
-                    return;
-                }
-                else if (Program.ObjHope.Colaborador.GravarRegistro(usuario))
-                {
-                    MessageBox.Show(Program.ObjHope.Colaborador.Informacao.ToMessageBox());
-                    btnVoltar.PerformClick();
-                    return;
+                    bool v4=Program.ObjHope.BackOffice.Colaborador.Gravar(colaborador);
+                    if (v4)
+                    {
+                        btnVoltar.PerformClick();
+                    }
+                    else
+                    {
+                        Program.ObjHope.BackOffice.Colaborador.Notifica.Mensagem();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(Program.ObjHope.Colaborador.Informacao.ToMessageBox());
-                    return;
+                    colaborador.Notifica.Mensagem();
                 }
+
             }
-            else
+            catch(Hope.HException he)
             {
-                MessageBox.Show(Program.ObjHope.Colaborador.Informacao.ToMessageBox());
-                return;
+                MessageBox.Show(he.Message);
             }
+
         }
     }
 }

@@ -184,6 +184,12 @@
     <Compile Include="View\ColaboradorAlteraRegistro.Designer.cs">
       <DependentUpon>ColaboradorAlteraRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VendaNovoRegistro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\VendaNovoRegistro.Designer.cs">
+      <DependentUpon>VendaNovoRegistro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormTeste.resx">
       <DependentUpon>FormTeste.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,15 +248,11 @@
     <EmbeddedResource Include="View\ColaboradorNovoRegistro.resx">
       <DependentUpon>ColaboradorNovoRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\VendaNovoRegistro.resx">
+      <DependentUpon>VendaNovoRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="POS_Test_TemporaryKey.pfx" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICaixa_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICliente_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IColaborador_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IComprador_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICupomItem_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.ICupom_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IProduto_Ent_c.datasource" />
-    <None Include="Properties\DataSources\Hope.Entidade.IUsuario_Ent_c.datasource" />
+    <None Include="Properties\DataSources\Hope.Enums.Consulta_u+Comando.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -309,5 +311,6 @@
       <Name>Hope</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

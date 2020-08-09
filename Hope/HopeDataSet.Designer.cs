@@ -961,10 +961,6 @@ namespace Hope {
             
             private global::System.Data.DataColumn columnID_Colaborador;
             
-            private global::System.Data.DataColumn columnDia_Hora_Abertura;
-            
-            private global::System.Data.DataColumn columnDia_Hora_Fechamento;
-            
             private global::System.Data.DataColumn columnReforco_Total;
             
             private global::System.Data.DataColumn columnSangria_Total;
@@ -994,6 +990,10 @@ namespace Hope {
             private global::System.Data.DataColumn columnDesconto_Total;
             
             private global::System.Data.DataColumn columnTroco_Total;
+            
+            private global::System.Data.DataColumn columnDia_Hora_Abertura;
+            
+            private global::System.Data.DataColumn columnDia_Hora_Fechamento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1041,22 +1041,6 @@ namespace Hope {
             public global::System.Data.DataColumn ID_ColaboradorColumn {
                 get {
                     return this.columnID_Colaborador;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Dia_Hora_AberturaColumn {
-                get {
-                    return this.columnDia_Hora_Abertura;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Dia_Hora_FechamentoColumn {
-                get {
-                    return this.columnDia_Hora_Fechamento;
                 }
             }
             
@@ -1182,6 +1166,22 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Dia_Hora_AberturaColumn {
+                get {
+                    return this.columnDia_Hora_Abertura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Dia_Hora_FechamentoColumn {
+                get {
+                    return this.columnDia_Hora_Fechamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1219,8 +1219,6 @@ namespace Hope {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CaixaRow AddCaixaRow(
                         int ID_Colaborador, 
-                        string Dia_Hora_Abertura, 
-                        string Dia_Hora_Fechamento, 
                         decimal Reforco_Total, 
                         decimal Sangria_Total, 
                         decimal Venda_Total, 
@@ -1235,13 +1233,13 @@ namespace Hope {
                         decimal Outro_Total, 
                         decimal Interno_Total, 
                         decimal Desconto_Total, 
-                        decimal Troco_Total) {
+                        decimal Troco_Total, 
+                        System.DateTime Dia_Hora_Abertura, 
+                        System.DateTime Dia_Hora_Fechamento) {
                 CaixaRow rowCaixaRow = ((CaixaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ID_Colaborador,
-                        Dia_Hora_Abertura,
-                        Dia_Hora_Fechamento,
                         Reforco_Total,
                         Sangria_Total,
                         Venda_Total,
@@ -1256,10 +1254,19 @@ namespace Hope {
                         Outro_Total,
                         Interno_Total,
                         Desconto_Total,
-                        Troco_Total};
+                        Troco_Total,
+                        Dia_Hora_Abertura,
+                        Dia_Hora_Fechamento};
                 rowCaixaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCaixaRow);
                 return rowCaixaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CaixaRow FindByID_Caixa(int ID_Caixa) {
+                return ((CaixaRow)(this.Rows.Find(new object[] {
+                            ID_Caixa})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1281,8 +1288,6 @@ namespace Hope {
             internal void InitVars() {
                 this.columnID_Caixa = base.Columns["ID_Caixa"];
                 this.columnID_Colaborador = base.Columns["ID_Colaborador"];
-                this.columnDia_Hora_Abertura = base.Columns["Dia_Hora_Abertura"];
-                this.columnDia_Hora_Fechamento = base.Columns["Dia_Hora_Fechamento"];
                 this.columnReforco_Total = base.Columns["Reforco_Total"];
                 this.columnSangria_Total = base.Columns["Sangria_Total"];
                 this.columnVenda_Total = base.Columns["Venda_Total"];
@@ -1298,6 +1303,8 @@ namespace Hope {
                 this.columnInterno_Total = base.Columns["Interno_Total"];
                 this.columnDesconto_Total = base.Columns["Desconto_Total"];
                 this.columnTroco_Total = base.Columns["Troco_Total"];
+                this.columnDia_Hora_Abertura = base.Columns["Dia_Hora_Abertura"];
+                this.columnDia_Hora_Fechamento = base.Columns["Dia_Hora_Fechamento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1307,10 +1314,6 @@ namespace Hope {
                 base.Columns.Add(this.columnID_Caixa);
                 this.columnID_Colaborador = new global::System.Data.DataColumn("ID_Colaborador", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Colaborador);
-                this.columnDia_Hora_Abertura = new global::System.Data.DataColumn("Dia_Hora_Abertura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDia_Hora_Abertura);
-                this.columnDia_Hora_Fechamento = new global::System.Data.DataColumn("Dia_Hora_Fechamento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDia_Hora_Fechamento);
                 this.columnReforco_Total = new global::System.Data.DataColumn("Reforco_Total", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReforco_Total);
                 this.columnSangria_Total = new global::System.Data.DataColumn("Sangria_Total", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -1341,30 +1344,33 @@ namespace Hope {
                 base.Columns.Add(this.columnDesconto_Total);
                 this.columnTroco_Total = new global::System.Data.DataColumn("Troco_Total", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTroco_Total);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_Caixa}, false));
+                this.columnDia_Hora_Abertura = new global::System.Data.DataColumn("Dia_Hora_Abertura", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDia_Hora_Abertura);
+                this.columnDia_Hora_Fechamento = new global::System.Data.DataColumn("Dia_Hora_Fechamento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDia_Hora_Fechamento);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("CaixaKeyID", new global::System.Data.DataColumn[] {
+                                this.columnID_Caixa}, true));
                 this.columnID_Caixa.AutoIncrement = true;
-                this.columnID_Caixa.AutoIncrementSeed = -1;
-                this.columnID_Caixa.AutoIncrementStep = -1;
+                this.columnID_Caixa.AutoIncrementSeed = 1;
+                this.columnID_Caixa.AllowDBNull = false;
+                this.columnID_Caixa.ReadOnly = true;
                 this.columnID_Caixa.Unique = true;
-                this.columnID_Colaborador.DefaultValue = ((int)(0));
-                this.columnDia_Hora_Abertura.DefaultValue = ((string)("\"\""));
-                this.columnDia_Hora_Fechamento.DefaultValue = ((string)("\"\""));
-                this.columnReforco_Total.DefaultValue = ((decimal)(0m));
-                this.columnSangria_Total.DefaultValue = ((decimal)(0m));
-                this.columnVenda_Total.DefaultValue = ((decimal)(0m));
-                this.columnRecebimento_Total.DefaultValue = ((decimal)(0m));
-                this.columnCancelado_Total.DefaultValue = ((decimal)(0m));
-                this.columnDinheiro_Total.DefaultValue = ((decimal)(0m));
-                this.columnDebito_Total.DefaultValue = ((decimal)(0m));
-                this.columnCredito_Total.DefaultValue = ((decimal)(0m));
-                this.columnCheque_Total.DefaultValue = ((decimal)(0m));
-                this.columnVale_Alimentacao_Total.DefaultValue = ((decimal)(0m));
-                this.columnVale_Refeicao_Total.DefaultValue = ((decimal)(0m));
-                this.columnOutro_Total.DefaultValue = ((decimal)(0m));
-                this.columnInterno_Total.DefaultValue = ((decimal)(0m));
-                this.columnDesconto_Total.DefaultValue = ((decimal)(0m));
-                this.columnTroco_Total.DefaultValue = ((decimal)(0m));
+                this.columnID_Colaborador.DefaultValue = ((int)(-1));
+                this.columnReforco_Total.DefaultValue = ((decimal)(-1m));
+                this.columnSangria_Total.DefaultValue = ((decimal)(-1m));
+                this.columnVenda_Total.DefaultValue = ((decimal)(-1m));
+                this.columnRecebimento_Total.DefaultValue = ((decimal)(-1m));
+                this.columnCancelado_Total.DefaultValue = ((decimal)(-1m));
+                this.columnDinheiro_Total.DefaultValue = ((decimal)(-1m));
+                this.columnDebito_Total.DefaultValue = ((decimal)(-1m));
+                this.columnCredito_Total.DefaultValue = ((decimal)(-1m));
+                this.columnCheque_Total.DefaultValue = ((decimal)(-1m));
+                this.columnVale_Alimentacao_Total.DefaultValue = ((decimal)(-1m));
+                this.columnVale_Refeicao_Total.DefaultValue = ((decimal)(-1m));
+                this.columnOutro_Total.DefaultValue = ((decimal)(-1m));
+                this.columnInterno_Total.DefaultValue = ((decimal)(-1m));
+                this.columnDesconto_Total.DefaultValue = ((decimal)(-1m));
+                this.columnTroco_Total.DefaultValue = ((decimal)(-1m));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3651,7 +3657,7 @@ namespace Hope {
             
             private global::System.Data.DataColumn columnDia_Hora_Fechamento;
             
-            private global::System.Data.DataColumn columnCondicao;
+            private global::System.Data.DataColumn columnPosicao;
             
             private global::System.Data.DataColumn columnTotal;
             
@@ -3742,9 +3748,9 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CondicaoColumn {
+            public global::System.Data.DataColumn PosicaoColumn {
                 get {
-                    return this.columnCondicao;
+                    return this.columnPosicao;
                 }
             }
             
@@ -3809,7 +3815,7 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VenderRow AddVenderRow(int ID_Caixa, int ID_Colaborado, int ID_Comprador, string Dia_Hora_Abertura, string Dia_Hora_Fechamento, object Condicao, decimal Total, string Item, string Pagar) {
+            public VenderRow AddVenderRow(int ID_Caixa, int ID_Colaborado, int ID_Comprador, string Dia_Hora_Abertura, string Dia_Hora_Fechamento, object Posicao, decimal Total, string Item, string Pagar) {
                 VenderRow rowVenderRow = ((VenderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3818,7 +3824,7 @@ namespace Hope {
                         ID_Comprador,
                         Dia_Hora_Abertura,
                         Dia_Hora_Fechamento,
-                        Condicao,
+                        Posicao,
                         Total,
                         Item,
                         Pagar};
@@ -3850,7 +3856,7 @@ namespace Hope {
                 this.columnID_Comprador = base.Columns["ID_Comprador"];
                 this.columnDia_Hora_Abertura = base.Columns["Dia_Hora_Abertura"];
                 this.columnDia_Hora_Fechamento = base.Columns["Dia_Hora_Fechamento"];
-                this.columnCondicao = base.Columns["Condicao"];
+                this.columnPosicao = base.Columns["Posicao"];
                 this.columnTotal = base.Columns["Total"];
                 this.columnItem = base.Columns["Item"];
                 this.columnPagar = base.Columns["Pagar"];
@@ -3871,8 +3877,8 @@ namespace Hope {
                 base.Columns.Add(this.columnDia_Hora_Abertura);
                 this.columnDia_Hora_Fechamento = new global::System.Data.DataColumn("Dia_Hora_Fechamento", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDia_Hora_Fechamento);
-                this.columnCondicao = new global::System.Data.DataColumn("Condicao", typeof(object), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCondicao);
+                this.columnPosicao = new global::System.Data.DataColumn("Posicao", typeof(object), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPosicao);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
                 this.columnItem = new global::System.Data.DataColumn("Item", typeof(string), null, global::System.Data.MappingType.Element);
@@ -4559,12 +4565,7 @@ namespace Hope {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ID_Caixa {
                 get {
-                    try {
-                        return ((int)(this[this.tableCaixa.ID_CaixaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ID_Caixa\' na tabela \'Caixa\' é DBNull.", e);
-                    }
+                    return ((int)(this[this.tableCaixa.ID_CaixaColumn]));
                 }
                 set {
                     this[this.tableCaixa.ID_CaixaColumn] = value;
@@ -4584,38 +4585,6 @@ namespace Hope {
                 }
                 set {
                     this[this.tableCaixa.ID_ColaboradorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Dia_Hora_Abertura {
-                get {
-                    try {
-                        return ((string)(this[this.tableCaixa.Dia_Hora_AberturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Dia_Hora_Abertura\' na tabela \'Caixa\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCaixa.Dia_Hora_AberturaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Dia_Hora_Fechamento {
-                get {
-                    try {
-                        return ((string)(this[this.tableCaixa.Dia_Hora_FechamentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Dia_Hora_Fechamento\' na tabela \'Caixa\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCaixa.Dia_Hora_FechamentoColumn] = value;
                 }
             }
             
@@ -4861,14 +4830,34 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsID_CaixaNull() {
-                return this.IsNull(this.tableCaixa.ID_CaixaColumn);
+            public System.DateTime Dia_Hora_Abertura {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCaixa.Dia_Hora_AberturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Dia_Hora_Abertura\' na tabela \'Caixa\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCaixa.Dia_Hora_AberturaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetID_CaixaNull() {
-                this[this.tableCaixa.ID_CaixaColumn] = global::System.Convert.DBNull;
+            public System.DateTime Dia_Hora_Fechamento {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCaixa.Dia_Hora_FechamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Dia_Hora_Fechamento\' na tabela \'Caixa\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCaixa.Dia_Hora_FechamentoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4881,30 +4870,6 @@ namespace Hope {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetID_ColaboradorNull() {
                 this[this.tableCaixa.ID_ColaboradorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDia_Hora_AberturaNull() {
-                return this.IsNull(this.tableCaixa.Dia_Hora_AberturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDia_Hora_AberturaNull() {
-                this[this.tableCaixa.Dia_Hora_AberturaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDia_Hora_FechamentoNull() {
-                return this.IsNull(this.tableCaixa.Dia_Hora_FechamentoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDia_Hora_FechamentoNull() {
-                this[this.tableCaixa.Dia_Hora_FechamentoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5085,6 +5050,30 @@ namespace Hope {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTroco_TotalNull() {
                 this[this.tableCaixa.Troco_TotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDia_Hora_AberturaNull() {
+                return this.IsNull(this.tableCaixa.Dia_Hora_AberturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDia_Hora_AberturaNull() {
+                this[this.tableCaixa.Dia_Hora_AberturaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDia_Hora_FechamentoNull() {
+                return this.IsNull(this.tableCaixa.Dia_Hora_FechamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDia_Hora_FechamentoNull() {
+                this[this.tableCaixa.Dia_Hora_FechamentoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6229,17 +6218,17 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public object Condicao {
+            public object Posicao {
                 get {
                     try {
-                        return ((object)(this[this.tableVender.CondicaoColumn]));
+                        return ((object)(this[this.tableVender.PosicaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Condicao\' na tabela \'Vender\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Posicao\' na tabela \'Vender\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVender.CondicaoColumn] = value;
+                    this[this.tableVender.PosicaoColumn] = value;
                 }
             }
             
@@ -6365,14 +6354,14 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCondicaoNull() {
-                return this.IsNull(this.tableVender.CondicaoColumn);
+            public bool IsPosicaoNull() {
+                return this.IsNull(this.tableVender.PosicaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCondicaoNull() {
-                this[this.tableVender.CondicaoColumn] = global::System.Convert.DBNull;
+            public void SetPosicaoNull() {
+                this[this.tableVender.PosicaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

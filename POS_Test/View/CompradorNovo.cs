@@ -20,28 +20,34 @@ namespace POS_Test.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Comprador.NovoRegistro(out Hope.Entidade.IComprador_Ent_c cliente))
+            try
             {
-                bool vcpfcnpj = cliente.Set_Numero_Registro(txtCpf_Cnpj.Text);
-                bool vnomecompleto = cliente.Set_NomeCompleto_Razao(txtNomeCompleto_Razao.Text);
-                if (!vcpfcnpj  | !vnomecompleto )
+                Hope.Interface.IComprador_e comprador = Program.ObjHope.BackOffice.Comprador.Novo();
+                bool v1 = comprador.Set_Nome_Comprador(txtNomeCompleto_Razao.Text);
+                bool v2 = comprador.Set_Numero_Documento(txtCpf_Cnpj.Text);
+                if (v1&v2)
                 {
-                    MessageBox.Show(Program.ObjHope.Comprador.Informacao.ToMessageBox());
-                    return;
-                }
-                else if (Program.ObjHope.Comprador.GravarRegistro(cliente))
-                {
-                    MessageBox.Show(Program.ObjHope.Comprador.Informacao.ToMessageBox());
-                    btnVoltar.PerformClick();
+                    bool v3 = Program.ObjHope.BackOffice.Comprador.Gravar(comprador);
+                    if (v3)
+                    {
+                        btnVoltar.PerformClick();
+                    }
+                    else
+                    {
+                        Program.ObjHope.BackOffice.Comprador.Notifica.Mensagem();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(Program.ObjHope.Comprador.Informacao.ToMessageBox());
+                    comprador.Notifica.Mensagem();
+
                 }
+
+
             }
-            else
+            catch (Hope.HException he)
             {
-                MessageBox.Show(Program.ObjHope.Comprador.Informacao.ToMessageBox());
+                MessageBox.Show(he.Message);
             }
         }
     }

@@ -63,78 +63,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beta\CaixaTotal_Ent_b.cs" />
-    <Compile Include="Beta\Caixa_Ent_b.cs" />
-    <Compile Include="Beta\Comprador_Ent_b.cs" />
-    <Compile Include="Beta\Colaborador_Ent_b.cs" />
-    <Compile Include="Beta\Vender_Ent_b.cs" />
-    <Compile Include="Beta\Vender_Item_b.cs" />
-    <Compile Include="Beta\Vender_Item_Ent_b.cs" />
-    <Compile Include="Beta\Vender_Pagar_b.cs" />
-    <Compile Include="Beta\Vender_Pagar_Ent_b.cs" />
-    <Compile Include="Beta\Informacao_b.cs" />
-    <Compile Include="Beta\Produto_Ent_b.cs" />
-    <Compile Include="Beta\Recebimento_b.cs" />
-    <Compile Include="Beta\Recebimento_Ent_b.cs" />
-    <None Include="Beta\Usuario_Ent_b.cs" />
-    <Compile Include="Contrato\IColaborador_c.cs" />
-    <Compile Include="Contrato\Iinformacao_c.cs" />
-    <Compile Include="Controle\CaixaTotal_Ent_abs.cs" />
-    <Compile Include="Controle\Caixa_abs.cs" />
-    <Compile Include="Controle\Comprador_abs.cs" />
-    <Compile Include="Controle\Comprador_Ent_abs.cs" />
-    <Compile Include="Controle\Colaborador_abs.cs" />
-    <Compile Include="Controle\Colaborador_Ent_abs.cs" />
-    <Compile Include="Controle\Vender_abs.cs" />
-    <Compile Include="Controle\Caixa_Ent_abs.cs" />
-    <Compile Include="Controle\Vender_Ent_abs.cs" />
-    <Compile Include="Controle\Vender_Item_abs.cs" />
-    <Compile Include="Controle\Vender_Item_Ent_abs.cs" />
-    <Compile Include="Controle\Vender_Pagar_abs.cs" />
-    <Compile Include="Controle\Vender_Pagar_Ent_abs.cs" />
-    <Compile Include="Controle\Informacao_abs.cs" />
-    <Compile Include="Controle\Pessoa_Fisica_Ent_abs.cs" />
-    <Compile Include="Controle\Pessoa_Juridica_Ent_abs.cs" />
-    <Compile Include="Controle\Produto_abs.cs" />
-    <Compile Include="Controle\Produto_Ent_abs.cs" />
-    <Compile Include="Controle\Recebimento_abs.cs" />
-    <Compile Include="Beta\Comprador_b.cs" />
-    <Compile Include="Beta\Produto_b.cs" />
-    <Compile Include="Beta\Caixa_b.cs" />
-    <Compile Include="Beta\Vender_b.cs" />
-    <Compile Include="Beta\Colaborador_b.cs" />
-    <Compile Include="Contrato\IVender_Cliente_c.cs" />
-    <Compile Include="Contrato\IVender_Item_c.cs" />
-    <Compile Include="Contrato\IVender_Pagar_c.cs" />
-    <Compile Include="Contrato\IRecebimento_c.cs" />
-    <Compile Include="Controle\Recebimento_Ent_abs.cs" />
-    <Compile Include="Entidade\ICaixa_Ent_c.cs" />
-    <Compile Include="Entidade\ICaixaTotal_Ent_c.cs" />
-    <Compile Include="Entidade\IComprador_Ent_c.cs" />
-    <Compile Include="Entidade\IColaborador_Ent_c.cs" />
-    <Compile Include="Entidade\IVender_Ent_c.cs" />
-    <Compile Include="Entidade\IVender_Cliente_Ent_c.cs" />
-    <Compile Include="Entidade\IVender_Item_Ent_c.cs" />
-    <Compile Include="Entidade\IVender_Pagar_Ent_c.cs" />
-    <Compile Include="Entidade\IEndereco_Ent_c.cs" />
-    <Compile Include="Entidade\IProduto_Ent_c.cs" />
-    <Compile Include="Entidade\IRecebimento_Ent_c.cs" />
-    <None Include="Entidade\IUsuario_Ent_c.cs" />
-    <Compile Include="Comeco.cs" />
+    <None Include="codigo-anterio\Beta\CaixaTotal_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Caixa_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Comprador_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Colaborador_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_Item_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_Item_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_Pagar_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_Pagar_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Informacao_b.cs" />
+    <None Include="codigo-anterio\Beta\Produto_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Recebimento_b.cs" />
+    <None Include="codigo-anterio\Beta\Recebimento_Ent_b.cs" />
+    <None Include="codigo-anterio\Controle\Colaborador_c.cs" />
+    <None Include="codigo-anterio\DAO\Colaborador_d.cs" />
+    <None Include="codigo-anterio\Entidade\Colaborador_e.cs" />
+    <None Include="codigo-anterio\Model\Colaborador_m.cs" />
+    <None Include="codigo-anterio\Interface\IColaborado_Get_v.cs" />
+    <None Include="codigo-anterio\Interface\IColaborado_Set_v.cs" />
+    <None Include="codigo-anterio\Interface\IColaborado_v.cs" />
+    <None Include="codigo-anterio\Beta\Usuario_Ent_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_b - Cópia .cs" />
+    <None Include="codigo-anterio\Contrato\IColaborador_c.cs" />
+    <None Include="codigo-anterio\Contrato\Iinformacao_c.cs" />
+    <None Include="codigo-anterio\Controle\CaixaTotal_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Caixa_abs.cs" />
+    <None Include="codigo-anterio\Controle\Comprador_abs.cs" />
+    <None Include="codigo-anterio\Controle\Comprador_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Colaborador_abs.cs" />
+    <None Include="codigo-anterio\Controle\Colaborador_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_abs.cs" />
+    <None Include="codigo-anterio\Controle\Caixa_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_Item_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_Item_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_Pagar_abs.cs" />
+    <None Include="codigo-anterio\Controle\Vender_Pagar_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Informacao_abs.cs" />
+    <None Include="codigo-anterio\Controle\Pessoa_Fisica_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Pessoa_Juridica_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Produto_abs.cs" />
+    <None Include="codigo-anterio\Controle\Produto_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Recebimento_abs.cs" />
+    <None Include="codigo-anterio\Beta\Comprador_b.cs" />
+    <None Include="codigo-anterio\Beta\Produto_b.cs" />
+    <None Include="codigo-anterio\Beta\Caixa_b.cs" />
+    <None Include="codigo-anterio\Beta\Vender_b.cs" />
+    <None Include="codigo-anterio\Beta\Colaborador_b.cs" />
+    <None Include="codigo-anterio\Contrato\IVender_Cliente_c.cs" />
+    <None Include="codigo-anterio\Contrato\IVender_Item_c.cs" />
+    <None Include="codigo-anterio\Contrato\IVender_Pagar_c.cs" />
+    <None Include="codigo-anterio\Contrato\IRecebimento_c.cs" />
+    <None Include="codigo-anterio\Controle\Recebimento_Ent_abs.cs" />
+    <None Include="codigo-anterio\Entidade\ICaixa_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\ICaixaTotal_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IComprador_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IColaborador_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IEndereco_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IProduto_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IRecebimento_Ent_c.cs" />
+    <Compile Include="Controle\Autenticacao_c.cs" />
+    <Compile Include="BackOffice.cs" />
+    <Compile Include="Controle\Caixa_c.cs" />
+    <Compile Include="Controle\Colaborador_c.cs" />
+    <Compile Include="Controle\Comprador_c.cs" />
+    <Compile Include="Controle\Consulta_c.cs" />
+    <Compile Include="Controle\Produto_c.cs" />
+    <Compile Include="Controle\Vender_c.cs" />
+    <Compile Include="DAO\Colaborador_d.cs" />
+    <Compile Include="Entidade\Autenticacao_e.cs" />
+    <Compile Include="Entidade\Caixa_e.cs" />
+    <Compile Include="Entidade\Colaborador_e.cs" />
+    <Compile Include="Enums\Consulta_u.cs" />
+    <Compile Include="Enums\Notifica_u.cs" />
+    <Compile Include="Enums\Produto_u.cs" />
+    <Compile Include="HException_c.cs" />
+    <Compile Include="HException\Caixa_he.cs" />
+    <Compile Include="HopeDataSet.cs">
+      <DependentUpon>HopeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hope_m.cs" />
+    <None Include="codigo-anterio\Entidade\IUsuario_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IVender_Cliente_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IVender_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IVender_Item_Ent_c.cs" />
+    <None Include="codigo-anterio\Entidade\IVender_Pagar_Ent_c.cs" />
     <Compile Include="HopeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Hope.cs" />
+    <Compile Include="Hope_c.cs" />
+    <Compile Include="Hope_static.cs" />
+    <Compile Include="Interface\IAutenticacao.cs" />
+    <Compile Include="Interface\IBackOffice.cs" />
+    <Compile Include="Interface\ICaixa.cs" />
+    <Compile Include="Interface\ICaixa_e.cs" />
+    <Compile Include="Interface\ICodigo.cs" />
+    <Compile Include="Interface\IColaborador.cs" />
+    <Compile Include="Interface\IColaborador_e.cs" />
+    <Compile Include="Interface\IComprador.cs" />
+    <Compile Include="Interface\IComprador_e.cs" />
+    <Compile Include="Interface\IConsulta.cs" />
+    <Compile Include="Interface\IItem_e.cs" />
+    <Compile Include="Interface\INotifica.cs" />
+    <Compile Include="Interface\IPagar_e.cs" />
+    <Compile Include="Interface\IPos.cs" />
+    <Compile Include="Interface\IPreco.cs" />
+    <Compile Include="Interface\IPreco_e.cs" />
+    <Compile Include="Interface\IProduto.cs" />
+    <Compile Include="Interface\IProduto_e.cs" />
+    <Compile Include="Interface\ISangria_e.cs" />
+    <Compile Include="Interface\ISuprimento_e.cs" />
+    <Compile Include="Interface\IVender.cs" />
+    <Compile Include="Interface\IVender_e.cs" />
     <Compile Include="ListEnum.cs" />
-    <Compile Include="Contrato\ICaixa_c.cs" />
-    <Compile Include="Contrato\IComprador_c.cs" />
-    <Compile Include="Contrato\IVender_c.cs" />
-    <Compile Include="Contrato\IProduto_c.cs" />
-    <None Include="Contrato\IUsuario_c.cs" />
+    <None Include="codigo-anterio\Contrato\ICaixa_c.cs" />
+    <None Include="codigo-anterio\Contrato\IComprador_c.cs" />
+    <None Include="codigo-anterio\Contrato\IVender_c.cs" />
+    <None Include="codigo-anterio\Contrato\IProduto_c.cs" />
+    <None Include="codigo-anterio\Contrato\IUsuario_c.cs" />
     <Compile Include="IHope.cs" />
-    <None Include="Controle\Usuario_Ent_abs.cs" />
+    <None Include="codigo-anterio\Controle\Usuario_Ent_abs.cs" />
+    <Compile Include="Model\Autenticacao_m.cs" />
+    <Compile Include="Model\Caixa_m.cs" />
+    <Compile Include="Model\Colaborador_m.cs" />
+    <Compile Include="Model\Consulta_m.cs" />
+    <Compile Include="Model\Venda_m.cs" />
+    <Compile Include="Pos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -146,7 +203,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <None Include="Controle\Usuario_abs.cs" />
+    <None Include="codigo-anterio\Controle\Usuario_abs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -185,7 +242,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HopeDB.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Hop-512.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -194,9 +250,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Alfa\" />
-    <Folder Include="Prod\" />
-    <Folder Include="Utilidade\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

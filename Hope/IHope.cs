@@ -8,25 +8,28 @@ namespace Hope
 {
     public interface IHope
     {
-        Contrato.IProduto_c Produto { get; }
-        Contrato.ICaixa_c Caixa { get; }
-        Contrato.IVender_c Cupom { get; }
-        Contrato.IColaborador_c Colaborador { get; }
-        Contrato.IComprador_c Comprador { get; }
-        string[] ArrayTipoCliente{ get; }
+        Interface.IBackOffice BackOffice { get; }
+        Interface.IPos Pos { get; }
+        Interface.IAutenticacao Autenticacao{get;}
+        //Contrato.IProduto_c Produto { get; }
+        //Contrato.ICaixa_c Caixa { get; }
+        //Contrato.IVender_c Vender { get; }
+        //Contrato.IColaborador_c Colaborador { get; }
+        //Contrato.IComprador_c Comprador { get; }
+        string[] ArrayTipoCliente { get; }
         string[] ArrayTipoVecimento { get; }
-        string[] ArrayVencimentoSemana{ get; }
-        string[] ArrayFormaRecebimento{ get; }
-        string[] ArrayTipoRecebimento{ get; }
-        string[] ArrayProdutoTipoUnidade{ get; }
-        string[] ArrayConsultaComando{ get; }
-        string[] ArrayCondicaoConsulta{ get; }
-        string[] ArrayConsultaOrden{ get; }
+        string[] ArrayVencimentoSemana { get; }
+        string[] ArrayFormaRecebimento { get; }
+        string[] ArrayTipoRecebimento { get; }
+        string[] ArrayProdutoTipoUnidade { get; }
+        string[] ArrayConsultaComando { get; }
+        string[] ArrayCondicaoConsulta { get; }
+        string[] ArrayConsultaOrden { get; }
         string[] ArrayUsuarioConsultaColuna { get; }
-        string[] ArrayClienteConsultaColuna{ get; }
-        string[] ArrayProdutoConsultaColuna{ get; }
-        string[] ArrayCaixaConsultaColuna{ get; }
-        string[] ArrayCupomConsultaColuna{ get; }
+        string[] ArrayClienteConsultaColuna { get; }
+        string[] ArrayProdutoConsultaColuna { get; }
+        string[] ArrayCaixaConsultaColuna { get; }
+        string[] ArrayCupomConsultaColuna { get; }
 
     }
 }

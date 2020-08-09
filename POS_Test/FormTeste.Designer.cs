@@ -67,6 +67,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAlteraCliente = new System.Windows.Forms.ToolStripButton();
+            this.btnNovoComprador = new System.Windows.Forms.ToolStripButton();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.cmbCondicaoConsultaCliente = new System.Windows.Forms.ComboBox();
             this.numLimitConsultaCliente = new System.Windows.Forms.NumericUpDown();
@@ -89,6 +90,7 @@
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAlteraProduto = new System.Windows.Forms.ToolStripButton();
+            this.btnNovoProduto = new System.Windows.Forms.ToolStripButton();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.cmbCondicaoConsultaPRoduto = new System.Windows.Forms.ComboBox();
             this.numLimitConsultaProduto = new System.Windows.Forms.NumericUpDown();
@@ -103,6 +105,7 @@
             this.btnReforco = new System.Windows.Forms.Button();
             this.btnSangria = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnLogouf = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbllogin = new System.Windows.Forms.Label();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
@@ -163,30 +166,6 @@
             this.cmbComandoConsultaCaixa = new System.Windows.Forms.ComboBox();
             this.cmbOrdenConusltaCaixa = new System.Windows.Forms.ComboBox();
             this.tabPagePDV = new System.Windows.Forms.TabPage();
-            this.btnCupomFechar = new System.Windows.Forms.Button();
-            this.btnCupomIniciaNovoCupom = new System.Windows.Forms.Button();
-            this.tabControlPDV = new System.Windows.Forms.TabControl();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.dgvVendaItem = new System.Windows.Forms.DataGridView();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTotalQuantItem = new System.Windows.Forms.Label();
-            this.btnCupomExcluirItem = new System.Windows.Forms.Button();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTroco = new System.Windows.Forms.Label();
-            this.btnCupomalteraItem = new System.Windows.Forms.Button();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.lblCupomDesconto = new System.Windows.Forms.Label();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTotalRecebido = new System.Windows.Forms.Label();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.lblCupomTotal = new System.Windows.Forms.Label();
-            this.btnVendaPagar = new System.Windows.Forms.Button();
-            this.btnVendaAdicionarProduto = new System.Windows.Forms.Button();
-            this.btnCupomComprador = new System.Windows.Forms.Button();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.lblResultadoComprador = new System.Windows.Forms.Label();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
             this.dgvListaCupom = new System.Windows.Forms.DataGridView();
             this.bindingNavigatorVenda = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
@@ -200,6 +179,7 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVisualizarRegistroCupom = new System.Windows.Forms.ToolStripButton();
             this.btnContinuarRegistro = new System.Windows.Forms.ToolStripButton();
+            this.btnNovoRegistroVenda = new System.Windows.Forms.ToolStripButton();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.cmbCondicaoConsultaCupom = new System.Windows.Forms.ComboBox();
             this.numLimitConsultaCupom = new System.Windows.Forms.NumericUpDown();
@@ -209,40 +189,6 @@
             this.btnFiltraCupom = new System.Windows.Forms.Button();
             this.cmbComandoConsultaCupom = new System.Windows.Forms.ComboBox();
             this.cmbOrdenConsultaCupom = new System.Windows.Forms.ComboBox();
-            this.btnNovoComprador = new System.Windows.Forms.ToolStripButton();
-            this.btnNovoProduto = new System.Windows.Forms.ToolStripButton();
-            this.btnLogouf = new System.Windows.Forms.Button();
-            this.iDColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeVendedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginPassWordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iColaboradorEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDCompradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iCompradorEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iProdutoEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDCaixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDColaboradorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaHoraAberturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaHoraFechamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iCaixaEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iVendeItemEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iVendaEntcBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlCRUD.SuspendLayout();
             this.tpageListacolaborador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
@@ -294,29 +240,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCaixa)).BeginInit();
             this.groupBox16.SuspendLayout();
             this.tabPagePDV.SuspendLayout();
-            this.tabControlPDV.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.groupBox28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVendaItem)).BeginInit();
-            this.groupBox29.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            this.groupBox24.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.tabPage14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorVenda)).BeginInit();
             this.bindingNavigatorVenda.SuspendLayout();
             this.groupBox30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCupom)).BeginInit();
             this.groupBox31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iColaboradorEntcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCompradorEntcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoEntcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaEntcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendeItemEntcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendaEntcBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlCRUD
@@ -348,15 +277,8 @@
             // 
             this.dgvListaUsuario.AllowUserToAddRows = false;
             this.dgvListaUsuario.AllowUserToDeleteRows = false;
-            this.dgvListaUsuario.AutoGenerateColumns = false;
             this.dgvListaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDColaboradorDataGridViewTextBoxColumn,
-            this.nomeVendedorDataGridViewTextBoxColumn,
-            this.loginUserDataGridViewTextBoxColumn,
-            this.loginPassWordDataGridViewTextBoxColumn});
-            this.dgvListaUsuario.DataSource = this.iColaboradorEntcBindingSource;
             this.dgvListaUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaUsuario.Location = new System.Drawing.Point(3, 109);
             this.dgvListaUsuario.Name = "dgvListaUsuario";
@@ -369,7 +291,6 @@
             // bindingNavigatorColaborador
             // 
             this.bindingNavigatorColaborador.AddNewItem = null;
-            this.bindingNavigatorColaborador.BindingSource = this.iColaboradorEntcBindingSource;
             this.bindingNavigatorColaborador.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigatorColaborador.DeleteItem = null;
             this.bindingNavigatorColaborador.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -431,7 +352,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -601,14 +521,8 @@
             // 
             this.dgvListaCliente.AllowUserToAddRows = false;
             this.dgvListaCliente.AllowUserToDeleteRows = false;
-            this.dgvListaCliente.AutoGenerateColumns = false;
             this.dgvListaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCompradorDataGridViewTextBoxColumn,
-            this.numeroRegistroDataGridViewTextBoxColumn,
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn});
-            this.dgvListaCliente.DataSource = this.iCompradorEntcBindingSource;
             this.dgvListaCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaCliente.Location = new System.Drawing.Point(3, 109);
             this.dgvListaCliente.Name = "dgvListaCliente";
@@ -621,7 +535,6 @@
             // bindingNavigatorComprador
             // 
             this.bindingNavigatorComprador.AddNewItem = null;
-            this.bindingNavigatorComprador.BindingSource = this.iCompradorEntcBindingSource;
             this.bindingNavigatorComprador.CountItem = this.toolStripLabel1;
             this.bindingNavigatorComprador.DeleteItem = null;
             this.bindingNavigatorComprador.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -683,7 +596,6 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Posição";
             this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox1.Text = "0";
@@ -726,6 +638,16 @@
             this.btnAlteraCliente.Size = new System.Drawing.Size(88, 22);
             this.btnAlteraCliente.Text = "Altera Registro";
             this.btnAlteraCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
+            // 
+            // btnNovoComprador
+            // 
+            this.btnNovoComprador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnNovoComprador.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoComprador.Image")));
+            this.btnNovoComprador.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNovoComprador.Name = "btnNovoComprador";
+            this.btnNovoComprador.Size = new System.Drawing.Size(86, 22);
+            this.btnNovoComprador.Text = "Novo Registro";
+            this.btnNovoComprador.Click += new System.EventHandler(this.btnNewCliente_Click);
             // 
             // groupBox19
             // 
@@ -843,17 +765,8 @@
             // 
             this.dgvListaProduto.AllowUserToAddRows = false;
             this.dgvListaProduto.AllowUserToDeleteRows = false;
-            this.dgvListaProduto.AutoGenerateColumns = false;
             this.dgvListaProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewTextBoxColumn30});
-            this.dgvListaProduto.DataSource = this.iProdutoEntcBindingSource;
             this.dgvListaProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaProduto.Location = new System.Drawing.Point(3, 109);
             this.dgvListaProduto.Name = "dgvListaProduto";
@@ -866,7 +779,6 @@
             // bindingNavigatorProduto
             // 
             this.bindingNavigatorProduto.AddNewItem = null;
-            this.bindingNavigatorProduto.BindingSource = this.iProdutoEntcBindingSource;
             this.bindingNavigatorProduto.CountItem = this.toolStripLabel2;
             this.bindingNavigatorProduto.DeleteItem = null;
             this.bindingNavigatorProduto.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -928,7 +840,6 @@
             // 
             this.toolStripTextBox2.AccessibleName = "Posição";
             this.toolStripTextBox2.AutoSize = false;
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox2.Text = "0";
@@ -971,6 +882,16 @@
             this.btnAlteraProduto.Size = new System.Drawing.Size(88, 22);
             this.btnAlteraProduto.Text = "Altera Registro";
             this.btnAlteraProduto.Click += new System.EventHandler(this.btnAlterarProduto_Click);
+            // 
+            // btnNovoProduto
+            // 
+            this.btnNovoProduto.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnNovoProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoProduto.Image")));
+            this.btnNovoProduto.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNovoProduto.Name = "btnNovoProduto";
+            this.btnNovoProduto.Size = new System.Drawing.Size(86, 22);
+            this.btnNovoProduto.Text = "Novo Registro";
+            this.btnNovoProduto.Click += new System.EventHandler(this.btnNewProduto_Click);
             // 
             // groupBox17
             // 
@@ -1122,6 +1043,17 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Login";
+            // 
+            // btnLogouf
+            // 
+            this.btnLogouf.Enabled = false;
+            this.btnLogouf.Location = new System.Drawing.Point(120, 32);
+            this.btnLogouf.Name = "btnLogouf";
+            this.btnLogouf.Size = new System.Drawing.Size(108, 37);
+            this.btnLogouf.TabIndex = 2;
+            this.btnLogouf.Text = "Des-Logar";
+            this.btnLogouf.UseVisualStyleBackColor = true;
+            this.btnLogouf.Click += new System.EventHandler(this.btnLogouf_Click);
             // 
             // btnLogin
             // 
@@ -1543,15 +1475,8 @@
             // 
             this.dgvListaCaixa.AllowUserToAddRows = false;
             this.dgvListaCaixa.AllowUserToDeleteRows = false;
-            this.dgvListaCaixa.AutoGenerateColumns = false;
             this.dgvListaCaixa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaCaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCaixa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCaixaDataGridViewTextBoxColumn,
-            this.iDColaboradorDataGridViewTextBoxColumn1,
-            this.diaHoraAberturaDataGridViewTextBoxColumn,
-            this.diaHoraFechamentoDataGridViewTextBoxColumn});
-            this.dgvListaCaixa.DataSource = this.iCaixaEntcBindingSource;
             this.dgvListaCaixa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaCaixa.Location = new System.Drawing.Point(3, 109);
             this.dgvListaCaixa.Name = "dgvListaCaixa";
@@ -1564,7 +1489,6 @@
             // bindingNavigatorCaixa
             // 
             this.bindingNavigatorCaixa.AddNewItem = null;
-            this.bindingNavigatorCaixa.BindingSource = this.iCaixaEntcBindingSource;
             this.bindingNavigatorCaixa.CountItem = this.toolStripLabel3;
             this.bindingNavigatorCaixa.DeleteItem = null;
             this.bindingNavigatorCaixa.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1625,7 +1549,6 @@
             // 
             this.toolStripTextBox3.AccessibleName = "Posição";
             this.toolStripTextBox3.AutoSize = false;
-            this.toolStripTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox3.Text = "0";
@@ -1770,9 +1693,9 @@
             // 
             // tabPagePDV
             // 
-            this.tabPagePDV.Controls.Add(this.btnCupomFechar);
-            this.tabPagePDV.Controls.Add(this.btnCupomIniciaNovoCupom);
-            this.tabPagePDV.Controls.Add(this.tabControlPDV);
+            this.tabPagePDV.Controls.Add(this.dgvListaCupom);
+            this.tabPagePDV.Controls.Add(this.bindingNavigatorVenda);
+            this.tabPagePDV.Controls.Add(this.groupBox30);
             this.tabPagePDV.Location = new System.Drawing.Point(4, 22);
             this.tabPagePDV.Name = "tabPagePDV";
             this.tabPagePDV.Padding = new System.Windows.Forms.Padding(3);
@@ -1781,293 +1704,24 @@
             this.tabPagePDV.Text = "Ponto De Venda";
             this.tabPagePDV.UseVisualStyleBackColor = true;
             // 
-            // btnCupomFechar
-            // 
-            this.btnCupomFechar.Location = new System.Drawing.Point(221, 6);
-            this.btnCupomFechar.Name = "btnCupomFechar";
-            this.btnCupomFechar.Size = new System.Drawing.Size(207, 34);
-            this.btnCupomFechar.TabIndex = 5;
-            this.btnCupomFechar.Text = "Fechar Cupom";
-            this.btnCupomFechar.UseVisualStyleBackColor = true;
-            this.btnCupomFechar.Click += new System.EventHandler(this.btnCupomFechar_Click);
-            // 
-            // btnCupomIniciaNovoCupom
-            // 
-            this.btnCupomIniciaNovoCupom.Location = new System.Drawing.Point(8, 6);
-            this.btnCupomIniciaNovoCupom.Name = "btnCupomIniciaNovoCupom";
-            this.btnCupomIniciaNovoCupom.Size = new System.Drawing.Size(207, 34);
-            this.btnCupomIniciaNovoCupom.TabIndex = 4;
-            this.btnCupomIniciaNovoCupom.Text = "Inicia Novo Cupom";
-            this.btnCupomIniciaNovoCupom.UseVisualStyleBackColor = true;
-            this.btnCupomIniciaNovoCupom.Click += new System.EventHandler(this.btnCupomIniciaNovoCupom_Click);
-            // 
-            // tabControlPDV
-            // 
-            this.tabControlPDV.Controls.Add(this.tabPage13);
-            this.tabControlPDV.Controls.Add(this.tabPage14);
-            this.tabControlPDV.Location = new System.Drawing.Point(8, 71);
-            this.tabControlPDV.Name = "tabControlPDV";
-            this.tabControlPDV.SelectedIndex = 0;
-            this.tabControlPDV.Size = new System.Drawing.Size(632, 347);
-            this.tabControlPDV.TabIndex = 3;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.groupBox28);
-            this.tabPage13.Controls.Add(this.groupBox29);
-            this.tabPage13.Controls.Add(this.btnCupomExcluirItem);
-            this.tabPage13.Controls.Add(this.groupBox27);
-            this.tabPage13.Controls.Add(this.btnCupomalteraItem);
-            this.tabPage13.Controls.Add(this.groupBox26);
-            this.tabPage13.Controls.Add(this.groupBox25);
-            this.tabPage13.Controls.Add(this.groupBox24);
-            this.tabPage13.Controls.Add(this.btnVendaPagar);
-            this.tabPage13.Controls.Add(this.btnVendaAdicionarProduto);
-            this.tabPage13.Controls.Add(this.btnCupomComprador);
-            this.tabPage13.Controls.Add(this.groupBox23);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(624, 321);
-            this.tabPage13.TabIndex = 0;
-            this.tabPage13.Text = "Cupom";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.Controls.Add(this.dgvVendaItem);
-            this.groupBox28.Location = new System.Drawing.Point(15, 55);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(427, 260);
-            this.groupBox28.TabIndex = 5;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "Item Cupom";
-            // 
-            // dgvVendaItem
-            // 
-            this.dgvVendaItem.AllowUserToAddRows = false;
-            this.dgvVendaItem.AllowUserToDeleteRows = false;
-            this.dgvVendaItem.AutoGenerateColumns = false;
-            this.dgvVendaItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVendaItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendaItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDItemDataGridViewTextBoxColumn,
-            this.codigoDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.quantidadeDataGridViewTextBoxColumn,
-            this.precoDataGridViewTextBoxColumn,
-            this.subTotalDataGridViewTextBoxColumn});
-            this.dgvVendaItem.DataSource = this.iVendeItemEntcBindingSource;
-            this.dgvVendaItem.Location = new System.Drawing.Point(10, 22);
-            this.dgvVendaItem.Name = "dgvVendaItem";
-            this.dgvVendaItem.ReadOnly = true;
-            this.dgvVendaItem.RowHeadersVisible = false;
-            this.dgvVendaItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVendaItem.Size = new System.Drawing.Size(407, 232);
-            this.dgvVendaItem.TabIndex = 6;
-            // 
-            // groupBox29
-            // 
-            this.groupBox29.Controls.Add(this.lblCupomTotalQuantItem);
-            this.groupBox29.Location = new System.Drawing.Point(471, 249);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(123, 36);
-            this.groupBox29.TabIndex = 5;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Total Item";
-            // 
-            // lblCupomTotalQuantItem
-            // 
-            this.lblCupomTotalQuantItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTotalQuantItem.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTotalQuantItem.Name = "lblCupomTotalQuantItem";
-            this.lblCupomTotalQuantItem.Size = new System.Drawing.Size(117, 17);
-            this.lblCupomTotalQuantItem.TabIndex = 0;
-            this.lblCupomTotalQuantItem.Text = "{0}";
-            this.lblCupomTotalQuantItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCupomExcluirItem
-            // 
-            this.btnCupomExcluirItem.Location = new System.Drawing.Point(447, 291);
-            this.btnCupomExcluirItem.Name = "btnCupomExcluirItem";
-            this.btnCupomExcluirItem.Size = new System.Drawing.Size(70, 24);
-            this.btnCupomExcluirItem.TabIndex = 2;
-            this.btnCupomExcluirItem.Text = "Excluir";
-            this.btnCupomExcluirItem.UseVisualStyleBackColor = true;
-            // 
-            // groupBox27
-            // 
-            this.groupBox27.Controls.Add(this.lblCupomTroco);
-            this.groupBox27.Location = new System.Drawing.Point(474, 202);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(123, 43);
-            this.groupBox27.TabIndex = 4;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Troco";
-            // 
-            // lblCupomTroco
-            // 
-            this.lblCupomTroco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTroco.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTroco.Name = "lblCupomTroco";
-            this.lblCupomTroco.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomTroco.TabIndex = 0;
-            this.lblCupomTroco.Text = "R$ {0}";
-            this.lblCupomTroco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCupomalteraItem
-            // 
-            this.btnCupomalteraItem.Location = new System.Drawing.Point(530, 291);
-            this.btnCupomalteraItem.Name = "btnCupomalteraItem";
-            this.btnCupomalteraItem.Size = new System.Drawing.Size(70, 24);
-            this.btnCupomalteraItem.TabIndex = 1;
-            this.btnCupomalteraItem.Text = "Alterar";
-            this.btnCupomalteraItem.UseVisualStyleBackColor = true;
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Controls.Add(this.lblCupomDesconto);
-            this.groupBox26.Location = new System.Drawing.Point(471, 153);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(123, 43);
-            this.groupBox26.TabIndex = 3;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Desconto";
-            // 
-            // lblCupomDesconto
-            // 
-            this.lblCupomDesconto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomDesconto.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomDesconto.Name = "lblCupomDesconto";
-            this.lblCupomDesconto.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomDesconto.TabIndex = 0;
-            this.lblCupomDesconto.Text = "R$ {0}";
-            this.lblCupomDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.lblCupomTotalRecebido);
-            this.groupBox25.Location = new System.Drawing.Point(474, 104);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(123, 43);
-            this.groupBox25.TabIndex = 2;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Total Recebido";
-            // 
-            // lblCupomTotalRecebido
-            // 
-            this.lblCupomTotalRecebido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTotalRecebido.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTotalRecebido.Name = "lblCupomTotalRecebido";
-            this.lblCupomTotalRecebido.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomTotalRecebido.TabIndex = 0;
-            this.lblCupomTotalRecebido.Text = "R$ {0}";
-            this.lblCupomTotalRecebido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.lblCupomTotal);
-            this.groupBox24.Location = new System.Drawing.Point(474, 55);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(123, 43);
-            this.groupBox24.TabIndex = 1;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Total Cupom";
-            // 
-            // lblCupomTotal
-            // 
-            this.lblCupomTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCupomTotal.Location = new System.Drawing.Point(3, 16);
-            this.lblCupomTotal.Name = "lblCupomTotal";
-            this.lblCupomTotal.Size = new System.Drawing.Size(117, 24);
-            this.lblCupomTotal.TabIndex = 0;
-            this.lblCupomTotal.Text = "R$ {0}";
-            this.lblCupomTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnVendaPagar
-            // 
-            this.btnVendaPagar.Location = new System.Drawing.Point(474, 12);
-            this.btnVendaPagar.Name = "btnVendaPagar";
-            this.btnVendaPagar.Size = new System.Drawing.Size(100, 37);
-            this.btnVendaPagar.TabIndex = 3;
-            this.btnVendaPagar.Text = "Pagar";
-            this.btnVendaPagar.UseVisualStyleBackColor = true;
-            // 
-            // btnVendaAdicionarProduto
-            // 
-            this.btnVendaAdicionarProduto.Location = new System.Drawing.Point(357, 12);
-            this.btnVendaAdicionarProduto.Name = "btnVendaAdicionarProduto";
-            this.btnVendaAdicionarProduto.Size = new System.Drawing.Size(111, 37);
-            this.btnVendaAdicionarProduto.TabIndex = 2;
-            this.btnVendaAdicionarProduto.Text = "Adicionar Produto";
-            this.btnVendaAdicionarProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnCupomComprador
-            // 
-            this.btnCupomComprador.Location = new System.Drawing.Point(240, 12);
-            this.btnCupomComprador.Name = "btnCupomComprador";
-            this.btnCupomComprador.Size = new System.Drawing.Size(111, 37);
-            this.btnCupomComprador.TabIndex = 1;
-            this.btnCupomComprador.Text = "Adicionar Cliente";
-            this.btnCupomComprador.UseVisualStyleBackColor = true;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Controls.Add(this.lblResultadoComprador);
-            this.groupBox23.Location = new System.Drawing.Point(6, 6);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(228, 43);
-            this.groupBox23.TabIndex = 0;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Comprador";
-            // 
-            // lblResultadoComprador
-            // 
-            this.lblResultadoComprador.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblResultadoComprador.Location = new System.Drawing.Point(3, 16);
-            this.lblResultadoComprador.Name = "lblResultadoComprador";
-            this.lblResultadoComprador.Size = new System.Drawing.Size(222, 24);
-            this.lblResultadoComprador.TabIndex = 0;
-            this.lblResultadoComprador.Text = "Resultado";
-            this.lblResultadoComprador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.dgvListaCupom);
-            this.tabPage14.Controls.Add(this.bindingNavigatorVenda);
-            this.tabPage14.Controls.Add(this.groupBox30);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(624, 321);
-            this.tabPage14.TabIndex = 1;
-            this.tabPage14.Text = "Listagem Cupom";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
             // dgvListaCupom
             // 
             this.dgvListaCupom.AllowUserToAddRows = false;
             this.dgvListaCupom.AllowUserToDeleteRows = false;
-            this.dgvListaCupom.AutoGenerateColumns = false;
             this.dgvListaCupom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaCupom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCupom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn34});
-            this.dgvListaCupom.DataSource = this.iVendaEntcBindingSource;
             this.dgvListaCupom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaCupom.Location = new System.Drawing.Point(3, 109);
             this.dgvListaCupom.Name = "dgvListaCupom";
             this.dgvListaCupom.ReadOnly = true;
             this.dgvListaCupom.RowHeadersVisible = false;
             this.dgvListaCupom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCupom.Size = new System.Drawing.Size(618, 184);
+            this.dgvListaCupom.Size = new System.Drawing.Size(642, 287);
             this.dgvListaCupom.TabIndex = 10;
             // 
             // bindingNavigatorVenda
             // 
             this.bindingNavigatorVenda.AddNewItem = null;
-            this.bindingNavigatorVenda.BindingSource = this.iVendaEntcBindingSource;
             this.bindingNavigatorVenda.CountItem = this.toolStripLabel4;
             this.bindingNavigatorVenda.DeleteItem = null;
             this.bindingNavigatorVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -2083,15 +1737,16 @@
             this.toolStripButton19,
             this.toolStripSeparator12,
             this.btnVisualizarRegistroCupom,
-            this.btnContinuarRegistro});
-            this.bindingNavigatorVenda.Location = new System.Drawing.Point(3, 293);
+            this.btnContinuarRegistro,
+            this.btnNovoRegistroVenda});
+            this.bindingNavigatorVenda.Location = new System.Drawing.Point(3, 396);
             this.bindingNavigatorVenda.MoveFirstItem = this.toolStripButton16;
             this.bindingNavigatorVenda.MoveLastItem = this.toolStripButton19;
             this.bindingNavigatorVenda.MoveNextItem = this.toolStripButton18;
             this.bindingNavigatorVenda.MovePreviousItem = this.toolStripButton17;
             this.bindingNavigatorVenda.Name = "bindingNavigatorVenda";
             this.bindingNavigatorVenda.PositionItem = this.toolStripTextBox4;
-            this.bindingNavigatorVenda.Size = new System.Drawing.Size(618, 25);
+            this.bindingNavigatorVenda.Size = new System.Drawing.Size(642, 25);
             this.bindingNavigatorVenda.TabIndex = 11;
             this.bindingNavigatorVenda.Text = "bindingNavigator2";
             // 
@@ -2129,7 +1784,6 @@
             // 
             this.toolStripTextBox4.AccessibleName = "Posição";
             this.toolStripTextBox4.AutoSize = false;
-            this.toolStripTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox4.Name = "toolStripTextBox4";
             this.toolStripTextBox4.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox4.Text = "0";
@@ -2169,8 +1823,8 @@
             this.btnVisualizarRegistroCupom.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarRegistroCupom.Image")));
             this.btnVisualizarRegistroCupom.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnVisualizarRegistroCupom.Name = "btnVisualizarRegistroCupom";
-            this.btnVisualizarRegistroCupom.Size = new System.Drawing.Size(106, 22);
-            this.btnVisualizarRegistroCupom.Text = "Visualizar Registro";
+            this.btnVisualizarRegistroCupom.Size = new System.Drawing.Size(152, 22);
+            this.btnVisualizarRegistroCupom.Text = "Visualizar Registro fechado";
             // 
             // btnContinuarRegistro
             // 
@@ -2180,6 +1834,16 @@
             this.btnContinuarRegistro.Name = "btnContinuarRegistro";
             this.btnContinuarRegistro.Size = new System.Drawing.Size(110, 22);
             this.btnContinuarRegistro.Text = "Continuar Registro";
+            // 
+            // btnNovoRegistroVenda
+            // 
+            this.btnNovoRegistroVenda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnNovoRegistroVenda.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoRegistroVenda.Image")));
+            this.btnNovoRegistroVenda.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNovoRegistroVenda.Name = "btnNovoRegistroVenda";
+            this.btnNovoRegistroVenda.Size = new System.Drawing.Size(121, 22);
+            this.btnNovoRegistroVenda.Text = "Novo Registro Venda";
+            this.btnNovoRegistroVenda.Click += new System.EventHandler(this.btnNovoRegistroVenda_Click);
             // 
             // groupBox30
             // 
@@ -2193,7 +1857,7 @@
             this.groupBox30.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox30.Location = new System.Drawing.Point(3, 3);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(618, 106);
+            this.groupBox30.Size = new System.Drawing.Size(642, 106);
             this.groupBox30.TabIndex = 12;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Filtrar";
@@ -2260,6 +1924,7 @@
             this.btnFiltraCupom.TabIndex = 2;
             this.btnFiltraCupom.Text = "Filtrar";
             this.btnFiltraCupom.UseVisualStyleBackColor = true;
+            this.btnFiltraCupom.Click += new System.EventHandler(this.btnVenderFiltraLista_Click);
             // 
             // cmbComandoConsultaCupom
             // 
@@ -2278,240 +1943,6 @@
             this.cmbOrdenConsultaCupom.Size = new System.Drawing.Size(83, 21);
             this.cmbOrdenConsultaCupom.TabIndex = 0;
             this.cmbOrdenConsultaCupom.Text = "Ordenar Por";
-            // 
-            // btnNovoComprador
-            // 
-            this.btnNovoComprador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnNovoComprador.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoComprador.Image")));
-            this.btnNovoComprador.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNovoComprador.Name = "btnNovoComprador";
-            this.btnNovoComprador.Size = new System.Drawing.Size(86, 22);
-            this.btnNovoComprador.Text = "Novo Registro";
-            this.btnNovoComprador.Click += new System.EventHandler(this.btnNewCliente_Click);
-            // 
-            // btnNovoProduto
-            // 
-            this.btnNovoProduto.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnNovoProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoProduto.Image")));
-            this.btnNovoProduto.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNovoProduto.Name = "btnNovoProduto";
-            this.btnNovoProduto.Size = new System.Drawing.Size(86, 22);
-            this.btnNovoProduto.Text = "Novo Registro";
-            this.btnNovoProduto.Click += new System.EventHandler(this.btnNewProduto_Click);
-            // 
-            // btnLogouf
-            // 
-            this.btnLogouf.Enabled = false;
-            this.btnLogouf.Location = new System.Drawing.Point(120, 32);
-            this.btnLogouf.Name = "btnLogouf";
-            this.btnLogouf.Size = new System.Drawing.Size(108, 37);
-            this.btnLogouf.TabIndex = 2;
-            this.btnLogouf.Text = "Des-Logar";
-            this.btnLogouf.UseVisualStyleBackColor = true;
-            this.btnLogouf.Click += new System.EventHandler(this.btnLogouf_Click);
-            // 
-            // iDColaboradorDataGridViewTextBoxColumn
-            // 
-            this.iDColaboradorDataGridViewTextBoxColumn.DataPropertyName = "ID_Colaborador";
-            this.iDColaboradorDataGridViewTextBoxColumn.HeaderText = "ID_Colaborador";
-            this.iDColaboradorDataGridViewTextBoxColumn.Name = "iDColaboradorDataGridViewTextBoxColumn";
-            this.iDColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeVendedorDataGridViewTextBoxColumn
-            // 
-            this.nomeVendedorDataGridViewTextBoxColumn.DataPropertyName = "Nome_Vendedor";
-            this.nomeVendedorDataGridViewTextBoxColumn.HeaderText = "Nome_Vendedor";
-            this.nomeVendedorDataGridViewTextBoxColumn.Name = "nomeVendedorDataGridViewTextBoxColumn";
-            this.nomeVendedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // loginUserDataGridViewTextBoxColumn
-            // 
-            this.loginUserDataGridViewTextBoxColumn.DataPropertyName = "Login_User";
-            this.loginUserDataGridViewTextBoxColumn.HeaderText = "Login_User";
-            this.loginUserDataGridViewTextBoxColumn.Name = "loginUserDataGridViewTextBoxColumn";
-            this.loginUserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // loginPassWordDataGridViewTextBoxColumn
-            // 
-            this.loginPassWordDataGridViewTextBoxColumn.DataPropertyName = "Login_PassWord";
-            this.loginPassWordDataGridViewTextBoxColumn.HeaderText = "Login_PassWord";
-            this.loginPassWordDataGridViewTextBoxColumn.Name = "loginPassWordDataGridViewTextBoxColumn";
-            this.loginPassWordDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iColaboradorEntcBindingSource
-            // 
-            this.iColaboradorEntcBindingSource.DataSource = typeof(Hope.Entidade.IColaborador_Ent_c);
-            // 
-            // iDCompradorDataGridViewTextBoxColumn
-            // 
-            this.iDCompradorDataGridViewTextBoxColumn.DataPropertyName = "ID_Comprador";
-            this.iDCompradorDataGridViewTextBoxColumn.HeaderText = "ID_Comprador";
-            this.iDCompradorDataGridViewTextBoxColumn.Name = "iDCompradorDataGridViewTextBoxColumn";
-            this.iDCompradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroRegistroDataGridViewTextBoxColumn
-            // 
-            this.numeroRegistroDataGridViewTextBoxColumn.DataPropertyName = "Numero_Registro";
-            this.numeroRegistroDataGridViewTextBoxColumn.HeaderText = "Numero_Registro";
-            this.numeroRegistroDataGridViewTextBoxColumn.Name = "numeroRegistroDataGridViewTextBoxColumn";
-            this.numeroRegistroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeCompletoRazaoSocialDataGridViewTextBoxColumn
-            // 
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn.DataPropertyName = "NomeCompleto_RazaoSocial";
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn.HeaderText = "NomeCompleto_RazaoSocial";
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn.Name = "nomeCompletoRazaoSocialDataGridViewTextBoxColumn";
-            this.nomeCompletoRazaoSocialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iCompradorEntcBindingSource
-            // 
-            this.iCompradorEntcBindingSource.DataSource = typeof(Hope.Entidade.IComprador_Ent_c);
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "ID_Produto";
-            this.dataGridViewTextBoxColumn25.HeaderText = "ID_Produto";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "EAN";
-            this.dataGridViewTextBoxColumn26.HeaderText = "EAN";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "Unidade";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Unidade";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "Custo";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Custo";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "Venda";
-            this.dataGridViewTextBoxColumn30.HeaderText = "Venda";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            this.dataGridViewTextBoxColumn30.Visible = false;
-            // 
-            // iProdutoEntcBindingSource
-            // 
-            this.iProdutoEntcBindingSource.DataSource = typeof(Hope.Entidade.IProduto_Ent_c);
-            // 
-            // iDCaixaDataGridViewTextBoxColumn
-            // 
-            this.iDCaixaDataGridViewTextBoxColumn.DataPropertyName = "ID_Caixa";
-            this.iDCaixaDataGridViewTextBoxColumn.HeaderText = "ID_Caixa";
-            this.iDCaixaDataGridViewTextBoxColumn.Name = "iDCaixaDataGridViewTextBoxColumn";
-            this.iDCaixaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDColaboradorDataGridViewTextBoxColumn1
-            // 
-            this.iDColaboradorDataGridViewTextBoxColumn1.DataPropertyName = "ID_Colaborador";
-            this.iDColaboradorDataGridViewTextBoxColumn1.HeaderText = "ID_Colaborador";
-            this.iDColaboradorDataGridViewTextBoxColumn1.Name = "iDColaboradorDataGridViewTextBoxColumn1";
-            this.iDColaboradorDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // diaHoraAberturaDataGridViewTextBoxColumn
-            // 
-            this.diaHoraAberturaDataGridViewTextBoxColumn.DataPropertyName = "Dia_Hora_Abertura";
-            this.diaHoraAberturaDataGridViewTextBoxColumn.HeaderText = "Dia_Hora_Abertura";
-            this.diaHoraAberturaDataGridViewTextBoxColumn.Name = "diaHoraAberturaDataGridViewTextBoxColumn";
-            this.diaHoraAberturaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diaHoraFechamentoDataGridViewTextBoxColumn
-            // 
-            this.diaHoraFechamentoDataGridViewTextBoxColumn.DataPropertyName = "Dia_Hora_Fechamento";
-            this.diaHoraFechamentoDataGridViewTextBoxColumn.HeaderText = "Dia_Hora_Fechamento";
-            this.diaHoraFechamentoDataGridViewTextBoxColumn.Name = "diaHoraFechamentoDataGridViewTextBoxColumn";
-            this.diaHoraFechamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iCaixaEntcBindingSource
-            // 
-            this.iCaixaEntcBindingSource.DataSource = typeof(Hope.Entidade.ICaixa_Ent_c);
-            // 
-            // iDItemDataGridViewTextBoxColumn
-            // 
-            this.iDItemDataGridViewTextBoxColumn.DataPropertyName = "ID_Item";
-            this.iDItemDataGridViewTextBoxColumn.HeaderText = "ID_Item";
-            this.iDItemDataGridViewTextBoxColumn.Name = "iDItemDataGridViewTextBoxColumn";
-            this.iDItemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn35.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "Unidade";
-            this.dataGridViewTextBoxColumn36.HeaderText = "Unidade";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precoDataGridViewTextBoxColumn
-            // 
-            this.precoDataGridViewTextBoxColumn.DataPropertyName = "Preco";
-            this.precoDataGridViewTextBoxColumn.HeaderText = "Preco";
-            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
-            this.precoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // subTotalDataGridViewTextBoxColumn
-            // 
-            this.subTotalDataGridViewTextBoxColumn.DataPropertyName = "Sub_Total";
-            this.subTotalDataGridViewTextBoxColumn.HeaderText = "Sub_Total";
-            this.subTotalDataGridViewTextBoxColumn.Name = "subTotalDataGridViewTextBoxColumn";
-            this.subTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iVendeItemEntcBindingSource
-            // 
-            this.iVendeItemEntcBindingSource.DataSource = typeof(Hope.Entidade.IVender_Item_Ent_c);
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "ID_Caixa";
-            this.dataGridViewTextBoxColumn34.HeaderText = "ID_Caixa";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
-            // 
-            // iVendaEntcBindingSource
-            // 
-            this.iVendaEntcBindingSource.DataSource = typeof(Hope.Entidade.IVender_Ent_c);
             // 
             // FormTeste
             // 
@@ -2588,18 +2019,7 @@
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             this.tabPagePDV.ResumeLayout(false);
-            this.tabControlPDV.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
-            this.groupBox28.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVendaItem)).EndInit();
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox23.ResumeLayout(false);
-            this.tabPage14.ResumeLayout(false);
-            this.tabPage14.PerformLayout();
+            this.tabPagePDV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCupom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorVenda)).EndInit();
             this.bindingNavigatorVenda.ResumeLayout(false);
@@ -2608,12 +2028,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLimitConsultaCupom)).EndInit();
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iColaboradorEntcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCompradorEntcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iProdutoEntcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaEntcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendeItemEntcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendaEntcBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2645,10 +2059,6 @@
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.TabPage tabPagePDV;
-        private System.Windows.Forms.Button btnCupomIniciaNovoCupom;
-        private System.Windows.Forms.TabControl tabControlPDV;
-        private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label lbltotInterno;
         private System.Windows.Forms.GroupBox groupBox12;
@@ -2679,26 +2089,6 @@
         private System.Windows.Forms.ComboBox cmbComandoConsultaUsuar;
         private System.Windows.Forms.ComboBox cmbOrdenConsultaUsuario;
         private System.Windows.Forms.DataGridView dgvListaUsuario;
-        private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.Button btnCupomComprador;
-        private System.Windows.Forms.Label lblResultadoComprador;
-        private System.Windows.Forms.Button btnCupomFechar;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.Label lblCupomTotalRecebido;
-        private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.Label lblCupomTotal;
-        private System.Windows.Forms.Button btnVendaPagar;
-        private System.Windows.Forms.Button btnVendaAdicionarProduto;
-        private System.Windows.Forms.GroupBox groupBox28;
-        private System.Windows.Forms.GroupBox groupBox29;
-        private System.Windows.Forms.Label lblCupomTotalQuantItem;
-        private System.Windows.Forms.Button btnCupomExcluirItem;
-        private System.Windows.Forms.Button btnCupomalteraItem;
-        private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.Label lblCupomTroco;
-        private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.Label lblCupomDesconto;
-        private System.Windows.Forms.DataGridView dgvVendaItem;
         private System.Windows.Forms.BindingNavigator bindingNavigatorColaborador;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -2829,41 +2219,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.BindingSource iProdutoEntcBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn fkIDUsuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCupomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colaboradorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iVendaEntcBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iVendeItemEntcBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDColaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeVendedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginPassWordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iColaboradorEntcBindingSource;
         private System.Windows.Forms.ToolStripButton btnNovoColaborador;
         private System.Windows.Forms.ToolStripButton btnNovoComprador;
         private System.Windows.Forms.ToolStripButton btnNovoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCompradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroRegistroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCompletoRazaoSocialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iCompradorEntcBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCaixaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDColaboradorDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaHoraAberturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaHoraFechamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource iCaixaEntcBindingSource;
         private System.Windows.Forms.Button btnLogouf;
+        private System.Windows.Forms.ToolStripButton btnNovoRegistroVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDVenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCaixaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDColaboradorDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCompradorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaHoraAberturaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaHoraFechamentoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condicaoDataGridViewTextBoxColumn;
     }
 }
 

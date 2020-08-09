@@ -33,20 +33,26 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numCusto = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numVenda = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cmbUnidade = new System.Windows.Forms.ComboBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.numVenda = new System.Windows.Forms.NumericUpDown();
-            this.numCusto = new System.Windows.Forms.NumericUpDown();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtCodigoInterno = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,6 +99,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Custo";
             // 
+            // numCusto
+            // 
+            this.numCusto.DecimalPlaces = 3;
+            this.numCusto.Location = new System.Drawing.Point(6, 19);
+            this.numCusto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numCusto.Name = "numCusto";
+            this.numCusto.Size = new System.Drawing.Size(103, 20);
+            this.numCusto.TabIndex = 8;
+            this.numCusto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.numVenda);
@@ -102,6 +126,24 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Venda";
+            // 
+            // numVenda
+            // 
+            this.numVenda.DecimalPlaces = 3;
+            this.numVenda.Location = new System.Drawing.Point(6, 19);
+            this.numVenda.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numVenda.Name = "numVenda";
+            this.numVenda.Size = new System.Drawing.Size(103, 20);
+            this.numVenda.TabIndex = 7;
+            this.numVenda.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // groupBox5
             // 
@@ -141,46 +183,46 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             // 
-            // numVenda
+            // groupBox6
             // 
-            this.numVenda.DecimalPlaces = 3;
-            this.numVenda.Location = new System.Drawing.Point(6, 19);
-            this.numVenda.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numVenda.Name = "numVenda";
-            this.numVenda.Size = new System.Drawing.Size(103, 20);
-            this.numVenda.TabIndex = 7;
-            this.numVenda.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.groupBox6.Controls.Add(this.txtCodigoBarra);
+            this.groupBox6.Location = new System.Drawing.Point(41, 210);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(278, 50);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Codigo Barra";
             // 
-            // numCusto
+            // txtCodigoBarra
             // 
-            this.numCusto.DecimalPlaces = 3;
-            this.numCusto.Location = new System.Drawing.Point(6, 19);
-            this.numCusto.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numCusto.Name = "numCusto";
-            this.numCusto.Size = new System.Drawing.Size(103, 20);
-            this.numCusto.TabIndex = 8;
-            this.numCusto.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
+            this.txtCodigoBarra.Location = new System.Drawing.Point(6, 19);
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(248, 20);
+            this.txtCodigoBarra.TabIndex = 0;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtCodigoInterno);
+            this.groupBox7.Location = new System.Drawing.Point(47, 266);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(278, 50);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Codigo Interno";
+            // 
+            // txtCodigoInterno
+            // 
+            this.txtCodigoInterno.Location = new System.Drawing.Point(6, 19);
+            this.txtCodigoInterno.Name = "txtCodigoInterno";
+            this.txtCodigoInterno.Size = new System.Drawing.Size(248, 20);
+            this.txtCodigoInterno.TabIndex = 0;
             // 
             // ProdutoNovo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.groupBox5);
@@ -189,16 +231,20 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ProdutoNovo";
-            this.Size = new System.Drawing.Size(591, 259);
+            this.Size = new System.Drawing.Size(591, 365);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numVenda)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +263,9 @@
         internal System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.NumericUpDown numCusto;
         private System.Windows.Forms.NumericUpDown numVenda;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtCodigoBarra;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtCodigoInterno;
     }
 }
