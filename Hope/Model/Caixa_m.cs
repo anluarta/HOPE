@@ -1,5 +1,6 @@
 ﻿using Hope.Controle;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Hope.Model
@@ -35,6 +36,12 @@ namespace Hope.Model
                 return false;
 
             }
+        }
+
+        protected override bool Update_Row(Dictionary<string, object> keyValueData)
+        {
+            keyValueData["Index"]
+            throw new NotImplementedException();
         }
     }
 }

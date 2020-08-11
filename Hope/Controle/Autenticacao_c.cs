@@ -43,7 +43,14 @@ namespace Hope.Controle
                 }
                 else
                 {
-                    return validalogin(User, Pass);
+                    if (validalogin(User, Pass))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }

@@ -7,13 +7,13 @@ using Hope.Entidade;
 using Hope.Interface;
 namespace Hope.Controle
 {
-   abstract class Caixa_c : ICaixa
+    abstract class Caixa_c : ICaixa
     {
        protected List<string> Noticia;
         protected Consulta_c _Consulta;
         public IConsulta Consulta => _Consulta;
         protected abstract bool Insert_New_Row(out int Index, out DateTime start);
-        protected abstract bool Update_Row(int Index,);
+        protected abstract bool Update_Row(Dictionary<string, object> keyValueData);
         public ICaixa_e Find(IConsulta consulta)
         {
             throw new NotImplementedException();
@@ -24,7 +24,16 @@ namespace Hope.Controle
             if (entidade != null)
             {
                 Caixa_e _E = entidade as Caixa_e;
-                return Update_Row(_E.ID,_E.Colaborador,_E.StartTime,_E.FinishTime,_E.vDinheiro)
+                if (_E.Disparidade())
+                {
+                    return Update_Row(_E.GetToDataValue());
+
+                }
+                else
+                {
+                    Noticia.Add("a entidade nao sobreu mudanca no seu estado acao nao realizado");
+                    return false;
+                }
             }
             else
             {
@@ -48,8 +57,9 @@ namespace Hope.Controle
         {
             if (Hope_static.Autenticacao.Autenticado)
             {
-                Insert_New_Row(out int id,out DateTime start);
-                ICaixa_e _E = new Entidade.Caixa_e(id,Hope_static.Autenticacao.Colaborador,start);
+
+                Insert_New_Row(out int id, out DateTime start);
+                ICaixa_e _E = new Entidade.Caixa_e(id, Hope_static.Autenticacao.Colaborador, start);
                 Noticia.Add("Novo caixa criado");
                 return _E;
             }
