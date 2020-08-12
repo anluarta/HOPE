@@ -13,10 +13,11 @@ namespace Hope.Interface
         bool Gravar(ICaixa_e entidade);
         ICaixa_e Select(object current);
         IConsulta Consulta { get; }
-        ICaixa_e Find(IConsulta consulta);
-        ISuprimento_e Suprimento(ICaixa_e entidade);
-        ISangria_e Sangria(ICaixa_e entidade);
-
+        ICaixa_e[] Find(IConsulta consulta);
+        ISuprimento_e Suprimento_Novo(ICaixa_e entidade);
+        ISangria_e Sangria_Novo(ICaixa_e entidade);
+        ISuprimento Suprimento { get; }
+        ISangria Sangria { get; }
 
     }
 }

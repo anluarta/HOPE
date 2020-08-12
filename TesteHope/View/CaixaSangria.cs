@@ -19,7 +19,7 @@ namespace TesteHope.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            Hope.Interface.ISangria_e entidade = Program.ObjHope.Pos.Caixa.Sangria(Program.CaixaOperacao);
+            Hope.Interface.ISangria_e entidade = Program.ObjHope.Pos.Caixa.Sangria_Novo(Program.CaixaOperacao);
            bool v1= entidade.Set_Valor(valor: txtValor.Text);
            bool v2= entidade.Set_Observacao(obsevacao: txtObservacao.Text);
             if (v1&v2)

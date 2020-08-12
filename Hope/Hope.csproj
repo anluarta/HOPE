@@ -130,11 +130,15 @@
     <Compile Include="Controle\Comprador_c.cs" />
     <Compile Include="Controle\Consulta_c.cs" />
     <Compile Include="Controle\Produto_c.cs" />
+    <Compile Include="Controle\Sangria.cs" />
+    <Compile Include="Controle\Suprimento.cs" />
     <Compile Include="Controle\Vender_c.cs" />
     <Compile Include="DAO\Colaborador_d.cs" />
     <Compile Include="Entidade\Autenticacao_e.cs" />
     <Compile Include="Entidade\Caixa_e.cs" />
     <Compile Include="Entidade\Colaborador_e.cs" />
+    <Compile Include="Entidade\Sangria_e.cs" />
+    <Compile Include="Entidade\Suprimento_e.cs" />
     <Compile Include="Enums\Consulta_u.cs" />
     <Compile Include="Enums\Notifica_u.cs" />
     <Compile Include="Enums\Produto_u.cs" />
@@ -174,7 +178,9 @@
     <Compile Include="Interface\IPreco_e.cs" />
     <Compile Include="Interface\IProduto.cs" />
     <Compile Include="Interface\IProduto_e.cs" />
+    <Compile Include="Interface\ISangria.cs" />
     <Compile Include="Interface\ISangria_e.cs" />
+    <Compile Include="Interface\ISuprimento.cs" />
     <Compile Include="Interface\ISuprimento_e.cs" />
     <Compile Include="Interface\IVender.cs" />
     <Compile Include="Interface\IVender_e.cs" />

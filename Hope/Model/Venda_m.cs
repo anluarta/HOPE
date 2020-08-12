@@ -6,5 +6,6 @@ namespace Hope.Model
 {
     internal class Venda_m : Vender_c
     {
+
     }
 }

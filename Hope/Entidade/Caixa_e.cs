@@ -12,6 +12,42 @@ namespace Hope.Entidade
         // nao mexer nessa propiedade fora do metodo Dispariedade
         private Caixa_e Temporario;
         List<string> Noticia;
+        internal const string Index = "Index";
+        internal const string Ant_FinishTime = "Ant_FinishTime";
+        internal const string Ant_Dinheiro = "Ant_Dinheiro";
+        internal const string Ant_Debido = "Ant_Debido";
+        internal const string Ant_Credito = "Ant_Credito";
+        internal const string Ant_Cheque = "Ant_Cheque";
+        internal const string Ant_ValeAlimentacao = "Ant_ValeAlimentacao";
+        internal const string Ant_ValeRefeica = "Ant_ValeRefeica";
+        internal const string Ant_Outro = "Ant_Outro";
+        internal const string Ant_Internal = "Ant_Internal";
+        internal const string Ant_Sangria = "Ant_Sangria";
+        internal const string Ant_Suprimento = "Ant_Suprimento";
+        internal const string Ant_Troco = "Ant_Troco";
+        internal const string Ant_Recebido = "Ant_Recebido";
+        internal const string Ant_Vendido = "Ant_Vendido";
+        internal const string Ant_Cancelado = "Ant_Cancelado";
+        internal const string Ant_Desconto = "Ant_Desconto";
+        internal const string Nov_FinishTime = "Nov_FinishTime";
+        internal const string Nov_Dinheiro = "Nov_Dinheiro";
+        internal const string Nov_Debido = "Nov_Debido";
+        internal const string Nov_Credito = "Nov_Credito";
+        internal const string Nov_Cheque = "Nov_Cheque";
+        internal const string Nov_ValeAlimentacao = "Nov_ValeAlimentacao";
+        internal const string Nov_ValeRefeica = "Nov_ValeRefeica";
+        internal const string Nov_Outro = "Nov_Outro";
+        internal const string Nov_Internal = "Nov_Internal";
+        internal const string Nov_Sangria = "Nov_Sangria";
+        internal const string Nov_Suprimento = "Nov_Suprimento";
+        internal const string Nov_Troco = "Nov_Troco";
+        internal const string Nov_Recebido = "Nov_Recebido";
+        internal const string Nov_Vendido = "Nov_Vendido";
+        internal const string Nov_Cancelado = "Nov_Cancelado";
+        internal const string Nov_Desconto = "Nov_Desconto";
+        protected static DateTime _ValueFinisTime = DateTime.Parse("01/01/01 23:59:59");
+        internal List<Suprimento_e> suprimento_s;
+        internal List<Sangria_e> sangria_s;
         internal int ID { get; private set; }
         internal IColaborador_e Colaborador { get; private set; }
         internal DateTime StartTime { get; private set; }
@@ -30,6 +66,7 @@ namespace Hope.Entidade
         internal decimal vRecebido { get; private set; }
         internal decimal vVendido { get; private set; }
         internal decimal vCancelado { get; private set; }
+        internal decimal vDesconto { get; private set; }
         string ICaixa_e.Get_ID => ID.ToString();
         string ICaixa_e.Get_Colaborador => Colaborador.Get_Nome_Vendedo;
         string ICaixa_e.Get_Start_DateTime => StartTime.ToString();
@@ -40,8 +77,23 @@ namespace Hope.Entidade
             ID = Index;
             Colaborador = colaborador;
             StartTime = start;
-            FinishTime = DateTime.Parse("01/01/01 23:59:59");
+            FinishTime = _ValueFinisTime;
             Temporario = null;
+            vDinheiro = 0;
+            vDebito = 0;
+            vCredito = 0;
+            vCheque = 0;
+            vValeAlimentacao = 0;
+            vValeRefeicao = 0;
+            vOutro = 0;
+            vInterno = 0;
+            vSangria = 0;
+            vSuprimento = 0;
+            vTroco = 0;
+            vRecebido = 0;
+            vVendido = 0;
+            vCancelado = 0;
+            vDesconto = 0;
         }
         public Caixa_e(int Index, IColaborador_e colaborador, DateTime start, DateTime finish) : this(Index, colaborador, start)
         {
@@ -75,7 +127,9 @@ namespace Hope.Entidade
             if (entidade != null)
             {
                 Entidade.Sangria_e _E = entidade as Entidade.Sangria_e;
-
+                this.vSangria += _E._Valor;
+                sangria_s.Add(_E);
+                return true;
             }
             else
             {
@@ -89,7 +143,9 @@ namespace Hope.Entidade
             if (entidade != null)
             {
                 Entidade.Suprimento_e _E = entidade as Entidade.Suprimento_e;
-
+                this.vSuprimento += _E._vValor;
+                suprimento_s.Add(_E);
+                return true;
             }
             else
             {
@@ -176,17 +232,18 @@ namespace Hope.Entidade
                     List<bool> vs = new List<bool>()
                     {
                         Temporario.vCancelado.Equals(vCancelado),
-                        Temporario.vCheque.Equals(vCancelado),
-                        Temporario.vCredito.Equals(vCancelado),
-                        Temporario.vDebito.Equals(vCancelado),
-                        Temporario.vDinheiro.Equals(vCancelado),
-                        Temporario.vInterno.Equals(vCancelado),
-                        Temporario.vOutro.Equals(vCancelado),
-                        Temporario.vRecebido.Equals(vCancelado),
-                        Temporario.vSangria.Equals(vCancelado),
-                        Temporario.vSuprimento.Equals(vCancelado),
-                        Temporario.vValeAlimentacao.Equals(vCancelado),
-                        Temporario.vValeRefeicao.Equals(vCancelado)
+                        Temporario.vCheque.Equals(vCheque),
+                        Temporario.vCredito.Equals(vCredito),
+                        Temporario.vDebito.Equals(vDebito),
+                        Temporario.vDinheiro.Equals(vDinheiro),
+                        Temporario.vInterno.Equals(vInterno),
+                        Temporario.vOutro.Equals(vOutro),
+                        Temporario.vRecebido.Equals(vRecebido),
+                        Temporario.vSangria.Equals(vSangria),
+                        Temporario.vSuprimento.Equals(vSuprimento),
+                        Temporario.vValeAlimentacao.Equals(vValeAlimentacao),
+                        Temporario.vValeRefeicao.Equals(vValeRefeicao),
+                        Temporario.vDesconto.Equals(vDesconto)
                     };
                     if (vs.Exists(x => x == false))
                     {
@@ -212,13 +269,53 @@ namespace Hope.Entidade
                 return true;
             }
         }
-        internal Dictionary<string, object> GetToDataValue()
+        internal Dictionary<string, string> GetToDataValue()
         {
-            Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("Index", ID);
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            try
+            {
+                data.Add(Index, ID.ToString());
+                data.Add(Ant_FinishTime, this.Temporario.FinishTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Dinheiro, this.Temporario.vDinheiro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Debido, this.Temporario.vDebito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Credito, this.Temporario.vCredito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Cheque, this.Temporario.vCheque.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_ValeAlimentacao, this.Temporario.vValeAlimentacao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_ValeRefeica, this.Temporario.vValeRefeicao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Outro, this.Temporario.vOutro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Internal, this.Temporario.vInterno.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Sangria, this.Temporario.vSangria.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Suprimento, this.Temporario.vSuprimento.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Troco, this.Temporario.vTroco.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Recebido, this.Temporario.vRecebido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Vendido, this.Temporario.vVendido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Cancelado, this.Temporario.vCancelado.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Ant_Desconto, this.Temporario.vDesconto.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+
+                data.Add(Nov_FinishTime, this.FinishTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Dinheiro, this.vDinheiro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Debido, this.vDebito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Credito, this.vCredito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Cheque, this.vCheque.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_ValeAlimentacao, this.vValeAlimentacao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_ValeRefeica, this.vValeRefeicao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Outro, this.vOutro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Internal, this.vInterno.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Sangria, this.vSangria.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Suprimento, this.vSuprimento.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Troco, this.vTroco.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Recebido, this.vRecebido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Vendido, this.vVendido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Cancelado, this.vCancelado.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                data.Add(Nov_Desconto, this.vDesconto.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+            }
+            catch (Exception ex)
+            {
+                Noticia.Add(ex.Message);
+            }
             return data;
         }
-        internal void SetToDataValue(decimal _Cancelado, decimal _Cheque, decimal _Credito, decimal _Debito, decimal _Dinheiro, decimal _Interno, decimal _Outro, decimal _Recebido, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Vendido)
+        internal void SetToDataValue(decimal _Desconto, decimal _Cancelado, decimal _Cheque, decimal _Credito, decimal _Debito, decimal _Dinheiro, decimal _Interno, decimal _Outro, decimal _Recebido, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Vendido)
         {
             this.vCancelado = _Cancelado;
             this.vCheque = _Cheque;
@@ -234,6 +331,7 @@ namespace Hope.Entidade
             this.vValeAlimentacao = _ValeAlimentacao;
             this.vValeRefeicao = _ValeRefeicao;
             this.vVendido = _Vendido;
+            this.vDesconto = _Desconto;
             return;
         }
     }

@@ -9,12 +9,20 @@ namespace Hope.Controle
 {
     abstract class Caixa_c : ICaixa
     {
-       protected List<string> Noticia;
+        protected List<string> Noticia;
         protected Consulta_c _Consulta;
+        Suprimento _Suprimento;
+        Sangria _Sangria;
         public IConsulta Consulta => _Consulta;
+
+        public ISuprimento Suprimento => _Suprimento;
+
+        public ISangria Sangria => _Sangria;
+
         protected abstract bool Insert_New_Row(out int Index, out DateTime start);
-        protected abstract bool Update_Row(Dictionary<string, object> keyValueData);
-        public ICaixa_e Find(IConsulta consulta)
+        protected abstract bool Update_Row(Dictionary<string, string> keyValueData);
+
+        public ICaixa_e[] Find(IConsulta consulta)
         {
             throw new NotImplementedException();
         }
@@ -26,6 +34,22 @@ namespace Hope.Controle
                 Caixa_e _E = entidade as Caixa_e;
                 if (_E.Disparidade())
                 {
+                    if (_Suprimento.Gravar(_E.suprimento_s))
+                    {
+                        Noticia.Add("Dado Value Suprimento Gravado");
+                    }
+                    else
+                    {
+                        Noticia.Add("Dado Value Suprimento nao gravado");
+                    }
+                    if (_Sangria.Gravar(_E.sangria_s))
+                    {
+                        Noticia.Add("Dado Value Sangria Gravado");
+                    }
+                    else
+                    {
+                        Noticia.Add("Dado Value Sangria nao Gravado");
+                    } 
                     return Update_Row(_E.GetToDataValue());
 
                 }
@@ -69,9 +93,30 @@ namespace Hope.Controle
             }
         }
 
-        public ISangria_e Sangria(ICaixa_e entidade)
+        public ISangria_e Sangria_Novo(ICaixa_e entidade)
         {
-            throw new NotImplementedException();
+            if (entidade != null)
+            {
+                if (Hope_static.Autenticacao.Autenticado)
+                {
+                    Caixa_e caixa_E = entidade as Caixa_e;
+
+                    ISangria_e _E = new Sangria_e(caixaID: caixa_E.ID, colaboraID: caixa_E.Colaborador.Get_ID);
+
+                    return _E;
+                }
+                else
+                {
+                    Noticia.Add("Nao esta autenticado para essa acao ");
+                    return null;
+                }
+
+            }
+            else
+            {
+                Noticia.Add("Sangria entidade nullo");
+                return null;
+            }
         }
 
         public ICaixa_e Select(object current)
@@ -79,9 +124,29 @@ namespace Hope.Controle
             throw new NotImplementedException();
         }
 
-        public ISuprimento_e Suprimento(ICaixa_e entidade)
+        public ISuprimento_e Suprimento_Novo(ICaixa_e entidade)
         {
-            throw new NotImplementedException();
+            if (entidade != null)
+            {
+                if (Hope_static.Autenticacao.Autenticado)
+                {
+                    Caixa_e caixa_E = entidade as Caixa_e;
+                    ISuprimento_e suprimento_E = new Suprimento_e(caixaID: caixa_E.ID, colaboraID: caixa_E.Colaborador.Get_ID);
+
+                    return suprimento_E;
+                }
+                else
+                {
+                    Noticia.Add("Nao esta autenticado para essa acao ");
+                    return null;
+                }
+
+            }
+            else
+            {
+                Noticia.Add("Suprimento entidade nullo");
+                return null;
+            }
         }
     }
 }
