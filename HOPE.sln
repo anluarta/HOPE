@@ -14,6 +14,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBHopeLocal", "DBHopeLocal\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteHope", "TesteHope\TesteHope.csproj", "{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS-Alessandro", "POS-Alessandro\POS-Alessandro.csproj", "{BC026129-DD59-4574-BCBE-F4AEF5D9279F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94647CAF-1D28-43A3-8CDE-98E551B8AD2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC026129-DD59-4574-BCBE-F4AEF5D9279F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC026129-DD59-4574-BCBE-F4AEF5D9279F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC026129-DD59-4574-BCBE-F4AEF5D9279F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC026129-DD59-4574-BCBE-F4AEF5D9279F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
