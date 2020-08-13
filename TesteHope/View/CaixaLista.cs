@@ -34,7 +34,7 @@ namespace TesteHope.View
         private void CaixaLista_Load(object sender, EventArgs e)
         {
             Hope.Interface.IConsulta consulta = Program.ObjHope.Pos.Caixa.Consulta();
-
+            
             consulta.Comando = Hope.Enums.Consulta_u.Comando.Select_All_From;
 
             if (Program.ObjHope.Pos.Caixa.Find(consulta, out Hope.Interface.ICaixa_e[] result))

@@ -19,6 +19,7 @@ namespace TesteHope.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             if (Program.ObjHope.Autenticacao.Login(txtUser.Text, txtPass.Text))
             {
                 lblResultado.Text = Program.ObjHope.Autenticacao.Notifica();
