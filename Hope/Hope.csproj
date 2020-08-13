@@ -130,8 +130,8 @@
     <Compile Include="Controle\Comprador_c.cs" />
     <Compile Include="Controle\Consulta_c.cs" />
     <Compile Include="Controle\Produto_c.cs" />
-    <Compile Include="Controle\Sangria.cs" />
-    <Compile Include="Controle\Suprimento.cs" />
+    <Compile Include="Controle\Sangria_c.cs" />
+    <Compile Include="Controle\Suprimento_c.cs" />
     <Compile Include="Controle\Vender_c.cs" />
     <Compile Include="DAO\Colaborador_d.cs" />
     <Compile Include="Entidade\Autenticacao_e.cs" />
@@ -196,6 +196,8 @@
     <Compile Include="Model\Caixa_m.cs" />
     <Compile Include="Model\Colaborador_m.cs" />
     <Compile Include="Model\Consulta_m.cs" />
+    <Compile Include="Model\Sangria_m.cs" />
+    <Compile Include="Model\Suprimento_m.cs" />
     <Compile Include="Model\Venda_m.cs" />
     <Compile Include="Pos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

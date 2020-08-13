@@ -32,6 +32,22 @@ namespace Hope.Entidade
             Senha = senha;
             Nome_Vendedor = nome_vendedo;
         }
+        internal Dictionary<int, object> GetkeyValues()
+        {
+            Dictionary<int, object> keys = new Dictionary<int, object>();
+            try
+            {
+                keys.Add(key:Key_Index, value:ID);
+                keys.Add(key:Key_Login_Pass, value:Senha);
+                keys.Add(key:Key_Login_User, value:Login);
+                keys.Add(key:Key_Nome_Vendedor, value:Nome_Vendedor);
+            }
+            catch (Exception e)
+            {
+                Noticia.Add(e.Message);
+            }
+            return keys;
+        }
         string IColaborador_e.Get_ID => ID.ToString();
         string IColaborador_e.Get_Login => Login;
         string IColaborador_e.Get_Nome_Vendedo => Nome_Vendedor;
@@ -46,7 +62,7 @@ namespace Hope.Entidade
             return builder.ToString();
         }
 
-        bool IColaborador_e.Set_Login(string valor)
+        public bool Set_Login(string valor)
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
@@ -66,7 +82,7 @@ namespace Hope.Entidade
             }
         }
 
-        bool IColaborador_e.Set_Nome_Vendedor(string valor)
+        public bool Set_Nome_Vendedor(string valor)
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
@@ -86,7 +102,7 @@ namespace Hope.Entidade
             }
         }
 
-        bool IColaborador_e.Set_Senha(string valor)
+        public bool Set_Senha(string valor)
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
@@ -105,5 +121,9 @@ namespace Hope.Entidade
                 return true;
             }
         }
+        internal const int Key_Index = 0;
+        internal const int Key_Login_Pass = 1;
+        internal const int Key_Login_User = 2;
+        internal const int Key_Nome_Vendedor = 3;
     }
 }

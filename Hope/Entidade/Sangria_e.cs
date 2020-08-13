@@ -22,15 +22,15 @@ namespace Hope.Entidade
             this.colaboraID = colaboraID;
             Noticia = new List<string>();
         }
-        internal Dictionary<string,string> GetKeyValuesData()
+        internal Dictionary<string,object> GetKeyValuesData()
         {
-            Dictionary<string, string> keys = new Dictionary<string, string>();
+            Dictionary<string, object> keys = new Dictionary<string, object>();
             try
             {
-                keys.Add(Key_CaixaID, caixaID.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                keys.Add(Key_CaixaID, caixaID);
                 keys.Add(Key_ColacoradoID, colaboraID);
                 keys.Add(Key_Observacao, _Observacao);
-                keys.Add(Key_Valor, _Valor.ToString("f4",System.Globalization.CultureInfo.InvariantCulture));
+                keys.Add(Key_Valor, _Valor);
             }
             catch (System.Exception e)
             {

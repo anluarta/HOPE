@@ -10,7 +10,7 @@ namespace Hope.Interface
     {
         string Notifica();
         ICaixa_e Novo();
-        bool Gravar(ICaixa_e entidade);
+        bool Gravar(ICaixa_e entidade, out ICaixa_e result);
         ICaixa_e Select(object current);
         IConsulta Consulta { get; }
         ICaixa_e[] Find(IConsulta consulta);

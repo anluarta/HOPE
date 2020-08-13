@@ -20,32 +20,39 @@ namespace TesteHope.View
         private void btnGravar_Click(object sender, EventArgs e)
         {
             Hope.Interface.ISuprimento_e entidade = Program.ObjHope.Pos.Caixa.Suprimento_Novo(Program.CaixaOperacao);
-            bool v1 = entidade.Set_Valor(valor: txtValor.Text);
-            bool v2 = entidade.Set_Observacao(observacao: txtObservacao.Text);
-            if (v1&v2)
+            if (entidade!= null)
             {
-                bool v3 = Program.CaixaOperacao.Add(entidade);
-                if (v3)
+                bool v1 = entidade.Set_Valor(valor: txtValor.Text);
+                bool v2 = entidade.Set_Observacao(observacao: txtObservacao.Text);
+                if (v1 & v2)
                 {
-                    bool v4 = Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao);
-                    if (v4)
+                    bool v3 = Program.CaixaOperacao.Add(entidade);
+                    if (v3)
                     {
-                        MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
-                        btnfechar.PerformClick();
+                        bool v4 = Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao, out Program.CaixaOperacao);
+                        if (v4)
+                        {
+                            MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                            btnfechar.PerformClick();
+                        }
+                        else
+                        {
+                            lblresultado.Text = Program.ObjHope.Pos.Caixa.Notifica();
+                        }
                     }
                     else
                     {
-                        lblresultado.Text = Program.ObjHope.Pos.Caixa.Notifica();
+                        lblresultado.Text = Program.CaixaOperacao.Notifica();
                     }
                 }
                 else
                 {
-                    lblresultado.Text = Program.CaixaOperacao.Notifica();
+                    lblresultado.Text = entidade.Notifica();
                 }
             }
             else
             {
-                lblresultado.Text = entidade.Notifica();
+                MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
             }
         }
     }

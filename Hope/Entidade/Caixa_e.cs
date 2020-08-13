@@ -73,6 +73,8 @@ namespace Hope.Entidade
         string ICaixa_e.Get_finish_DateTime => FinishTime.ToString();
         public Caixa_e(int Index, IColaborador_e colaborador, DateTime start)
         {
+            suprimento_s = new List<Suprimento_e>();
+            sangria_s = new List<Sangria_e>();
             Noticia = new List<string>();
             ID = Index;
             Colaborador = colaborador;
@@ -95,10 +97,29 @@ namespace Hope.Entidade
             vCancelado = 0;
             vDesconto = 0;
         }
-        public Caixa_e(int Index, IColaborador_e colaborador, DateTime start, DateTime finish) : this(Index, colaborador, start)
+        internal Caixa_e(int Index, IColaborador_e colaborador, DateTime start, DateTime finish, decimal _Dinheiro, decimal _Debito, decimal _Credito, decimal _Cheque, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Outro, decimal _Interno, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _Recebido, decimal _Vendido, decimal _Cancelado, decimal _Desconto)
         {
-            Noticia.Add("Caixa_e finalizado");
+            ID = Index;
+            Colaborador = colaborador;
+            StartTime = start;
             FinishTime = finish;
+            Temporario = null;
+            vDinheiro = _Dinheiro;
+            vDebito = _Debito;
+            vCredito = _Credito;
+            vCheque = _Cheque;
+            vValeAlimentacao = _ValeAlimentacao;
+            vValeRefeicao = _ValeRefeicao;
+            vOutro = _Outro;
+            vInterno = _Interno;
+            vSangria = _Sangria;
+            vSuprimento = _Suprimento;
+            vTroco = _Troco;
+            vRecebido = _Recebido;
+            vVendido = _Vendido;
+            vCancelado = _Cancelado;
+            vDesconto = _Desconto;
+            Noticia.Add("Caixa_e finalizado");
         }
         protected Caixa_e(Caixa_e _E)
         {
@@ -243,7 +264,8 @@ namespace Hope.Entidade
                         Temporario.vSuprimento.Equals(vSuprimento),
                         Temporario.vValeAlimentacao.Equals(vValeAlimentacao),
                         Temporario.vValeRefeicao.Equals(vValeRefeicao),
-                        Temporario.vDesconto.Equals(vDesconto)
+                        Temporario.vDesconto.Equals(vDesconto),
+                        Temporario.FinishTime.Equals(FinishTime)
                     };
                     if (vs.Exists(x => x == false))
                     {
@@ -308,6 +330,40 @@ namespace Hope.Entidade
                 data.Add(Nov_Vendido, this.vVendido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
                 data.Add(Nov_Cancelado, this.vCancelado.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
                 data.Add(Nov_Desconto, this.vDesconto.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Index, ID);
+                //data.Add(Ant_FinishTime, this.Temporario.FinishTime);
+                //data.Add(Ant_Dinheiro, this.Temporario.vDinheiro);
+                //data.Add(Ant_Debido, this.Temporario.vDebito);
+                //data.Add(Ant_Credito, this.Temporario.vCredito);
+                //data.Add(Ant_Cheque, this.Temporario.vCheque);
+                //data.Add(Ant_ValeAlimentacao, this.Temporario.vValeAlimentacao);
+                //data.Add(Ant_ValeRefeica, this.Temporario.vValeRefeicao);
+                //data.Add(Ant_Outro, this.Temporario.vOutro);
+                //data.Add(Ant_Internal, this.Temporario.vInterno);
+                //data.Add(Ant_Sangria, this.Temporario.vSangria);
+                //data.Add(Ant_Suprimento, this.Temporario.vSuprimento);
+                //data.Add(Ant_Troco, this.Temporario.vTroco);
+                //data.Add(Ant_Recebido, this.Temporario.vRecebido);
+                //data.Add(Ant_Vendido, this.Temporario.vVendido);
+                //data.Add(Ant_Cancelado, this.Temporario.vCancelado);
+                //data.Add(Ant_Desconto, this.Temporario.vDesconto);
+
+                //data.Add(Nov_FinishTime, this.FinishTime);
+                //data.Add(Nov_Dinheiro, this.vDinheiro);
+                //data.Add(Nov_Debido, this.vDebito);
+                //data.Add(Nov_Credito, this.vCredito);
+                //data.Add(Nov_Cheque, this.vCheque);
+                //data.Add(Nov_ValeAlimentacao, this.vValeAlimentacao);
+                //data.Add(Nov_ValeRefeica, this.vValeRefeicao);
+                //data.Add(Nov_Outro, this.vOutro);
+                //data.Add(Nov_Internal, this.vInterno);
+                //data.Add(Nov_Sangria, this.vSangria);
+                //data.Add(Nov_Suprimento, this.vSuprimento);
+                //data.Add(Nov_Troco, this.vTroco);
+                //data.Add(Nov_Recebido, this.vRecebido);
+                //data.Add(Nov_Vendido, this.vVendido);
+                //data.Add(Nov_Cancelado, this.vCancelado);
+                //data.Add(Nov_Desconto, this.vDesconto);
             }
             catch (Exception ex)
             {

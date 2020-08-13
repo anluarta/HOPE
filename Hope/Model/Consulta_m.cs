@@ -21,6 +21,14 @@ namespace Hope.Model
         {
             internal override string ToSql()
             {
+                switch (Comando)
+                {
+                    case Enums.Consulta_u.Comando.Select_All_From:
+
+                        break;
+                    default:
+                        return "";
+                }
                 throw new NotImplementedException();
             }
         }

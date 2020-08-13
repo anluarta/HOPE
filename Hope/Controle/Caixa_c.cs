@@ -11,62 +11,97 @@ namespace Hope.Controle
     {
         protected List<string> Noticia;
         protected Consulta_c _Consulta;
-        Suprimento _Suprimento;
-        Sangria _Sangria;
-        public IConsulta Consulta => _Consulta;
+        protected Suprimento_c _Suprimento;
+        protected Sangria_c _Sangria;
+        IConsulta ICaixa.Consulta => _Consulta;
 
-        public ISuprimento Suprimento => _Suprimento;
+        ISuprimento ICaixa.Suprimento => _Suprimento;
 
-        public ISangria Sangria => _Sangria;
+        ISangria ICaixa.Sangria => _Sangria;
 
         protected abstract bool Insert_New_Row(out int Index, out DateTime start);
         protected abstract bool Update_Row(Dictionary<string, string> keyValueData);
-
-        public ICaixa_e[] Find(IConsulta consulta)
+        protected abstract bool Select_All_From(out ICaixa_e[] caixa_s);
+        ICaixa_e[] ICaixa.Find(IConsulta consulta)
         {
+            switch (consulta.Comando)
+            {
+                case Enums.Consulta_u.Comando.Select_All_From:
+                    if (Select_All_From(out ICaixa_e[] result))
+                    {
+                        return result;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                    break;
+                default:
+                    break;
+            }
             throw new NotImplementedException();
         }
 
-        public bool Gravar(ICaixa_e entidade)
+        bool ICaixa.Gravar(ICaixa_e entidade, out ICaixa_e result)
         {
             if (entidade != null)
             {
                 Caixa_e _E = entidade as Caixa_e;
+                if (_Suprimento.Gravar(_E.suprimento_s))
+                {
+                    _E.suprimento_s.Clear();
+                    Noticia.AddRange(_Suprimento.Noticia);
+                    _Suprimento.Noticia.Clear();
+                    Noticia.Add("Dado Value Suprimento Gravado");
+                }
+                else
+                {
+                    Noticia.AddRange(_Suprimento.Noticia);
+                    Noticia.Add("Dado Value Suprimento nao gravado");
+                }
+                if (_Sangria.Gravar(_E.sangria_s))
+                {
+                    _E.sangria_s.Clear();
+                    Noticia.AddRange(_Sangria.Noticia);
+                    _Sangria.Noticia.Clear();
+                    Noticia.Add("Dado Value Sangria Gravado");
+                }
+                else
+                {
+                    Noticia.AddRange(_Sangria.Noticia);
+
+                    Noticia.Add("Dado Value Sangria nao Gravado");
+                }
                 if (_E.Disparidade())
                 {
-                    if (_Suprimento.Gravar(_E.suprimento_s))
+                    if (Update_Row(_E.GetToDataValue()))
                     {
-                        Noticia.Add("Dado Value Suprimento Gravado");
-                    }
-                    else
-                    {
-                        Noticia.Add("Dado Value Suprimento nao gravado");
-                    }
-                    if (_Sangria.Gravar(_E.sangria_s))
-                    {
-                        Noticia.Add("Dado Value Sangria Gravado");
-                    }
-                    else
-                    {
-                        Noticia.Add("Dado Value Sangria nao Gravado");
-                    } 
-                    return Update_Row(_E.GetToDataValue());
+                        result = _E;
+                        return true;
 
+                    }
+                    else
+                    {
+                        result = _E;
+                        return false;
+                    }
                 }
                 else
                 {
                     Noticia.Add("a entidade nao sobreu mudanca no seu estado acao nao realizado");
+                    result = _E;
                     return false;
                 }
             }
             else
             {
                 Noticia.Add("Entidade Nula");
+                result = null;
                 return false;
             }
         }
 
-        public string Notifica()
+        string ICaixa.Notifica()
         {
             StringBuilder builder = new StringBuilder();
             foreach (string item in Noticia)
@@ -77,7 +112,7 @@ namespace Hope.Controle
             return builder.ToString();
         }
 
-        public ICaixa_e Novo()
+        ICaixa_e ICaixa.Novo()
         {
             if (Hope_static.Autenticacao.Autenticado)
             {
@@ -93,7 +128,7 @@ namespace Hope.Controle
             }
         }
 
-        public ISangria_e Sangria_Novo(ICaixa_e entidade)
+        ISangria_e ICaixa.Sangria_Novo(ICaixa_e entidade)
         {
             if (entidade != null)
             {
@@ -119,12 +154,12 @@ namespace Hope.Controle
             }
         }
 
-        public ICaixa_e Select(object current)
+        ICaixa_e ICaixa.Select(object current)
         {
             throw new NotImplementedException();
         }
 
-        public ISuprimento_e Suprimento_Novo(ICaixa_e entidade)
+        ISuprimento_e ICaixa.Suprimento_Novo(ICaixa_e entidade)
         {
             if (entidade != null)
             {

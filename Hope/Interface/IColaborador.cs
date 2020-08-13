@@ -11,8 +11,7 @@ namespace Hope.Interface
     /// </summary>
    public interface IColaborador
     {
-        INotifica Notifica { get; }
-
+        string Notifica();
         /// <summary>
         /// funcao de inicia nova Entidade
         /// </summary>

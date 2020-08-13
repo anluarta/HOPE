@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaixaLista));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.iCaixaeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -43,15 +44,14 @@
             this.btnVisualizarLeitura = new System.Windows.Forms.ToolStripButton();
             this.btnfechar = new System.Windows.Forms.ToolStripButton();
             this.dgvListaCaixa = new System.Windows.Forms.DataGridView();
-            this.iCaixaeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getStartDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getfinishDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -82,6 +82,10 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(486, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // iCaixaeBindingSource
+            // 
+            this.iCaixaeBindingSource.DataSource = typeof(Hope.Interface.ICaixa_e);
             // 
             // bindingNavigatorCountItem
             // 
@@ -192,10 +196,6 @@
             this.dgvListaCaixa.Size = new System.Drawing.Size(486, 351);
             this.dgvListaCaixa.TabIndex = 2;
             // 
-            // iCaixaeBindingSource
-            // 
-            this.iCaixaeBindingSource.DataSource = typeof(Hope.Interface.ICaixa_e);
-            // 
             // getIDDataGridViewTextBoxColumn
             // 
             this.getIDDataGridViewTextBoxColumn.DataPropertyName = "Get_ID";
@@ -232,11 +232,12 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "CaixaLista";
             this.Size = new System.Drawing.Size(486, 376);
+            this.Load += new System.EventHandler(this.CaixaLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

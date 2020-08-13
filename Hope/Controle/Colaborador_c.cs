@@ -10,13 +10,12 @@ namespace Hope.Controle
 {
     abstract class Colaborador_c : IColaborador
     {
-
+        protected List<string> Noticia;
         protected abstract IColaborador_e[] find();
-        protected DAO.Colaborador_d colaborador_DAO;
         protected Consulta_c consulta;
         IConsulta IColaborador.Consulta => consulta;
-
-        INotifica IColaborador.Notifica => throw new NotImplementedException();
+        protected abstract bool Insert_Data_Value(Dictionary<int, object> keyValuesData);
+        internal abstract bool Busca_Index(object index,out IColaborador_e result);
 
         IColaborador_e[] IColaborador.Find(IConsulta consulta)
         {
@@ -26,6 +25,7 @@ namespace Hope.Controle
 
         bool IColaborador.Gravar(IColaborador_e _E)
         {
+
             throw new NotImplementedException();
         }
 
@@ -41,6 +41,17 @@ namespace Hope.Controle
             return new Entidade.Colaborador_e();
 
             throw new NotImplementedException();
+        }
+
+        string IColaborador.Notifica()
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string item in Noticia)
+            {
+                builder.AppendLine(item);
+            }
+            Noticia.Clear();
+            return builder.ToString();
         }
     }
 }

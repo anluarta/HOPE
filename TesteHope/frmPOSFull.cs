@@ -28,7 +28,7 @@ namespace TesteHope
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbldatetime.Text = DateTime.Now.ToString();
-            if (count==100)
+            if (count == 100)
             {
                 count = 0;
                 lblCaixaResult.Text = "";
@@ -103,18 +103,29 @@ namespace TesteHope
 
         private void BtnCaixaFechamento_Click(object sender, EventArgs e)
         {
-            Program.CaixaOperacao.Fechamento();
-            lblCaixaResult.Text = Program.CaixaOperacao.Notifica();
-            try
+            if (Program.CaixaOperacao != null)
             {
-                if (!Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao))
+                Program.CaixaOperacao.Fechamento();
+                try
                 {
-                    MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                    if (Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao,out Program.CaixaOperacao))
+                    {
+                        lblCaixaResult.Text=Program.ObjHope.Pos.Caixa.Notifica();
+                        Program.CaixaOperacao = null;
+                    }
+                    else
+                    {
+                        lblCaixaResult.Text = Program.ObjHope.Pos.Caixa.Notifica();
+                    }
+                }
+                catch (Hope.HException_c he)
+                {
+                    MessageBox.Show(he.Message);
                 }
             }
-            catch (Hope.HException_c he)
+            else
             {
-                MessageBox.Show(he.Message);
+                MessageBox.Show("Caixaoperacao esta nullo");
             }
         }
 
@@ -147,9 +158,16 @@ namespace TesteHope
 
         private void BtnCaixaLeitura_Click(object sender, EventArgs e)
         {
-            vwCaixaLeitura = new View.CaixaLeitura();
-            vwCaixaLeitura.btnfechar.Click += new EventHandler(vwLeitura_btnfechar_Click);
-            Exibicao(vwCaixaLeitura);
+            if (Program.CaixaOperacao != null)
+            {
+                vwCaixaLeitura = new View.CaixaLeitura(Program.CaixaOperacao);
+                vwCaixaLeitura.btnfechar.Click += new EventHandler(vwLeitura_btnfechar_Click);
+                Exibicao(vwCaixaLeitura);
+            }
+            else
+            {
+                MessageBox.Show("CaixaOperacao esta nullo");
+            }
         }
 
         private void vwLeitura_btnfechar_Click(object sender, EventArgs e)

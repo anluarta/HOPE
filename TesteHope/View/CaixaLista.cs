@@ -30,5 +30,11 @@ namespace TesteHope.View
                 frm.ShowDialog();
             }
         }
+
+        private void CaixaLista_Load(object sender, EventArgs e)
+        {
+            Program.ObjHope.Pos.Caixa.Consulta;
+            Program.ObjHope.Pos.Caixa.Find()
+        }
     }
 }

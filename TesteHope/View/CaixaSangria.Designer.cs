@@ -39,9 +39,9 @@
             // 
             // lblresultado
             // 
-            this.lblresultado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblresultado.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblresultado.AutoSize = true;
-            this.lblresultado.Location = new System.Drawing.Point(3, 268);
+            this.lblresultado.Location = new System.Drawing.Point(3, 229);
             this.lblresultado.Name = "lblresultado";
             this.lblresultado.Size = new System.Drawing.Size(55, 13);
             this.lblresultado.TabIndex = 0;

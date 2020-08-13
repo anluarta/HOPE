@@ -20,12 +20,15 @@ namespace Hope
             //------------------------------------------------
             // instacia inicia pra ser objetos internos de operacao do caminho publico
             // 
-            //Hope_static.Colaborador = new Model.Colaborador_m();
 
             Hope_static.Autenticacao = new Model.Autenticacao_m();
+            
+            //---POS
             Hope_static.Caixa = new Model.Caixa_m();
             Hope_static.Venda = new Model.Venda_m();
 
+            //---BACKOFFICE
+            Hope_static.Colaborador = new Model.Colaborador_m();
         }
 
 
