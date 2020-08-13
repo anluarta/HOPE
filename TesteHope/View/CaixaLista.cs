@@ -22,7 +22,7 @@ namespace TesteHope.View
             Hope.Interface.ICaixa_e row;
             row = Program.ObjHope.Pos.Caixa.Select(iCaixaeBindingSource.Current);
             View.CaixaLeitura caixaLeitura = new CaixaLeitura(row);
-            using (frmViewControlSecundario frm= new frmViewControlSecundario())
+            using (frmViewControlSecundario frm = new frmViewControlSecundario())
             {
                 caixaLeitura.btnfechar.Click += new EventHandler(frm.btnfechar);
                 caixaLeitura.Dock = DockStyle.Fill;
@@ -33,8 +33,18 @@ namespace TesteHope.View
 
         private void CaixaLista_Load(object sender, EventArgs e)
         {
-            Program.ObjHope.Pos.Caixa.Consulta;
-            Program.ObjHope.Pos.Caixa.Find()
+            Hope.Interface.IConsulta consulta = Program.ObjHope.Pos.Caixa.Consulta();
+
+            consulta.Comando = Hope.Enums.Consulta_u.Comando.Select_All_From;
+
+            if (Program.ObjHope.Pos.Caixa.Find(consulta, out Hope.Interface.ICaixa_e[] result))
+            {
+                iCaixaeBindingSource.DataSource = result;
+            }
+            else
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+            }
         }
     }
 }

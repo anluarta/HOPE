@@ -22,7 +22,7 @@ namespace Hope.Model
             try
             {
                 HopeDataSet.CaixaRow row = Hope_static.hopeData.Caixa.NewCaixaRow();
-                row.ID_Colaborador = Hope_static.Autenticacao.Colaborador.ID;
+                row.Colaborador = Hope_static.Autenticacao.Colaborador.ToSerilazion();
                 row.Dia_Hora_Abertura = DateTime.Now;
                 Hope_static.hopeData.Caixa.AddCaixaRow(row);
                 row = Hope_static.hopeData.Caixa.Rows[Hope_static.hopeData.Caixa.Rows.IndexOf(row)] as HopeDataSet.CaixaRow;
@@ -50,15 +50,8 @@ namespace Hope.Model
                 foreach (HopeDataSet.CaixaRow item in Hope.Hope_static.hopeData.Caixa.Rows)
                 {
                     // busca o colaborado na base de dados
-                    IColaborador_e _E;
-                    if (Hope_static.Colaborador.Busca_Index(item.ID_Colaborador, out IColaborador_e result))
-                    {
-                        _E = result;
-                    }
-                    else
-                    {
-                        _E = new Entidade.Colaborador_e(0, "Erro", "Erro", "Erro");
-                    }
+                    IColaborador_e _E= new Colaborador_e(item.Colaborador);
+                   
                     // adiciona a linha de registro ja no formato pra exibicao
                     vs.Add
                         (

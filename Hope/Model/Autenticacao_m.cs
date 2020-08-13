@@ -32,6 +32,8 @@ namespace Hope.Model
                 Noticia.Add("Login Validado");
                 return true;
             }
+            // colocar else if pra checar se ta configurado o bbcloud pra valida 
+            // coloca else if pra checar se ta configurado o backoffice pra valida 
             else
             {
                 Noticia.Add("Erro de Pass ou User");

@@ -13,7 +13,6 @@ namespace Hope.Controle
         protected Consulta_c _Consulta;
         protected Suprimento_c _Suprimento;
         protected Sangria_c _Sangria;
-        IConsulta ICaixa.Consulta => _Consulta;
 
         ISuprimento ICaixa.Suprimento => _Suprimento;
 
@@ -22,25 +21,7 @@ namespace Hope.Controle
         protected abstract bool Insert_New_Row(out int Index, out DateTime start);
         protected abstract bool Update_Row(Dictionary<string, string> keyValueData);
         protected abstract bool Select_All_From(out ICaixa_e[] caixa_s);
-        ICaixa_e[] ICaixa.Find(IConsulta consulta)
-        {
-            switch (consulta.Comando)
-            {
-                case Enums.Consulta_u.Comando.Select_All_From:
-                    if (Select_All_From(out ICaixa_e[] result))
-                    {
-                        return result;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                    break;
-                default:
-                    break;
-            }
-            throw new NotImplementedException();
-        }
+        
 
         bool ICaixa.Gravar(ICaixa_e entidade, out ICaixa_e result)
         {
@@ -181,6 +162,32 @@ namespace Hope.Controle
             {
                 Noticia.Add("Suprimento entidade nullo");
                 return null;
+            }
+        }
+
+        IConsulta ICaixa.Consulta()
+        {
+            return _Consulta;
+        }
+
+        bool ICaixa.Find(IConsulta consulta, out ICaixa_e[] caixa_s)
+        {
+            switch (consulta.Comando)
+            {
+                case Enums.Consulta_u.Comando.Select_All_From:
+                    if (Select_All_From(out ICaixa_e[] result))
+                    {
+                        caixa_s = result;
+                        return true; ;
+                    }
+                    else
+                    {
+                        caixa_s = null;
+                        return false;
+                    }
+                default:
+                    caixa_s = null;
+                    return false;
             }
         }
     }
