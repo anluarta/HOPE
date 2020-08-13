@@ -19,8 +19,7 @@ namespace POS_Alessandro.NewFolder1
 
         private void BnfBtnPdv_Click(object sender, EventArgs e)
         {
-            FrenteDeCaixa frenteDeCaixa = new FrenteDeCaixa();
-            frenteDeCaixa.ShowDialog();
+            this.Close();
 
             
         }

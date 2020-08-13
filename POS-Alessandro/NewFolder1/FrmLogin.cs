@@ -26,16 +26,29 @@ namespace POS_Alessandro.NewFolder1
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (!Program.objhope.Autenticacao.Login(TxtUserName.Text, txtLogin.Text))
+            {
+                return;
+            }
             
-            this.Close();
+            //    if ()
+            //{
+            //    ;
 
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show(Program.objhope.Autenticacao.Notifica());
+            //}
+
+            this.Close();
 
         }
 
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            BackOffice backOffice = new BackOffice();
-            backOffice.ShowDialog();
+            
 
 
         }

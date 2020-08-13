@@ -100,6 +100,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,6 +114,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner faixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logosoFt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sincronização-da-nuvem-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nuvem-de-cruz-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hope\Hope.csproj">
+      <Project>{1a163c76-7d25-4f19-be2f-daceecaca707}</Project>
+      <Name>Hope</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
