@@ -37,7 +37,7 @@ namespace Hope.Model
                 Noticia.Add("Erro Insert_New_Row");
                 Noticia.Add(e.Message);
                 Index = 0;
-                start = DateTime.Parse("01/01/01 23:59:59");
+                start = DateTime.MinValue;
                 return false;
 
             }

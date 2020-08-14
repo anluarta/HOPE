@@ -32,5 +32,12 @@ namespace Hope.Model
                 throw new NotImplementedException();
             }
         }
+        public class _vender : Consulta_c
+        {
+            internal override string ToSql()
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

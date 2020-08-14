@@ -19,35 +19,42 @@ namespace TesteHope.View
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            Hope.Interface.IItem_e entidade = Program.ObjHope.Pos.Vender.Items(Program.Vender);
-            bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
-            bool v2 = entidade.Set_Unidade(descricao: txtDescricao.Text);
-            bool v3 = entidade.Set_Quantidade(descricao: txtDescricao.Text);
-            bool v4 = entidade.Set_Venda(descricao: txtDescricao.Text);
-            if (v1 & v2 & v3 & v4)
+            if (Program.ObjHope.Pos.Vender.Item_Novo(Program.Vender, out Hope.Interface.IItem_e result))
             {
-                bool v5 = Program.Vender.Add(entidade);
-                if (v5)
+                Hope.Interface.IItem_e entidade = result;
+                bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
+                bool v2 = entidade.Set_Unidade(descricao: txtUnidade.Text);
+                bool v3 = entidade.Set_Quantidade(descricao: txtQuantidade.Text);
+                bool v4 = entidade.Set_Venda(descricao: txtVenda.Text);
+                if (v1 & v2 & v3 & v4)
                 {
-                    bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
-                    if (v6)
+                    bool v5 = Program.Vender.Add(entidade);
+                    if (v5)
                     {
-                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-                        btnfechar.PerformClick();
+                        bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+                        if (v6)
+                        {
+                            MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                            btnfechar.PerformClick();
+                        }
+                        else
+                        {
+                            lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                        }
                     }
                     else
                     {
-                        lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                        lblResultado.Text = Program.Vender.Notifica();
                     }
                 }
                 else
                 {
-                    lblResultado.Text = Program.Vender.Notifica();
+                    lblResultado.Text = entidade.Notifica();
                 }
             }
             else
             {
-                lblResultado.Text = entidade.Notifica();
+                lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
             }
         }
     }

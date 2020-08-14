@@ -6,7 +6,7 @@
         string Get_ID { get; }
         string Get_ID_Caixa { get; }
         string Get_Colaborador { get; }
-        string Get_Finish { get; }
+        string Get_Finish_Time { get; }
         string Get_Total_Item { get; }
         string Get_Valor_Total { get; }
         string Get_Valor_Recebido { get; }

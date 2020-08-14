@@ -141,6 +141,7 @@
     <Compile Include="Entidade\Colaborador_e.cs" />
     <Compile Include="Entidade\Sangria_e.cs" />
     <Compile Include="Entidade\Suprimento_e.cs" />
+    <Compile Include="Entidade\Vender_e.cs" />
     <Compile Include="Enums\Consulta_u.cs" />
     <Compile Include="Enums\Notifica_u.cs" />
     <Compile Include="Enums\Produto_u.cs" />
