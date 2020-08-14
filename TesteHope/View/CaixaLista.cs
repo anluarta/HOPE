@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace TesteHope.View
 {
@@ -19,22 +20,22 @@ namespace TesteHope.View
 
         private void btnVisualizarLeitura_Click(object sender, EventArgs e)
         {
-            Hope.Interface.ICaixa_e row;
-            row = Program.ObjHope.Pos.Caixa.Select(iCaixaeBindingSource.Current);
-            View.CaixaLeitura caixaLeitura = new CaixaLeitura(row);
-            using (frmViewControlSecundario frm = new frmViewControlSecundario())
+            if (Program.ObjHope.Pos.Caixa.Print_Document(iCaixaeBindingSource.Current,out PrintDocument document))
             {
-                caixaLeitura.btnfechar.Click += new EventHandler(frm.btnfechar);
-                caixaLeitura.Dock = DockStyle.Fill;
-                frm.Controls.Add(caixaLeitura);
-                frm.ShowDialog();
+                printPreviewDialog1.Document = document;
+                printPreviewDialog1.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+            }
+
         }
 
         private void CaixaLista_Load(object sender, EventArgs e)
         {
             Hope.Interface.IConsulta consulta = Program.ObjHope.Pos.Caixa.Consulta();
-            
+
             consulta.Comando = Hope.Enums.Consulta_u.Comando.Select_All_From;
 
             if (Program.ObjHope.Pos.Caixa.Find(consulta, out Hope.Interface.ICaixa_e[] result))

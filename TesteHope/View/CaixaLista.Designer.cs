@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaixaLista));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.iCaixaeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,10 +47,13 @@
             this.getColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getStartDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getfinishDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iCaixaeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -82,10 +84,6 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(486, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // iCaixaeBindingSource
-            // 
-            this.iCaixaeBindingSource.DataSource = typeof(Hope.Interface.ICaixa_e);
             // 
             // bindingNavigatorCountItem
             // 
@@ -193,7 +191,7 @@
             this.dgvListaCaixa.ReadOnly = true;
             this.dgvListaCaixa.RowHeadersVisible = false;
             this.dgvListaCaixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCaixa.Size = new System.Drawing.Size(486, 351);
+            this.dgvListaCaixa.Size = new System.Drawing.Size(486, 268);
             this.dgvListaCaixa.TabIndex = 2;
             // 
             // getIDDataGridViewTextBoxColumn
@@ -224,6 +222,21 @@
             this.getfinishDateTimeDataGridViewTextBoxColumn.Name = "getfinishDateTimeDataGridViewTextBoxColumn";
             this.getfinishDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // iCaixaeBindingSource
+            // 
+            this.iCaixaeBindingSource.DataSource = typeof(Hope.Interface.ICaixa_e);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // CaixaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,13 +244,13 @@
             this.Controls.Add(this.dgvListaCaixa);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "CaixaLista";
-            this.Size = new System.Drawing.Size(486, 376);
+            this.Size = new System.Drawing.Size(486, 293);
             this.Load += new System.EventHandler(this.CaixaLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCaixa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iCaixaeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn getColaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getStartDateTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getfinishDateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

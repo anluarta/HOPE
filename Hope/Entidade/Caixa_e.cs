@@ -45,7 +45,7 @@ namespace Hope.Entidade
         internal const string Nov_Vendido = "Nov_Vendido";
         internal const string Nov_Cancelado = "Nov_Cancelado";
         internal const string Nov_Desconto = "Nov_Desconto";
-        protected static DateTime _ValueFinisTime = DateTime.Parse("01/01/01 23:59:59");
+        internal static DateTime _ValueFinisTime = DateTime.Parse("01/01/01 23:59:59");
         internal List<Suprimento_e> suprimento_s;
         internal List<Sangria_e> sangria_s;
         internal int ID { get; private set; }
@@ -99,6 +99,7 @@ namespace Hope.Entidade
         }
         internal Caixa_e(int Index, IColaborador_e colaborador, DateTime start, DateTime finish, decimal _Dinheiro, decimal _Debito, decimal _Credito, decimal _Cheque, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Outro, decimal _Interno, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _Recebido, decimal _Vendido, decimal _Cancelado, decimal _Desconto)
         {
+            Noticia = new List<string>();
             ID = Index;
             Colaborador = colaborador;
             StartTime = start;

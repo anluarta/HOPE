@@ -24,6 +24,7 @@ namespace Hope.Model
                 HopeDataSet.CaixaRow row = Hope_static.hopeData.Caixa.NewCaixaRow();
                 row.Colaborador = Hope_static.Autenticacao.Colaborador.ToSerilazion();
                 row.Dia_Hora_Abertura = DateTime.Now;
+                row.Dia_Hora_Fechamento = Caixa_e._ValueFinisTime;
                 Hope_static.hopeData.Caixa.AddCaixaRow(row);
                 row = Hope_static.hopeData.Caixa.Rows[Hope_static.hopeData.Caixa.Rows.IndexOf(row)] as HopeDataSet.CaixaRow;
                 Index = row.ID_Caixa;
