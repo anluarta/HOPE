@@ -44,10 +44,5 @@ namespace POS_Alessandro.NewFolder1
         {
 
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            //caso o pdv nao esteja sincronizado ao big  boss ele mostra esse icone
-        }
     }
 }

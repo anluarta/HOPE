@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace POS_Alessandro.NewFolder1
 {
-    public partial class BackOffice : Form
+    public partial class FrmCaixaClosed : Form
     {
-        public BackOffice()
+        public FrmCaixaClosed()
         {
             InitializeComponent();
         }
 
-        private void BnfBtnPdv_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            FrenteDeCaixa frenteDeCaixa = new FrenteDeCaixa();
-            frenteDeCaixa.ShowDialog();
 
-            
         }
     }
 }

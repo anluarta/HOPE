@@ -63,19 +63,9 @@ namespace POS_Alessandro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap banner_faixa {
+        internal static System.Drawing.Bitmap doe {
             get {
-                object obj = ResourceManager.GetObject("banner faixa", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_nuvem_de_cruz_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-nuvem-de-cruz-48", resourceCulture);
+                object obj = ResourceManager.GetObject("doe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +83,19 @@ namespace POS_Alessandro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logosoFt {
+        internal static System.Drawing.Bitmap logo_NFPaulista {
             get {
-                object obj = ResourceManager.GetObject("logosoFt", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_NFPaulista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sat {
+            get {
+                object obj = ResourceManager.GetObject("sat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
