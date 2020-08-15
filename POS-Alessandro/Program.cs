@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_Alessandro.NewFolder1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace POS_Alessandro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewFolder1.FrmLogin());
+            
+            FrmLoginTrans frmLoginTrans = new FrmLoginTrans();
+            frmLoginTrans.ShowDialog();
+
            // Application.Run(new NewFolder1.BackOffice());
         }
     }
