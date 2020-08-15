@@ -20,7 +20,18 @@ namespace Hope.Entidade
         ListPosicao _Posicao;
         decimal _Troco;
         decimal _Total_Recebido;
-        decimal _Total_Venda;
+        decimal _Total_Venda
+        {
+            get
+            {
+                if (_item_e_s.Count!=0)
+                {
+                   return  _item_e_s.Sum<IItem_e>(x => x.Get_Sub_Total);
+                }
+                else
+                {
+                    return 0.0m;
+                } } }
         decimal _Desconto;
         internal Vender_e(object index, object id_caixa, object start_time, object finish_time, object posicao,
             object colaborador, object item_s, object troco, object recebido, object total_venda, object desconto, object pagamento)
@@ -37,7 +48,7 @@ namespace Hope.Entidade
             this._Posicao =SelectPosicao(posicao);
             this._Troco =decimal.Parse(troco.ToString());
             this._Total_Recebido =decimal.Parse(recebido.ToString());
-            this._Total_Venda =decimal.Parse(total_venda.ToString());
+            //this._Total_Venda =decimal.Parse(total_venda.ToString());
             this._Desconto =decimal.Parse(desconto.ToString());
 
         }
@@ -184,7 +195,8 @@ namespace Hope.Entidade
             {
                 if (_item_e_s.Contains(current))
                 {
-                    item_ = _item_e_s[_item_e_s.IndexOf(current as IItem_e)]
+                    item_ = _item_e_s[_item_e_s.IndexOf(current as IItem_e)];
+                    return true;
                 }
                 else
                 {
@@ -197,12 +209,28 @@ namespace Hope.Entidade
                 item_ = null;
                 return false;
             }
-            throw new NotImplementedException();
         }
 
         bool IVender_e.Update(IItem_e entidade)
         {
-            throw new NotImplementedException();
+            if (entidade != null)
+            {
+                if (_item_e_s.Contains(entidade))
+                {
+                    _item_e_s[_item_e_s.IndexOf(entidade)]=entidade;
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Item_e nao localizado pra update");
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Item_e Valor Nullo");
+                return false;
+            }
         }
         internal static DateTime _ValuaBaseFinishTime = DateTime.Parse("01/01/01 23:59:59");
         internal const int Key_Index = 0;

@@ -71,23 +71,26 @@ namespace Hope.Entidade
         }
         internal Pagar_e(object dadoserial) : this()
         {
-            string[] vs = dadoserial.ToString().Split(char.Parse(","));
-            Dictionary<int, object> key = new Dictionary<int, object>();
-            foreach (string item in vs)
+            if (dadoserial.ToString().Contains(",")& dadoserial.ToString().Contains(":"))
             {
-                string[] subitem = item.Split(char.Parse(":"));
-                key.Add(int.Parse(subitem[0]), subitem[1]);
+                string[] vs = dadoserial.ToString().Split(char.Parse(","));
+                Dictionary<int, object> key = new Dictionary<int, object>();
+                foreach (string item in vs)
+                {
+                    string[] subitem = item.Split(char.Parse(":"));
+                    key.Add(int.Parse(subitem[0]), subitem[1]);
+                }
+                _Bruto = decimal.Parse(key[Key_Bruto].ToString());
+                _Desconto = decimal.Parse(key[Key_Desconto].ToString());
+                _Dinheiro = decimal.Parse(key[Key_Dinheiro].ToString());
+                _Debito = decimal.Parse(key[Key_Debito].ToString());
+                _Credito = decimal.Parse(key[Key_Credito].ToString());
+                _Cheque = decimal.Parse(key[Key_Cheque].ToString());
+                _Vale_Alimentacao = decimal.Parse(key[Key_Vale_Alimentacao].ToString());
+                _Vale_Refeicao = decimal.Parse(key[Key_Vale_Refeicao].ToString());
+                _Outro = decimal.Parse(key[Key_Outro].ToString());
+                _Interno = decimal.Parse(key[Key_Interno].ToString());
             }
-            _Bruto = decimal.Parse(key[Key_Bruto].ToString());
-            _Desconto = decimal.Parse(key[Key_Desconto].ToString());
-            _Dinheiro = decimal.Parse(key[Key_Dinheiro].ToString());
-            _Debito = decimal.Parse(key[Key_Debito].ToString());
-            _Credito = decimal.Parse(key[Key_Credito].ToString());
-            _Cheque = decimal.Parse(key[Key_Cheque].ToString());
-            _Vale_Alimentacao = decimal.Parse(key[Key_Vale_Alimentacao].ToString());
-            _Vale_Refeicao = decimal.Parse(key[Key_Vale_Refeicao].ToString());
-            _Outro = decimal.Parse(key[Key_Outro].ToString());
-            _Interno = decimal.Parse(key[Key_Interno].ToString());
         }
 
         decimal IPagar_e.Bruto => _Bruto;

@@ -16,47 +16,53 @@ namespace TesteHope.View
         {
             InitializeComponent();
         }
-        public ItemEditar(Hope.Interface.IItem_e item):this()
+        public ItemEditar(Hope.Interface.IItem_e item) : this()
         {
             txtDescricao.Text = item.Get_Descricao;
-            txtQuantidade.Text = item.Get_Quantidade;
-            txtSubTotal.Text = item.Get_Sub_Total;
+            txtQuantidade.Text = item.Get_Quantidade.ToString();
+            txtSubTotal.Text = item.Get_Sub_Total.ToString();
             txtUnidade.Text = item.Get_Unidade;
-            txtVenda.Text = item.Get_Venda;
+            txtVenda.Text = item.Get_Venda.ToString();
 
         }
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            Hope.Interface.IItem_e entidade = Program.ObjHope.Pos.Vender.Items(Program.Vender);
-            bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
-            bool v2 = entidade.Set_Unidade(descricao: txtDescricao.Text);
-            bool v3 = entidade.Set_Quantidade(descricao: txtDescricao.Text);
-            bool v4 = entidade.Set_Venda(descricao: txtDescricao.Text);
-            if (v1&v2&v3&v4)
+            if (Program.ObjHope.Pos.Vender.Item_Novo(Program.Vender, out Hope.Interface.IItem_e entidade))
             {
-                bool v5 = Program.Vender.Add(entidade);
-                if (v5)
+                bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
+                bool v2 = entidade.Set_Unidade(descricao: txtDescricao.Text);
+                bool v3 = entidade.Set_Quantidade(descricao: txtDescricao.Text);
+                bool v4 = entidade.Set_Venda(descricao: txtDescricao.Text);
+                if (v1 & v2 & v3 & v4)
                 {
-                    bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
-                    if (v6)
+                    bool v5 = Program.Vender.Add(entidade);
+                    if (v5)
                     {
-                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-                        btnfechar.PerformClick();
+                        bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+                        if (v6)
+                        {
+                            MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                            btnfechar.PerformClick();
+                        }
+                        else
+                        {
+                            lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                        }
                     }
                     else
                     {
-                        lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                        lblResultado.Text = Program.Vender.Notifica();
                     }
                 }
                 else
                 {
-                    lblResultado.Text = Program.Vender.Notifica();
+                    lblResultado.Text = entidade.Notifica();
                 }
             }
             else
             {
-                lblResultado.Text = entidade.Notifica();
+                lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
             }
         }
     }
