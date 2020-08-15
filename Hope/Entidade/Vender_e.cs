@@ -100,10 +100,19 @@ namespace Hope.Entidade
                 return false;
             }
         }
-
         bool IVender_e.Finalizar()
         {
-            throw new NotImplementedException();
+            if (_Time_Finish == Vender_e._ValuaBaseFinishTime)
+            {
+                _Time_Finish = DateTime.Now;
+                Noticia.Add("Finalizado Sussceso");
+                return true;
+            }
+            else
+            {
+                Noticia.Add(string.Format("Ja Finalizado  valor {0}", _Time_Finish));
+                return false;
+            }
         }
 
         IItem_e[] IVender_e.GetDataByItem()
@@ -124,7 +133,27 @@ namespace Hope.Entidade
 
         bool IVender_e.Pagarmento(IPagar_e entidade)
         {
-            throw new NotImplementedException();
+            if (entidade!= null)
+            {
+                if (entidade.Recebido>= _Total_Venda)
+                {
+                    _Desconto = entidade.Desconto;
+                    _Troco = entidade.Troco;
+                    _Total_Recebido = entidade.Recebido;
+                    Pagar = (Pagar_e)entidade;
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("valor recebido abaixo da venda");
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Paga nullo");
+                return false;
+            }
         }
 
         bool IVender_e.Remover(IItem_e entidade)
@@ -149,9 +178,25 @@ namespace Hope.Entidade
             }
         }
 
-        IItem_e IVender_e.SelectItem(object current)
+        bool IVender_e.SelectItem(object current,out IItem_e item_)
         {
-
+            if (current!= null)
+            {
+                if (_item_e_s.Contains(current))
+                {
+                    item_ = _item_e_s[_item_e_s.IndexOf(current as IItem_e)]
+                }
+                else
+                {
+                    item_ = null;
+                    return false;
+                }
+            }
+            else
+            {
+                item_ = null;
+                return false;
+            }
             throw new NotImplementedException();
         }
 

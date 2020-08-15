@@ -20,6 +20,6 @@ namespace Hope.Interface
         bool Add(IItem_e entidade);
         bool Remover(IItem_e entidade);
         bool Update(IItem_e entidade);
-        IItem_e SelectItem(object current);
+        bool SelectItem(object current,out IItem_e item_);
     }
 }

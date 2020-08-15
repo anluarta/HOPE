@@ -21,13 +21,16 @@ namespace Hope.Controle
         {
             return Consulta;
         }
-
-        public IVender_e[] Fill(IConsulta consulta)
+        bool IVender.Select(object current, out IVender_e vender_)
         {
             throw new NotImplementedException();
         }
 
-        public bool Gravar(IVender_e vender)
+        bool IVender.Fill(IConsulta consulta, out IVender_e[] vender_s)
+        {
+            throw new NotImplementedException();
+        }
+        bool IVender.Gravar(IVender_e vender)
         {
             if (vender != null)
             {
@@ -54,10 +57,7 @@ namespace Hope.Controle
             }
             throw new NotImplementedException();
         }
-
-
-
-        public string Notificar()
+        string IVender.Notificar()
         {
             StringBuilder builder = new StringBuilder();
             foreach (string item in Noticia)
@@ -67,12 +67,6 @@ namespace Hope.Controle
             Noticia.Clear();
             return builder.ToString();
         }
-
-        public IVender_e Select(object current)
-        {
-            throw new NotImplementedException();
-        }
-
         bool IVender.Novo(ICaixa_e caixaOperacao, out IVender_e vender_)
         {
             if (Hope.Hope_static.Autenticacao.Autenticado)
@@ -127,14 +121,13 @@ namespace Hope.Controle
                 return false;
             }
         }
-
         bool IVender.Item_Novo(IVender_e entidade, out IItem_e item_)
         {
             if (entidade != null)
             {
                 if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
                 {
-                    item_ = new Item_e(index_item: entidade.Get_Total_Item + 1, index_venda: entidade.Get_ID);
+                    item_ = new Item_e(index_item: entidade.Get_Total_Item + 1);
                     return true;
                 }
                 else
@@ -176,7 +169,6 @@ namespace Hope.Controle
             }
         }
         #region PrintDocumento
-
         public bool VendaComum(/*Entidade.EntEmpresa empresa, Entidade.EntCupom cupom*/)
         {
             //EntCupom = cupom;
@@ -205,7 +197,6 @@ namespace Hope.Controle
             //}
             throw new Exception();
         }
-
         private void VendaNaoRegistrada_PrintPage(object sender, PrintPageEventArgs e)
         {
             //Graphics graphics = e.Graphics;
@@ -369,7 +360,6 @@ namespace Hope.Controle
             //graphics.Flush();
 
         }
-
         bool IVender.Print_Document(IVender_e entidade, out PrintDocument document)
         {
             throw new NotImplementedException();
