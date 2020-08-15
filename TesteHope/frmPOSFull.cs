@@ -108,9 +108,9 @@ namespace TesteHope
                 Program.CaixaOperacao.Fechamento();
                 try
                 {
-                    if (Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao,out Program.CaixaOperacao))
+                    if (Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao, out Program.CaixaOperacao))
                     {
-                        lblCaixaResult.Text=Program.ObjHope.Pos.Caixa.Notifica();
+                        lblCaixaResult.Text = Program.ObjHope.Pos.Caixa.Notifica();
                         Program.CaixaOperacao = null;
                     }
                     else
@@ -181,21 +181,28 @@ namespace TesteHope
         {
             try
             {
-                if (Program.ObjHope.Pos.Vender.Gravar(Program.Vender))
+
+                //if (Program.ObjHope.Pos.Vender.Gravar(Program.Vender))
+                //{
+                //    MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                //}
+                if (Program.ObjHope.Pos.Vender.Novo(Program.CaixaOperacao, out Hope.Interface.IVender_e result))
+                {
+                    Program.Vender = result;
+                    vwVenda = new View.Vender();
+                    vwVenda.btnfechar.Click += new EventHandler(vwVenda_btnfechar_Click);
+                    Exibicao(vwVenda);
+                }
+                else
                 {
                     MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
                 }
-                Program.Vender = Program.ObjHope.Pos.Vender.Novo();
-                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-
             }
             catch (Hope.HException_c he)
             {
                 MessageBox.Show(he.Message);
             }
-            vwVenda = new View.Vender();
-            vwVenda.btnfechar.Click += new EventHandler(vwVenda_btnfechar_Click);
-            Exibicao(vwVenda);
+
         }
 
         private void vwVenda_btnfechar_Click(object sender, EventArgs e)

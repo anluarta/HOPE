@@ -20,7 +20,7 @@ namespace TesteHope.View
         void atualizarvalor()
         {
             lblColaborador.Text = string.Format(lblColaborador.Text, Program.Vender.Get_Colaborador);
-            lblFinalizado.Text = string.Format(lblFinalizado.Text, Program.Vender.Get_Finish);
+            lblFinalizado.Text = string.Format(lblFinalizado.Text, Program.Vender.Get_Finish_Time);
             lblIdCaixa.Text = string.Format(lblIdCaixa.Text, Program.Vender.Get_ID_Caixa);
             lblIndex.Text = string.Format(lblIndex.Text, Program.Vender.Get_ID);
             lblTotalVenda.Text = Program.Vender.Get_Valor_Total;
