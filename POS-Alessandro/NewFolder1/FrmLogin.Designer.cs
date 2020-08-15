@@ -72,6 +72,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(344, 516);
             this.bunifuGradientPanel1.TabIndex = 0;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // checkBox1
             // 
@@ -115,7 +116,7 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.CadetBlue;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "LOGIN";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;

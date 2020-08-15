@@ -63,9 +63,29 @@ namespace POS_Alessandro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Close_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doe {
             get {
                 object obj = ResourceManager.GetObject("doe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_h_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-h-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,16 @@ namespace POS_Alessandro.Properties {
         internal static System.Drawing.Bitmap logo_NFPaulista {
             get {
                 object obj = ResourceManager.GetObject("logo_NFPaulista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Minimize_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

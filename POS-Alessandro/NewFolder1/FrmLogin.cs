@@ -34,9 +34,13 @@ namespace POS_Alessandro.NewFolder1
 
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            BackOffice backOffice = new BackOffice();
-            backOffice.ShowDialog();
+          
 
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

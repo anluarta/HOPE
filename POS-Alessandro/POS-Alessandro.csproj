@@ -73,6 +73,18 @@
     <Compile Include="NewFolder1\CaixaFechado.Designer.cs">
       <DependentUpon>CaixaFechado.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\FrmCpf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\FrmCpf.Designer.cs">
+      <DependentUpon>FrmCpf.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewFolder1\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\CaixaFechado.resx">
       <DependentUpon>CaixaFechado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\FrmCpf.resx">
+      <DependentUpon>FrmCpf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -145,6 +163,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_NFPaulista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-h-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
