@@ -53,10 +53,10 @@ namespace Hope.Controle
         {
             throw new NotImplementedException();
         }
-        public bool Suprimento(decimal valor)
+        public bool Suprimento(/*decimal valor*/)
         {
             //Caixa_Suprimento = valor;
-
+            return false;
             //this.Print.PrintPage += new PrintPageEventHandler(PrintPage_Suprimento);
             //this.Print.PrinterSettings.PrintFileName = "Suprimento";
             //this.Print.BeginPrint += PrintDocument_BeginPrint;

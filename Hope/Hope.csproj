@@ -51,7 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -136,9 +136,16 @@
     <Compile Include="Controle\Suprimento_c.cs" />
     <Compile Include="Controle\Vender_c.cs" />
     <Compile Include="DAO\Colaborador_d.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidade\Autenticacao_e.cs" />
     <Compile Include="Entidade\Caixa_e.cs" />
     <Compile Include="Entidade\Colaborador_e.cs" />
+    <Compile Include="Entidade\Item_e.cs" />
+    <Compile Include="Entidade\Pagar_e.cs" />
     <Compile Include="Entidade\Sangria_e.cs" />
     <Compile Include="Entidade\Suprimento_e.cs" />
     <Compile Include="Entidade\Vender_e.cs" />
@@ -150,17 +157,17 @@
     <Compile Include="HopeDataSet.cs">
       <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HopeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HopeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Hope_m.cs" />
     <None Include="codigo-anterio\Entidade\IUsuario_Ent_c.cs" />
     <None Include="codigo-anterio\Entidade\IVender_Cliente_Ent_c.cs" />
     <None Include="codigo-anterio\Entidade\IVender_Ent_c.cs" />
     <None Include="codigo-anterio\Entidade\IVender_Item_Ent_c.cs" />
     <None Include="codigo-anterio\Entidade\IVender_Pagar_Ent_c.cs" />
-    <Compile Include="HopeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HopeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Hope_c.cs" />
     <Compile Include="Hope_static.cs" />
     <Compile Include="Interface\IAutenticacao.cs" />
@@ -218,13 +225,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="HopeDataSet.xsc">
       <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </None>
     <None Include="HopeDataSet.xsd">
       <SubType>Designer</SubType>
+      <LastGenOutput>HopeDataSet1.Designer.cs</LastGenOutput>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HopeDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="HopeDataSet.xss">
       <DependentUpon>HopeDataSet.xsd</DependentUpon>

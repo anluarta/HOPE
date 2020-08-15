@@ -13,31 +13,31 @@ namespace Hope.Entidade
 {
    public class Colaborador_e : IColaborador_e
     {
-        List<string> Noticia;
-        private string Senha;
-        private int ID ;
-        private string Login ;
-        private string Nome_Vendedor ;
+        List<string> _Noticia;
+        private string _Senha;
+        private int _ID ;
+        private string _Login ;
+        private string _Nome_Vendedor ;
 
         public Colaborador_e()
         {
-            Noticia = new List<string>();
-            ID = 0;
-            Login = string.Empty;
-            Senha = string.Empty;
-            Nome_Vendedor = string.Empty;
+            _Noticia = new List<string>();
+            _ID = 0;
+            _Login = string.Empty;
+            _Senha = string.Empty;
+            _Nome_Vendedor = string.Empty;
         }
         internal Colaborador_e(int index, string login, string senha, string nome_vendedo)
         {
-            Noticia = new List<string>();
-            ID = index;
-            Login = login;
-            Senha = senha;
-            Nome_Vendedor = nome_vendedo;
+            _Noticia = new List<string>();
+            _ID = index;
+            _Login = login;
+            _Senha = senha;
+            _Nome_Vendedor = nome_vendedo;
         }
-        internal Colaborador_e(string selization)
+        internal Colaborador_e(object selization)
         {
-            object[] vs = selization.Split(char.Parse("|"));
+            object[] vs = selization.ToString().Split(char.Parse(","));
             Dictionary<int, object> keyValues = new Dictionary<int, object>();
             foreach (object item in vs)
             {
@@ -48,55 +48,56 @@ namespace Hope.Entidade
                     keyValues.Add(int.Parse(subItem[0]), subItem[1]);
                 }
             }
-            this.ID = int.Parse(keyValues[Key_Index].ToString());
-            this.Login = keyValues[Key_Login_User].ToString();
-            this.Nome_Vendedor = keyValues[Key_Nome_Vendedor].ToString();
+            this._ID = int.Parse(keyValues[Key_Index].ToString());
+            this._Login = keyValues[Key_Login_User].ToString();
+            this._Nome_Vendedor = keyValues[Key_Nome_Vendedor].ToString();
         }
         internal string ToSerilazion()
         {
-            string format = "{0}:{1}|{2}:{3}|{4}:{5}";
+            string format = "{0}:{1},{2}:{3},{4}:{5}";
             object[] value = new object[]
             {
                 Key_Index,
-                this.ID,
+                this._ID,
                 Key_Nome_Vendedor,
-                this.Nome_Vendedor,
+                this._Nome_Vendedor,
                 Key_Login_User,
-                Login
+                _Login
             };
            string serial = string.Format(format, value);
             
             return serial;
         }
+        internal string Nome_Vendedor => _Nome_Vendedor;
         internal Dictionary<int, object> GetkeyValues()
         {
             Dictionary<int, object> keys = new Dictionary<int, object>();
             try
             {
-                keys.Add(key:Key_Index, value:ID);
-                keys.Add(key:Key_Login_Pass, value:Senha);
-                keys.Add(key:Key_Login_User, value:Login);
-                keys.Add(key:Key_Nome_Vendedor, value:Nome_Vendedor);
+                keys.Add(key:Key_Index, value:_ID);
+                keys.Add(key:Key_Login_Pass, value:_Senha);
+                keys.Add(key:Key_Login_User, value:_Login);
+                keys.Add(key:Key_Nome_Vendedor, value:_Nome_Vendedor);
             }
             catch (Exception e)
             {
-                Noticia.Add(e.Message);
+                _Noticia.Add(e.Message);
             }
             return keys;
         }
       
-        string IColaborador_e.Get_ID => ID.ToString();
+        string IColaborador_e.Get_ID => _ID.ToString();
 
-        string IColaborador_e.Get_Login => Login;
-        string IColaborador_e.Get_Nome_Vendedo => Nome_Vendedor;
+        string IColaborador_e.Get_Login => _Login;
+        string IColaborador_e.Get_Nome_Vendedo => _Nome_Vendedor;
         string IColaborador_e.Notifica()
         {
             StringBuilder builder = new StringBuilder();
-            foreach (string item in Noticia)
+            foreach (string item in _Noticia)
             {
                 builder.AppendLine(item);
             }
-            Noticia.Clear();
+            _Noticia.Clear();
             return builder.ToString();
         }
 
@@ -104,18 +105,18 @@ namespace Hope.Entidade
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
-                Noticia.Add("Login nulo ou com espaco em branco");
+                _Noticia.Add("Login nulo ou com espaco em branco");
                 return false;
             }
             else if (valor.Length <= 3)
             {
-                Noticia.Add("Login muito curto");
+                _Noticia.Add("Login muito curto");
                 return false;
             }
             else
             {
-                Noticia.Add("Login aceito");
-                Login = valor;
+                _Noticia.Add("Login aceito");
+                _Login = valor;
                 return true;
             }
         }
@@ -124,18 +125,18 @@ namespace Hope.Entidade
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
-                Noticia.Add("Nome Vendedo nulo ou com espaco em branco");
+                _Noticia.Add("Nome Vendedo nulo ou com espaco em branco");
                 return false;
             }
             else if (valor.Length <= 3)
             {
-                Noticia.Add("Nome Vendedo muito curto");
+                _Noticia.Add("Nome Vendedo muito curto");
                 return false;
             }
             else
             {
-                Noticia.Add("Nome Vendedo aceito");
-                Nome_Vendedor = valor;
+                _Noticia.Add("Nome Vendedo aceito");
+                _Nome_Vendedor = valor;
                 return true;
             }
         }
@@ -144,18 +145,18 @@ namespace Hope.Entidade
         {
             if (string.IsNullOrEmpty(valor) | string.IsNullOrWhiteSpace(valor))
             {
-                Noticia.Add("Senha nulo ou com espaco em branco");
+                _Noticia.Add("Senha nulo ou com espaco em branco");
                 return false;
             }
             else if (valor.Length <= 3)
             {
-                Noticia.Add("Senha muito curto");
+                _Noticia.Add("Senha muito curto");
                 return false;
             }
             else
             {
-                Noticia.Add("Senha aceito");
-                Senha = valor;
+                _Noticia.Add("Senha aceito");
+                _Senha = valor;
                 return true;
             }
         }

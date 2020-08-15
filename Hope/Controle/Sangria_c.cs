@@ -53,7 +53,7 @@ namespace Hope.Controle
         {
             throw new NotImplementedException();
         }
-        public bool Sangria(Decimal valor, string observacao)
+        public bool Sangria(/*Decimal valor, string observacao*/)
         {
             //Caixa_Sangria = valor;
             //Observacao = observacao;
@@ -76,6 +76,7 @@ namespace Hope.Controle
             //{
             //    return false;
             //}
+            return false;
         }
         private void Sangria_PrintPage(object sender, PrintPageEventArgs e)
         {

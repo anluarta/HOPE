@@ -1,17 +1,19 @@
-﻿namespace Hope.Interface
+﻿using System;
+
+namespace Hope.Interface
 {
     public interface IVender_e
     {
         string Notifica();
-        string Get_ID { get; }
-        string Get_ID_Caixa { get; }
-        string Get_Colaborador { get; }
-        string Get_Finish_Time { get; }
-        string Get_Total_Item { get; }
-        string Get_Valor_Total { get; }
-        string Get_Valor_Recebido { get; }
-        string Get_Valor_Desconto { get; }
-        string Get_Valor_Troco { get; }
+        int Get_ID { get; }
+        int Get_ID_Caixa { get; }
+        string Get_Nome_Vendedor { get; }
+        DateTime Get_Finish_Time { get; }
+        int Get_Total_Item { get; }
+        decimal Get_Valor_Total { get; }
+        decimal Get_Valor_Recebido { get; }
+        decimal Get_Valor_Desconto { get; }
+        decimal Get_Valor_Troco { get; }
         bool Pagarmento(IPagar_e entidade);
         bool Finalizar();
         IItem_e[] GetDataByItem();

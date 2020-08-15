@@ -14,8 +14,8 @@ namespace Hope.Controle
     {
         internal List<string> Noticia;
         internal Consulta_c Consulta;
-        protected abstract bool Insert_New_Row(string Id_caixa,out Dictionary<int, object> keyValuesData);
-        protected abstract bool Update_Row(Dictionary<string, object> keyValueData);
+        protected abstract bool Insert_New_Row(string Id_caixa, out Dictionary<int, object> keyValuesData);
+        protected abstract bool Update_Row(Dictionary<int, object> keyValueData);
         protected abstract bool Select_All_From(out IVender_e[] vender_s);
         IConsulta IVender.Consulta()
         {
@@ -29,6 +29,29 @@ namespace Hope.Controle
 
         public bool Gravar(IVender_e vender)
         {
+            if (vender != null)
+            {
+                Vender_e _E = (Vender_e)vender;
+                if (_E.Dispariedade())
+                {
+                    if (Update_Row(_E.GetKeyValuesData()))
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
             throw new NotImplementedException();
         }
 
@@ -58,9 +81,23 @@ namespace Hope.Controle
                 {
                     if (DateTime.Parse(caixaOperacao.Get_finish_DateTime) == Caixa_e._ValueFinisTime)
                     {
-                        if (Insert_New_Row(caixaOperacao.Get_ID,out Dictionary<int, object> result))
+                        if (Insert_New_Row(caixaOperacao.Get_ID, out Dictionary<int, object> result))
                         {
-                            vender_ = new Vender_e(caixa_ID: caixaOperacao.Get_ID, colaborador: Hope_static.Autenticacao.Colaborador);
+                            vender_ = new Vender_e
+                                (
+                                index: result[Vender_e.Key_Index],
+                                id_caixa: result[Vender_e.Key_ID_Caixa],
+                                start_time: result[Vender_e.Key_Start_Time],
+                                finish_time: result[Vender_e.Key_Finish_Time],
+                                posicao: result[Vender_e.Key_Posicao],
+                                colaborador: result[Vender_e.Key_Colaborado],
+                                item_s: result[Vender_e.Key_Item_s],
+                                troco: result[Vender_e.Key_Troco],
+                                recebido: result[Vender_e.Key_Total_Recebido],
+                                total_venda: result[Vender_e.Key_Total_Venda],
+                                desconto: result[Vender_e.Key_Desconto],
+                                pagamento: result[Vender_e.Key_Pagamento]
+                                );
                             return true;
                         }
                         else
@@ -90,6 +127,56 @@ namespace Hope.Controle
                 return false;
             }
         }
+
+        bool IVender.Item_Novo(IVender_e entidade, out IItem_e item_)
+        {
+            if (entidade != null)
+            {
+                if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
+                {
+                    item_ = new Item_e(index_item: entidade.Get_Total_Item + 1, index_venda: entidade.Get_ID);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("IVender_e.finish_time ja alterado");
+                    item_ = null;
+                    return false;
+                }
+            }
+            else
+            {
+                item_ = null;
+                Noticia.Add("IVender_e valor nullo");
+                return false;
+            }
+        }
+        bool IVender.Pagar_Novo(IVender_e entidade, out IPagar_e pagar_)
+        {
+            if (entidade != null)
+            {
+
+                if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
+                {
+                    pagar_ = new Pagar_e(entidade.Get_Valor_Total);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("IVender_e.finish_time ja alterado");
+                    pagar_ = null;
+                    return false;
+                }
+            }
+            else
+            {
+                pagar_ = null;
+                Noticia.Add("IVender_e valor nullo");
+                return false;
+            }
+        }
+        #region PrintDocumento
+
         public bool VendaComum(/*Entidade.EntEmpresa empresa, Entidade.EntCupom cupom*/)
         {
             //EntCupom = cupom;
@@ -287,53 +374,6 @@ namespace Hope.Controle
         {
             throw new NotImplementedException();
         }
-
-        bool IVender.Item_Novo(IVender_e entidade, out IItem_e item_)
-        {
-            if (entidade != null)
-            {
-                if (DateTime.Parse(entidade.Get_Finish_Time) == Vender_e._ValuaBaseFinishTime)
-                {
-                    item_ = new Entidade.Item_e(entidade.Get_ID);
-                    return true;
-                }
-                else
-                {
-                    Noticia.Add("IVender_e.finish_time ja alterado");
-                    item_ = null;
-                    return false;
-                }
-            }
-            else
-            {
-                item_ = null;
-                Noticia.Add("IVender_e valor nullo");
-                return false;
-            }
-        }
-
-        bool IVender.Pagar_Novo(IVender_e entidade, out IPagar_e pagar_)
-        {
-            if (entidade != null)
-            {
-                if (DateTime.Parse(entidade.Get_Finish_Time) == Vender_e._ValuaBaseFinishTime)
-                {
-                    pagar_ = new Entidade.Pagar_e(entidade.Get_ID, entidade.Get_Valor_Total);
-                    return true;
-                }
-                else
-                {
-                    Noticia.Add("IVender_e.finish_time ja alterado");
-                    pagar_ = null;
-                    return false;
-                }
-            }
-            else
-            {
-                pagar_ = null;
-                Noticia.Add("IVender_e valor nullo");
-                return false;
-            }
-        }
+        #endregion
     }
 }
