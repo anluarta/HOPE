@@ -22,9 +22,9 @@ namespace POS_Alessandro.NewFolder1
 
         private void TxtUsuarioTrans_Enter(object sender, EventArgs e)
         {
-            if (TxtUsuarioTrans.Text == "Usuario") ;
-            TxtUsuarioTrans.Text = "";
-            TxtUsuarioTrans.ForeColor = Color.LightGray;
+           if (TxtUsuarioTrans.Text == "Usuario") ;
+           TxtUsuarioTrans.Text = "_";
+           TxtUsuarioTrans.ForeColor = Color.LightGray;
 
 
 
@@ -32,26 +32,26 @@ namespace POS_Alessandro.NewFolder1
 
         private void TxtUsuarioTrans_Leave(object sender, EventArgs e)
         {
-            if (TxtUsuarioTrans.Text == "") ;
-            TxtUsuarioTrans.Text = "Usuario";
-            TxtUsuarioTrans.ForeColor = Color.DimGray;
+            //if (TxtUsuarioTrans.Text == "") ;
+            //TxtUsuarioTrans.Text = "Usuario";
+            //TxtUsuarioTrans.ForeColor = Color.DimGray;
         }
 
         private void TxtSenhaTrans_Enter(object sender, EventArgs e)
         {
-            if (TxtSenhaTrans.Text == "Senha") ;
-            TxtSenhaTrans.Text = "";
-            TxtSenhaTrans.ForeColor = Color.LightGray;
-            TxtSenhaTrans.UseSystemPasswordChar = true;
+           // if (TxtSenhaTrans.Text == "") ;
+           // TxtSenhaTrans.Text = "";
+           // TxtSenhaTrans.ForeColor = Color.LightGray;
+           // TxtSenhaTrans.UseSystemPasswordChar = true;
 
         }
 
         private void TxtSenhaTrans_Leave(object sender, EventArgs e)
         {
-            if (TxtSenhaTrans.Text == "") ;
-            TxtSenhaTrans.Text = "Senha";
-            TxtSenhaTrans.ForeColor = Color.DimGray;
-            TxtSenhaTrans.UseSystemPasswordChar = false;
+           // if (TxtSenhaTrans.Text == "Senha") ;
+            //TxtSenhaTrans.Text = "";
+            //TxtSenhaTrans.ForeColor = Color.DimGray;
+           // TxtSenhaTrans.UseSystemPasswordChar = false;
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -74,6 +74,40 @@ namespace POS_Alessandro.NewFolder1
         private void TxtUsuarioTrans_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEntrarTRans_Click(object sender, EventArgs e)
+        {
+            if (Program.objhope.Autenticacao.Login(TxtUsuarioTrans.Text, TxtSenhaTrans.Text))
+            {
+                MessageBox.Show(Program.objhope.Autenticacao.Notifica());
+            }
+            else
+            {
+                MessageBox.Show(Program.objhope.Autenticacao.Notifica());
+            }
+            if (Program.objhope.Autenticacao.Autenticado)
+            {
+                FrmBoasVindas frm = new FrmBoasVindas();
+                frm.ShowDialog();
+            FrmFrenteDeCaixa frmFrenteDe = new FrmFrenteDeCaixa();
+            frmFrenteDe.ShowDialog();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //so ira aparecer caso seja errado a senha ou usuario
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            //so ira aparecer caso seja errado a senha ou usuario
         }
     }
 

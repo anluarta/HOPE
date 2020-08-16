@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS_Alessandro.NewFolder1
 {
-    public partial class FrenteDeCaixa : Form
+    public partial class FrmFrenteDeCaixa : Form
     {
-        public FrenteDeCaixa()
+        public FrmFrenteDeCaixa()
         {
             InitializeComponent();
           //  this.Controls.Add(new NewFolder2.Login());

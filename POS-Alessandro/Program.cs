@@ -9,19 +9,20 @@ namespace POS_Alessandro
 {
     static class Program
     {
+      internal static Hope.IHope objhope;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            objhope = new Hope.Hope_m();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            FrmLoginTrans frmLoginTrans = new FrmLoginTrans();
-            frmLoginTrans.ShowDialog();
 
-           // Application.Run(new NewFolder1.BackOffice());
+            BackOffice back = new BackOffice ();
+           back.ShowDialog();
+
         }
     }
 }

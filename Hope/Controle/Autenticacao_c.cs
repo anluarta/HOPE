@@ -79,5 +79,10 @@ namespace Hope.Controle
             Noticia.Clear();
             return builder.ToString();
         }
+
+        IColaborador_e IAutenticacao.Colaborador()
+        {
+            return Colaborador;
+        }
     }
 }

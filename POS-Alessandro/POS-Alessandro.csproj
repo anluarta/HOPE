@@ -40,7 +40,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ProgressBar.1.0.10\lib\ProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -53,6 +59,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewFolder1\BackOffice.cs">
@@ -78,6 +87,12 @@
     </Compile>
     <Compile Include="NewFolder1\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\FrmBoasVindas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\FrmBoasVindas.Designer.cs">
+      <DependentUpon>FrmBoasVindas.cs</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\FrmCpf.cs">
       <SubType>Form</SubType>
@@ -117,6 +132,9 @@
     <EmbeddedResource Include="NewFolder1\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\FrmBoasVindas.resx">
+      <DependentUpon>FrmBoasVindas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\FrmCpf.resx">
       <DependentUpon>FrmCpf.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +157,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +191,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-h-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-h-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\berm vindo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-solucao-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-solucao-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erro-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hope\Hope.csproj">
+      <Project>{1a163c76-7d25-4f19-be2f-daceecaca707}</Project>
+      <Name>Hope</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

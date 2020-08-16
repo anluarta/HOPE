@@ -1,6 +1,6 @@
 ﻿namespace POS_Alessandro.NewFolder1
 {
-    partial class FrenteDeCaixa
+    partial class FrmFrenteDeCaixa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrenteDeCaixa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFrenteDeCaixa));
             this.bunifuMetroTextbox4 = new ns1.BunifuMetroTextbox();
             this.bunifuMetroTextbox5 = new ns1.BunifuMetroTextbox();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
@@ -416,7 +416,7 @@
             this.bunifuTextbox1.TabIndex = 25;
             this.bunifuTextbox1.text = "Buscar o Produto";
             // 
-            // FrenteDeCaixa
+            // FrmFrenteDeCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -425,7 +425,7 @@
             this.Controls.Add(this.bunifuMetroTextbox5);
             this.Controls.Add(this.bunifuMetroTextbox4);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Name = "FrenteDeCaixa";
+            this.Name = "FrmFrenteDeCaixa";
             this.Text = "Frente De Caixa";
             this.Load += new System.EventHandler(this.Pdv_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
