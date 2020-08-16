@@ -32,44 +32,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vender));
             this.btnfechar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTroco = new System.Windows.Forms.Label();
             this.lblFinalizado = new System.Windows.Forms.Label();
+            this.lblDesconto = new System.Windows.Forms.Label();
             this.lblIdCaixa = new System.Windows.Forms.Label();
+            this.lblRecebido = new System.Windows.Forms.Label();
             this.lblColaborador = new System.Windows.Forms.Label();
             this.lblIndex = new System.Windows.Forms.Label();
             this.dgvItem = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bindingNavigatorItem = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btngravar = new System.Windows.Forms.Button();
-            this.btnPagamento = new System.Windows.Forms.Button();
-            this.btnFecharVenda = new System.Windows.Forms.Button();
-            this.lblTotalVenda = new System.Windows.Forms.Label();
-            this.lblRecebido = new System.Windows.Forms.Label();
-            this.lblDesconto = new System.Windows.Forms.Label();
-            this.lblTroco = new System.Windows.Forms.Label();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.btnItemAdicionar = new System.Windows.Forms.ToolStripButton();
-            this.btnItemEditar = new System.Windows.Forms.ToolStripButton();
-            this.iItemeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getDescricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getQuantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getSubTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getUnidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iItemeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bindingNavigatorItem = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnItemAdicionar = new System.Windows.Forms.ToolStripButton();
+            this.btnItemEditar = new System.Windows.Forms.ToolStripButton();
+            this.btngravar = new System.Windows.Forms.Button();
+            this.btnPagamento = new System.Windows.Forms.Button();
+            this.btnFecharVenda = new System.Windows.Forms.Button();
+            this.lblTotalVenda = new System.Windows.Forms.Label();
             this.lblresultado = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iItemeBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorItem)).BeginInit();
             this.bindingNavigatorItem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iItemeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnfechar
@@ -97,6 +98,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cabecalho";
             // 
+            // lblTroco
+            // 
+            this.lblTroco.AutoSize = true;
+            this.lblTroco.Location = new System.Drawing.Point(477, 55);
+            this.lblTroco.Name = "lblTroco";
+            this.lblTroco.Size = new System.Drawing.Size(52, 13);
+            this.lblTroco.TabIndex = 9;
+            this.lblTroco.Text = "Troco {0}";
+            // 
             // lblFinalizado
             // 
             this.lblFinalizado.AutoSize = true;
@@ -106,6 +116,15 @@
             this.lblFinalizado.TabIndex = 3;
             this.lblFinalizado.Text = "Finalizado {0}";
             // 
+            // lblDesconto
+            // 
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Location = new System.Drawing.Point(477, 42);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(70, 13);
+            this.lblDesconto.TabIndex = 8;
+            this.lblDesconto.Text = "Desconto {0}";
+            // 
             // lblIdCaixa
             // 
             this.lblIdCaixa.AutoSize = true;
@@ -114,6 +133,15 @@
             this.lblIdCaixa.Size = new System.Drawing.Size(64, 13);
             this.lblIdCaixa.TabIndex = 2;
             this.lblIdCaixa.Text = "ID Caixa {0}";
+            // 
+            // lblRecebido
+            // 
+            this.lblRecebido.AutoSize = true;
+            this.lblRecebido.Location = new System.Drawing.Point(477, 29);
+            this.lblRecebido.Name = "lblRecebido";
+            this.lblRecebido.Size = new System.Drawing.Size(70, 13);
+            this.lblRecebido.TabIndex = 4;
+            this.lblRecebido.Text = "Recebido {0}";
             // 
             // lblColaborador
             // 
@@ -155,6 +183,45 @@
             this.dgvItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItem.Size = new System.Drawing.Size(372, 221);
             this.dgvItem.TabIndex = 2;
+            // 
+            // getDescricaoDataGridViewTextBoxColumn
+            // 
+            this.getDescricaoDataGridViewTextBoxColumn.DataPropertyName = "Get_Descricao";
+            this.getDescricaoDataGridViewTextBoxColumn.HeaderText = "Get_Descricao";
+            this.getDescricaoDataGridViewTextBoxColumn.Name = "getDescricaoDataGridViewTextBoxColumn";
+            this.getDescricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getQuantidadeDataGridViewTextBoxColumn
+            // 
+            this.getQuantidadeDataGridViewTextBoxColumn.DataPropertyName = "Get_Quantidade";
+            this.getQuantidadeDataGridViewTextBoxColumn.HeaderText = "Get_Quantidade";
+            this.getQuantidadeDataGridViewTextBoxColumn.Name = "getQuantidadeDataGridViewTextBoxColumn";
+            this.getQuantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getSubTotalDataGridViewTextBoxColumn
+            // 
+            this.getSubTotalDataGridViewTextBoxColumn.DataPropertyName = "Get_Sub_Total";
+            this.getSubTotalDataGridViewTextBoxColumn.HeaderText = "Get_Sub_Total";
+            this.getSubTotalDataGridViewTextBoxColumn.Name = "getSubTotalDataGridViewTextBoxColumn";
+            this.getSubTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getUnidadeDataGridViewTextBoxColumn
+            // 
+            this.getUnidadeDataGridViewTextBoxColumn.DataPropertyName = "Get_Unidade";
+            this.getUnidadeDataGridViewTextBoxColumn.HeaderText = "Get_Unidade";
+            this.getUnidadeDataGridViewTextBoxColumn.Name = "getUnidadeDataGridViewTextBoxColumn";
+            this.getUnidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getVendaDataGridViewTextBoxColumn
+            // 
+            this.getVendaDataGridViewTextBoxColumn.DataPropertyName = "Get_Venda";
+            this.getVendaDataGridViewTextBoxColumn.HeaderText = "Get_Venda";
+            this.getVendaDataGridViewTextBoxColumn.Name = "getVendaDataGridViewTextBoxColumn";
+            this.getVendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iItemeBindingSource
+            // 
+            this.iItemeBindingSource.DataSource = typeof(Hope.Interface.IItem_e);
             // 
             // groupBox2
             // 
@@ -203,6 +270,24 @@
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
@@ -212,6 +297,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -222,14 +308,52 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // btnItemAdicionar
+            // 
+            this.btnItemAdicionar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnItemAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnItemAdicionar.Image")));
+            this.btnItemAdicionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnItemAdicionar.Name = "btnItemAdicionar";
+            this.btnItemAdicionar.Size = new System.Drawing.Size(62, 22);
+            this.btnItemAdicionar.Text = "Adicionar";
+            this.btnItemAdicionar.Click += new System.EventHandler(this.btnItemAdicionar_Click);
+            // 
+            // btnItemEditar
+            // 
+            this.btnItemEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnItemEditar.Image")));
+            this.btnItemEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnItemEditar.Name = "btnItemEditar";
+            this.btnItemEditar.Size = new System.Drawing.Size(41, 22);
+            this.btnItemEditar.Text = "Editar";
+            this.btnItemEditar.Click += new System.EventHandler(this.btnItemEditar_Click);
+            // 
             // btngravar
             // 
-            this.btngravar.Location = new System.Drawing.Point(644, 32);
+            this.btngravar.Location = new System.Drawing.Point(644, 58);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(75, 61);
             this.btngravar.TabIndex = 4;
@@ -266,128 +390,6 @@
             this.lblTotalVenda.TabIndex = 4;
             this.lblTotalVenda.Text = "Total Venda {0}";
             // 
-            // lblRecebido
-            // 
-            this.lblRecebido.AutoSize = true;
-            this.lblRecebido.Location = new System.Drawing.Point(477, 29);
-            this.lblRecebido.Name = "lblRecebido";
-            this.lblRecebido.Size = new System.Drawing.Size(70, 13);
-            this.lblRecebido.TabIndex = 4;
-            this.lblRecebido.Text = "Recebido {0}";
-            // 
-            // lblDesconto
-            // 
-            this.lblDesconto.AutoSize = true;
-            this.lblDesconto.Location = new System.Drawing.Point(477, 42);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(70, 13);
-            this.lblDesconto.TabIndex = 8;
-            this.lblDesconto.Text = "Desconto {0}";
-            // 
-            // lblTroco
-            // 
-            this.lblTroco.AutoSize = true;
-            this.lblTroco.Location = new System.Drawing.Point(477, 55);
-            this.lblTroco.Name = "lblTroco";
-            this.lblTroco.Size = new System.Drawing.Size(52, 13);
-            this.lblTroco.TabIndex = 9;
-            this.lblTroco.Text = "Troco {0}";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // btnItemAdicionar
-            // 
-            this.btnItemAdicionar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnItemAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnItemAdicionar.Image")));
-            this.btnItemAdicionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnItemAdicionar.Name = "btnItemAdicionar";
-            this.btnItemAdicionar.Size = new System.Drawing.Size(62, 22);
-            this.btnItemAdicionar.Text = "Adicionar";
-            this.btnItemAdicionar.Click += new System.EventHandler(this.btnItemAdicionar_Click);
-            // 
-            // btnItemEditar
-            // 
-            this.btnItemEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnItemEditar.Image")));
-            this.btnItemEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnItemEditar.Name = "btnItemEditar";
-            this.btnItemEditar.Size = new System.Drawing.Size(41, 22);
-            this.btnItemEditar.Text = "Editar";
-            this.btnItemEditar.Click += new System.EventHandler(this.btnItemEditar_Click);
-            // 
-            // iItemeBindingSource
-            // 
-            this.iItemeBindingSource.DataSource = typeof(Hope.Interface.IItem_e);
-            // 
-            // getDescricaoDataGridViewTextBoxColumn
-            // 
-            this.getDescricaoDataGridViewTextBoxColumn.DataPropertyName = "Get_Descricao";
-            this.getDescricaoDataGridViewTextBoxColumn.HeaderText = "Get_Descricao";
-            this.getDescricaoDataGridViewTextBoxColumn.Name = "getDescricaoDataGridViewTextBoxColumn";
-            this.getDescricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getQuantidadeDataGridViewTextBoxColumn
-            // 
-            this.getQuantidadeDataGridViewTextBoxColumn.DataPropertyName = "Get_Quantidade";
-            this.getQuantidadeDataGridViewTextBoxColumn.HeaderText = "Get_Quantidade";
-            this.getQuantidadeDataGridViewTextBoxColumn.Name = "getQuantidadeDataGridViewTextBoxColumn";
-            this.getQuantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getSubTotalDataGridViewTextBoxColumn
-            // 
-            this.getSubTotalDataGridViewTextBoxColumn.DataPropertyName = "Get_Sub_Total";
-            this.getSubTotalDataGridViewTextBoxColumn.HeaderText = "Get_Sub_Total";
-            this.getSubTotalDataGridViewTextBoxColumn.Name = "getSubTotalDataGridViewTextBoxColumn";
-            this.getSubTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getUnidadeDataGridViewTextBoxColumn
-            // 
-            this.getUnidadeDataGridViewTextBoxColumn.DataPropertyName = "Get_Unidade";
-            this.getUnidadeDataGridViewTextBoxColumn.HeaderText = "Get_Unidade";
-            this.getUnidadeDataGridViewTextBoxColumn.Name = "getUnidadeDataGridViewTextBoxColumn";
-            this.getUnidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getVendaDataGridViewTextBoxColumn
-            // 
-            this.getVendaDataGridViewTextBoxColumn.DataPropertyName = "Get_Venda";
-            this.getVendaDataGridViewTextBoxColumn.HeaderText = "Get_Venda";
-            this.getVendaDataGridViewTextBoxColumn.Name = "getVendaDataGridViewTextBoxColumn";
-            this.getVendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // lblresultado
             // 
             this.lblresultado.AutoSize = true;
@@ -397,10 +399,20 @@
             this.lblresultado.TabIndex = 8;
             this.lblresultado.Text = "-";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(644, 32);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 20);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // Vender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblresultado);
             this.Controls.Add(this.lblTotalVenda);
             this.Controls.Add(this.btnFecharVenda);
@@ -414,12 +426,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iItemeBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorItem)).EndInit();
             this.bindingNavigatorItem.ResumeLayout(false);
             this.bindingNavigatorItem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iItemeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn getUnidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblresultado;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

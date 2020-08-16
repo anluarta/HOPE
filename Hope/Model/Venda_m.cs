@@ -60,13 +60,73 @@ namespace Hope.Model
 
         protected override bool Select_All_From(out IVender_e[] vender_s)
         {
-            throw new NotImplementedException();
+            if (Hope.Hope_static.hopeData.Vender.Count != 0)
+            {
+                List<IVender_e> vs = new List<IVender_e>();
+                foreach (HopeDataSet.VenderRow item in Hope.Hope_static.hopeData.Vender.Rows)
+                {
+                    vs.Add
+                        (
+                        new Vender_e
+                        (
+                            index: item.Index,
+                            id_caixa: item.ID_Caixa,
+                            start_time: item.Data_Time_Start,
+                            finish_time: item.Data_Time_Finish,
+                            posicao: item.Posicao,
+                            colaborador: item.Colaborador,
+                            item_s: item.Item_s,
+                            troco: item.Troco,
+                            recebido: item.Total_Recebido,
+                            total_venda: item.Total_Venda,
+                            desconto: item.Desconto,
+                            pagamento: item.Pagamento
+                        )
+                        );
+                }
+                vender_s = vs.ToArray();
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Nao existe registro");
+                vender_s = null;
+                return false;
+            }
         }
 
         protected override bool Update_Row(Dictionary<int, object> keyValueData)
         {
-
-            throw new NotImplementedException();
+            try
+            {
+                HopeDataSet.VenderRow venderRow = Hope_static.hopeData.Vender.FindByIndex(int.Parse(keyValueData[Vender_e.Key_Index].ToString()));
+                if (venderRow != null)
+                {
+                    venderRow.Colaborador = keyValueData[Vender_e.Key_Colaborado].ToString();
+                    venderRow.Data_Time_Finish = (DateTime)keyValueData[Vender_e.Key_Finish_Time];
+                    venderRow.Data_Time_Start = (DateTime)keyValueData[Vender_e.Key_Start_Time];
+                    venderRow.Item_s = keyValueData[Vender_e.Key_Item_s].ToString();
+                    venderRow.Pagamento = keyValueData[Vender_e.Key_Pagamento].ToString();
+                    venderRow.Posicao = keyValueData[Vender_e.Key_Posicao].ToString();
+                    venderRow.Desconto = (decimal)keyValueData[Vender_e.Key_Desconto];
+                    venderRow.Total_Recebido = (decimal)keyValueData[Vender_e.Key_Total_Recebido];
+                    venderRow.Total_Venda = (decimal)keyValueData[Vender_e.Key_Total_Venda];
+                    venderRow.Troco = (decimal)keyValueData[Vender_e.Key_Troco];
+                    venderRow.AcceptChanges();
+                    Hope_static.hopeData.AcceptChanges();
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Erro ao localizar index da venda no dataset");
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Noticia.Add(e.Message);
+                return false;
+            }
         }
     }
 }

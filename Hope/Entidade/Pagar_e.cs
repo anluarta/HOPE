@@ -71,7 +71,7 @@ namespace Hope.Entidade
         }
         internal Pagar_e(object dadoserial) : this()
         {
-            if (dadoserial.ToString().Contains(",")& dadoserial.ToString().Contains(":"))
+            if (dadoserial.ToString().Contains(",") & dadoserial.ToString().Contains(":"))
             {
                 string[] vs = dadoserial.ToString().Split(char.Parse(","));
                 Dictionary<int, object> key = new Dictionary<int, object>();
@@ -108,62 +108,175 @@ namespace Hope.Entidade
         decimal IPagar_e.Troco => _Troco;
         bool IPagar_e.Set_Cheque(string Valor)
         {
-            _Cheque = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Cheque vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Cheque = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Cheque nao e numerico");
+                return false;
+            }
         }
         bool IPagar_e.Set_Credito(string Valor)
         {
-            _Credito = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Credito vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Credito = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Credito nao e numerico");
+                return false;
+            }
+
         }
 
         bool IPagar_e.Set_Debito(string Valor)
         {
-            _Debito = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Debito vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Debito = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Debito nao e numerico");
+                return false;
+            }
+
         }
 
         bool IPagar_e.Set_Desconto(string Valor)
         {
-            _Desconto = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Desconto vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Desconto = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Desconto nao e numerico");
+                return false;
+            }
         }
 
         bool IPagar_e.Set_Dinheiro(string Valor)
         {
-            _Dinheiro = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Dinheiro vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Dinheiro = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Dinheiro nao e numerico");
+                return false;
+            }
+
         }
 
         bool IPagar_e.Set_Interno(string Valor)
         {
-            _Interno = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Interno vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Interno = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Interno nao e numerico");
+                return false;
+            }
         }
 
         bool IPagar_e.Set_Outro(string Valor)
         {
-            _Outro = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Outro vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Outro = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor Outro nao e numerico");
+                return false;
+            }
+
         }
         bool IPagar_e.Set_Vale_Alimentacao(string Valor)
         {
-            _Vale_Alimentacao = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Vale Alimentacao vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Vale_Alimentacao = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor VAle Alimentacao nao e numerico");
+                return false;
+            }
         }
         bool IPagar_e.Set_Vale_Refeicao(string Valor)
         {
-            _Vale_Refeicao = decimal.Parse(Valor);
-            return true;
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Valor))
+            {
+                Noticia.Add("Valor Vale Refeicao vazio ou nullo");
+                return false;
+            }
+            else if (Decimal.TryParse(Valor, out decimal result))
+            {
+                _Vale_Refeicao = result;
+                return true;
+            }
+            else
+            {
+                Noticia.Add("Valor VAle Refeicao nao e numerico");
+                return false;
+            }
+
         }
         internal string ToSerilizacao()
         {

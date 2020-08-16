@@ -1,9 +1,12 @@
-﻿namespace Hope.Interface
+﻿using System.Drawing.Printing;
+
+namespace Hope.Interface
 {
     public interface ISuprimento
     {
-        IConsulta Consulta { get; }
-        ISuprimento_e[] Find(IConsulta consulta);
-        ISuprimento_e Select(object current);
+        IConsulta Consulta();
+        bool Find(IConsulta consulta,out ISuprimento_e[] suprimento_s);
+        bool Select(object current,out ISuprimento_e suprimento_);
+        bool Print_Document(ISuprimento_e suprimento_, out PrintDocument document);
     }
 }

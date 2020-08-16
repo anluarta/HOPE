@@ -10,15 +10,17 @@ namespace Hope.Interface
    public interface ICaixa
     {
         string Notifica();
-        ICaixa_e Novo();
+        bool Novo(out ICaixa_e caixa_);
         bool Gravar(ICaixa_e entidade, out ICaixa_e result);
-        ICaixa_e Select(object current);
         
         IConsulta Consulta();
         bool Find(IConsulta consulta,out ICaixa_e[] caixa_s);
-        ISuprimento_e Suprimento_Novo(ICaixa_e entidade);
-        ISangria_e Sangria_Novo(ICaixa_e entidade);
-        bool Print_Document(object current, out PrintDocument document);
+        
+        bool Suprimento_Novo(ICaixa_e entidade,out ISuprimento_e suprimento_);
+        bool Sangria_Novo(ICaixa_e entidade,out ISangria_e sangria_);
+
+        bool Select(object current,out ICaixa_e caixa_);
+        bool Print_Document(ICaixa_e caixa_, out PrintDocument document);
 
         ISuprimento Suprimento { get; }
         ISangria Sangria { get; }

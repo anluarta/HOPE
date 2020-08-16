@@ -136,11 +136,6 @@
     <Compile Include="Controle\Suprimento_c.cs" />
     <Compile Include="Controle\Vender_c.cs" />
     <Compile Include="DAO\Colaborador_d.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Entidade\Autenticacao_e.cs" />
     <Compile Include="Entidade\Caixa_e.cs" />
     <Compile Include="Entidade\Colaborador_e.cs" />
@@ -225,17 +220,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="HopeDataSet.xsc">
       <DependentUpon>HopeDataSet.xsd</DependentUpon>
     </None>

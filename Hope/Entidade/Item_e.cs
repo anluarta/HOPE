@@ -66,20 +66,20 @@ namespace Hope.Entidade
         {
             if (descricao != null)
             {
-                if (descricao.Length < 11)
+                if (descricao.Length > 11)
                 {
                     _Descricao = descricao;
                     return true;
                 }
                 else
                 {
-                    Notifica.Add("Descricao < 11");
+                    Notifica.Add("Erro Descricao Lenght < 11");
                     return false;
                 }
             }
             else
             {
-                Notifica.Add("descricao Nullo");
+                Notifica.Add("Erro descricao Nullo");
                 return false;
             }
         }
@@ -87,14 +87,14 @@ namespace Hope.Entidade
         {
             if (unidade != null)
             {
-                if (unidade.Length > 11)
+                if (unidade.Length < 11)
                 {
                     this._Unidade = unidade;
                     return true;
                 }
                 else
                 {
-                    Notifica.Add("Unidade Length > 11");
+                    Notifica.Add("Erro Unidade Length > 11 ");
                     return false;
 
                 }

@@ -31,32 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendaLista));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.iVendereBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnVisualizarRegistro = new System.Windows.Forms.ToolStripButton();
             this.btnfechar = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iVendereBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getIDCaixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getFinishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getTotalItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorRecebidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorTrocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -75,7 +74,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.toolStripButton1,
+            this.btnVisualizarRegistro,
             this.btnfechar});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -88,19 +87,9 @@
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorSeparator
+            // iVendereBindingSource
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            this.iVendereBindingSource.DataSource = typeof(Hope.Interface.IVender_e);
             // 
             // bindingNavigatorCountItem
             // 
@@ -108,16 +97,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -137,6 +116,25 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -155,14 +153,20 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
-            // toolStripButton1
+            // bindingNavigatorSeparator2
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(98, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnVisualizarRegistro
+            // 
+            this.btnVisualizarRegistro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnVisualizarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarRegistro.Image")));
+            this.btnVisualizarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVisualizarRegistro.Name = "btnVisualizarRegistro";
+            this.btnVisualizarRegistro.Size = new System.Drawing.Size(112, 22);
+            this.btnVisualizarRegistro.Text = "Visualizar Regisatro";
+            this.btnVisualizarRegistro.Click += new System.EventHandler(this.btnVisualizarRegistro_Click);
             // 
             // btnfechar
             // 
@@ -183,8 +187,6 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.getIDDataGridViewTextBoxColumn,
             this.getIDCaixaDataGridViewTextBoxColumn,
-            this.getColaboradorDataGridViewTextBoxColumn,
-            this.getFinishDataGridViewTextBoxColumn,
             this.getTotalItemDataGridViewTextBoxColumn,
             this.getValorTotalDataGridViewTextBoxColumn,
             this.getValorRecebidoDataGridViewTextBoxColumn,
@@ -200,10 +202,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(847, 451);
             this.dataGridView1.TabIndex = 1;
             // 
-            // iVendereBindingSource
-            // 
-            this.iVendereBindingSource.DataSource = typeof(Hope.Interface.IVender_e);
-            // 
             // getIDDataGridViewTextBoxColumn
             // 
             this.getIDDataGridViewTextBoxColumn.DataPropertyName = "Get_ID";
@@ -217,20 +215,6 @@
             this.getIDCaixaDataGridViewTextBoxColumn.HeaderText = "Get_ID_Caixa";
             this.getIDCaixaDataGridViewTextBoxColumn.Name = "getIDCaixaDataGridViewTextBoxColumn";
             this.getIDCaixaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getColaboradorDataGridViewTextBoxColumn
-            // 
-            this.getColaboradorDataGridViewTextBoxColumn.DataPropertyName = "Get_Colaborador";
-            this.getColaboradorDataGridViewTextBoxColumn.HeaderText = "Get_Colaborador";
-            this.getColaboradorDataGridViewTextBoxColumn.Name = "getColaboradorDataGridViewTextBoxColumn";
-            this.getColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // getFinishDataGridViewTextBoxColumn
-            // 
-            this.getFinishDataGridViewTextBoxColumn.DataPropertyName = "Get_Finish";
-            this.getFinishDataGridViewTextBoxColumn.HeaderText = "Get_Finish";
-            this.getFinishDataGridViewTextBoxColumn.Name = "getFinishDataGridViewTextBoxColumn";
-            this.getFinishDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // getTotalItemDataGridViewTextBoxColumn
             // 
@@ -267,6 +251,16 @@
             this.getValorTrocoDataGridViewTextBoxColumn.Name = "getValorTrocoDataGridViewTextBoxColumn";
             this.getValorTrocoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // VendaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,8 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +292,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.BindingSource iVendereBindingSource;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnVisualizarRegistro;
         public System.Windows.Forms.ToolStripButton btnfechar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn getIDDataGridViewTextBoxColumn;
@@ -310,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn getValorRecebidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getValorDescontoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getValorTrocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

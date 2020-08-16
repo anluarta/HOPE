@@ -9,31 +9,42 @@ namespace Hope.Entidade
 {
     class Suprimento_e : ISuprimento_e
     {
-        internal const string Key_CaixaID = "CaixaID";
-        internal const string Key_ColaboradoID = "ColaboradoID";
-        internal const string Key_Valor = "Valor";
-        internal const string Key_Observacao = "Observacao";
+        
         List<string> Noticia;
+        int _index;
         private readonly int CaixaID;
-        private readonly string ColaboraID;
-
+        private readonly string Colabora;
+        DateTime _datatime_registro_salvo;
         internal string _vObservacao { get; private set; }
         internal decimal _vValor { get; private set; }
-        internal Suprimento_e(int caixaID, string colaboraID)
+
+        int ISuprimento_e.Index => _index;
+
+        int ISuprimento_e.Id_Caixa => CaixaID;
+
+        DateTime ISuprimento_e.Data_Registro => _datatime_registro_salvo;
+
+        string ISuprimento_e.Observacao => _vObservacao;
+
+        decimal ISuprimento_e.Valor => _vValor;
+
+        internal Suprimento_e(object caixaID, object colaborador)
         {
             Noticia = new List<string>();
             _vObservacao = string.Empty;
             _vValor = 0.0m;
-            this.CaixaID = caixaID;
-            this.ColaboraID = colaboraID;
+            this.CaixaID = int.Parse((string)caixaID);
+            this.Colabora = (string)colaborador;
         }
-        internal Dictionary <string,object> GetKeysValueData()
+        internal Dictionary <int,object> GetKeysValueData()
         {
-            Dictionary<string, object> keys = new Dictionary<string, object>();
+            Dictionary<int, object> keys = new Dictionary<int, object>();
             try
             {
+                keys.Add(Key_Index, _index);
                 keys.Add(Key_CaixaID, CaixaID);
-                keys.Add(Key_ColaboradoID, ColaboraID);
+                keys.Add(Key_DataTime_Registro, _datatime_registro_salvo);
+                keys.Add(Key_Colaborado, Colabora);
                 keys.Add(Key_Observacao, _vObservacao);
                 keys.Add(Key_Valor, _vValor);
             }
@@ -97,5 +108,18 @@ namespace Hope.Entidade
                 return false;
             }
         }
+
+        IColaborador_e ISuprimento_e.Colaborador()
+        {
+            return new Colaborador_e(this.Colabora);
+        }
+        
+        internal const int Key_Index = 1;
+        internal const int Key_CaixaID = 2;
+        internal const int Key_DataTime_Registro = 3;
+        internal const int Key_Colaborado = 4;
+        internal const int Key_Valor =5;
+        internal const int Key_Observacao = 6;
+
     }
 }

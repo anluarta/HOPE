@@ -24,6 +24,7 @@ namespace TesteHope.View
         public Vender()
         {
             InitializeComponent();
+            atualizarvalor();
         }
         void atualizarvalor()
         {
@@ -31,8 +32,14 @@ namespace TesteHope.View
             lblFinalizado.Text = string.Format(_finalizado, Program.Vender.Get_Finish_Time);
             lblIdCaixa.Text = string.Format(_id_caixa, Program.Vender.Get_ID_Caixa);
             lblIndex.Text = string.Format(_index, Program.Vender.Get_ID);
-            lblTotalVenda.Text = string.Format(_index, Program.Vender.Get_Valor_Total);
+            lblTotalVenda.Text = string.Format(_total_venda, Program.Vender.Get_Valor_Total);
             iItemeBindingSource.DataSource = Program.Vender.GetDataByItem();
+            lblRecebido.Text = string.Format(_recebido, Program.Vender.Get_Valor_Recebido);
+            lblTroco.Text = string.Format(_troco, Program.Vender.Get_Valor_Troco);
+            lblDesconto.Text = string.Format(_desconto, Program.Vender.Get_Valor_Desconto);
+            lblRecebido.Text = string.Format(_recebido, Program.Vender.Get_Valor_Recebido);
+            lblTroco.Text = string.Format(_troco, Program.Vender.Get_Valor_Troco);
+            lblDesconto.Text = string.Format(_desconto, Program.Vender.Get_Valor_Desconto);
         }
 
         private void btnItemAdicionar_Click(object sender, EventArgs e)
@@ -45,7 +52,8 @@ namespace TesteHope.View
                 frm.Controls.Add(itemAdd);
                 frm.ShowDialog();
             }
-            iItemeBindingSource.DataSource = Program.Vender.GetDataByItem();
+            atualizarvalor();
+
         }
 
         private void btnPagamento_Click(object sender, EventArgs e)
@@ -58,9 +66,8 @@ namespace TesteHope.View
                 frm.Controls.Add(pagamento);
                 frm.ShowDialog();
             }
-            lblRecebido.Text = string.Format(_recebido, Program.Vender.Get_Valor_Recebido);
-            lblTroco.Text = string.Format(_troco, Program.Vender.Get_Valor_Troco);
-            lblDesconto.Text = string.Format(_desconto, Program.Vender.Get_Valor_Desconto);
+            atualizarvalor();
+
         }
 
         private void btnItemEditar_Click(object sender, EventArgs e)
@@ -85,7 +92,8 @@ namespace TesteHope.View
                     frm.Controls.Add(editar);
                     frm.ShowDialog();
                 }
-                iItemeBindingSource.DataSource = Program.Vender.GetDataByItem();
+                atualizarvalor();
+
             }
             else
             {
@@ -98,15 +106,26 @@ namespace TesteHope.View
             bool v1 = Program.Vender.Finalizar();
             if (v1)
             {
-                bool v2 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+                bool v2 = Program.CaixaOperacao.Add(Program.Vender);
                 if (v2)
                 {
-                    MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-                    btnfechar.PerformClick();
+                    bool v3 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+                    if (v3)
+                    {
+                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                        btnfechar.PerformClick();
+
+                    }
+                    else
+                    {
+
+                        lblresultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                    }
                 }
                 else
                 {
-                    lblresultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                    lblresultado.Text = Program.CaixaOperacao.Notifica();
+
                 }
             }
             else

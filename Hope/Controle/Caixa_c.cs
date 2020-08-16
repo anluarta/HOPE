@@ -96,75 +96,103 @@ namespace Hope.Controle
             return builder.ToString();
         }
 
-        ICaixa_e ICaixa.Novo()
+        bool ICaixa.Novo(out ICaixa_e caixa_)
         {
             if (Hope_static.Autenticacao.Autenticado)
             {
-
-                Insert_New_Row(out int id, out DateTime start);
-                ICaixa_e _E = new Entidade.Caixa_e(id, Hope_static.Autenticacao.Colaborador, start);
-                Noticia.Add("Novo caixa criado");
-                return _E;
+                if (Insert_New_Row(out int id, out DateTime start))
+                {
+                    Noticia.Add("Novo caixa criado");
+                    caixa_ = new Caixa_e(id, Hope_static.Autenticacao.Colaborador, start);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Erro Caixa_c Insert_New_Row");
+                    caixa_ = null;
+                    return false;
+                }
             }
             else
             {
-                throw HException.Caixa_he.Erro_0();
+                Noticia.Add("voce nao esta logado");
+                caixa_ = null;
+                return false;
+                //throw HException.Caixa_he.Erro_0();
             }
         }
 
-        ISangria_e ICaixa.Sangria_Novo(ICaixa_e entidade)
+        bool ICaixa.Sangria_Novo(ICaixa_e entidade, out ISangria_e sangria_)
         {
             if (entidade != null)
             {
                 if (Hope_static.Autenticacao.Autenticado)
                 {
-                    Caixa_e caixa_E = entidade as Caixa_e;
 
-                    ISangria_e _E = new Sangria_e(caixaID: caixa_E.ID, colaboraID: caixa_E.Colaborador.Get_ID);
+                    sangria_ = new Sangria_e(caixaID: entidade.Get_ID, colaborador: Hope_static.Autenticacao.Colaborador.ToSerilazion());
 
-                    return _E;
+                    return true;
                 }
                 else
                 {
+                    sangria_ = null;
                     Noticia.Add("Nao esta autenticado para essa acao ");
-                    return null;
+                    return false;
                 }
-
             }
             else
             {
-                Noticia.Add("Sangria entidade nullo");
-                return null;
+                Noticia.Add("erro Sangria_novo ICaixa_e nullo");
+                sangria_ = null;
+                return false;
             }
         }
 
-        ICaixa_e ICaixa.Select(object current)
+        bool ICaixa.Select(object current, out ICaixa_e caixa_)
         {
-            throw new NotImplementedException();
+            if (current !=null)
+            {
+                if (current is ICaixa_e)
+                {
+                    caixa_ = (ICaixa_e)current;
+                    return true;
+                }
+                else
+                {
+                    caixa_ = null;
+                    Noticia.Add("erro Caixa_c Select valor current na e ICaixa_e");
+                    return false;
+                }
+            }
+            else
+            {
+                caixa_ = null;
+                Noticia.Add("erro Caixa_c Select valor current nullo");
+                return false;
+            }
         }
 
-        ISuprimento_e ICaixa.Suprimento_Novo(ICaixa_e entidade)
+        bool ICaixa.Suprimento_Novo(ICaixa_e entidade, out ISuprimento_e suprimento_)
         {
             if (entidade != null)
             {
                 if (Hope_static.Autenticacao.Autenticado)
                 {
-                    Caixa_e caixa_E = entidade as Caixa_e;
-                    ISuprimento_e suprimento_E = new Suprimento_e(caixaID: caixa_E.ID, colaboraID: caixa_E.Colaborador.Get_ID);
-
-                    return suprimento_E;
+                    suprimento_ = new Suprimento_e(caixaID: entidade.Get_ID, colaborador: Hope_static.Autenticacao.Colaborador);
+                    return true;
                 }
                 else
                 {
                     Noticia.Add("Nao esta autenticado para essa acao ");
-                    return null;
+                    suprimento_ = null;
+                    return false;
                 }
-
             }
             else
             {
                 Noticia.Add("Suprimento entidade nullo");
-                return null;
+                suprimento_ = null;
+                return false;
             }
         }
 
@@ -196,25 +224,26 @@ namespace Hope.Controle
 
         Rectangle marginBounds;
         Rectangle pageBounds;
-        PageSettings settings;
         Font FonLeituraxItem;
         Font FonLeituraxCabeca;
         Graphics graphics;
         Font Bold;
         Caixa_e _E;
-        bool ICaixa.Print_Document(object current, out PrintDocument document)
+        bool ICaixa.Print_Document(ICaixa_e current, out PrintDocument document)
         {
+            PageSettings settings = null;
             if (current != null)
             {
                 _E = current as Caixa_e;
-                if (_E.FinishTime== Caixa_e._ValueFinisTime)
+                if (_E.FinishTime == Caixa_e._ValueFinisTime)
                 {
                     // leitura X
                     Bold = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold);
-                    document = new PrintDocument();
-                    settings = new PageSettings();
                     FonLeituraxCabeca = new Font(FontFamily.GenericSansSerif, 14, FontStyle.Bold);
                     FonLeituraxItem = new Font(FontFamily.GenericSerif, 11, FontStyle.Regular);
+
+                    document = new PrintDocument();
+                    settings = new PageSettings();
                     graphics = document.PrinterSettings.CreateMeasurementGraphics();
 
                     settings.PaperSize = CalcArePrint(graphics: ref graphics);
@@ -246,20 +275,19 @@ namespace Hope.Controle
                 Noticia.Add("Entidade nula Print_Document");
                 return false;
             }
-            throw new NotImplementedException();
         }
         private void Leitura_X(object sender, PrintPageEventArgs e)
         {
             graphics = e.Graphics;
             CalcArePrint(ref graphics);
-           // graphics.DrawString("Suprimento", Bold, Brushes.Black, 1, 1);
+            // graphics.DrawString("Suprimento", Bold, Brushes.Black, 1, 1);
 
         }
         private void Remumo_Caixa(object sender, PrintPageEventArgs e)
         {
             graphics = e.Graphics;
             CalcArePrint(ref graphics);
-           // graphics.DrawString("Suprimento", Bold, Brushes.Black, 1, 1);
+            // graphics.DrawString("Suprimento", Bold, Brushes.Black, 1, 1);
 
         }
         private PaperSize CalcArePrint(ref Graphics graphics)
@@ -397,7 +425,7 @@ namespace Hope.Controle
             graphics.DrawString("Controle Interno...", FonLeituraxItem, Brushes.Black, internoF);
             graphics.DrawString(_E.vInterno.ToString("f2"), FonLeituraxItem, Brushes.Black, internoValorF);
             graphics.Flush();
-            return new PaperSize("Custom", (int)graphics.VisibleClipBounds.Width/5, (int)graphics.VisibleClipBounds.Height/5);
+            return new PaperSize("Custom", (int)graphics.VisibleClipBounds.Width / 5, (int)graphics.VisibleClipBounds.Height / 5);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Hope.Model
         {
             Noticia = new List<string>();
         }
-        protected override bool Insert_Data_Value(Dictionary<string, object> keyValuesData)
+        protected override bool Insert_Data_Value(Dictionary<int, object> keyValuesData)
         {
             if (keyValuesData!=null)
             {
@@ -19,7 +19,7 @@ namespace Hope.Model
                 {
                     HopeDataSet.Caixa_SuprimentoRow _SuprimentoRow = Hope.Hope_static.hopeData.Caixa_Suprimento.NewCaixa_SuprimentoRow();
                     _SuprimentoRow.ID_Caixa = (int)keyValuesData[Suprimento_e.Key_CaixaID];
-                    _SuprimentoRow.ID_Colaborador = int.Parse(keyValuesData[Suprimento_e.Key_ColaboradoID].ToString());
+                    _SuprimentoRow.ID_Colaborador = int.Parse(keyValuesData[Suprimento_e.Key_Colaborado].ToString());
                     _SuprimentoRow.Valor = (decimal)keyValuesData[Suprimento_e.Key_Valor];
                     _SuprimentoRow.Observacao = (string)keyValuesData[Suprimento_e.Key_Observacao];
                     _SuprimentoRow.DataRegistro = DateTime.Now;

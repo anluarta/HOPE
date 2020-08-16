@@ -148,10 +148,20 @@ namespace Hope.Entidade
         {
             if (entidade != null)
             {
-                Entidade.Sangria_e _E = entidade as Entidade.Sangria_e;
-                this.vSangria += _E._Valor;
-                sangria_s.Add(_E);
-                return true;
+                var tempsangria = this.vSangria;
+                this.vSangria = decimal.Add(this.vSangria, entidade.Valor);
+                if (tempsangria.CompareTo(this.vSangria)>0)
+                {
+                    string format = "total anterio{0} novo total{1}, diferenca acrecentada{3}";
+                    Noticia.Add(string.Format(format, tempsangria, vSangria, entidade.Valor));
+                    sangria_s.Add((Sangria_e)entidade);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("valor adicopnado nao acrenta em nada");
+                    return false;
+                }
             }
             else
             {
@@ -164,9 +174,9 @@ namespace Hope.Entidade
         {
             if (entidade != null)
             {
-                Entidade.Suprimento_e _E = entidade as Entidade.Suprimento_e;
-                this.vSuprimento += _E._vValor;
-                suprimento_s.Add(_E);
+                var tempSuprimento = this.vSuprimento;
+                
+                suprimento_s.Add((Suprimento_e)entidade);
                 return true;
             }
             else
@@ -390,6 +400,11 @@ namespace Hope.Entidade
             this.vVendido = _Vendido;
             this.vDesconto = _Desconto;
             return;
+        }
+
+        bool ICaixa_e.Add(IVender_e entidade)
+        {
+            throw new NotImplementedException();
         }
     }
 }

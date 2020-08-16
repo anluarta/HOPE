@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnfechar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnfechar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtUnidade = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -55,15 +55,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Descricao";
             // 
-            // btnfechar
-            // 
-            this.btnfechar.Location = new System.Drawing.Point(227, 3);
-            this.btnfechar.Name = "btnfechar";
-            this.btnfechar.Size = new System.Drawing.Size(75, 23);
-            this.btnfechar.TabIndex = 1;
-            this.btnfechar.Text = "Fechar";
-            this.btnfechar.UseVisualStyleBackColor = true;
-            // 
             // txtDescricao
             // 
             this.txtDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,6 +63,16 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 31);
             this.txtDescricao.TabIndex = 0;
+            this.txtDescricao.Text = "Algodao Doce";
+            // 
+            // btnfechar
+            // 
+            this.btnfechar.Location = new System.Drawing.Point(227, 3);
+            this.btnfechar.Name = "btnfechar";
+            this.btnfechar.Size = new System.Drawing.Size(75, 23);
+            this.btnfechar.TabIndex = 1;
+            this.btnfechar.Text = "Fechar";
+            this.btnfechar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -91,6 +92,7 @@
             this.txtUnidade.Name = "txtUnidade";
             this.txtUnidade.Size = new System.Drawing.Size(212, 31);
             this.txtUnidade.TabIndex = 0;
+            this.txtUnidade.Text = "peca";
             // 
             // groupBox3
             // 
@@ -110,6 +112,7 @@
             this.txtVenda.Name = "txtVenda";
             this.txtVenda.Size = new System.Drawing.Size(212, 31);
             this.txtVenda.TabIndex = 0;
+            this.txtVenda.Text = "1,50";
             // 
             // groupBox4
             // 
@@ -129,6 +132,7 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(212, 31);
             this.txtQuantidade.TabIndex = 0;
+            this.txtQuantidade.Text = "2";
             // 
             // btnAdicionar
             // 

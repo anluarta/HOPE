@@ -20,16 +20,23 @@ namespace TesteHope.View
 
         private void btnVisualizarLeitura_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Pos.Caixa.Print_Document(iCaixaeBindingSource.Current,out PrintDocument document))
+            if (Program.ObjHope.Pos.Caixa.Select(iCaixaeBindingSource.Current, out Hope.Interface.ICaixa_e result))
             {
-                printPreviewDialog1.Document = document;
-                printPreviewDialog1.ShowDialog();
+                if (Program.ObjHope.Pos.Caixa.Print_Document(result, out PrintDocument document))
+                {
+                    printPreviewDialog1.Document = document;
+                    printPreviewDialog1.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                }
             }
             else
             {
                 MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
-            }
 
+            }
         }
 
         private void CaixaLista_Load(object sender, EventArgs e)

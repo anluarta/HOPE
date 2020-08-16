@@ -92,8 +92,14 @@ namespace TesteHope
         {
             try
             {
-                Program.CaixaOperacao = Program.ObjHope.Pos.Caixa.Novo();
-                lblCaixaResult.Text = Program.ObjHope.Pos.Caixa.Notifica();
+                if (Program.ObjHope.Pos.Caixa.Novo(out Program.CaixaOperacao))
+                {
+                    lblCaixaResult.Text = Program.ObjHope.Pos.Caixa.Notifica();
+                }
+                else
+                {
+                    MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                }
             }
             catch (Hope.HException_c he)
             {

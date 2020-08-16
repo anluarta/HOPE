@@ -1,4 +1,5 @@
 ﻿using Hope.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,29 +7,37 @@ namespace Hope.Entidade
 {
     internal class Sangria_e : ISangria_e
     {
-        internal const string Key_CaixaID = "CaixaID";
-        internal const string Key_ColacoradoID = "ColaboradorID";
-        internal const string Key_Observacao = "Observacao";
-        internal const string Key_Valor = "Valor";
         List<string> Noticia;
-        private int caixaID;
-        private string colaboraID;
+        int _index;
+        int IdCaixa;
+        string Colabora;
         string _Observacao;
-       internal decimal _Valor { get; private set; }
-
-        public Sangria_e(int caixaID, string colaboraID)
+        DateTime _datatime_registro_salvo;
+        decimal _Valor;
+        public Sangria_e(object caixaID, object colaborador)
         {
-            this.caixaID = caixaID;
-            this.colaboraID = colaboraID;
+            this.IdCaixa = int.Parse(caixaID.ToString());
+            this.Colabora = (string)colaborador;
             Noticia = new List<string>();
         }
-        internal Dictionary<string,object> GetKeyValuesData()
+
+        internal Sangria_e(object index, object idCaixa, object colaborador, object dataregistro, object observacao, object valor)
         {
-            Dictionary<string, object> keys = new Dictionary<string, object>();
+            Noticia = new List<string>();
+            _index = int.Parse((string)index);
+            IdCaixa = int.Parse((string)idCaixa);
+            Colabora = (string)colaborador;
+            _datatime_registro_salvo = DateTime.Parse((string)dataregistro);
+            this._Valor = (decimal)valor;
+        }
+
+        internal Dictionary<int, object> GetKeyValuesData()
+        {
+            Dictionary<int, object> keys = new Dictionary<int, object>();
             try
             {
-                keys.Add(Key_CaixaID, caixaID);
-                keys.Add(Key_ColacoradoID, colaboraID);
+                keys.Add(Key_CaixaID, IdCaixa);
+                keys.Add(Key_Colacorado, Colabora);
                 keys.Add(Key_Observacao, _Observacao);
                 keys.Add(Key_Valor, _Valor);
             }
@@ -38,6 +47,12 @@ namespace Hope.Entidade
             }
             return keys;
         }
+        int ISangria_e.Id_Sangria => this._index;
+        int ISangria_e.Id_Caixa => this.IdCaixa;
+        DateTime ISangria_e.Data_Registro => this._datatime_registro_salvo;
+        decimal ISangria_e.Valor => this._Valor;
+        string ISangria_e.Observacao => this._Observacao;
+
         string ISangria_e.Notifica()
         {
             StringBuilder builder = new StringBuilder();
@@ -93,5 +108,17 @@ namespace Hope.Entidade
                 return false;
             }
         }
+
+        IColaborador_e ISangria_e.Get_Colaborador()
+        {
+            return new Colaborador_e(this.Colabora);
+        }
+        internal const int Key_Index = 1;
+        internal const int Key_CaixaID = 2;
+        internal const int Key_Data_Registro = 3;
+        internal const int Key_Colacorado = 4;
+        internal const int Key_Observacao = 5;
+        internal const int Key_Valor = 6;
+
     }
 }

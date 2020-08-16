@@ -19,9 +19,8 @@ namespace TesteHope.View
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Pos.Vender.Item_Novo(Program.Vender, out Hope.Interface.IItem_e result))
+            if (Program.ObjHope.Pos.Vender.Item_Novo(Program.Vender, out Hope.Interface.IItem_e entidade))
             {
-                Hope.Interface.IItem_e entidade = result;
                 bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
                 bool v2 = entidade.Set_Unidade(descricao: txtUnidade.Text);
                 bool v3 = entidade.Set_Quantidade(descricao: txtQuantidade.Text);
@@ -34,7 +33,11 @@ namespace TesteHope.View
                         bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
                         if (v6)
                         {
-                            MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                            var str = Program.ObjHope.Pos.Vender.Notificar();
+                            if (str.Length != 0)
+                            {
+                                MessageBox.Show(str);
+                            }
                             btnfechar.PerformClick();
                         }
                         else

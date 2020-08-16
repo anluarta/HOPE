@@ -2720,7 +2720,7 @@ namespace Hope {
             
             private global::System.Data.DataColumn columnID_Caixa;
             
-            private global::System.Data.DataColumn columnID_Colaborador;
+            private global::System.Data.DataColumn columnColaborador;
             
             private global::System.Data.DataColumn columnValor;
             
@@ -2779,9 +2779,9 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_ColaboradorColumn {
+            public global::System.Data.DataColumn ColaboradorColumn {
                 get {
-                    return this.columnID_Colaborador;
+                    return this.columnColaborador;
                 }
             }
             
@@ -2846,12 +2846,12 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Caixa_SangriaRow AddCaixa_SangriaRow(int ID_Caixa, int ID_Colaborador, decimal Valor, string Observacao, System.DateTime DataRegistro) {
+            public Caixa_SangriaRow AddCaixa_SangriaRow(int ID_Caixa, string Colaborador, decimal Valor, string Observacao, System.DateTime DataRegistro) {
                 Caixa_SangriaRow rowCaixa_SangriaRow = ((Caixa_SangriaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ID_Caixa,
-                        ID_Colaborador,
+                        Colaborador,
                         Valor,
                         Observacao,
                         DataRegistro};
@@ -2879,7 +2879,7 @@ namespace Hope {
             internal void InitVars() {
                 this.columnID_sangria = base.Columns["ID_sangria"];
                 this.columnID_Caixa = base.Columns["ID_Caixa"];
-                this.columnID_Colaborador = base.Columns["ID_Colaborador"];
+                this.columnColaborador = base.Columns["Colaborador"];
                 this.columnValor = base.Columns["Valor"];
                 this.columnObservacao = base.Columns["Observacao"];
                 this.columnDataRegistro = base.Columns["DataRegistro"];
@@ -2892,8 +2892,8 @@ namespace Hope {
                 base.Columns.Add(this.columnID_sangria);
                 this.columnID_Caixa = new global::System.Data.DataColumn("ID_Caixa", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Caixa);
-                this.columnID_Colaborador = new global::System.Data.DataColumn("ID_Colaborador", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Colaborador);
+                this.columnColaborador = new global::System.Data.DataColumn("Colaborador", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColaborador);
                 this.columnValor = new global::System.Data.DataColumn("Valor", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValor);
                 this.columnObservacao = new global::System.Data.DataColumn("Observacao", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2907,8 +2907,6 @@ namespace Hope {
                 this.columnID_sangria.Unique = true;
                 this.columnID_sangria.Caption = "ID_Reforco";
                 this.columnID_Caixa.DefaultValue = ((int)(0));
-                this.columnID_Colaborador.Caption = "ID_Usuario";
-                this.columnID_Colaborador.DefaultValue = ((int)(0));
                 this.columnValor.DefaultValue = ((decimal)(0m));
             }
             
@@ -5737,17 +5735,17 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_Colaborador {
+            public string Colaborador {
                 get {
                     try {
-                        return ((int)(this[this.tableCaixa_Sangria.ID_ColaboradorColumn]));
+                        return ((string)(this[this.tableCaixa_Sangria.ColaboradorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ID_Colaborador\' na tabela \'Caixa_Sangria\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Colaborador\' na tabela \'Caixa_Sangria\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCaixa_Sangria.ID_ColaboradorColumn] = value;
+                    this[this.tableCaixa_Sangria.ColaboradorColumn] = value;
                 }
             }
             
@@ -5825,14 +5823,14 @@ namespace Hope {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsID_ColaboradorNull() {
-                return this.IsNull(this.tableCaixa_Sangria.ID_ColaboradorColumn);
+            public bool IsColaboradorNull() {
+                return this.IsNull(this.tableCaixa_Sangria.ColaboradorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetID_ColaboradorNull() {
-                this[this.tableCaixa_Sangria.ID_ColaboradorColumn] = global::System.Convert.DBNull;
+            public void SetColaboradorNull() {
+                this[this.tableCaixa_Sangria.ColaboradorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

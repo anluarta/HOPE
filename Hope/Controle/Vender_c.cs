@@ -23,12 +23,58 @@ namespace Hope.Controle
         }
         bool IVender.Select(object current, out IVender_e vender_)
         {
-            throw new NotImplementedException();
+            if (current != null)
+            {
+                if (current is IVender_e)
+                {
+                    vender_ = (IVender_e)current;
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Erro Vender_c Select valor current nao e IVender_e");
+                    vender_ = null;
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Erro Valor current nullo");
+                vender_ = null;
+                return false;
+            }
         }
 
         bool IVender.Fill(IConsulta consulta, out IVender_e[] vender_s)
         {
-            throw new NotImplementedException();
+            if (consulta != null)
+            {
+                switch (consulta.Comando)
+                {
+                    case Enums.Consulta_u.Comando.Select_All_From:
+                        if (Select_All_From(out IVender_e[] result))
+                        {
+                            vender_s = result;
+                            return true;
+                        }
+                        else
+                        {
+                            vender_s = result;
+                            return false;
+                        }
+                        break;
+                    default:
+                        Noticia.Add("Erro IConsulta comando nao existe");
+                        vender_s = null;
+                        return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Erro IConsulta Nullo");
+                vender_s = null;
+                return false;
+            }
         }
         bool IVender.Gravar(IVender_e vender)
         {
@@ -37,25 +83,34 @@ namespace Hope.Controle
                 Vender_e _E = (Vender_e)vender;
                 if (_E.Dispariedade())
                 {
+                    //if (_E._Time_Finish!=Vender_e._ValuaBaseFinishTime)
+                    //{
+                    //    if (Hope_static.Caixa.)
+                    //    {
+
+                    //    }
+                    //}
                     if (Update_Row(_E.GetKeyValuesData()))
                     {
-
+                        return true;
                     }
                     else
                     {
-
+                        Noticia.Add("Erro ao atualizar linha do banco de dados");
+                        return false;
                     }
                 }
                 else
                 {
-
+                    Noticia.Add("Nao a diferenca a ser salva ");
+                    return false;
                 }
             }
             else
             {
-
+                Noticia.Add("Erro IVender_e nullo");
+                return false;
             }
-            throw new NotImplementedException();
         }
         string IVender.Notificar()
         {
