@@ -42,6 +42,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVisualizarRegistro = new System.Windows.Forms.ToolStripButton();
+            this.btnDevolucao = new System.Windows.Forms.ToolStripButton();
             this.btnfechar = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.getIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +53,7 @@
             this.getValorDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorTrocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnCarregarRegistro = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).BeginInit();
@@ -76,7 +77,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnVisualizarRegistro,
-            this.toolStripButton1,
+            this.btnCarregarRegistro,
+            this.btnDevolucao,
             this.btnfechar});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -127,6 +129,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -169,6 +172,15 @@
             this.btnVisualizarRegistro.Size = new System.Drawing.Size(112, 22);
             this.btnVisualizarRegistro.Text = "Visualizar Regisatro";
             this.btnVisualizarRegistro.Click += new System.EventHandler(this.btnVisualizarRegistro_Click);
+            // 
+            // btnDevolucao
+            // 
+            this.btnDevolucao.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnDevolucao.Image = ((System.Drawing.Image)(resources.GetObject("btnDevolucao.Image")));
+            this.btnDevolucao.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDevolucao.Name = "btnDevolucao";
+            this.btnDevolucao.Size = new System.Drawing.Size(67, 22);
+            this.btnDevolucao.Text = "Devolucao";
             // 
             // btnfechar
             // 
@@ -263,14 +275,14 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // toolStripButton1
+            // btnCarregarRegistro
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(67, 22);
-            this.toolStripButton1.Text = "Devolucao";
+            this.btnCarregarRegistro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCarregarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnCarregarRegistro.Image")));
+            this.btnCarregarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCarregarRegistro.Name = "btnCarregarRegistro";
+            this.btnCarregarRegistro.Size = new System.Drawing.Size(102, 22);
+            this.btnCarregarRegistro.Text = "Carregar Registro";
             // 
             // VendaLista
             // 
@@ -302,7 +314,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.BindingSource iVendereBindingSource;
         private System.Windows.Forms.ToolStripButton btnVisualizarRegistro;
         public System.Windows.Forms.ToolStripButton btnfechar;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -316,6 +327,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn getValorDescontoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn getValorTrocoDataGridViewTextBoxColumn;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnDevolucao;
+        internal System.Windows.Forms.BindingSource iVendereBindingSource;
+        internal System.Windows.Forms.ToolStripButton btnCarregarRegistro;
     }
 }

@@ -21,5 +21,6 @@
         bool Add(ISangria_e entidade);
         bool Add(ISuprimento_e entidade);
         bool Add(IVender_e entidade);
+        bool Remover(IVender_e vender_);
     }
 }

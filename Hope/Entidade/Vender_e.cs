@@ -510,5 +510,11 @@ namespace Hope.Entidade
             _Posicao = ListPosicao.Devolucao;
             return true;
         }
+
+        ListPosicao IVender_Posicao.GetListPosicao()
+        {
+            return _Posicao;
+            throw new NotImplementedException();
+        }
     }
 }

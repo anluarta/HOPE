@@ -33,7 +33,6 @@ namespace TesteHope.View
         {
             if (Program.ObjHope.Pos.Vender.Select(iVendereBindingSource.Current, out IVender_e vender_))
             {
-
                 if (Program.ObjHope.Pos.Vender.Print_Document(vender_, out PrintDocument doc))
                 {
                     printPreviewDialog1.Document = doc;

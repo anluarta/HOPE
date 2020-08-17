@@ -22,6 +22,38 @@ namespace Hope.Controle
         {
             return Consulta;
         }
+        bool IVender.Continuar_Registro(object current, out IVender_e vender_)
+        {
+            if (current != null)
+            {
+                if (current is IVender_e)
+                {
+                    vender_ = (IVender_e)current;
+                    if (vender_.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
+                    {
+
+                        return true;
+                    }
+                    else
+                    {
+                        Noticia.Add("Erro Vender_c Continuar_Registro Finish Time modificado");
+                        return false;
+                    }
+                }
+                else
+                {
+                    Noticia.Add("Erro Vender_c Select valor current nao e IVender_e");
+                    vender_ = null;
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Erro Valor current nullo");
+                vender_ = null;
+                return false;
+            }
+        }
         bool IVender.Select(object current, out IVender_e vender_)
         {
             if (current != null)
@@ -140,7 +172,7 @@ namespace Hope.Controle
 
                         break;
                     case Vender_e.ListPosicao.Devolucao:
-                        
+
                         if (Update_Row(_E.GetKeyValuesData()))
                         {
                             return true;
@@ -157,7 +189,7 @@ namespace Hope.Controle
 
                         break;
                 }
-               
+
             }
             else
             {
@@ -472,6 +504,8 @@ namespace Hope.Controle
         {
             throw new NotImplementedException();
         }
+
+
         #endregion
     }
 }
