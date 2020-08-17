@@ -16,6 +16,7 @@ namespace Hope.Controle
         internal Consulta_c Consulta;
         protected abstract bool Insert_New_Row(string Id_caixa, out Dictionary<int, object> keyValuesData);
         protected abstract bool Update_Row(Dictionary<int, object> keyValueData);
+        protected abstract bool Deletar_Row(Dictionary<int, object> keyValueData);
         protected abstract bool Select_All_From(out IVender_e[] vender_s);
         IConsulta IVender.Consulta()
         {
@@ -81,30 +82,82 @@ namespace Hope.Controle
             if (vender != null)
             {
                 Vender_e _E = (Vender_e)vender;
-                if (_E.Dispariedade())
+                switch (_E._Posicao)
                 {
-                    //if (_E._Time_Finish!=Vender_e._ValuaBaseFinishTime)
-                    //{
-                    //    if (Hope_static.Caixa.)
-                    //    {
-
-                    //    }
-                    //}
-                    if (Update_Row(_E.GetKeyValuesData()))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        Noticia.Add("Erro ao atualizar linha do banco de dados");
+                    case Vender_e.ListPosicao.Iniciado:
+                        _E._Posicao = Vender_e.ListPosicao.Aberto;
+                        goto case Vender_e.ListPosicao.Aberto;
+                        break;
+                    case Vender_e.ListPosicao.Aberto:
+                        if (_E.Dispariedade())
+                        {
+                            if (Update_Row(_E.GetKeyValuesData()))
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                Noticia.Add("Erro ao atualizar linha do banco de dados");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            Noticia.Add("Nao a diferenca a ser salva ");
+                            return false;
+                        }
+                        break;
+                    case Vender_e.ListPosicao.Espera:
                         return false;
-                    }
+
+                        break;
+                    case Vender_e.ListPosicao.Pago:
+                        return false;
+
+                        break;
+                    case Vender_e.ListPosicao.Finalizado:
+                        if (Update_Row(_E.GetKeyValuesData()))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            Noticia.Add("Erro ao atualizar linha do banco de dados");
+                            return false;
+                        }
+
+                        break;
+                    case Vender_e.ListPosicao.Aborta:
+                        if (Deletar_Row(_E.GetKeyValuesData()))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            Noticia.Add("Erro ao atualizar linha do banco de dados");
+                            return false;
+                        }
+
+                        break;
+                    case Vender_e.ListPosicao.Devolucao:
+                        
+                        if (Update_Row(_E.GetKeyValuesData()))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            Noticia.Add("Erro ao atualizar linha do banco de dados");
+                            return false;
+                        }
+
+                        break;
+                    default:
+                        return false;
+
+                        break;
                 }
-                else
-                {
-                    Noticia.Add("Nao a diferenca a ser salva ");
-                    return false;
-                }
+               
             }
             else
             {

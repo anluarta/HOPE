@@ -359,6 +359,7 @@
             this.btngravar.TabIndex = 4;
             this.btngravar.Text = "Gravar";
             this.btngravar.UseVisualStyleBackColor = true;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // btnPagamento
             // 
@@ -407,6 +408,7 @@
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Vender
             // 

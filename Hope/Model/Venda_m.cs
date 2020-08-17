@@ -3,6 +3,7 @@ using Hope.Entidade;
 using Hope.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Hope.Model
 {
@@ -12,6 +13,31 @@ namespace Hope.Model
         {
             Noticia = new List<string>();
             Consulta = new Consulta_m._vender();
+        }
+
+        protected override bool Deletar_Row(Dictionary<int, object> keyValueData)
+        {
+            object result = Hope_static.hopeData.Vender.FindByIndex((int)keyValueData[Vender_e.Key_Index]);
+            if (result != null)
+            {
+                HopeDataSet.VenderRow venderRow = (HopeDataSet.VenderRow)result;
+                Hope_static.hopeData.Vender.RemoveVenderRow(venderRow);
+                if (Hope_static.hopeData.Vender.Contains<HopeDataSet.VenderRow>(venderRow))
+                {
+                    Noticia.Add("Erro Venda_m Deletar_Row o valor nao foi apagado do registro");
+                    return false;
+                }
+                else
+                {
+                    Noticia.Add("Venda_m Deletar_Row valor apagado do registro");
+                    return true;
+                }
+            }
+            else
+            {
+                Noticia.Add("Venda_m Deletar_Row valor nullo");
+                return false;
+            }
         }
 
         protected override bool Insert_New_Row(string Id_caixa, out Dictionary<int, object> keyValuesData)

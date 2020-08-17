@@ -18,7 +18,7 @@ namespace Hope.Entidade
         int _ID_Caixa;
         internal DateTime _Time_Start;
         internal DateTime _Time_Finish;
-        ListPosicao _Posicao;
+       internal ListPosicao _Posicao;
         decimal _Troco;
         decimal _Total_Recebido;
         decimal _Total_Venda;
@@ -346,7 +346,9 @@ namespace Hope.Entidade
         internal const int Key_Pagamento = 12;
         internal enum ListPosicao
         {
-            Iniciado, Aberto, Espera, Pago, Finalizado
+            Iniciado, Aberto, Espera, Pago, Finalizado,
+            Aborta,
+            Devolucao
         }
         private string Item_e_s_Serelizado()
         {
@@ -354,7 +356,7 @@ namespace Hope.Entidade
             StringBuilder builder = new StringBuilder();
             foreach (Item_e item in _item_e_s)
             {
-               builder.AppendLine( string.Format(formnat, item.ToSerilazion()));
+                builder.AppendLine(string.Format(formnat, item.ToSerilazion()));
             }
             return builder.ToString();
         }
@@ -463,6 +465,50 @@ namespace Hope.Entidade
                 Noticia.Add("Paga nullo");
                 return false;
             }
+        }
+
+        bool IVender_e.Aborta()
+        {
+            _Posicao = ListPosicao.Aborta;
+            return true;
+        }
+
+        bool IVender_e.Join(IVender_e vender_)
+        {
+            if (vender_ != null)
+            {
+                Vender_e _E = (Vender_e)vender_;
+                if (_E._Posicao == ListPosicao.Iniciado)
+                {
+                    foreach (IItem_e item in _E._item_e_s)
+                    {
+                        var temptotalvenda = this._Total_Venda;
+                        this._Total_Venda = decimal.Add(this._Total_Venda, item.Get_Sub_Total);
+                        string format = "Total Venda {0} valor anterio {1} diferenca adicionado {2}";
+                        Noticia.Add(string.Format(format, this._Total_Venda, temptotalvenda, item.Get_Sub_Total));
+                        _item_e_s.Add(item);
+
+                    }
+                    return true;
+
+                }
+                else
+                {
+                    Noticia.Add("Vender_e Join Valor Ivender_e nao pode ser juntado");
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Vender_e Join valor nulo");
+                return false;
+            }
+        }
+
+        bool IVender_e.Devolucao()
+        {
+            _Posicao = ListPosicao.Devolucao;
+            return true;
         }
     }
 }

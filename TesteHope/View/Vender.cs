@@ -133,5 +133,37 @@ namespace TesteHope.View
                 lblresultado.Text = Program.Vender.Notifica();
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Program.Vender.Aborta();
+            bool v1 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+            if (v1)
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                btnfechar.PerformClick();
+            }
+            else
+            {
+
+                lblresultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+            }
+        }
+
+        private void btngravar_Click(object sender, EventArgs e)
+        {
+            bool v1 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+            if (v1)
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                btnfechar.PerformClick();
+
+            }
+            else
+            {
+
+                lblresultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+            }
+        }
     }
 }
