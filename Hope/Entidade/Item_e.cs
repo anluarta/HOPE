@@ -19,7 +19,7 @@ namespace Hope.Entidade
         }
         internal Item_e(object dadoSerial) : this()
         {
-            object[] vs = dadoSerial.ToString().Split(char.Parse(","));
+            object[] vs = dadoSerial.ToString().Split(char.Parse("."));
             Dictionary<int, object> keyValues = new Dictionary<int, object>();
             foreach (object item in vs)
             {
@@ -147,7 +147,7 @@ namespace Hope.Entidade
         }
         internal string ToSerilazion()
         {
-            string format = "{0}:{1},";
+            string format = "{0}:{1}.";
             StringBuilder builder = new StringBuilder();
             builder.Append(string.Format(format, Key_Index, _index_item));
             builder.Append(string.Format(format, Key_Descricao, _Descricao));

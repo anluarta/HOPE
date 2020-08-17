@@ -417,7 +417,7 @@ namespace Hope.Entidade
                     this.vCheque=decimal.Add(this.vCheque, _E.Cheque);
                     this.vCredito=decimal.Add(this.vCredito, _E.Credito);
                     this.vDebito=decimal.Add(this.vDebito, _E.Debito);
-                    this.vDinheiro=decimal.Add(this.vDinheiro, _E.Debito);
+                    this.vDinheiro=decimal.Add(this.vDinheiro, _E.Dinheiro);
                     this.vInterno=decimal.Add(this.vInterno, _E.Interno);
                     this.vOutro=decimal.Add(this.vOutro, _E.Outro);
                     this.vRecebido=decimal.Add(this.vRecebido, _E.Recebido);
@@ -425,7 +425,8 @@ namespace Hope.Entidade
                     this.vValeAlimentacao=decimal.Add(this.vValeAlimentacao, _E.Vale_Alimentacao);
                     this.vValeRefeicao=decimal.Add(this.vValeRefeicao, _E.Vale_Refeicao);
                     this.vDesconto=decimal.Add(this.vDesconto, _E.Desconto);
-                    return false;
+                    this.vVendido=decimal.Add(this.vVendido, _E.Cobrado);
+                    return true;
                 }
             }
             else

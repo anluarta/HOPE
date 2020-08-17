@@ -351,12 +351,12 @@ namespace Hope.Entidade
         private string Item_e_s_Serelizado()
         {
             string formnat = "{0}|";
-            string result = string.Empty;
+            StringBuilder builder = new StringBuilder();
             foreach (Item_e item in _item_e_s)
             {
-                result += string.Format(formnat, item.ToSerilazion());
+               builder.AppendLine( string.Format(formnat, item.ToSerilazion()));
             }
-            return result;
+            return builder.ToString();
         }
         private void Item_e_s_Desereliza(object dado)
         {

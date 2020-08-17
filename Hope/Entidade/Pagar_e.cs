@@ -71,14 +71,17 @@ namespace Hope.Entidade
         }
         internal Pagar_e(object dadoserial) : this()
         {
-            if (dadoserial.ToString().Contains(",") & dadoserial.ToString().Contains(":"))
+            if (dadoserial.ToString().Contains(".") & dadoserial.ToString().Contains(":"))
             {
-                string[] vs = dadoserial.ToString().Split(char.Parse(","));
+                string[] vs = dadoserial.ToString().Split(char.Parse("."));
                 Dictionary<int, object> key = new Dictionary<int, object>();
                 foreach (string item in vs)
                 {
-                    string[] subitem = item.Split(char.Parse(":"));
-                    key.Add(int.Parse(subitem[0]), subitem[1]);
+                    if (item.Contains(":"))
+                    {
+                        string[] subitem = item.Split(char.Parse(":"));
+                        key.Add(int.Parse(subitem[0]), subitem[1]);
+                    }
                 }
                 _Bruto = decimal.Parse(key[Key_Bruto].ToString());
                 _Desconto = decimal.Parse(key[Key_Desconto].ToString());
@@ -280,7 +283,7 @@ namespace Hope.Entidade
         }
         internal string ToSerilizacao()
         {
-            string format = "{0}:{1},";
+            string format = "{0}:{1}.";
             StringBuilder builder = new StringBuilder();
             builder.Append(string.Format(format, Key_Dinheiro, _Dinheiro));
             builder.Append(string.Format(format, Key_Bruto, _Bruto));
