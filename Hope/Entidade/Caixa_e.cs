@@ -413,22 +413,19 @@ namespace Hope.Entidade
                 }
                 else
                 {
-                    this.vCancelado = decimal.Add(this.v, entidade);
-this.vCheque=decimal.Add(this.v,entidade);
-this.vCredito=decimal.Add(this.v,entidade);
-this.vDebito=decimal.Add(this.v,entidade);
-this.vDinheiro=decimal.Add(this.v,entidade);
-this.vInterno=decimal.Add(this.v,entidade);
-this.vOutro=decimal.Add(this.v,entidade);
-this.vRecebido=decimal.Add(this.v,entidade);
-this.vSangria=decimal.Add(this.v,entidade);
-this.vSuprimento=decimal.Add(this.v,entidade);
-this.vTroco=decimal.Add(this.v,entidade);
-this.vValeAlimentacao=decimal.Add(this.v,entidade);
-this.vValeRefeicao=decimal.Add(this.v,entidade);
-this.vVendido=decimal.Add(this.v,entidade);
-this.vDesconto=decimal.Add(this.v,entidade);
-
+                    entidade.Pagarmento(out IPagar_e _E);
+                    this.vCheque=decimal.Add(this.vCheque, _E.Cheque);
+                    this.vCredito=decimal.Add(this.vCredito, _E.Credito);
+                    this.vDebito=decimal.Add(this.vDebito, _E.Debito);
+                    this.vDinheiro=decimal.Add(this.vDinheiro, _E.Debito);
+                    this.vInterno=decimal.Add(this.vInterno, _E.Interno);
+                    this.vOutro=decimal.Add(this.vOutro, _E.Outro);
+                    this.vRecebido=decimal.Add(this.vRecebido, _E.Recebido);
+                    this.vTroco=decimal.Add(this.vTroco, _E.Troco);
+                    this.vValeAlimentacao=decimal.Add(this.vValeAlimentacao, _E.Vale_Alimentacao);
+                    this.vValeRefeicao=decimal.Add(this.vValeRefeicao, _E.Vale_Refeicao);
+                    this.vDesconto=decimal.Add(this.vDesconto, _E.Desconto);
+                    return false;
                 }
             }
             else
