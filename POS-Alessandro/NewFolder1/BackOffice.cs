@@ -56,5 +56,15 @@ namespace POS_Alessandro.NewFolder1
         {
             System.Diagnostics.Process.Start("https://www.app.bbcloud.com.br/acesso/login");
         }
+
+        private void BackOffice_Load(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

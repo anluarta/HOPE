@@ -23,7 +23,7 @@ namespace POS_Alessandro.NewFolder1
         private void TxtUsuarioTrans_Enter(object sender, EventArgs e)
         {
            if (TxtUsuarioTrans.Text == "Usuario") ;
-           TxtUsuarioTrans.Text = "_";
+           TxtUsuarioTrans.Text = "Usuario";
            TxtUsuarioTrans.ForeColor = Color.LightGray;
 
 
@@ -42,7 +42,7 @@ namespace POS_Alessandro.NewFolder1
            // if (TxtSenhaTrans.Text == "") ;
            // TxtSenhaTrans.Text = "";
            // TxtSenhaTrans.ForeColor = Color.LightGray;
-           // TxtSenhaTrans.UseSystemPasswordChar = true;
+           TxtSenhaTrans.UseSystemPasswordChar = true;
 
         }
 
@@ -51,7 +51,7 @@ namespace POS_Alessandro.NewFolder1
            // if (TxtSenhaTrans.Text == "Senha") ;
             //TxtSenhaTrans.Text = "";
             //TxtSenhaTrans.ForeColor = Color.DimGray;
-           // TxtSenhaTrans.UseSystemPasswordChar = false;
+           TxtSenhaTrans.UseSystemPasswordChar = false;
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -108,6 +108,13 @@ namespace POS_Alessandro.NewFolder1
         private void label3_Click(object sender, EventArgs e)
         {
             //so ira aparecer caso seja errado a senha ou usuario
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCaixaClosed frmCaixa = new FrmCaixaClosed();
+            frmCaixa.ShowDialog();
+
         }
     }
 

@@ -125,29 +125,7 @@
         MwszoxLvPSrh7lQiIqhEZlKJqqIS3U0lZoZK7C6VuDv+P34Q+zvinprU6wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuFlatButton1.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAABHdJREFUaEPt
-        mUuoVVUYx6/mo9LUnj4KtLIgyEqc2CDBcGAvR6EIglDmwKmDIogaNGhi0UvTMpz4GFSilumgQYkgqdQo
-        Sk1CRIIeouXb0t9ve77Lueeeffbr7HsF/cOPc9fae629Ht/61rfW7bmuK5oID8CMxq/pq0ojYR68C/vh
-        X7jUBvP3ge89B5YbcN0PH8LfEA27AAfhS9gIqxu/X4H5Po93LfcB3Ae16y5YC9GAP8GPz4XR0Ek+fxpW
-        wl8QHf0Y7oRatBBiZA/ACzACykjzeBEOgfXZiQXQNQ2DVWDlp+BlGA7dkJ1+FU6D9Wtyfq+SboJtYIU/
-        wcNQhx6Bn8HvbAG/W0o3wBdgRd/CWKhT4+A78HsOVKkRD5OwwaV7XlB+Zxf4XRd4IbnoLKhJ1D3CrboV
-        wlTmm5FHujW9hIuuLhvOkjbu4tSl3mFGlj4Fe6mXGEzpVWzHmiTVQe50Onz9cB63di+81WCRGRmaBvH+
-        42Z0kO5QP34e/E6q9JP2zo0jj4bADrCMnZ0OabIRP4LvOiijIEsvge+/n6TayF1KW9aOiux098BxsHKD
-        pjRX9QZE52aakUO2yd0ytU1Ga1Za2NWgxWBZecWMFj0GTrPP3zSjgML1PpOkWmTY6EODnzKKjegsPGRG
-        Q468YanPfoAis6ieBcu+naRa5NQ6dVnRWpoM9iN6c2cbCup1iM6UcaG3wEX4Pkk1yQX1D7hAqig2JVkG
-        +ttzjfRyKKtf4STYzl5NACvenqSq6TOwrhPwS+NvQ4EY+TIKD+XG16sHwcz1Saqa3MF+B+sTj1pToYo8
-        AVmXZ85eubrN/CRJVdcGiEZ3YyA8LVnXo0mqoW6O9JPwP0Sj/4NZUEVtR3o8mFnVpsfAb2BduyFsOu8O
-        mKaw6T5nyfAenpqrSPOy8rBj4wvdlXnvQVkdhn7eQ7kB6Kf1i2XkphRmobsLvQPm+Wy2GQXl7LX10yp2
-        xKeSVDF5UDgClv8GmkfkZtA8fKbp2Igi8nLHsiuSVIviofcSRbUOLOsUTjajRU+AC9J3MuPjFnnpYznv
-        TPopojy34iLXVtFZWWpGimImNZO88c2NkBl5GuFZ8ZIkla3b4BhYZif0WyhN0nvE5cxR8PSdJQfB9zsu
-        Yu/WXIxWnicauxvmNMhzteUJJN6fZEYHOdt6DUPaKWZ0kndr9s4z2mDqNbAdxtOZcsS0a0/DRmmDIY9t
-        Z+APuN2MPPIy0F56/+A9xEDKdRIu8nkziigOud74DNQNkz7d7d/vltpBvcv7HKxgD+SeppJyRuNKbCuU
-        vj11hL3FtCJNpS4b14bDJDaD/rmS7HH4bxenXqXo4TRNujW9hIvO+jUJZ7hr8jLQncnKPbO5ARXZOZtl
-        OTcO/bD16SUKL7q88ihl7BB3GLpG/ah3ElnRoYGS1wHGEvFvEOv5COpeL4nc2ZzKuDIQw0d30q9hE9g4
-        f007MxFXizNmLJK509Uhbdvoy5h5LxjlRcOaMd942AsXQ99urYmuyaObpxb/Y+tvn2P/NaqenstjsDr1
-        hoTFxQAAAABJRU5ErkJggg==
-</value>
-  </data>
+  <metadata name="TmHora.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -21,5 +21,15 @@ namespace POS_Alessandro.NewFolder1
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TmHora_Tick(object sender, EventArgs e)
+        {
+            LblHora.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

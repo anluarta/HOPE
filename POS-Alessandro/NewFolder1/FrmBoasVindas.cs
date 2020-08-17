@@ -63,5 +63,10 @@ namespace POS_Alessandro.NewFolder1
 
 
         }
+
+        private void circularProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
