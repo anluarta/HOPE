@@ -21,5 +21,20 @@ namespace POS_Alessandro.NewFolder1
         {
 
         }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void encerrarCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void voltarOperarCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

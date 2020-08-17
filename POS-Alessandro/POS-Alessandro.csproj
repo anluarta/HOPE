@@ -219,5 +219,20 @@
       <Name>Hope</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

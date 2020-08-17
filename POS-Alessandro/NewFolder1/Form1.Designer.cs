@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.TxtUsuarioTrans = new System.Windows.Forms.TextBox();
             this.TxtSenhaTrans = new System.Windows.Forms.TextBox();
@@ -36,12 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnEntrarTRans = new System.Windows.Forms.Button();
             this.LklbEsqueciSenha = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnClose = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.bunifuSeparator3 = new ns1.BunifuSeparator();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
@@ -52,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.bunifuSeparator3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -59,6 +62,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 46);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "OPE\r\nSISTEMAS\r\n";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // bunifuSeparator1
             // 
@@ -152,17 +166,6 @@
             this.LklbEsqueciSenha.TabStop = true;
             this.LklbEsqueciSenha.Text = "Esqueci minha senha";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 46);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "OPE\r\nSISTEMAS\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -214,12 +217,35 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.Black;
+            this.bunifuSeparator3.LineThickness = 1;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(113, 152);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Size = new System.Drawing.Size(82, 6);
+            this.bunifuSeparator3.TabIndex = 2;
+            this.bunifuSeparator3.Transparency = 255;
+            this.bunifuSeparator3.Vertical = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(654, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 20);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmLoginTrans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnMinimizar);
@@ -265,5 +291,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ns1.BunifuSeparator bunifuSeparator3;
+        private System.Windows.Forms.Button button1;
     }
 }
