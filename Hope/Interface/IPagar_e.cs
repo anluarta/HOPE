@@ -2,6 +2,7 @@
 {
     public interface IPagar_e
     {
+        string Noticia();
         decimal Bruto { get; }
         decimal Desconto { get; }
         decimal Cobrado { get; }

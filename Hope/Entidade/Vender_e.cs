@@ -215,29 +215,18 @@ namespace Hope.Entidade
             return builder.ToString();
         }
 
-        bool IVender_e.Pagarmento(IPagar_e entidade)
+        bool IVender_e.Pagarmento(out IPagar_e entidade)
         {
-            if (entidade != null)
+            if (Pagar == null)
             {
-                if (entidade.Recebido >= _Total_Venda)
-                {
-                    _Desconto = entidade.Desconto;
-                    _Troco = entidade.Troco;
-                    _Total_Recebido = entidade.Recebido;
-                    Pagar = (Pagar_e)entidade;
-                    return true;
-                }
-                else
-                {
-                    Noticia.Add("valor recebido abaixo da venda");
-                    return false;
-                }
+                Pagar = new Pagar_e(_Total_Venda);
+                entidade = Pagar;
             }
             else
             {
-                Noticia.Add("Paga nullo");
-                return false;
+                entidade = Pagar;
             }
+            return true;
         }
 
         bool IVender_e.Remover(IItem_e entidade)
@@ -449,6 +438,31 @@ namespace Hope.Entidade
                     break;
             }
             return PLIS;
+        }
+
+        bool IVender_e.Add(IPagar_e entidade)
+        {
+            if (entidade != null)
+            {
+                if (entidade.Recebido >= _Total_Venda)
+                {
+                    _Desconto = entidade.Desconto;
+                    _Troco = entidade.Troco;
+                    _Total_Recebido = entidade.Recebido;
+                    Pagar = (Pagar_e)entidade;
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("valor recebido abaixo da venda");
+                    return false;
+                }
+            }
+            else
+            {
+                Noticia.Add("Paga nullo");
+                return false;
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ namespace TesteHope.View
 {
     public partial class ItemEditar : UserControl
     {
+        Hope.Interface.IItem_e Item_Ativo;
         public ItemEditar()
         {
             InitializeComponent();
@@ -23,46 +24,40 @@ namespace TesteHope.View
             txtSubTotal.Text = item.Get_Sub_Total.ToString();
             txtUnidade.Text = item.Get_Unidade;
             txtVenda.Text = item.Get_Venda.ToString();
-
+            Item_Ativo = item;
         }
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Pos.Vender.Item_Novo(Program.Vender, out Hope.Interface.IItem_e entidade))
+
+            bool v1 = Item_Ativo.Set_Descricao(descricao: txtDescricao.Text);
+            bool v2 = Item_Ativo.Set_Unidade(descricao: txtUnidade.Text);
+            bool v3 = Item_Ativo.Set_Quantidade(descricao: txtQuantidade.Text);
+            bool v4 = Item_Ativo.Set_Venda(descricao: txtVenda.Text);
+            if (v1 & v2 & v3 & v4)
             {
-                bool v1 = entidade.Set_Descricao(descricao: txtDescricao.Text);
-                bool v2 = entidade.Set_Unidade(descricao: txtDescricao.Text);
-                bool v3 = entidade.Set_Quantidade(descricao: txtDescricao.Text);
-                bool v4 = entidade.Set_Venda(descricao: txtDescricao.Text);
-                if (v1 & v2 & v3 & v4)
+                bool v5 = Program.Vender.Update(Item_Ativo);
+                if (v5)
                 {
-                    bool v5 = Program.Vender.Add(entidade);
-                    if (v5)
+                    bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
+                    if (v6)
                     {
-                        bool v6 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
-                        if (v6)
-                        {
-                            MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-                            btnfechar.PerformClick();
-                        }
-                        else
-                        {
-                            lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
-                        }
+                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                        btnfechar.PerformClick();
                     }
                     else
                     {
-                        lblResultado.Text = Program.Vender.Notifica();
+                        lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
                     }
                 }
                 else
                 {
-                    lblResultado.Text = entidade.Notifica();
+                    lblResultado.Text = Program.Vender.Notifica();
                 }
             }
             else
             {
-                lblResultado.Text = Program.ObjHope.Pos.Vender.Notificar();
+                lblResultado.Text = Item_Ativo.Notifica();
             }
         }
     }

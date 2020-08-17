@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -168,6 +169,7 @@
     <None Include="Properties\DataSources\Hope.Interface.ICaixa_e.datasource" />
     <None Include="Properties\DataSources\Hope.Interface.IColaborador_e.datasource" />
     <None Include="Properties\DataSources\Hope.Interface.IItem_e.datasource" />
+    <None Include="Properties\DataSources\Hope.Interface.IPagar_e.datasource" />
     <None Include="Properties\DataSources\Hope.Interface.IVender_e.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

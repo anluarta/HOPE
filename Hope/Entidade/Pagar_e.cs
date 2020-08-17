@@ -297,6 +297,18 @@ namespace Hope.Entidade
             builder.Append(string.Format(format, Key_Troco, _Troco));
             return builder.ToString();
         }
+
+        string IPagar_e.Noticia()
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string item in Noticia)
+            {
+                builder.AppendLine(item);
+            }
+            Noticia.Clear();
+            return builder.ToString();
+        }
+
         internal const int Key_Bruto = 1;
         internal const int Key_Desconto = 2;
         internal const int Key_Cobrado = 3;

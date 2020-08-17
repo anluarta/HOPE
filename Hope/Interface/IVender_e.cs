@@ -14,10 +14,11 @@ namespace Hope.Interface
         decimal Get_Valor_Recebido { get; }
         decimal Get_Valor_Desconto { get; }
         decimal Get_Valor_Troco { get; }
-        bool Pagarmento(IPagar_e entidade);
+        bool Pagarmento(out IPagar_e entidade);
         bool Finalizar();
         IItem_e[] GetDataByItem();
         bool Add(IItem_e entidade);
+        bool Add(IPagar_e entidade);
         bool Remover(IItem_e entidade);
         bool Update(IItem_e entidade);
         bool SelectItem(object current,out IItem_e item_);

@@ -404,6 +404,39 @@ namespace Hope.Entidade
 
         bool ICaixa_e.Add(IVender_e entidade)
         {
+            if (entidade != null)
+            {
+                if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
+                {
+                    Noticia.Add("Caixa_e Add IVender_e nao ta finalizado");
+                    return false;
+                }
+                else
+                {
+                    this.vCancelado = decimal.Add(this.v, entidade);
+this.vCheque=decimal.Add(this.v,entidade);
+this.vCredito=decimal.Add(this.v,entidade);
+this.vDebito=decimal.Add(this.v,entidade);
+this.vDinheiro=decimal.Add(this.v,entidade);
+this.vInterno=decimal.Add(this.v,entidade);
+this.vOutro=decimal.Add(this.v,entidade);
+this.vRecebido=decimal.Add(this.v,entidade);
+this.vSangria=decimal.Add(this.v,entidade);
+this.vSuprimento=decimal.Add(this.v,entidade);
+this.vTroco=decimal.Add(this.v,entidade);
+this.vValeAlimentacao=decimal.Add(this.v,entidade);
+this.vValeRefeicao=decimal.Add(this.v,entidade);
+this.vVendido=decimal.Add(this.v,entidade);
+this.vDesconto=decimal.Add(this.v,entidade);
+
+                }
+            }
+            else
+            {
+                Noticia.Add("Caixa_e Add IVender valor Nullo");
+                return false;
+            }
+            //entidade.Pagarmento
             throw new NotImplementedException();
         }
     }
