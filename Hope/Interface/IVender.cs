@@ -13,6 +13,7 @@ namespace Hope.Interface
         bool Novo(ICaixa_e caixaOperacao,out IVender_e vender_);
         bool Gravar(IVender_e vender);
         bool Select(object current,out IVender_e vender_);
+        bool Continuar_Registro(object current, out IVender_e vender_);
         IConsulta Consulta();
         bool Fill(IConsulta consulta,out IVender_e[] vender_s);
         bool Item_Novo(IVender_e entidade,out IItem_e item_);

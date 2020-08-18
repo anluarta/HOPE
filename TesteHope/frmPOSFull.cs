@@ -221,11 +221,30 @@ namespace TesteHope
         {
             vwVendaLista = new View.VendaLista();
             vwVendaLista.btnfechar.Click += new EventHandler(vwVendaLista_btnfechar_Click);
+            vwVendaLista.btnCarregarRegistro.Click += new EventHandler(vwVendaLista_btnCarreagarRegistro);
             Exibicao(vwVendaLista);
+        }
+
+        private void vwVendaLista_btnCarreagarRegistro(object sender, EventArgs e)
+        {
+            if (Program.ObjHope.Pos.Vender.Select(vwVendaLista.iVendereBindingSource.Current, out Hope.Interface.IVender_e result))
+            {
+                Remocao(vwVendaLista);
+                Program.Vender = result;
+                vwVenda = new View.Vender();
+                vwVenda.btnfechar.Click += new EventHandler(vwVenda_btnfechar_Click);
+                Exibicao(vwVenda);
+                vwVendaLista = null;
+            }
+            else
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+            }
         }
 
         private void vwVendaLista_btnfechar_Click(object sender, EventArgs e)
         {
+
             Remocao(vwVendaLista);
             vwVendaLista = null;
         }

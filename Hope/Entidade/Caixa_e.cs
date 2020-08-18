@@ -437,5 +437,27 @@ namespace Hope.Entidade
             //entidade.Pagarmento
             throw new NotImplementedException();
         }
+
+        bool ICaixa_e.Remover(IVender_e vender_)
+        {
+            if (vender_ != null)
+            {
+                if (vender_.GetListPosicao()== Vender_e.ListPosicao.Devolucao)
+                {
+
+                }
+                else
+                {
+
+                }
+
+            }
+            else
+            {
+                vender_ = null;
+                return false;
+            }
+            throw new NotImplementedException();
+        }
     }
 }
