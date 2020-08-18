@@ -48,6 +48,7 @@
             this.lbldatetime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCaixaResult = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnlView = new System.Windows.Forms.Panel();
+            this.preLoadHopeCarrgarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.autenticarToolStripMenuItem,
             this.caixaToolStripMenuItem,
-            this.vendaToolStripMenuItem});
+            this.vendaToolStripMenuItem,
+            this.preLoadHopeCarrgarDadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(722, 24);
@@ -82,14 +84,14 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // logouthToolStripMenuItem
             // 
             this.logouthToolStripMenuItem.Name = "logouthToolStripMenuItem";
-            this.logouthToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.logouthToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logouthToolStripMenuItem.Text = "Logouth";
             this.logouthToolStripMenuItem.Click += new System.EventHandler(this.logouthToolStripMenuItem_Click);
             // 
@@ -109,42 +111,42 @@
             // btnCaixaNovo
             // 
             this.btnCaixaNovo.Name = "btnCaixaNovo";
-            this.btnCaixaNovo.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaNovo.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaNovo.Text = "Novo";
             this.btnCaixaNovo.Click += new System.EventHandler(this.BtnCaixaNovo_Click);
             // 
             // btnCaixaFechamento
             // 
             this.btnCaixaFechamento.Name = "btnCaixaFechamento";
-            this.btnCaixaFechamento.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaFechamento.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaFechamento.Text = "Fechamento";
             this.btnCaixaFechamento.Click += new System.EventHandler(this.BtnCaixaFechamento_Click);
             // 
             // btnCaixaSangria
             // 
             this.btnCaixaSangria.Name = "btnCaixaSangria";
-            this.btnCaixaSangria.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaSangria.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaSangria.Text = "Sangria";
             this.btnCaixaSangria.Click += new System.EventHandler(this.BtnCaixaSangria_Click);
             // 
             // btnCaixaSuprimento
             // 
             this.btnCaixaSuprimento.Name = "btnCaixaSuprimento";
-            this.btnCaixaSuprimento.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaSuprimento.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaSuprimento.Text = "Suprimento";
             this.btnCaixaSuprimento.Click += new System.EventHandler(this.BtnCaixaSuprimento_Click);
             // 
             // btnCaixaLeitura
             // 
             this.btnCaixaLeitura.Name = "btnCaixaLeitura";
-            this.btnCaixaLeitura.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaLeitura.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaLeitura.Text = "Leitura";
             this.btnCaixaLeitura.Click += new System.EventHandler(this.BtnCaixaLeitura_Click);
             // 
             // btnCaixaLista
             // 
             this.btnCaixaLista.Name = "btnCaixaLista";
-            this.btnCaixaLista.Size = new System.Drawing.Size(180, 22);
+            this.btnCaixaLista.Size = new System.Drawing.Size(140, 22);
             this.btnCaixaLista.Text = "Lista";
             this.btnCaixaLista.Click += new System.EventHandler(this.btnCaixaLista_Click);
             // 
@@ -160,14 +162,14 @@
             // btnNovaVenda
             // 
             this.btnNovaVenda.Name = "btnNovaVenda";
-            this.btnNovaVenda.Size = new System.Drawing.Size(180, 22);
+            this.btnNovaVenda.Size = new System.Drawing.Size(103, 22);
             this.btnNovaVenda.Text = "Novo";
             this.btnNovaVenda.Click += new System.EventHandler(this.btnNovaVenda_Click);
             // 
             // btnListaVenda
             // 
             this.btnListaVenda.Name = "btnListaVenda";
-            this.btnListaVenda.Size = new System.Drawing.Size(180, 22);
+            this.btnListaVenda.Size = new System.Drawing.Size(103, 22);
             this.btnListaVenda.Text = "Lista";
             this.btnListaVenda.Click += new System.EventHandler(this.btnListaVenda_Click);
             // 
@@ -207,6 +209,13 @@
             this.pnlView.Name = "pnlView";
             this.pnlView.Size = new System.Drawing.Size(722, 382);
             this.pnlView.TabIndex = 5;
+            // 
+            // preLoadHopeCarrgarDadosToolStripMenuItem
+            // 
+            this.preLoadHopeCarrgarDadosToolStripMenuItem.Name = "preLoadHopeCarrgarDadosToolStripMenuItem";
+            this.preLoadHopeCarrgarDadosToolStripMenuItem.Size = new System.Drawing.Size(163, 20);
+            this.preLoadHopeCarrgarDadosToolStripMenuItem.Text = "PreLoadHopeCarrgarDados";
+            this.preLoadHopeCarrgarDadosToolStripMenuItem.Click += new System.EventHandler(this.preLoadHopeCarrgarDadosToolStripMenuItem_Click);
             // 
             // frmPOSFull
             // 
@@ -248,6 +257,7 @@
         private System.Windows.Forms.Panel pnlView;
         private System.Windows.Forms.ToolStripStatusLabel lblCaixaResult;
         private System.Windows.Forms.ToolStripMenuItem btnCaixaLista;
+        private System.Windows.Forms.ToolStripMenuItem preLoadHopeCarrgarDadosToolStripMenuItem;
     }
 }
 

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using Hope.Interface;
+using System.Drawing.Printing;
 
 namespace TesteHope.View
 {
@@ -112,13 +114,29 @@ namespace TesteHope.View
                     bool v3 = Program.ObjHope.Pos.Vender.Gravar(Program.Vender);
                     if (v3)
                     {
-                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
-                        btnfechar.PerformClick();
-
+                        bool v4 = Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao, out ICaixa_e caixa_);
+                        if (v4)
+                        {
+                            Program.CaixaOperacao = caixa_;
+                            if (Program.ObjHope.Pos.Vender.Print_Document(Program.Vender,out PrintDocument document))
+                            {
+                                printPreviewDialog1.Document = document;
+                                printPreviewDialog1.ShowDialog();
+                                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                                btnfechar.PerformClick();
+                            }
+                            else
+                            {
+                                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                        }
                     }
                     else
                     {
-
                         lblresultado.Text = Program.ObjHope.Pos.Vender.Notificar();
                     }
                 }

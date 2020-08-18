@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendaLista));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.iVendereBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -42,9 +41,11 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVisualizarRegistro = new System.Windows.Forms.ToolStripButton();
+            this.btnCarregarRegistro = new System.Windows.Forms.ToolStripButton();
             this.btnDevolucao = new System.Windows.Forms.ToolStripButton();
             this.btnfechar = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.getIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getIDCaixaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getTotalItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +53,11 @@
             this.getValorRecebidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getValorTrocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.btnCarregarRegistro = new System.Windows.Forms.ToolStripButton();
+            this.iVendereBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -90,10 +90,6 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(847, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // iVendereBindingSource
-            // 
-            this.iVendereBindingSource.DataSource = typeof(Hope.Interface.IVender_e);
             // 
             // bindingNavigatorCountItem
             // 
@@ -173,6 +169,15 @@
             this.btnVisualizarRegistro.Text = "Visualizar Regisatro";
             this.btnVisualizarRegistro.Click += new System.EventHandler(this.btnVisualizarRegistro_Click);
             // 
+            // btnCarregarRegistro
+            // 
+            this.btnCarregarRegistro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCarregarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnCarregarRegistro.Image")));
+            this.btnCarregarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCarregarRegistro.Name = "btnCarregarRegistro";
+            this.btnCarregarRegistro.Size = new System.Drawing.Size(102, 22);
+            this.btnCarregarRegistro.Text = "Carregar Registro";
+            // 
             // btnDevolucao
             // 
             this.btnDevolucao.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -181,6 +186,7 @@
             this.btnDevolucao.Name = "btnDevolucao";
             this.btnDevolucao.Size = new System.Drawing.Size(67, 22);
             this.btnDevolucao.Text = "Devolucao";
+            this.btnDevolucao.Click += new System.EventHandler(this.btnDevolucao_Click);
             // 
             // btnfechar
             // 
@@ -215,6 +221,16 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(847, 451);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // getIDDataGridViewTextBoxColumn
             // 
@@ -265,24 +281,9 @@
             this.getValorTrocoDataGridViewTextBoxColumn.Name = "getValorTrocoDataGridViewTextBoxColumn";
             this.getValorTrocoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // printPreviewDialog1
+            // iVendereBindingSource
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // btnCarregarRegistro
-            // 
-            this.btnCarregarRegistro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnCarregarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnCarregarRegistro.Image")));
-            this.btnCarregarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCarregarRegistro.Name = "btnCarregarRegistro";
-            this.btnCarregarRegistro.Size = new System.Drawing.Size(102, 22);
-            this.btnCarregarRegistro.Text = "Carregar Registro";
+            this.iVendereBindingSource.DataSource = typeof(Hope.Interface.IVender_e);
             // 
             // VendaLista
             // 
@@ -295,8 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iVendereBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

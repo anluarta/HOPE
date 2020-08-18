@@ -71,9 +71,9 @@ namespace Hope.Entidade
         }
         internal Pagar_e(object dadoserial) : this()
         {
-            if (dadoserial.ToString().Contains(".") & dadoserial.ToString().Contains(":"))
+            if (dadoserial.ToString().Contains("|") & dadoserial.ToString().Contains(":"))
             {
-                string[] vs = dadoserial.ToString().Split(char.Parse("."));
+                string[] vs = dadoserial.ToString().Split(char.Parse("|"));
                 Dictionary<int, object> key = new Dictionary<int, object>();
                 foreach (string item in vs)
                 {
@@ -283,22 +283,22 @@ namespace Hope.Entidade
         }
         internal string ToSerilizacao()
         {
-            string format = "{0}:{1}.";
-            StringBuilder builder = new StringBuilder();
-            builder.Append(string.Format(format, Key_Dinheiro, _Dinheiro));
-            builder.Append(string.Format(format, Key_Bruto, _Bruto));
-            builder.Append(string.Format(format, Key_Desconto, _Desconto));
-            builder.Append(string.Format(format, Key_Cobrado, _Cobrado));
-            builder.Append(string.Format(format, Key_Recebido, _Recebido));
-            builder.Append(string.Format(format, Key_Debito, _Debito));
-            builder.Append(string.Format(format, Key_Credito, _Credito));
-            builder.Append(string.Format(format, Key_Cheque, _Cheque));
-            builder.Append(string.Format(format, Key_Vale_Alimentacao, _Vale_Alimentacao));
-            builder.Append(string.Format(format, Key_Vale_Refeicao, _Vale_Refeicao));
-            builder.Append(string.Format(format, Key_Outro, _Outro));
-            builder.Append(string.Format(format, Key_Interno, _Interno));
-            builder.Append(string.Format(format, Key_Troco, _Troco));
-            return builder.ToString();
+            string format = "{0}:{1}";
+            List<string> vs = new List<string>();
+            vs.Add(string.Format(format, Key_Dinheiro, _Dinheiro));
+            vs.Add(string.Format(format, Key_Bruto, _Bruto));
+            vs.Add(string.Format(format, Key_Desconto, _Desconto));
+            vs.Add(string.Format(format, Key_Cobrado, _Cobrado));
+            vs.Add(string.Format(format, Key_Recebido, _Recebido));
+            vs.Add(string.Format(format, Key_Debito, _Debito));
+            vs.Add(string.Format(format, Key_Credito, _Credito));
+            vs.Add(string.Format(format, Key_Cheque, _Cheque));
+            vs.Add(string.Format(format, Key_Vale_Alimentacao, _Vale_Alimentacao));
+            vs.Add(string.Format(format, Key_Vale_Refeicao, _Vale_Refeicao));
+            vs.Add(string.Format(format, Key_Outro, _Outro));
+            vs.Add(string.Format(format, Key_Interno, _Interno));
+            vs.Add(string.Format(format, Key_Troco, _Troco));
+            return string.Join("|",vs.ToArray());
         }
 
         string IPagar_e.Noticia()

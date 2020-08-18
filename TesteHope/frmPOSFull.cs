@@ -49,6 +49,7 @@ namespace TesteHope
             }
             else
             {
+                pnlView.Controls.Clear();
                 pnlView.Controls.Add(control);
                 return;
             }
@@ -227,7 +228,7 @@ namespace TesteHope
 
         private void vwVendaLista_btnCarreagarRegistro(object sender, EventArgs e)
         {
-            if (Program.ObjHope.Pos.Vender.Select(vwVendaLista.iVendereBindingSource.Current, out Hope.Interface.IVender_e result))
+            if (Program.ObjHope.Pos.Vender.Continuar_Registro(vwVendaLista.iVendereBindingSource.Current, out Hope.Interface.IVender_e result))
             {
                 Remocao(vwVendaLista);
                 Program.Vender = result;
@@ -260,6 +261,14 @@ namespace TesteHope
         {
             Remocao(vwCaixalista);
             vwCaixalista = null;
+        }
+
+        private void preLoadHopeCarrgarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.PreLoadHope();
+
+            Exibicao(new View.PreLoadCargaDado());
+
         }
     }
 }

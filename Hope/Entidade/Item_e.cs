@@ -1,40 +1,46 @@
 ﻿using Hope.Interface;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Hope.Entidade
 {
     internal class Item_e : IItem_e
     {
         List<string> Notifica;
-        private int _index_item;
-        private string _Descricao;
-        private string _Unidade;
-        private decimal _Quantidade;
-        private decimal _Venda;
-        private decimal _Sub_Total { get { return decimal.Multiply(_Quantidade, _Venda); } }
+        internal int _index_item{get;private set;}
+        internal string _Descricao{get;private set;}
+        internal string _Unidade{get;private set;}
+        internal decimal _Quantidade{get;private set;}
+        internal decimal _Venda { get; private set; }
+        internal decimal _Sub_Total { get { return decimal.Multiply(_Quantidade, _Venda); } }
         private Item_e()
         {
             Notifica = new List<string>();
         }
         internal Item_e(object dadoSerial) : this()
         {
-            object[] vs = dadoSerial.ToString().Split(char.Parse("."));
-            Dictionary<int, object> keyValues = new Dictionary<int, object>();
-            foreach (object item in vs)
+            
+            object[] vs = dadoSerial.ToString().Split(char.Parse("|"));
+            if (vs.Length>4)
             {
-                string strItem = item.ToString();
-                if (strItem.Contains(":"))
+                Dictionary<int, object> keyValues = new Dictionary<int, object>();
+                foreach (object item in vs)
                 {
-                    string[] subItem = strItem.Split(char.Parse(":"));
-                    keyValues.Add(int.Parse(subItem[0]), subItem[1]);
+                    string strItem = item.ToString();
+                    if (strItem.Contains(":"))
+                    {
+                        string[] subItem = strItem.Split(char.Parse(":"));
+                        keyValues.Add(int.Parse(subItem[0]), subItem[1]);
+                    }
                 }
+
+                _index_item = int.Parse(keyValues[Key_Index].ToString());
+                _Descricao = keyValues[Key_Descricao].ToString();
+                _Unidade = keyValues[Key_Unidade].ToString();
+                _Quantidade = decimal.Parse(keyValues[Key_Quantidade].ToString());
+                _Venda = decimal.Parse(keyValues[Key_Venda].ToString()); 
             }
-            _index_item = int.Parse(keyValues[Key_Index].ToString());
-            _Descricao = keyValues[Key_Descricao].ToString();
-            _Unidade = keyValues[Key_Unidade].ToString();
-            _Quantidade = decimal.Parse(keyValues[Key_Quantidade].ToString());
-            _Venda = decimal.Parse(keyValues[Key_Venda].ToString());
         }
         public Item_e(int index_item) : this()
         {
@@ -109,8 +115,9 @@ namespace Hope.Entidade
         {
             if (quantidade != null)
             {
-                if (decimal.TryParse(quantidade, out _Quantidade))
+                if (decimal.TryParse(quantidade, out decimal result))
                 {
+                    _Quantidade = result;
                     return true;
                 }
                 else
@@ -129,8 +136,9 @@ namespace Hope.Entidade
         {
             if (venda != null)
             {
-                if (decimal.TryParse(venda, out _Venda))
+                if (decimal.TryParse(venda, out decimal result))
                 {
+                    _Venda = result;
                     return true;
                 }
                 else
@@ -147,15 +155,15 @@ namespace Hope.Entidade
         }
         internal string ToSerilazion()
         {
-            string format = "{0}:{1}.";
-            StringBuilder builder = new StringBuilder();
-            builder.Append(string.Format(format, Key_Index, _index_item));
-            builder.Append(string.Format(format, Key_Descricao, _Descricao));
-            builder.Append(string.Format(format, Key_Unidade, _Unidade));
-            builder.Append(string.Format(format, Key_Quantidade, _Quantidade));
-            builder.Append(string.Format(format, Key_Venda, _Venda));
-            builder.Append(string.Format(format, Key_Sub_Total, _Sub_Total));
-            return builder.ToString();
+            string format = "{0}:{1}";
+            List<string> vs = new List<string>();
+            vs.Add(string.Format(format, Key_Index, _index_item));
+            vs.Add(string.Format(format, Key_Descricao, _Descricao));
+            vs.Add(string.Format(format, Key_Unidade, _Unidade));
+            vs.Add(string.Format(format, Key_Quantidade, _Quantidade));
+            vs.Add(string.Format(format, Key_Venda, _Venda));
+            vs.Add(string.Format(format, Key_Sub_Total, _Sub_Total));
+            return string.Join("|",vs.ToArray());
         }
         internal const int Key_Index = 1;
         internal const int Key_Descricao = 2;

@@ -7,7 +7,7 @@
         string Get_Start_DateTime{get;}
         string Get_finish_DateTime{get;}
         string Notifica();
-        void Fechamento();
+        bool Fechamento();
         string Dinheiro();
         string Debito();
         string Credito();

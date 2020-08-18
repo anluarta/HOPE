@@ -14,7 +14,7 @@ namespace Hope.Entidade
         int _index;
         private readonly int CaixaID;
         private readonly string Colabora;
-        DateTime _datatime_registro_salvo;
+       internal DateTime _datatime_registro_salvo;
         internal string _vObservacao { get; private set; }
         internal decimal _vValor { get; private set; }
 
@@ -27,14 +27,27 @@ namespace Hope.Entidade
         string ISuprimento_e.Observacao => _vObservacao;
 
         decimal ISuprimento_e.Valor => _vValor;
-
-        internal Suprimento_e(object caixaID, object colaborador)
+        private Suprimento_e()
         {
             Noticia = new List<string>();
+
+        }
+        internal Suprimento_e(object caixaID, object colaborador):this()
+        {
+            _index = 0;
+            _datatime_registro_salvo = DateTime.MinValue;
             _vObservacao = string.Empty;
             _vValor = 0.0m;
             this.CaixaID = int.Parse((string)caixaID);
             this.Colabora = (string)colaborador;
+        }
+        internal Suprimento_e(object index,object idcaixa,object colaborado,object datatimeregistro,object valor) : this()
+        {
+            _index = (int)index;
+            CaixaID = (int)idcaixa;
+            Colabora = (string)colaborado;
+            _datatime_registro_salvo = (DateTime)datatimeregistro;
+            _vValor = (decimal)valor;
         }
         internal Dictionary <int,object> GetKeysValueData()
         {
@@ -108,7 +121,7 @@ namespace Hope.Entidade
                 return false;
             }
         }
-
+        
         IColaborador_e ISuprimento_e.Colaborador()
         {
             return new Colaborador_e(this.Colabora);

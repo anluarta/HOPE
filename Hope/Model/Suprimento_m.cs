@@ -19,7 +19,7 @@ namespace Hope.Model
                 {
                     HopeDataSet.Caixa_SuprimentoRow _SuprimentoRow = Hope.Hope_static.hopeData.Caixa_Suprimento.NewCaixa_SuprimentoRow();
                     _SuprimentoRow.ID_Caixa = (int)keyValuesData[Suprimento_e.Key_CaixaID];
-                    _SuprimentoRow.ID_Colaborador = int.Parse(keyValuesData[Suprimento_e.Key_Colaborado].ToString());
+                    _SuprimentoRow.Colaborador = (string)keyValuesData[Suprimento_e.Key_Colaborado];
                     _SuprimentoRow.Valor = (decimal)keyValuesData[Suprimento_e.Key_Valor];
                     _SuprimentoRow.Observacao = (string)keyValuesData[Suprimento_e.Key_Observacao];
                     _SuprimentoRow.DataRegistro = DateTime.Now;

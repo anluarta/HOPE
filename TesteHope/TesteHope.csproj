@@ -108,6 +108,12 @@
     <Compile Include="View\Pagamento.Designer.cs">
       <DependentUpon>Pagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PreLoadCargaDado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PreLoadCargaDado.Designer.cs">
+      <DependentUpon>PreLoadCargaDado.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VendaLista.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Pagamento.resx">
       <DependentUpon>Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PreLoadCargaDado.resx">
+      <DependentUpon>PreLoadCargaDado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VendaLista.resx">
       <DependentUpon>VendaLista.cs</DependentUpon>

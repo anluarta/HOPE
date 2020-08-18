@@ -152,7 +152,7 @@ namespace Hope.Entidade
                 this.vSangria = decimal.Add(this.vSangria, entidade.Valor);
                 if (tempsangria.CompareTo(this.vSangria)>0)
                 {
-                    string format = "total anterio{0} novo total{1}, diferenca acrecentada{3}";
+                    string format = "total anterio{0} novo total{1}, diferenca acrecentada{2}";
                     Noticia.Add(string.Format(format, tempsangria, vSangria, entidade.Valor));
                     sangria_s.Add((Sangria_e)entidade);
                     return true;
@@ -175,9 +175,19 @@ namespace Hope.Entidade
             if (entidade != null)
             {
                 var tempSuprimento = this.vSuprimento;
-                
-                suprimento_s.Add((Suprimento_e)entidade);
-                return true;
+                this.vSuprimento = decimal.Add(this.vSuprimento, entidade.Valor);
+                if (this.vSuprimento.CompareTo(tempSuprimento) > 0)
+                {
+                    string format = "total anterio{0} novo total{1}, diferenca acrecentada{2}";
+                    Noticia.Add(string.Format(format, tempSuprimento, vSuprimento, entidade.Valor));
+                    suprimento_s.Add((Suprimento_e)entidade);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("valor adicopnado nao acrenta em nada");
+                    return false;
+                }
             }
             else
             {
@@ -208,10 +218,11 @@ namespace Hope.Entidade
             return vDinheiro.ToString("f2");
         }
 
-        void ICaixa_e.Fechamento()
+        bool ICaixa_e.Fechamento()
         {
             Noticia.Add("Caixa Fechado");
             FinishTime = DateTime.Now;
+            return true;
         }
 
         string ICaixa_e.Interno()
@@ -280,6 +291,7 @@ namespace Hope.Entidade
                     };
                     if (vs.Exists(x => x == false))
                     {
+                        Temporario = new Caixa_e(this);
                         Noticia.Add("Existe mudanca a ser aplicada");
                         return true;
                     }
@@ -308,22 +320,22 @@ namespace Hope.Entidade
             try
             {
                 data.Add(Index, ID.ToString());
-                data.Add(Ant_FinishTime, this.Temporario.FinishTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Dinheiro, this.Temporario.vDinheiro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Debido, this.Temporario.vDebito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Credito, this.Temporario.vCredito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Cheque, this.Temporario.vCheque.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_ValeAlimentacao, this.Temporario.vValeAlimentacao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_ValeRefeica, this.Temporario.vValeRefeicao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Outro, this.Temporario.vOutro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Internal, this.Temporario.vInterno.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Sangria, this.Temporario.vSangria.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Suprimento, this.Temporario.vSuprimento.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Troco, this.Temporario.vTroco.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Recebido, this.Temporario.vRecebido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Vendido, this.Temporario.vVendido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Cancelado, this.Temporario.vCancelado.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
-                data.Add(Ant_Desconto, this.Temporario.vDesconto.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_FinishTime, this.Temporario.FinishTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Dinheiro, this.Temporario.vDinheiro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Debido, this.Temporario.vDebito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Credito, this.Temporario.vCredito.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Cheque, this.Temporario.vCheque.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_ValeAlimentacao, this.Temporario.vValeAlimentacao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_ValeRefeica, this.Temporario.vValeRefeicao.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Outro, this.Temporario.vOutro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Internal, this.Temporario.vInterno.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Sangria, this.Temporario.vSangria.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Suprimento, this.Temporario.vSuprimento.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Troco, this.Temporario.vTroco.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Recebido, this.Temporario.vRecebido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Vendido, this.Temporario.vVendido.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Cancelado, this.Temporario.vCancelado.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
+                //data.Add(Ant_Desconto, this.Temporario.vDesconto.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
 
                 data.Add(Nov_FinishTime, this.FinishTime.ToString(System.Globalization.CultureInfo.InvariantCulture));
                 data.Add(Nov_Dinheiro, this.vDinheiro.ToString("f4", System.Globalization.CultureInfo.InvariantCulture));
@@ -444,11 +456,26 @@ namespace Hope.Entidade
             {
                 if (vender_.GetListPosicao()== Vender_e.ListPosicao.Devolucao)
                 {
-
+                    vender_.Pagarmento(out IPagar_e _E);
+                    this.vCheque = decimal.Subtract(this.vCheque, _E.Cheque);
+                    this.vCredito = decimal.Subtract(this.vCredito, _E.Credito);
+                    this.vDebito = decimal.Subtract(this.vDebito, _E.Debito);
+                    this.vDinheiro = decimal.Subtract(this.vDinheiro, _E.Dinheiro);
+                    this.vInterno = decimal.Subtract(this.vInterno, _E.Interno);
+                    this.vOutro = decimal.Subtract(this.vOutro, _E.Outro);
+                    this.vRecebido = decimal.Subtract(this.vRecebido, _E.Recebido);
+                    this.vTroco = decimal.Subtract(this.vTroco, _E.Troco);
+                    this.vValeAlimentacao = decimal.Subtract(this.vValeAlimentacao, _E.Vale_Alimentacao);
+                    this.vValeRefeicao = decimal.Subtract(this.vValeRefeicao, _E.Vale_Refeicao);
+                    this.vDesconto = decimal.Subtract(this.vDesconto, _E.Desconto);
+                    this.vVendido = decimal.Subtract(this.vVendido, _E.Cobrado);
+                    this.vCancelado = decimal.Add(this.vCancelado, _E.Cobrado);
+                    return true;
                 }
                 else
                 {
-
+                    Noticia.Add("Erro Caixa_e Remover valor Ivender_e nao esta em devolucao");
+                    return false;
                 }
 
             }
@@ -457,7 +484,6 @@ namespace Hope.Entidade
                 vender_ = null;
                 return false;
             }
-            throw new NotImplementedException();
         }
     }
 }

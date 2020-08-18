@@ -11,17 +11,18 @@ namespace Hope.Entidade
     {
         Vender_e Temporario;
         List<string> Noticia;
-        List<IItem_e> _item_e_s;
-        Pagar_e Pagar;
-        Colaborador_e _Colaborador;
-        int _Index;
-        int _ID_Caixa;
-        internal DateTime _Time_Start;
-        internal DateTime _Time_Finish;
-       internal ListPosicao _Posicao;
-        decimal _Troco;
-        decimal _Total_Recebido;
-        decimal _Total_Venda;
+        internal List<IItem_e> _item_e_s { get; private set; }
+        internal Pagar_e Pagar { get; private set; }
+        internal Colaborador_e _Colaborador{get;private set;}
+        internal int _Index{get;private set;}
+        internal int _ID_Caixa{get;private set;}
+        internal DateTime _Time_Start{get;private set;}
+        internal DateTime _Time_Finish{get;private set;}
+        internal ListPosicao _Posicao{get;set;}
+        internal decimal _Troco{get;private set;}
+        internal decimal _Total_Recebido{get;private set;}
+        internal decimal _Total_Venda{get;private set;}
+        internal decimal _Desconto{get;private set;}
         //{
         //    get
         //    {
@@ -35,7 +36,6 @@ namespace Hope.Entidade
         //        }
         //    }
         //}
-        decimal _Desconto;
         internal Vender_e(object index, object id_caixa, object start_time, object finish_time, object posicao,
             object colaborador, object item_s, object troco, object recebido, object total_venda, object desconto, object pagamento)
         {
@@ -188,6 +188,7 @@ namespace Hope.Entidade
         {
             if (_Time_Finish == Vender_e._ValuaBaseFinishTime)
             {
+                _Posicao = ListPosicao.Finalizado;
                 _Time_Finish = DateTime.Now;
                 Noticia.Add("Finalizado Sussceso");
                 return true;
@@ -352,24 +353,24 @@ namespace Hope.Entidade
         }
         private string Item_e_s_Serelizado()
         {
-            string formnat = "{0}|";
-            StringBuilder builder = new StringBuilder();
+            List<string> vs = new List<string>();
             foreach (Item_e item in _item_e_s)
             {
-                builder.AppendLine(string.Format(formnat, item.ToSerilazion()));
+                vs.Add(item.ToSerilazion());
             }
-            return builder.ToString();
+            return string.Join("\"", vs.ToArray());
         }
         private void Item_e_s_Desereliza(object dado)
         {
-            if (dado.ToString().Contains("|"))
+            if (dado.ToString().Contains("\""))
             {
                 try
                 {
-                    object[] vs = dado.ToString().Split(char.Parse("|"));
+                    object[] vs = dado.ToString().Split(char.Parse("\""));
                     foreach (object item in vs)
                     {
                         IItem_e _E = new Item_e(item);
+                        
                         _item_e_s.Add(_E);
                     }
 
@@ -511,10 +512,9 @@ namespace Hope.Entidade
             return true;
         }
 
-        ListPosicao IVender_Posicao.GetListPosicao()
+        ListPosicao IVender_e.GetListPosicao()
         {
             return _Posicao;
-            throw new NotImplementedException();
         }
     }
 }

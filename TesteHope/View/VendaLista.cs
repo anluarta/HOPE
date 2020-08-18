@@ -48,5 +48,56 @@ namespace TesteHope.View
                 MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
             }
         }
+
+        private void btnDevolucao_Click(object sender, EventArgs e)
+        {
+            if (Program.ObjHope.Pos.Vender.Select(iVendereBindingSource.Current,out IVender_e result))
+            {
+                if (result.Devolucao())
+                {
+                    if (Program.ObjHope.Pos.Vender.Gravar(result))
+                    {
+                        if (Program.CaixaOperacao.Remover(result))
+                        {
+                            if (Program.ObjHope.Pos.Caixa.Gravar(Program.CaixaOperacao,out ICaixa_e caixa_))
+                            {
+                                Program.CaixaOperacao = caixa_;
+                                if (Program.ObjHope.Pos.Vender.Print_Document(result,out PrintDocument document))
+                                {
+                                    printPreviewDialog1.Document = document;
+                                    printPreviewDialog1.ShowDialog();
+                                }
+                                else
+                                {
+                                    MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show(Program.ObjHope.Pos.Caixa.Notifica());
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(Program.CaixaOperacao.Notifica());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(result.Notifica());
+                }
+
+               
+            }
+            else
+            {
+                MessageBox.Show(Program.ObjHope.Pos.Vender.Notificar());
+            }
+        }
     }
 }

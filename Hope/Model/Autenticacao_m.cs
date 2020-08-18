@@ -18,6 +18,9 @@ namespace Hope.Model
        const string adminUser = "Hope";
        const string adminPass = "Hope";
        const string adminSales = "Hope";
+        const string demoUser = "Demo";
+       const string demoPass = "Demo";
+       const string demoSales = "Demo nome vendedo";
         protected override bool validalogin(string user, string pass)
         {
             if (adminPass.Equals(pass)&adminUser.Equals(user))
@@ -27,6 +30,18 @@ namespace Hope.Model
                     adminUser,
                     adminPass,
                     adminSales
+                    );
+                _Autenticado = true;
+                Noticia.Add("Login Validado");
+                return true;
+            }else if
+                (demoPass.Equals(pass)& demoUser.Equals(user))
+            {
+                Colaborador = new Colaborador_e(
+                    1,
+                    demoPass,
+                    demoUser,
+                    demoSales
                     );
                 _Autenticado = true;
                 Noticia.Add("Login Validado");

@@ -3,6 +3,7 @@ using Hope.Interface;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
@@ -309,202 +310,255 @@ namespace Hope.Controle
             }
         }
         #region PrintDocumento
-        public bool VendaComum(/*Entidade.EntEmpresa empresa, Entidade.EntCupom cupom*/)
-        {
-            //EntCupom = cupom;
-            //EntEmpresa = empresa;
-            //FontVendaEmpresa = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Regular);
-            //FontVendaCabItem = new Font(FontFamily.GenericSerif, 9.0f, FontStyle.Bold);
-            //FontVendaItem = new Font(FontFamily.GenericSerif, 7.0f, FontStyle.Bold);
-            //FontEspaco = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Bold);
-            //BrushVendaEmpresa = Brushes.Black;
-            //this.Print.BeginPrint += PrintDocument_BeginPrint;
-            //this.Print.EndPrint += PrintDocument_EndPrint;
-            //this.Print.PrintPage += new PrintPageEventHandler(VendaNaoRegistrada_PrintPage);
-            //this.Print.PrinterSettings.PrintFileName = "VendaComun";
-            //this.Print.Print();
-            //if (InicioImpresao)
-            //{
-            //    while (!FimImpresao)
-            //    {
-            //        System.Threading.Thread.Sleep(100);
-            //    }
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
-            throw new Exception();
-        }
+
         private void VendaNaoRegistrada_PrintPage(object sender, PrintPageEventArgs e)
         {
-            //Graphics graphics = e.Graphics;
-            //graphics.Clear(Color.White);
-            //graphics.PageUnit = GraphicsUnit.Pixel;
-            //graphics.PageScale = 1.5f;
-            //string STRnomeEmpresta = EntEmpresa.Razao;
-            //string STRlogradouro = EntEmpresa.Logradouro + " " + EntEmpresa.Numero;
-
-            //string STRtelefone = /*"TEL: " + EntEmpresa.Telefone.Insert(0, "(").Insert(3, ") ") + " FAX: " + EntEmpresa.Fax.Insert(0, "(").Insert(3, ") ")*/"";
-            //string STREspaco = "========================================";
-            //string STRSubTitulo = "CUPOM NAO FISCAL";
-            //// REPETE 2 VEZES O STRespaco
-            //// ========================================
-            //// ========================================
-            //string STRcerquilha = "| #";
-            //string STRCod = "| COD";
-            //string STRProduto = "| PRODUTO";
-            //string STRVlr = "VLR";
-            //string STRQtd = "| QTD";
-            //string STRTotal = "| TOTAL |";
-            //// ========================================
-            //// lista de item montado pelo foreach
-            //// ========================================
-            //string STRTituloTotalPedido = "| VALOR TOTAL DO PEDIDO:";
-            //// ========================================
-            //string STRObg = "****OBRIGADO E VOLTE SEMPRE****";
-            //// paramentros linha X
-            //float mgEspacoX = 1.0f;
-            //float mgNomeEmpresaX = 290.0f;
-            //float logradouroX = 10.0f;
-            //float TelefoneX = 10.0f;
-            //float mgSubTituloX = 290.0f;
-            //float cerquilhaX = 8.0f;
-            //float codX = 90.0f;
-            //float produtoX = 260.0f;
-            //float vlrX = 650.0f;
-            //float qtdX = 770.0f;
-            //float totalX = 920.0f;
-            //float TituloTotaX = 10.0f;
-            //float ValorTotalX = 900.0f;
-            //float obrigadoX = 200.0f;
-            //// paramentros linha Y
-            //float nomeempresaY = 5.0f;
-            //float logradouroY = 70.0f;
-            //float TelefoneY = 130.0f;
-            //float espaco1Y = 190.0f;
-            //float SubtituloY = 250.0f;
-            //float espaco2Y = 290.0f;
-            //float espaco3Y = 340.0f;
-            //float cerquilhaY = 400.0f;
-            //float codY = 400.0f;
-            //float produtoY = 400.0f;
-            //float vlrY = 400.0f;
-            //float qtdY = 400.0f;
-            //float totalY = 400.0f;
-            //float espaco4Y = 460.0f;
-            //float ItemY = 530.0f;
-            //PointF nomeempresaF = new PointF(mgNomeEmpresaX, nomeempresaY);
-            //PointF logradouroF = new PointF(logradouroX, logradouroY);
-            //PointF TelefoneF = new PointF(TelefoneX, TelefoneY);
-            //PointF Espaco1F = new PointF(mgEspacoX, espaco1Y);
-            //PointF subtituloF = new PointF(mgSubTituloX, SubtituloY);
-            //PointF Espaco2F = new PointF(mgEspacoX, espaco2Y);
-            //PointF Espaco3F = new PointF(mgEspacoX, espaco3Y);
-            //PointF cerquilhaF = new PointF(cerquilhaX, cerquilhaY);
-            //PointF codF = new PointF(codX, codY);
-            //PointF produtoF = new PointF(produtoX, produtoY);
-            //PointF vlrF = new PointF(vlrX, vlrY);
-            //PointF qtdF = new PointF(qtdX, qtdY);
-            //PointF totalF = new PointF(totalX, totalY);
-            //PointF Espaco4F = new PointF(mgEspacoX, espaco4Y);
-
-            //PointF cerItemF;
-            //PointF codItemF;
-            //PointF prodItemF;
-            //PointF vlrItemF;
-            //PointF qtdItemF;
-            //PointF totalItemF;
-
-            //PointF Espaco5F;
-            //PointF TituloTotalF;
-            //PointF ValorTotalF;
-            //PointF Espaco6F;
-            //PointF ObrigadoF;
-
-            //graphics.DrawString(STRnomeEmpresta, FontVendaEmpresa, BrushVendaEmpresa, nomeempresaF);
-            //graphics.DrawString(STRlogradouro, FontVendaEmpresa, BrushVendaEmpresa, logradouroF);
-            //graphics.DrawString(STRtelefone, FontVendaEmpresa, BrushVendaEmpresa, TelefoneF);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco1F);
-            //graphics.DrawString(STRSubTitulo, FontVendaEmpresa, BrushVendaEmpresa, subtituloF);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco2F);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco3F);
-            //graphics.DrawString(STRcerquilha, FontVendaCabItem, BrushVendaEmpresa, cerquilhaF);
-            //graphics.DrawString(STRCod, FontVendaCabItem, BrushVendaEmpresa, codF);
-            //graphics.DrawString(STRProduto, FontVendaCabItem, BrushVendaEmpresa, produtoF);
-            //graphics.DrawString(STRVlr, FontVendaCabItem, BrushVendaEmpresa, vlrF);
-            //graphics.DrawString(STRQtd, FontVendaCabItem, BrushVendaEmpresa, qtdF);
-            //graphics.DrawString(STRTotal, FontVendaCabItem, BrushVendaEmpresa, totalF);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco4F);
-            //int NumeroIndexProduto = 0;
-            //foreach (Entidade.EntProduto item in EntCupom.Produtos)
-            //{
-            //    cerItemF = new PointF(cerquilhaX, ItemY);
-            //    codItemF = new PointF(codX + 5.0f, ItemY);
-            //    prodItemF = new PointF(produtoX, ItemY);
-            //    vlrItemF = new PointF(vlrX, ItemY);
-            //    qtdItemF = new PointF(qtdX, ItemY);
-            //    totalItemF = new PointF(totalX + 30.0f, ItemY);
-            //    NumeroIndexProduto++;
-            //    string numite = NumeroIndexProduto.ToString();
-            //    switch (numite.Length)
-            //    {
-            //        case 1:
-            //            numite = "|00" + numite;
-            //            break;
-            //        case 2:
-            //            numite = "|0" + numite;
-            //            break;
-            //        case 3:
-            //            numite = "|" + numite;
-            //            break;
-            //        default:
-            //            numite = "|" + numite;
-            //            break;
-            //    }
-            //    graphics.DrawString(numite, FontVendaItem, BrushVendaEmpresa, cerItemF);
-            //    graphics.DrawString(item.Codigo, FontVendaItem, BrushVendaEmpresa, codItemF);
-            //    string descricao = string.Empty;
-            //    if (item.Descricao.Length > 10)
-            //    {
-            //        descricao = item.Descricao.Substring(0, 10);
-            //    }
-            //    else
-            //    {
-            //        descricao = item.Descricao;
-            //    }
-            //    graphics.DrawString(descricao, FontVendaItem, BrushVendaEmpresa, prodItemF);
-            //    graphics.DrawString(item.ValorUnidade.ToString("f2"), FontVendaItem, BrushVendaEmpresa, vlrItemF);
-            //    graphics.DrawString(item.Quantidade.ToString("f4"), FontVendaItem, BrushVendaEmpresa, qtdItemF);
-            //    graphics.DrawString(item.SubValor.ToString("f2"), FontVendaItem, BrushVendaEmpresa, totalItemF);
-            //    ItemY += 50.0f;
-            //}
-            //float espaco5Y = ItemY + 20.0f;
-            //Espaco5F = new PointF(mgEspacoX, espaco5Y);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco5F);
-
-            //float TituloTotaValorlY = espaco5Y + 50.0F;
-            //TituloTotalF = new PointF(TituloTotaX, TituloTotaValorlY);
-            //graphics.DrawString(STRTituloTotalPedido, FontVendaCabItem, BrushVendaEmpresa, TituloTotalF);
-            //ValorTotalF = new PointF(ValorTotalX, TituloTotaValorlY);
-            //graphics.DrawString(EntCupom.Total, FontVendaCabItem, BrushVendaEmpresa, ValorTotalF);
-
-            //float espaco6Y = TituloTotaValorlY + 50.0F;
-            //Espaco6F = new PointF(mgEspacoX, espaco6Y);
-            //graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco6F);
-
-            //float obrigadoY = espaco6Y + 100.0f;
-            //ObrigadoF = new PointF(obrigadoX, obrigadoY);
-            //graphics.DrawString(STRObg, FontVendaItem, BrushVendaEmpresa, ObrigadoF);
-            //graphics.Flush();
 
         }
-        bool IVender.Print_Document(IVender_e entidade, out PrintDocument document)
+        Font Bold;
+        Vender_e entidade;
+        private Font FontVendaEmpresa;
+        private Brush BrushVendaEmpresa;
+        private Font FontVendaCabItem;
+        private Font FontVendaItem;
+        private Font FontEspaco;
+            Graphics graphicsBASE;
+        GraphicsState graphicsState;
+        bool IVender.Print_Document(IVender_e current, out PrintDocument document)
+        {
+            if (current != null)
+            {
+                Bold = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold);
+                document = new PrintDocument();
+                PageSettings settings = new PageSettings();
+
+                entidade = (Vender_e)current;
+                if (current.GetListPosicao() == Vender_e.ListPosicao.Finalizado)
+                {
+                    FontVendaEmpresa = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Regular);
+                    FontVendaCabItem = new Font(FontFamily.GenericSerif, 9.0f, FontStyle.Bold);
+                    FontVendaItem = new Font(FontFamily.GenericSerif, 7.0f, FontStyle.Bold);
+                    FontEspaco = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Bold);
+                    BrushVendaEmpresa = Brushes.Black;
+                    graphicsBASE = CalcArePrintVendaComun(document.PrinterSettings.CreateMeasurementGraphics(), out PaperSize paperSize);
+                    graphicsState = graphicsBASE.Save();
+                    settings.PaperSize = paperSize;
+                    document.PrintPage += new PrintPageEventHandler(VendaComum);
+                    document.DefaultPageSettings.PaperSize = paperSize;
+                    document.PrinterSettings.DefaultPageSettings.PaperSize = paperSize;
+                    return true;
+                }
+                else if (current.GetListPosicao() == Vender_e.ListPosicao.Devolucao)
+                {
+                    FontVendaEmpresa = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Regular);
+                    FontVendaCabItem = new Font(FontFamily.GenericSerif, 9.0f, FontStyle.Bold);
+                    FontVendaItem = new Font(FontFamily.GenericSerif, 7.0f, FontStyle.Bold);
+                    FontEspaco = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Bold);
+                    BrushVendaEmpresa = Brushes.Black;
+                    graphicsBASE = CalcArePrintDevolucaoComun(document.PrinterSettings.CreateMeasurementGraphics(),out PaperSize paper);
+                    settings.PaperSize = paper;
+                    document.PrintPage += new PrintPageEventHandler(DevolucaoComum);
+                    document.DefaultPageSettings.PaperSize = paper;
+                    document.PrinterSettings.DefaultPageSettings.PaperSize = paper;
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Erro Vender_c Print_Document valor IVender_e nao pode ser gerado");
+                    return false;
+                }
+
+            }
+            else
+            {
+                document = null;
+                Noticia.Add("Entidade nula Print_Document");
+                return false;
+            }
+            throw new NotImplementedException();
+        }
+
+        private Graphics CalcArePrintDevolucaoComun(Graphics graphics,out PaperSize paperSize)
         {
             throw new NotImplementedException();
         }
 
+        private Graphics CalcArePrintVendaComun(Graphics graphics, out PaperSize paperSize)
+        {
+
+            graphics.PageUnit = GraphicsUnit.Pixel;
+            graphics.PageScale = 1.5f;
+            string STRnomeEmpresta = "Hope";
+            string STRlogradouro = "Avenida Hope - 0000 ";
+
+            string STRtelefone = /*"TEL: " + EntEmpresa.Telefone.Insert(0, "(").Insert(3, ") ") + " FAX: " + EntEmpresa.Fax.Insert(0, "(").Insert(3, ") ")*/"";
+            string STREspaco = "========================================";
+            string STRSubTitulo = "CUPOM NAO FISCAL";
+            // REPETE 2 VEZES O STRespaco
+            // ========================================
+            // ========================================
+            string STRcerquilha = "| #";
+            string STRCod = "| COD";
+            string STRProduto = "| PRODUTO";
+            string STRVlr = "VLR";
+            string STRQtd = "| QTD";
+            string STRTotal = "| TOTAL |";
+            // ========================================
+            // lista de item montado pelo foreach
+            // ========================================
+            string STRTituloTotalPedido = "| VALOR TOTAL DO PEDIDO:";
+            // ========================================
+            string STRObg = "****OBRIGADO E VOLTE SEMPRE****";
+            // paramentros linha X
+            float mgEspacoX = 1.0f;
+            float mgNomeEmpresaX = 290.0f;
+            float logradouroX = 10.0f;
+            float TelefoneX = 10.0f;
+            float mgSubTituloX = 290.0f;
+            float cerquilhaX = 8.0f;
+            float codX = 90.0f;
+            float produtoX = 260.0f;
+            float vlrX = 650.0f;
+            float qtdX = 770.0f;
+            float totalX = 920.0f;
+            float TituloTotaX = 10.0f;
+            float ValorTotalX = 900.0f;
+            float obrigadoX = 200.0f;
+            // paramentros linha Y
+            float nomeempresaY = 5.0f;
+            float logradouroY = 70.0f;
+            float TelefoneY = 130.0f;
+            float espaco1Y = 190.0f;
+            float SubtituloY = 250.0f;
+            float espaco2Y = 290.0f;
+            float espaco3Y = 340.0f;
+            float cerquilhaY = 400.0f;
+            float codY = 400.0f;
+            float produtoY = 400.0f;
+            float vlrY = 400.0f;
+            float qtdY = 400.0f;
+            float totalY = 400.0f;
+            float espaco4Y = 460.0f;
+            float ItemY = 530.0f;
+            PointF nomeempresaF = new PointF(mgNomeEmpresaX, nomeempresaY);
+            PointF logradouroF = new PointF(logradouroX, logradouroY);
+            PointF TelefoneF = new PointF(TelefoneX, TelefoneY);
+            PointF Espaco1F = new PointF(mgEspacoX, espaco1Y);
+            PointF subtituloF = new PointF(mgSubTituloX, SubtituloY);
+            PointF Espaco2F = new PointF(mgEspacoX, espaco2Y);
+            PointF Espaco3F = new PointF(mgEspacoX, espaco3Y);
+            PointF cerquilhaF = new PointF(cerquilhaX, cerquilhaY);
+            PointF codF = new PointF(codX, codY);
+            PointF produtoF = new PointF(produtoX, produtoY);
+            PointF vlrF = new PointF(vlrX, vlrY);
+            PointF qtdF = new PointF(qtdX, qtdY);
+            PointF totalF = new PointF(totalX, totalY);
+            PointF Espaco4F = new PointF(mgEspacoX, espaco4Y);
+
+            PointF cerItemF;
+            PointF codItemF;
+            PointF prodItemF;
+            PointF vlrItemF;
+            PointF qtdItemF;
+            PointF totalItemF;
+
+            PointF Espaco5F;
+            PointF TituloTotalF;
+            PointF ValorTotalF;
+            PointF Espaco6F;
+            PointF ObrigadoF;
+
+            graphics.DrawString(STRnomeEmpresta, FontVendaEmpresa, BrushVendaEmpresa, nomeempresaF);
+            graphics.DrawString(STRlogradouro, FontVendaEmpresa, BrushVendaEmpresa, logradouroF);
+            graphics.DrawString(STRtelefone, FontVendaEmpresa, BrushVendaEmpresa, TelefoneF);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco1F);
+            graphics.DrawString(STRSubTitulo, FontVendaEmpresa, BrushVendaEmpresa, subtituloF);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco2F);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco3F);
+            graphics.DrawString(STRcerquilha, FontVendaCabItem, BrushVendaEmpresa, cerquilhaF);
+            graphics.DrawString(STRCod, FontVendaCabItem, BrushVendaEmpresa, codF);
+            graphics.DrawString(STRProduto, FontVendaCabItem, BrushVendaEmpresa, produtoF);
+            graphics.DrawString(STRVlr, FontVendaCabItem, BrushVendaEmpresa, vlrF);
+            graphics.DrawString(STRQtd, FontVendaCabItem, BrushVendaEmpresa, qtdF);
+            graphics.DrawString(STRTotal, FontVendaCabItem, BrushVendaEmpresa, totalF);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco4F);
+            int NumeroIndexProduto = 0;
+            foreach (Item_e item in entidade._item_e_s)
+            {
+                cerItemF = new PointF(cerquilhaX, ItemY);
+                codItemF = new PointF(codX + 5.0f, ItemY);
+                prodItemF = new PointF(produtoX, ItemY);
+                vlrItemF = new PointF(vlrX, ItemY);
+                qtdItemF = new PointF(qtdX, ItemY);
+                totalItemF = new PointF(totalX + 30.0f, ItemY);
+                NumeroIndexProduto++;
+                string numite = NumeroIndexProduto.ToString();
+                switch (numite.Length)
+                {
+                    case 1:
+                        numite = "|00" + numite;
+                        break;
+                    case 2:
+                        numite = "|0" + numite;
+                        break;
+                    case 3:
+                        numite = "|" + numite;
+                        break;
+                    default:
+                        numite = "|" + numite;
+                        break;
+                }
+                graphics.DrawString(numite, FontVendaItem, BrushVendaEmpresa, cerItemF);
+                graphics.DrawString(item._index_item.ToString(), FontVendaItem, BrushVendaEmpresa, codItemF);
+                string descricao = string.Empty;
+                if (item._Descricao.Length > 10)
+                {
+                    descricao = item._Descricao.Substring(0, 10);
+                }
+                else
+                {
+                    descricao = item._Descricao;
+                }
+                graphics.DrawString(descricao, FontVendaItem, BrushVendaEmpresa, prodItemF);
+                graphics.DrawString(item._Venda.ToString("f2"), FontVendaItem, BrushVendaEmpresa, vlrItemF);
+                graphics.DrawString(item._Quantidade.ToString("f4"), FontVendaItem, BrushVendaEmpresa, qtdItemF);
+                graphics.DrawString(item._Sub_Total.ToString("f2"), FontVendaItem, BrushVendaEmpresa, totalItemF);
+                ItemY += 50.0f;
+            }
+            float espaco5Y = ItemY + 20.0f;
+            Espaco5F = new PointF(mgEspacoX, espaco5Y);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco5F);
+
+            float TituloTotaValorlY = espaco5Y + 50.0F;
+            TituloTotalF = new PointF(TituloTotaX, TituloTotaValorlY);
+            graphics.DrawString(STRTituloTotalPedido, FontVendaCabItem, BrushVendaEmpresa, TituloTotalF);
+            ValorTotalF = new PointF(ValorTotalX, TituloTotaValorlY);
+            graphics.DrawString(entidade._Total_Venda.ToString(), FontVendaCabItem, BrushVendaEmpresa, ValorTotalF);
+
+            float espaco6Y = TituloTotaValorlY + 50.0F;
+            Espaco6F = new PointF(mgEspacoX, espaco6Y);
+            graphics.DrawString(STREspaco, FontEspaco, BrushVendaEmpresa, Espaco6F);
+
+            float obrigadoY = espaco6Y + 100.0f;
+            ObrigadoF = new PointF(obrigadoX, obrigadoY);
+            graphics.DrawString(STRObg, FontVendaItem, BrushVendaEmpresa, ObrigadoF);
+            paperSize = new PaperSize(PaperKind.Custom.ToString(), (int)graphics.VisibleClipBounds.Width / 8, (int)graphics.VisibleClipBounds.Height / 9);
+            return graphics;
+
+        }
+
+        private void DevolucaoComum(object sender, PrintPageEventArgs e)
+        {
+            //Graphics graphics= CalcArePrintDevolucaoComun(e.Graphics,out PaperSize paper);
+
+        }
+        private void VendaComum(object sender, PrintPageEventArgs e)
+        {
+            Graphics _graphics;
+            _graphics = CalcArePrintVendaComun(e.Graphics, out PaperSize paperSize);
+            e.PageSettings.PaperSize = paperSize;
+            e.PageSettings.PrinterSettings.DefaultPageSettings.PaperSize = paperSize;
+        }
 
         #endregion
     }
