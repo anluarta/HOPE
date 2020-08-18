@@ -511,10 +511,6 @@ namespace Hope.Entidade
             return true;
         }
 
-        ListPosicao IVender_Posicao.GetListPosicao()
-        {
-            return _Posicao;
-            throw new NotImplementedException();
-        }
+       
     }
 }

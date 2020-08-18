@@ -3,7 +3,7 @@ using System;
 
 namespace Hope.Interface
 {
-    public interface IVender_e:IVender_Posicao
+    public interface IVender_e
     {
         string Notifica();
         int Get_ID { get; }
@@ -27,8 +27,5 @@ namespace Hope.Interface
         bool Join(IVender_e vender_);
         bool Finalizar();
     }
-    public interface IVender_Posicao
-    {
-       internal Vender_e.ListPosicao GetListPosicao();
-    }
+    
 }

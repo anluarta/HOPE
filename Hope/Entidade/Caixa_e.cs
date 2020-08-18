@@ -442,14 +442,7 @@ namespace Hope.Entidade
         {
             if (vender_ != null)
             {
-                if (vender_.GetListPosicao()== Vender_e.ListPosicao.Devolucao)
-                {
-
-                }
-                else
-                {
-
-                }
+              
 
             }
             else
