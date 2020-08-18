@@ -86,14 +86,19 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTime.Location = new System.Drawing.Point(39, 299);
+            this.lblTime.Location = new System.Drawing.Point(25, 381);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(199, 73);
+            this.lblTime.Size = new System.Drawing.Size(150, 55);
             this.lblTime.TabIndex = 1;
             this.lblTime.Text = "15:45";
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // menuStrip1
             // 
@@ -107,6 +112,7 @@
             // 
             // voltarOperarCaixaToolStripMenuItem
             // 
+            this.voltarOperarCaixaToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.voltarOperarCaixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.voltarOperarCaixaToolStripMenuItem1,
             this.trocarUsuarioToolStripMenuItem});
@@ -120,12 +126,14 @@
             this.voltarOperarCaixaToolStripMenuItem1.Name = "voltarOperarCaixaToolStripMenuItem1";
             this.voltarOperarCaixaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.voltarOperarCaixaToolStripMenuItem1.Text = "Voltar Operar Caixa";
+            this.voltarOperarCaixaToolStripMenuItem1.Click += new System.EventHandler(this.voltarOperarCaixaToolStripMenuItem1_Click);
             // 
             // trocarUsuarioToolStripMenuItem
             // 
             this.trocarUsuarioToolStripMenuItem.Name = "trocarUsuarioToolStripMenuItem";
             this.trocarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trocarUsuarioToolStripMenuItem.Text = "Trocar Usuario";
+            this.trocarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.trocarUsuarioToolStripMenuItem_Click);
             // 
             // FrmCaixaClosed
             // 

@@ -126,7 +126,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.bunifuMetroTextbox1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuTextbox1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Thistle;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Empty;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;

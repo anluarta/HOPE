@@ -109,12 +109,22 @@ namespace POS_Alessandro.NewFolder1
         {
             //so ira aparecer caso seja errado a senha ou usuario
         }
-
+        GUI_V_2.Form1 form1;
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmCaixaClosed frmCaixa = new FrmCaixaClosed();
-            frmCaixa.ShowDialog();
+            //FrmCaixaClosed frmCaixa = new FrmCaixaClosed();
+            //frmCaixa.ShowDialog();
 
+            form1 = new GUI_V_2.Form1();
+            form1.btnVenda.Click += BtnVenda_Click;
+            form1.ShowDialog();
+
+        }
+
+        private void BtnVenda_Click(object sender, EventArgs e)
+        {
+           // form1.AbrirFormEnPanel(new FrmFrenteDeCaixa());
+            
         }
     }
 

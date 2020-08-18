@@ -143,6 +143,16 @@ namespace POS_Alessandro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_Icon2 {
+            get {
+                object obj = ResourceManager.GetObject("Close_Icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doe {
             get {
                 object obj = ResourceManager.GetObject("doe", resourceCulture);
@@ -236,6 +246,16 @@ namespace POS_Alessandro.Properties {
         internal static System.Drawing.Bitmap Minimize_Icon1 {
             get {
                 object obj = ResourceManager.GetObject("Minimize_Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_Icon2 {
+            get {
+                object obj = ResourceManager.GetObject("Minimize_Icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
