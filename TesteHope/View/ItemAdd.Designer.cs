@@ -165,7 +165,7 @@
             this.Controls.Add(this.btnfechar);
             this.Controls.Add(this.groupBox1);
             this.Name = "ItemAdd";
-            this.Size = new System.Drawing.Size(313, 276);
+            this.Size = new System.Drawing.Size(313, 367);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

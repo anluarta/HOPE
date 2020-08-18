@@ -24,7 +24,6 @@ namespace POS_Alessandro.NewFolder1
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void encerrarCaixaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,6 +33,25 @@ namespace POS_Alessandro.NewFolder1
 
         private void voltarOperarCaixaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+
+        }
+
+        private void trocarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLoginTrans loginTrans = new FrmLoginTrans();
+            loginTrans.ShowDialog();
+        }
+
+        private void voltarOperarCaixaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmFrenteDeCaixa frmFrenteDeCaixa = new FrmFrenteDeCaixa();
+            frmFrenteDeCaixa.ShowDialog();
 
         }
     }
