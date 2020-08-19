@@ -91,9 +91,7 @@ namespace Hope.Model
                 List<IVender_e> vs = new List<IVender_e>();
                 foreach (HopeDataSet.VenderRow item in Hope.Hope_static.hopeData.Vender.Rows)
                 {
-                    vs.Add
-                        (
-                        new Vender_e
+                    IVender_e vender_E = new Vender_e
                         (
                             index: item.Index,
                             id_caixa: item.ID_Caixa,
@@ -107,8 +105,8 @@ namespace Hope.Model
                             total_venda: item.Total_Venda,
                             desconto: item.Desconto,
                             pagamento: item.Pagamento
-                        )
                         );
+                    vs.Add(vender_E);
                 }
                 vender_s = vs.ToArray();
                 return true;

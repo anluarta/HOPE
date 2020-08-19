@@ -8,10 +8,10 @@ namespace Hope.Entidade
     internal class Item_e : IItem_e
     {
         List<string> Notifica;
-        internal int _index_item{get;private set;}
-        internal string _Descricao{get;private set;}
-        internal string _Unidade{get;private set;}
-        internal decimal _Quantidade{get;private set;}
+        internal int _index_item { get; private set; }
+        internal string _Descricao { get; private set; }
+        internal string _Unidade { get; private set; }
+        internal decimal _Quantidade { get; private set; }
         internal decimal _Venda { get; private set; }
         internal decimal _Sub_Total { get { return decimal.Multiply(_Quantidade, _Venda); } }
         private Item_e()
@@ -20,26 +20,28 @@ namespace Hope.Entidade
         }
         internal Item_e(object dadoSerial) : this()
         {
-            
-            object[] vs = dadoSerial.ToString().Split(char.Parse("|"));
-            if (vs.Length>4)
+            if (dadoSerial.ToString().Contains("|"))
             {
-                Dictionary<int, object> keyValues = new Dictionary<int, object>();
-                foreach (object item in vs)
+                object[] vs = dadoSerial.ToString().Split(char.Parse("|"));
+                if (vs.Length > 4)
                 {
-                    string strItem = item.ToString();
-                    if (strItem.Contains(":"))
+                    Dictionary<int, object> keyValues = new Dictionary<int, object>();
+                    foreach (object item in vs)
                     {
-                        string[] subItem = strItem.Split(char.Parse(":"));
-                        keyValues.Add(int.Parse(subItem[0]), subItem[1]);
+                        string strItem = item.ToString();
+                        if (strItem.Contains(":"))
+                        {
+                            string[] subItem = strItem.Split(char.Parse(":"));
+                            keyValues.Add(int.Parse(subItem[0]), subItem[1]);
+                        }
                     }
-                }
 
-                _index_item = int.Parse(keyValues[Key_Index].ToString());
-                _Descricao = keyValues[Key_Descricao].ToString();
-                _Unidade = keyValues[Key_Unidade].ToString();
-                _Quantidade = decimal.Parse(keyValues[Key_Quantidade].ToString());
-                _Venda = decimal.Parse(keyValues[Key_Venda].ToString()); 
+                    _index_item = int.Parse(keyValues[Key_Index].ToString());
+                    _Descricao = keyValues[Key_Descricao].ToString();
+                    _Unidade = keyValues[Key_Unidade].ToString();
+                    _Quantidade = decimal.Parse(keyValues[Key_Quantidade].ToString());
+                    _Venda = decimal.Parse(keyValues[Key_Venda].ToString());
+                }
             }
         }
         public Item_e(int index_item) : this()
@@ -72,7 +74,7 @@ namespace Hope.Entidade
         {
             if (descricao != null)
             {
-                if (descricao.Length > 11)
+                if (descricao.Length > 3)
                 {
                     _Descricao = descricao;
                     return true;
@@ -163,7 +165,7 @@ namespace Hope.Entidade
             vs.Add(string.Format(format, Key_Quantidade, _Quantidade));
             vs.Add(string.Format(format, Key_Venda, _Venda));
             vs.Add(string.Format(format, Key_Sub_Total, _Sub_Total));
-            return string.Join("|",vs.ToArray());
+            return string.Join("|", vs.ToArray());
         }
         internal const int Key_Index = 1;
         internal const int Key_Descricao = 2;

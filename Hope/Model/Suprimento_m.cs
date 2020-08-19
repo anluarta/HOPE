@@ -24,7 +24,7 @@ namespace Hope.Model
                     _SuprimentoRow.Observacao = (string)keyValuesData[Suprimento_e.Key_Observacao];
                     _SuprimentoRow.DataRegistro = DateTime.Now;
                     Hope.Hope_static.hopeData.Caixa_Suprimento.AddCaixa_SuprimentoRow(_SuprimentoRow);
-                    Noticia.Add("Registro salvo");
+                    Noticia.Add(string.Format(Msg007,_SuprimentoRow.Valor,_SuprimentoRow.DataRegistro));
                     return true;
                 }
                 catch (System.Exception e)
@@ -35,7 +35,7 @@ namespace Hope.Model
             }
             else
             {
-                Noticia.Add("KeyValuesData valor nulo");
+                Noticia.Add(Msg006);
                 return false;
             }
         }

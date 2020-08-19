@@ -243,12 +243,11 @@ namespace Hope.Controle
         {
             if (entidade != null)
             {
-                Caixa_e _E = entidade as Caixa_e;
-                if (_Suprimento.Gravar(_E.suprimento_s))
+                
+                if (_Suprimento.Gravar(entidade.GetSuprimento_s()))
                 {
-                    _E.suprimento_s.Clear();
+                    entidade.Suprimento_Clear();
                     Noticia.AddRange(_Suprimento.Noticia);
-                    _Suprimento.Noticia.Clear();
                     Noticia.Add(Msg002);
                 }
                 else
@@ -256,37 +255,37 @@ namespace Hope.Controle
                     Noticia.AddRange(_Suprimento.Noticia);
                     Noticia.Add("Dado Value Suprimento nao gravado");
                 }
-                if (_Sangria.Gravar(_E.sangria_s))
+                if (_Sangria.Gravar(entidade.GetSangria_s()))
                 {
-                    _E.sangria_s.Clear();
+                    entidade.Sangria_Clear();
                     Noticia.AddRange(_Sangria.Noticia);
-                    _Sangria.Noticia.Clear();
-                    Noticia.Add("Dado Value Sangria Gravado");
+                    Noticia.Add(Msg003);
                 }
                 else
                 {
                     Noticia.AddRange(_Sangria.Noticia);
-
                     Noticia.Add("Dado Value Sangria nao Gravado");
                 }
-                if (_E.Disparidade())
+                _Suprimento.Noticia.Clear();
+                _Sangria.Noticia.Clear();
+                if (entidade.Disparidade())
                 {
-                    if (Update_Row(_E.GetToDataValue()))
+                    if (Update_Row(entidade.GetToDataValue()))
                     {
-                        result = _E;
+                        result = entidade;
                         return true;
 
                     }
                     else
                     {
-                        result = _E;
+                        result = entidade;
                         return false;
                     }
                 }
                 else
                 {
                     Noticia.Add("a entidade nao sobreu mudanca no seu estado acao nao realizado");
-                    result = _E;
+                    result = entidade;
                     return false;
                 }
             }
@@ -438,9 +437,9 @@ namespace Hope.Controle
 
         #region ValorConstCaixa
         #region Mensagem
-        const string Msg001 = "";
-        const string Msg003 = "";
-        const string Msg002 = "Msg002:Lista Registro Suprimento Gravado";
+        const string Msg001 = "Caixa_c_Msg-001:";
+        const string Msg003 = "Caixa_c_Msg-003: Registro Sangria Gravado";
+        const string Msg002 = "Caixa_c_Msg-002: Registro Suprimento Gravado";
         #endregion
         #endregion
     }

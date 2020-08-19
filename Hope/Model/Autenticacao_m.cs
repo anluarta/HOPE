@@ -17,7 +17,7 @@ namespace Hope.Model
         }
        const string adminUser = "Hope";
        const string adminPass = "Hope";
-       const string adminSales = "Hope";
+       const string adminSales = "Hope Road Run After";
         const string demoUser = "Demo";
        const string demoPass = "Demo";
        const string demoSales = "Demo nome vendedo";
@@ -32,7 +32,7 @@ namespace Hope.Model
                     adminSales
                     );
                 _Autenticado = true;
-                Noticia.Add("Login Validado");
+                Noticia.Add(Msg010);
                 return true;
             }else if
                 (demoPass.Equals(pass)& demoUser.Equals(user))
@@ -44,14 +44,14 @@ namespace Hope.Model
                     demoSales
                     );
                 _Autenticado = true;
-                Noticia.Add("Login Validado");
+                Noticia.Add(Msg011);
                 return true;
             }
             // colocar else if pra checar se ta configurado o bbcloud pra valida 
             // coloca else if pra checar se ta configurado o backoffice pra valida 
             else
             {
-                Noticia.Add("Erro de Pass ou User");
+                Noticia.Add(Msg012);
                 return false;
             }
         }
@@ -60,6 +60,7 @@ namespace Hope.Model
         {
             Colaborador = null;
             _Autenticado = false;
+            Noticia.Add(Msg013);
             return true;
         }
     }

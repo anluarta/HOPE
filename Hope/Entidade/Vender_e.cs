@@ -13,16 +13,16 @@ namespace Hope.Entidade
         List<string> Noticia;
         internal List<IItem_e> _item_e_s { get; private set; }
         internal Pagar_e Pagar { get; private set; }
-        internal Colaborador_e _Colaborador{get;private set;}
-        internal int _Index{get;private set;}
-        internal int _ID_Caixa{get;private set;}
-        internal DateTime _Time_Start{get;private set;}
-        internal DateTime _Time_Finish{get;private set;}
-        internal ListPosicao _Posicao{get;set;}
-        internal decimal _Troco{get;private set;}
-        internal decimal _Total_Recebido{get;private set;}
-        internal decimal _Total_Venda{get;private set;}
-        internal decimal _Desconto{get;private set;}
+        internal Colaborador_e _Colaborador { get; private set; }
+        internal int _Index { get; private set; }
+        internal int _ID_Caixa { get; private set; }
+        internal DateTime _Time_Start { get; private set; }
+        internal DateTime _Time_Finish { get; private set; }
+        internal ListPosicao _Posicao { get; set; }
+        internal decimal _Troco { get; private set; }
+        internal decimal _Total_Recebido { get; private set; }
+        internal decimal _Total_Venda { get; private set; }
+        internal decimal _Desconto { get; private set; }
         //{
         //    get
         //    {
@@ -40,8 +40,7 @@ namespace Hope.Entidade
             object colaborador, object item_s, object troco, object recebido, object total_venda, object desconto, object pagamento)
         {
             this.Noticia = new List<string>();
-            this._item_e_s = new List<IItem_e>();
-            this.Item_e_s_Desereliza(item_s);
+            this._item_e_s = this.Item_e_s_Desereliza(item_s);
             this.Pagar = new Pagar_e(pagamento);
             this._Colaborador = new Colaborador_e(colaborador);
             this._Index = int.Parse(index.ToString());
@@ -356,22 +355,24 @@ namespace Hope.Entidade
             List<string> vs = new List<string>();
             foreach (Item_e item in _item_e_s)
             {
+
                 vs.Add(item.ToSerilazion());
             }
             return string.Join("\"", vs.ToArray());
         }
-        private void Item_e_s_Desereliza(object dado)
+        private List<IItem_e> Item_e_s_Desereliza(object dado)
         {
+            List<IItem_e> vs = new List<IItem_e>();
             if (dado.ToString().Contains("\""))
             {
                 try
                 {
-                    object[] vs = dado.ToString().Split(char.Parse("\""));
-                    foreach (object item in vs)
+                    object[] split = dado.ToString().Split(char.Parse("\""));
+                    foreach (object item in split)
                     {
                         IItem_e _E = new Item_e(item);
-                        
-                        _item_e_s.Add(_E);
+
+                        vs.Add(_E);
                     }
 
                 }
@@ -380,6 +381,14 @@ namespace Hope.Entidade
                     Noticia.Add(e.Message);
                 }
             }
+            else if (dado.ToString().Contains("|"))
+            {
+                IItem_e _E = new Item_e(dado);
+                vs.Add(_E);
+
+            }
+
+            return vs;
         }
         private ListPosicao SelectPosicao(object posicao)
         {

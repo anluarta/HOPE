@@ -27,7 +27,7 @@ namespace Hope.Controle
         }
         protected abstract bool Insert_Data_Value(Dictionary<int, object> keyValuesData);
         protected abstract bool Select_All_From(out ISangria_e[] sangria_s);
-        internal bool Gravar(List<Sangria_e> sangria_s)
+        internal bool Gravar(List<ISangria_e> sangria_s)
         {
             if (sangria_s != null)
             {

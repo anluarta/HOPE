@@ -46,8 +46,8 @@ namespace Hope.Entidade
         internal const string Nov_Cancelado = "Nov_Cancelado";
         internal const string Nov_Desconto = "Nov_Desconto";
         internal static DateTime _ValueFinisTime = DateTime.Parse("01/01/01 23:59:59");
-        internal List<Suprimento_e> suprimento_s;
-        internal List<Sangria_e> sangria_s;
+        List<Suprimento_e> suprimento_s;
+        List<Sangria_e> sangria_s;
         internal int ID { get; private set; }
         internal IColaborador_e Colaborador { get; private set; }
         internal DateTime StartTime { get; private set; }
@@ -71,6 +71,19 @@ namespace Hope.Entidade
         string ICaixa_e.Get_Colaborador => Colaborador.Get_Nome_Vendedo;
         string ICaixa_e.Get_Start_DateTime => StartTime.ToString();
         string ICaixa_e.Get_finish_DateTime => FinishTime.ToString();
+
+        List<ISuprimento_e> ICaixa_e.GetSuprimento_s()
+        {
+            List<ISuprimento_e> vs = new List<ISuprimento_e>(suprimento_s.ToArray<ISuprimento_e>());
+            return vs;
+        }
+
+        List<ISangria_e> ICaixa_e.GetSangria_s()
+        {
+            List<ISangria_e> vs = new List<ISangria_e>(sangria_s.ToArray<ISangria_e>());
+            return vs;
+        }
+
         public Caixa_e(int Index, IColaborador_e colaborador, DateTime start)
         {
             suprimento_s = new List<Suprimento_e>();
@@ -150,7 +163,7 @@ namespace Hope.Entidade
             {
                 var tempsangria = this.vSangria;
                 this.vSangria = decimal.Add(this.vSangria, entidade.Valor);
-                if (tempsangria.CompareTo(this.vSangria)>0)
+                if (tempsangria.CompareTo(this.vSangria) > 0)
                 {
                     string format = "total anterio{0} novo total{1}, diferenca acrecentada{2}";
                     Noticia.Add(string.Format(format, tempsangria, vSangria, entidade.Valor));
@@ -265,8 +278,109 @@ namespace Hope.Entidade
         {
             return vValeRefeicao.ToString("f2");
         }
+        internal void SetToDataValue(decimal _Desconto, decimal _Cancelado, decimal _Cheque, decimal _Credito, decimal _Debito, decimal _Dinheiro, decimal _Interno, decimal _Outro, decimal _Recebido, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Vendido)
+        {
+            this.vCancelado = _Cancelado;
+            this.vCheque = _Cheque;
+            this.vCredito = _Credito;
+            this.vDebito = _Debito;
+            this.vDinheiro = _Dinheiro;
+            this.vInterno = _Interno;
+            this.vOutro = _Outro;
+            this.vRecebido = _Recebido;
+            this.vSangria = _Sangria;
+            this.vSuprimento = _Suprimento;
+            this.vTroco = _Troco;
+            this.vValeAlimentacao = _ValeAlimentacao;
+            this.vValeRefeicao = _ValeRefeicao;
+            this.vVendido = _Vendido;
+            this.vDesconto = _Desconto;
+            return;
+        }
 
-        internal bool Disparidade()
+        bool ICaixa_e.Add(IVender_e entidade)
+        {
+            if (entidade != null)
+            {
+                if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
+                {
+                    Noticia.Add("Caixa_e Add IVender_e nao ta finalizado");
+                    return false;
+                }
+                else
+                {
+                    entidade.Pagarmento(out IPagar_e _E);
+                    this.vCheque = decimal.Add(this.vCheque, _E.Cheque);
+                    this.vCredito = decimal.Add(this.vCredito, _E.Credito);
+                    this.vDebito = decimal.Add(this.vDebito, _E.Debito);
+                    this.vDinheiro = decimal.Add(this.vDinheiro, _E.Dinheiro);
+                    this.vInterno = decimal.Add(this.vInterno, _E.Interno);
+                    this.vOutro = decimal.Add(this.vOutro, _E.Outro);
+                    this.vRecebido = decimal.Add(this.vRecebido, _E.Recebido);
+                    this.vTroco = decimal.Add(this.vTroco, _E.Troco);
+                    this.vValeAlimentacao = decimal.Add(this.vValeAlimentacao, _E.Vale_Alimentacao);
+                    this.vValeRefeicao = decimal.Add(this.vValeRefeicao, _E.Vale_Refeicao);
+                    this.vDesconto = decimal.Add(this.vDesconto, _E.Desconto);
+                    this.vVendido = decimal.Add(this.vVendido, _E.Cobrado);
+                    return true;
+                }
+            }
+            else
+            {
+                Noticia.Add("Caixa_e Add IVender valor Nullo");
+                return false;
+            }
+            //entidade.Pagarmento
+            throw new NotImplementedException();
+        }
+
+        bool ICaixa_e.Remover(IVender_e vender_)
+        {
+            if (vender_ != null)
+            {
+                if (vender_.GetListPosicao() == Vender_e.ListPosicao.Devolucao)
+                {
+                    vender_.Pagarmento(out IPagar_e _E);
+                    this.vCheque = decimal.Subtract(this.vCheque, _E.Cheque);
+                    this.vCredito = decimal.Subtract(this.vCredito, _E.Credito);
+                    this.vDebito = decimal.Subtract(this.vDebito, _E.Debito);
+                    this.vDinheiro = decimal.Subtract(this.vDinheiro, _E.Dinheiro);
+                    this.vInterno = decimal.Subtract(this.vInterno, _E.Interno);
+                    this.vOutro = decimal.Subtract(this.vOutro, _E.Outro);
+                    this.vRecebido = decimal.Subtract(this.vRecebido, _E.Recebido);
+                    this.vTroco = decimal.Subtract(this.vTroco, _E.Troco);
+                    this.vValeAlimentacao = decimal.Subtract(this.vValeAlimentacao, _E.Vale_Alimentacao);
+                    this.vValeRefeicao = decimal.Subtract(this.vValeRefeicao, _E.Vale_Refeicao);
+                    this.vDesconto = decimal.Subtract(this.vDesconto, _E.Desconto);
+                    this.vVendido = decimal.Subtract(this.vVendido, _E.Cobrado);
+                    this.vCancelado = decimal.Add(this.vCancelado, _E.Cobrado);
+                    return true;
+                }
+                else
+                {
+                    Noticia.Add("Erro Caixa_e Remover valor Ivender_e nao esta em devolucao");
+                    return false;
+                }
+
+            }
+            else
+            {
+                vender_ = null;
+                return false;
+            }
+        }
+
+        void ICaixa_e.Suprimento_Clear()
+        {
+            suprimento_s.Clear();
+        }
+
+        void ICaixa_e.Sangria_Clear()
+        {
+            sangria_s.Clear();
+        }
+
+        bool ICaixa_e.Disparidade()
         {
             if (Temporario != null)
             {
@@ -313,8 +427,10 @@ namespace Hope.Entidade
                 Temporario = new Caixa_e(this);
                 return true;
             }
+            throw new NotImplementedException();
         }
-        internal Dictionary<string, string> GetToDataValue()
+
+        Dictionary<string, string> ICaixa_e.GetToDataValue()
         {
             Dictionary<string, string> data = new Dictionary<string, string>();
             try
@@ -393,97 +509,6 @@ namespace Hope.Entidade
                 Noticia.Add(ex.Message);
             }
             return data;
-        }
-        internal void SetToDataValue(decimal _Desconto, decimal _Cancelado, decimal _Cheque, decimal _Credito, decimal _Debito, decimal _Dinheiro, decimal _Interno, decimal _Outro, decimal _Recebido, decimal _Sangria, decimal _Suprimento, decimal _Troco, decimal _ValeAlimentacao, decimal _ValeRefeicao, decimal _Vendido)
-        {
-            this.vCancelado = _Cancelado;
-            this.vCheque = _Cheque;
-            this.vCredito = _Credito;
-            this.vDebito = _Debito;
-            this.vDinheiro = _Dinheiro;
-            this.vInterno = _Interno;
-            this.vOutro = _Outro;
-            this.vRecebido = _Recebido;
-            this.vSangria = _Sangria;
-            this.vSuprimento = _Suprimento;
-            this.vTroco = _Troco;
-            this.vValeAlimentacao = _ValeAlimentacao;
-            this.vValeRefeicao = _ValeRefeicao;
-            this.vVendido = _Vendido;
-            this.vDesconto = _Desconto;
-            return;
-        }
-
-        bool ICaixa_e.Add(IVender_e entidade)
-        {
-            if (entidade != null)
-            {
-                if (entidade.Get_Finish_Time == Vender_e._ValuaBaseFinishTime)
-                {
-                    Noticia.Add("Caixa_e Add IVender_e nao ta finalizado");
-                    return false;
-                }
-                else
-                {
-                    entidade.Pagarmento(out IPagar_e _E);
-                    this.vCheque=decimal.Add(this.vCheque, _E.Cheque);
-                    this.vCredito=decimal.Add(this.vCredito, _E.Credito);
-                    this.vDebito=decimal.Add(this.vDebito, _E.Debito);
-                    this.vDinheiro=decimal.Add(this.vDinheiro, _E.Dinheiro);
-                    this.vInterno=decimal.Add(this.vInterno, _E.Interno);
-                    this.vOutro=decimal.Add(this.vOutro, _E.Outro);
-                    this.vRecebido=decimal.Add(this.vRecebido, _E.Recebido);
-                    this.vTroco=decimal.Add(this.vTroco, _E.Troco);
-                    this.vValeAlimentacao=decimal.Add(this.vValeAlimentacao, _E.Vale_Alimentacao);
-                    this.vValeRefeicao=decimal.Add(this.vValeRefeicao, _E.Vale_Refeicao);
-                    this.vDesconto=decimal.Add(this.vDesconto, _E.Desconto);
-                    this.vVendido=decimal.Add(this.vVendido, _E.Cobrado);
-                    return true;
-                }
-            }
-            else
-            {
-                Noticia.Add("Caixa_e Add IVender valor Nullo");
-                return false;
-            }
-            //entidade.Pagarmento
-            throw new NotImplementedException();
-        }
-
-        bool ICaixa_e.Remover(IVender_e vender_)
-        {
-            if (vender_ != null)
-            {
-                if (vender_.GetListPosicao()== Vender_e.ListPosicao.Devolucao)
-                {
-                    vender_.Pagarmento(out IPagar_e _E);
-                    this.vCheque = decimal.Subtract(this.vCheque, _E.Cheque);
-                    this.vCredito = decimal.Subtract(this.vCredito, _E.Credito);
-                    this.vDebito = decimal.Subtract(this.vDebito, _E.Debito);
-                    this.vDinheiro = decimal.Subtract(this.vDinheiro, _E.Dinheiro);
-                    this.vInterno = decimal.Subtract(this.vInterno, _E.Interno);
-                    this.vOutro = decimal.Subtract(this.vOutro, _E.Outro);
-                    this.vRecebido = decimal.Subtract(this.vRecebido, _E.Recebido);
-                    this.vTroco = decimal.Subtract(this.vTroco, _E.Troco);
-                    this.vValeAlimentacao = decimal.Subtract(this.vValeAlimentacao, _E.Vale_Alimentacao);
-                    this.vValeRefeicao = decimal.Subtract(this.vValeRefeicao, _E.Vale_Refeicao);
-                    this.vDesconto = decimal.Subtract(this.vDesconto, _E.Desconto);
-                    this.vVendido = decimal.Subtract(this.vVendido, _E.Cobrado);
-                    this.vCancelado = decimal.Add(this.vCancelado, _E.Cobrado);
-                    return true;
-                }
-                else
-                {
-                    Noticia.Add("Erro Caixa_e Remover valor Ivender_e nao esta em devolucao");
-                    return false;
-                }
-
-            }
-            else
-            {
-                vender_ = null;
-                return false;
-            }
         }
     }
 }

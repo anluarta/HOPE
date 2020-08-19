@@ -14,7 +14,7 @@ namespace Hope.Controle
         IConsulta ISuprimento.Consulta() { return Consulta; }
 
         protected abstract bool Insert_Data_Value(Dictionary<int, object> keyValuesData);
-        internal bool Gravar(List<Suprimento_e> suprimento_s)
+        internal bool Gravar(List<ISuprimento_e> suprimento_s)
         {
             if (suprimento_s != null)
             {
@@ -27,21 +27,27 @@ namespace Hope.Controle
                     }
                     if (vs.Find(x => x == true))
                     {
+                        Noticia.Add(Msg005);
 
                         return true;
                     }
                     else
                     {
+                        Noticia.Add(Msg004);
+
                         return false;
                     }
                 }
                 else
                 {
+                    Noticia.Add(Msg003);
+
                     return false;
                 }
             }
             else
             {
+                Noticia.Add(Msg002);
                 return false;
             }
         }
@@ -99,5 +105,12 @@ namespace Hope.Controle
             return new PaperSize("Custom", (int)graphics.VisibleClipBounds.Width / 5, (int)graphics.VisibleClipBounds.Height / 5);
 
         }
+        const string Msg001 = "Suprimento_c Msg-001:";
+        const string Msg002 = "Suprimento_c Gravar Msg-002:Erro valor list suprimento_s nullo";
+        const string Msg003 = "Suprimento_c Gravar Msg-003:Aviso valor list suprimento_s cont 0";
+        const string Msg004 = "Suprimento_c Gravar Msg-004:Erro predicado retonou false";
+        const string Msg005 = "Suprimento_c Gravar Msg-005:Aviso predicado retonou true";
+       protected const string Msg006 = "Suprimento_c Insert_data_row Msg-006:Erro valor nullo Dicionary ";
+       protected const string Msg007 = "Suprimento_c Insert_data_row Msg-006:Aviso Registro Gravado {0},{1}";
     }
 }
